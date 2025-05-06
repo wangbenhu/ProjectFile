@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "main.h": "c",
+        "usart.h": "c",
+        "mye_reflector.h": "c",
+        "gpio.h": "c",
+        "myapp.h": "c",
+        "stm32f1xx_it.h": "c",
+        "tim.h": "c",
+        "myhighspeedmotor.h": "c",
+        "mylowspeedmotor.h": "c"
+    }
+}
