@@ -3,15 +3,15 @@
         {
             "name": "TennisBallLauncher_STM32F103RCT6",
             "includePath": [
-                "t:\\OnMicro_Projects\\网球发射器\\TennisBallLauncher_STM32F103RCT6_V1.1\\TennisBallLauncher_STM32F103RCT6\\Core\\Inc",
-                "t:\\OnMicro_Projects\\网球发射器\\TennisBallLauncher_STM32F103RCT6_V1.1\\TennisBallLauncher_STM32F103RCT6\\Drivers\\STM32F1xx_HAL_Driver\\Inc",
-                "t:\\OnMicro_Projects\\网球发射器\\TennisBallLauncher_STM32F103RCT6_V1.1\\TennisBallLauncher_STM32F103RCT6\\Drivers\\STM32F1xx_HAL_Driver\\Inc\\Legacy",
-                "t:\\OnMicro_Projects\\网球发射器\\TennisBallLauncher_STM32F103RCT6_V1.1\\TennisBallLauncher_STM32F103RCT6\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
-                "t:\\OnMicro_Projects\\网球发射器\\TennisBallLauncher_STM32F103RCT6_V1.1\\TennisBallLauncher_STM32F103RCT6\\Drivers\\CMSIS\\Include",
-                "t:\\OnMicro_Projects\\网球发射器\\TennisBallLauncher_STM32F103RCT6_V1.1\\TennisBallLauncher_STM32F103RCT6\\User",
-                "t:\\OnMicro_Projects\\网球发射器\\TennisBallLauncher_STM32F103RCT6_V1.1\\TennisBallLauncher_STM32F103RCT6\\MDK-ARM",
-                "t:\\OnMicro_Projects\\网球发射器\\TennisBallLauncher_STM32F103RCT6_V1.1\\TennisBallLauncher_STM32F103RCT6\\Core\\Src",
-                "t:\\OnMicro_Projects\\网球发射器\\TennisBallLauncher_STM32F103RCT6_V1.1\\TennisBallLauncher_STM32F103RCT6\\Drivers\\STM32F1xx_HAL_Driver\\Src"
+                "t:\\GIT仓库\\TennisProject\\TennisProject\\TennisBallLauncher_STM32F103RCT6\\Core\\Inc",
+                "t:\\GIT仓库\\TennisProject\\TennisProject\\TennisBallLauncher_STM32F103RCT6\\Drivers\\STM32F1xx_HAL_Driver\\Inc",
+                "t:\\GIT仓库\\TennisProject\\TennisProject\\TennisBallLauncher_STM32F103RCT6\\Drivers\\STM32F1xx_HAL_Driver\\Inc\\Legacy",
+                "t:\\GIT仓库\\TennisProject\\TennisProject\\TennisBallLauncher_STM32F103RCT6\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
+                "t:\\GIT仓库\\TennisProject\\TennisProject\\TennisBallLauncher_STM32F103RCT6\\Drivers\\CMSIS\\Include",
+                "t:\\GIT仓库\\TennisProject\\TennisProject\\TennisBallLauncher_STM32F103RCT6\\User",
+                "t:\\GIT仓库\\TennisProject\\TennisProject\\TennisBallLauncher_STM32F103RCT6\\MDK-ARM",
+                "t:\\GIT仓库\\TennisProject\\TennisProject\\TennisBallLauncher_STM32F103RCT6\\Core\\Src",
+                "t:\\GIT仓库\\TennisProject\\TennisProject\\TennisBallLauncher_STM32F103RCT6\\Drivers\\STM32F1xx_HAL_Driver\\Src"
             ],
             "defines": [
                 "USE_HAL_DRIVER",
