@@ -1,0 +1,310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>User Guide: /mnt/data/yaoyufeng/work.svnrepo/om6627x/om6627/trunk/SDK/hal/driver/source/drv_gpadc.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+-->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">User Guide
+   </div>
+   <div id="projectbrief">Bluetooth Low Energy 5.4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('drv__gpadc_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">drv_gpadc.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;RTE_driver.h&quot;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="om__driver_8h_source.html">om_driver.h</a>&quot;</code><br />
+</div>
+<p><a href="drv__gpadc_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrv__gpadc__temperature__compen__t.html">drv_gpadc_temperature_compen_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPADC temperature compensation.  <a href="structdrv__gpadc__temperature__compen__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrv__gpadc__config__t.html">drv_gpadc_config_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPADC config.  <a href="structdrv__gpadc__config__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct____PACKED.html">__PACKED</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPADC calibration parameters in efuse.  <a href="struct____PACKED.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrv__gpadc__cpft__calib__t.html">drv_gpadc_cpft_calib_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPADC calibration parameters.  <a href="structdrv__gpadc__cpft__calib__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:gacb19ad16a17496eddce870d353b7835f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__GPADC.html#gacb19ad16a17496eddce870d353b7835f">drv_gpadc_channel_p_t</a> { <br />
+&#160;&#160;<a class="el" href="group__GPADC.html#ggacb19ad16a17496eddce870d353b7835fa770c60657290ac266d21c460b103be6c">GPADC_CH_P_TEMPERATURE</a> = (1&lt;&lt;0U)
+, <a class="el" href="group__GPADC.html#ggacb19ad16a17496eddce870d353b7835faadf89d5fc5e8b80c41cd027660ec04d3">GPADC_CH_P_VBAT</a> = (1&lt;&lt;1U)
+, <a class="el" href="group__GPADC.html#ggacb19ad16a17496eddce870d353b7835fa86df2c0504c57df248a904d2ccbbcd32">GPADC_CH_P_GPIO2</a> = (1&lt;&lt;4U)
+, <a class="el" href="group__GPADC.html#ggacb19ad16a17496eddce870d353b7835fafacbbbd5fd97eabf107d059210254df3">GPADC_CH_P_GPIO3</a> = (1&lt;&lt;5U)
+, <br />
+&#160;&#160;<a class="el" href="group__GPADC.html#ggacb19ad16a17496eddce870d353b7835fa0987c1cb00f347b7f807d9c7c56fa88e">GPADC_CH_P_GPIO7</a> = (1&lt;&lt;6U)
+, <a class="el" href="group__GPADC.html#ggacb19ad16a17496eddce870d353b7835fa1556410fa3879c69928e9228f9b7eee5">GPADC_CH_P_GPIO8</a> = (1&lt;&lt;7U)
+, <a class="el" href="group__GPADC.html#ggacb19ad16a17496eddce870d353b7835faff691bb33bc8225636a3f1ca11d49f4e">GPADC_CH_P_GPIO11</a> = (1&lt;&lt;8U)
+, <a class="el" href="group__GPADC.html#ggacb19ad16a17496eddce870d353b7835fa3c04a6003a8ae6c3dc05bc2dc4c250c3">GPADC_CH_P_GPIO12</a> = (1&lt;&lt;9U)
+, <br />
+&#160;&#160;<a class="el" href="group__GPADC.html#ggacb19ad16a17496eddce870d353b7835faa9e7f3386574108caef2ca1bf8ea7cdb">GPADC_CH_P_GPIO14</a> = (1&lt;&lt;10U)
+, <a class="el" href="group__GPADC.html#ggacb19ad16a17496eddce870d353b7835fa8c38390139519f2d98c032bf4c3f68d4">GPADC_CH_P_GPIO15</a> = (1&lt;&lt;11U)
+<br />
+ }</td></tr>
+<tr class="memdesc:gacb19ad16a17496eddce870d353b7835f"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPADC channels P.  <a href="group__GPADC.html#gacb19ad16a17496eddce870d353b7835f">More...</a><br /></td></tr>
+<tr class="separator:gacb19ad16a17496eddce870d353b7835f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeb0b9206ea0317d7622170e231a4f863"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__GPADC.html#gaeb0b9206ea0317d7622170e231a4f863">drv_gpadc_channel_n_t</a> { <br />
+&#160;&#160;<a class="el" href="group__GPADC.html#ggaeb0b9206ea0317d7622170e231a4f863ab81516a67eabd67034cd392e9ad3cdd4">GPADC_CH_N_AVSS</a> = 3U
+, <a class="el" href="group__GPADC.html#ggaeb0b9206ea0317d7622170e231a4f863a73d47959ff3a7ecbe3b5ef42e0c5e79e">GPADC_CH_N_GPIO2</a> = 4U
+, <a class="el" href="group__GPADC.html#ggaeb0b9206ea0317d7622170e231a4f863a06440224157f873fe3b2a43975dea603">GPADC_CH_N_GPIO3</a> = 5U
+, <a class="el" href="group__GPADC.html#ggaeb0b9206ea0317d7622170e231a4f863a33e1c41e5edc9b243a5128bd14572b11">GPADC_CH_N_GPIO7</a> = 6U
+, <br />
+&#160;&#160;<a class="el" href="group__GPADC.html#ggaeb0b9206ea0317d7622170e231a4f863a0c0e0a52b3527c69a815c48e87f36dca">GPADC_CH_N_GPIO8</a> = 7U
+, <a class="el" href="group__GPADC.html#ggaeb0b9206ea0317d7622170e231a4f863a5c429f63dbb969e1402ba17299cefe57">GPADC_CH_N_GPIO11</a> = 8U
+, <a class="el" href="group__GPADC.html#ggaeb0b9206ea0317d7622170e231a4f863aaa4ae6b4af6551536c0d6ba635924d1e">GPADC_CH_N_GPIO12</a> = 9U
+, <a class="el" href="group__GPADC.html#ggaeb0b9206ea0317d7622170e231a4f863a06ceeb167f592827c50aceea3e43298d">GPADC_CH_N_GPIO14</a> = 10
+, <br />
+&#160;&#160;<a class="el" href="group__GPADC.html#ggaeb0b9206ea0317d7622170e231a4f863ae0425cfc2150d3753f4f51b85a451e29">GPADC_CH_N_GPIO15</a> = 11
+<br />
+ }</td></tr>
+<tr class="memdesc:gaeb0b9206ea0317d7622170e231a4f863"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPADC channels N.  <a href="group__GPADC.html#gaeb0b9206ea0317d7622170e231a4f863">More...</a><br /></td></tr>
+<tr class="separator:gaeb0b9206ea0317d7622170e231a4f863"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga80cac61d49b40284ec89cae08974252e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__GPADC.html#ga80cac61d49b40284ec89cae08974252e">drv_gpadc_mode_t</a> { <a class="el" href="group__GPADC.html#gga80cac61d49b40284ec89cae08974252ea8b0724a2e6db640f95a2c24522238db2">GPADC_MODE_SINGLE</a> = 0U
+, <a class="el" href="group__GPADC.html#gga80cac61d49b40284ec89cae08974252eab1d2a8b493b12ff99489cd70fa7c2a25">GPADC_MODE_DIFF</a> = 1U
+ }</td></tr>
+<tr class="memdesc:ga80cac61d49b40284ec89cae08974252e"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPADC mode.  <a href="group__GPADC.html#ga80cac61d49b40284ec89cae08974252e">More...</a><br /></td></tr>
+<tr class="separator:ga80cac61d49b40284ec89cae08974252e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad0bb37bcadb0bf5685d19698fa53d67e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__GPADC.html#gad0bb37bcadb0bf5685d19698fa53d67e">drv_gpadc_gain_t</a> { <a class="el" href="group__GPADC.html#ggad0bb37bcadb0bf5685d19698fa53d67eaa30166f166c0b861fe9efb82db4b17da">GPADC_GAIN_1_EXTERNAL_REF</a> = 0U
+, <a class="el" href="group__GPADC.html#ggad0bb37bcadb0bf5685d19698fa53d67eaf41afedaa42671ed0c7aa2b0c7257608">GPADC_GAIN_1_3_INTERNAL_REF</a> = 1U
+, <a class="el" href="group__GPADC.html#ggad0bb37bcadb0bf5685d19698fa53d67eadce2138237af865aca042e79b8b47f69">GPADC_GAIN_1_INTERNAL_REF</a> = 2U
+, <a class="el" href="group__GPADC.html#ggad0bb37bcadb0bf5685d19698fa53d67ea881468d6b5a2f231826d1f99d4866c5e">GPADC_GAIN_MAX</a>
+ }</td></tr>
+<tr class="memdesc:gad0bb37bcadb0bf5685d19698fa53d67e"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPADC gain.  <a href="group__GPADC.html#gad0bb37bcadb0bf5685d19698fa53d67e">More...</a><br /></td></tr>
+<tr class="separator:gad0bb37bcadb0bf5685d19698fa53d67e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga143bd51e260f0e5c960dab0f22317517"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__GPADC.html#ga143bd51e260f0e5c960dab0f22317517">drv_gpadc_sum_num_t</a> { <br />
+&#160;&#160;<a class="el" href="group__GPADC.html#gga143bd51e260f0e5c960dab0f22317517a4d5a79aecd6116187610ffc0832983a4">GPADC_SUM_NUM_2</a> = 0U
+, <a class="el" href="group__GPADC.html#gga143bd51e260f0e5c960dab0f22317517a95821556c7cfa7d6c571080f19b60a43">GPADC_SUM_NUM_4</a> = 1U
+, <a class="el" href="group__GPADC.html#gga143bd51e260f0e5c960dab0f22317517a421fc806cfa0fbaa36e9e7b000b47992">GPADC_SUM_NUM_8</a> = 2U
+, <a class="el" href="group__GPADC.html#gga143bd51e260f0e5c960dab0f22317517a7803f7937ccb3d45f9d639c8fa368086">GPADC_SUM_NUM_16</a> = 3U
+, <br />
+&#160;&#160;<a class="el" href="group__GPADC.html#gga143bd51e260f0e5c960dab0f22317517a3f57664e8cf916e99589fd9001cff842">GPADC_SUM_NUM_32</a> = 4U
+, <a class="el" href="group__GPADC.html#gga143bd51e260f0e5c960dab0f22317517a8321f9c37e9a356f6b7e5d755616a5bd">GPADC_SUM_NUM_64</a> = 5U
+, <a class="el" href="group__GPADC.html#gga143bd51e260f0e5c960dab0f22317517ab1fc7b8fca37d04d2f0e150d6c77d11f">GPADC_SUM_NUM_128</a> = 6U
+, <a class="el" href="group__GPADC.html#gga143bd51e260f0e5c960dab0f22317517ab796f4568bfeea56b498cbafe9cbeaeb">GPADC_SUM_NUM_256</a> = 7U
+, <br />
+&#160;&#160;<a class="el" href="group__GPADC.html#gga143bd51e260f0e5c960dab0f22317517ab845c7214e403fb5ead5b286ad6d90a1">GPADC_SUM_NUM_MAX</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga143bd51e260f0e5c960dab0f22317517"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPADC summation number.  <a href="group__GPADC.html#ga143bd51e260f0e5c960dab0f22317517">More...</a><br /></td></tr>
+<tr class="separator:ga143bd51e260f0e5c960dab0f22317517"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga661e66842eed93ab5ce2f7f859066453"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__GPADC.html#ga661e66842eed93ab5ce2f7f859066453">drv_gpadc_sampling_cycles_t</a> { <br />
+&#160;&#160;<a class="el" href="group__GPADC.html#gga661e66842eed93ab5ce2f7f859066453a35b8149685f4c310c8349e6415c92d78">GPADC_SAMPLING_CYCLES_0</a> = 0U
+, <a class="el" href="group__GPADC.html#gga661e66842eed93ab5ce2f7f859066453a31372b2e84770868bfe8a22790f3daf0">GPADC_SAMPLING_CYCLES_2</a> = 1U
+, <a class="el" href="group__GPADC.html#gga661e66842eed93ab5ce2f7f859066453ad6ebe7abbc8a4ec3c44c91cee04d8c29">GPADC_SAMPLING_CYCLES_8</a> = 2U
+, <a class="el" href="group__GPADC.html#gga661e66842eed93ab5ce2f7f859066453a37e628b721de07bcb5172f145db99ff0">GPADC_SAMPLING_CYCLES_16</a> = 3U
+, <br />
+&#160;&#160;<a class="el" href="group__GPADC.html#gga661e66842eed93ab5ce2f7f859066453a804b90a50bb0da7e1e39d9fe642c0dc5">GPADC_SAMPLING_CYCLES_32</a> = 4U
+, <a class="el" href="group__GPADC.html#gga661e66842eed93ab5ce2f7f859066453a7b8be22b85399e610c559f5badd0a84c">GPADC_SAMPLING_CYCLES_64</a> = 5U
+, <a class="el" href="group__GPADC.html#gga661e66842eed93ab5ce2f7f859066453a429382bde8642d436504cafbf031e06e">GPADC_SAMPLING_CYCLES_80</a> = 6U
+, <a class="el" href="group__GPADC.html#gga661e66842eed93ab5ce2f7f859066453a4ff1ce39d21566aa51b0304691b6ecf4">GPADC_SAMPLING_CYCLES_128</a> = 7U
+, <br />
+&#160;&#160;<a class="el" href="group__GPADC.html#gga661e66842eed93ab5ce2f7f859066453a5eca1781a8f6893a25c8dfb30e65a57a">GPADC_SAMPLING_CYCLES_256</a> = 8U
+, <a class="el" href="group__GPADC.html#gga661e66842eed93ab5ce2f7f859066453a59db7f2720b69aae6f619cb4e5b3eae0">GPADC_SAMPLING_CYCLES_512</a> = 9U
+, <a class="el" href="group__GPADC.html#gga661e66842eed93ab5ce2f7f859066453a3f13ffb1b35216f2243d6b562b6923be">GPADC_SAMPLING_CYCLES_1024</a> = 10U
+, <a class="el" href="group__GPADC.html#gga661e66842eed93ab5ce2f7f859066453a50c1cb45393504ff9e84b4f1256b49b4">GPADC_SAMPLING_CYCLES_2048</a> = 11U
+, <br />
+&#160;&#160;<a class="el" href="group__GPADC.html#gga661e66842eed93ab5ce2f7f859066453a4a2490e2365ea6dcd7a7aec9dbf4b141">GPADC_SAMPLING_CYCLES_4096</a> = 12U
+, <a class="el" href="group__GPADC.html#gga661e66842eed93ab5ce2f7f859066453af49bd77e2d8c33fcea18bc3c36817de4">GPADC_SAMPLING_CYCLES_MAX</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga661e66842eed93ab5ce2f7f859066453"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPADC sampling cycles.  <a href="group__GPADC.html#ga661e66842eed93ab5ce2f7f859066453">More...</a><br /></td></tr>
+<tr class="separator:ga661e66842eed93ab5ce2f7f859066453"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7df54425c201d51f8ac8a76a855ca08c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__GPADC.html#ga7df54425c201d51f8ac8a76a855ca08c">drv_gpadc_calib_sel_t</a> { <br />
+&#160;&#160;<a class="el" href="group__GPADC.html#gga7df54425c201d51f8ac8a76a855ca08cae678d8e9ee3144d0696d774178bacc14">GPADC_CALIB_FT_SINGLE</a> = 0
+, <a class="el" href="group__GPADC.html#gga7df54425c201d51f8ac8a76a855ca08cab36eda53aabe7b0bf046ed107d162ac5">GPADC_CALIB_CP_1</a> = 1
+, <a class="el" href="group__GPADC.html#gga7df54425c201d51f8ac8a76a855ca08cad78d495993acf1de8428c08e6d336b7c">GPADC_CALIB_CP_2</a> = 2
+, <a class="el" href="group__GPADC.html#gga7df54425c201d51f8ac8a76a855ca08ca9e1af38555fc9d21bcef4e69a2d799d2">GPADC_CALIB_FT_DIFF_1</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="group__GPADC.html#gga7df54425c201d51f8ac8a76a855ca08caf7235c470ddb440dc0690f8fd00d208c">GPADC_CALIB_FT_DIFF_2</a> = 4
+<br />
+ }</td></tr>
+<tr class="memdesc:ga7df54425c201d51f8ac8a76a855ca08c"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPADC calib sel.  <a href="group__GPADC.html#ga7df54425c201d51f8ac8a76a855ca08c">More...</a><br /></td></tr>
+<tr class="separator:ga7df54425c201d51f8ac8a76a855ca08c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8d2eb1e9b42ec38eda6e11a96c84c79e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__GPADC.html#ga8d2eb1e9b42ec38eda6e11a96c84c79e">drv_gpadc_control_t</a> { <br />
+&#160;&#160;<a class="el" href="group__GPADC.html#gga8d2eb1e9b42ec38eda6e11a96c84c79ea97cb85f7b12febfbf62b18f985bcd18c">GPADC_CONTROL_ENABLE_CLOCK</a> = 0U
+, <a class="el" href="group__GPADC.html#gga8d2eb1e9b42ec38eda6e11a96c84c79eaa64182e476efe71299a1afb9340dfe9b">GPADC_CONTROL_DISABLE_CLOCK</a> = 1U
+, <a class="el" href="group__GPADC.html#gga8d2eb1e9b42ec38eda6e11a96c84c79ea0b46e76fe54e690019920fd5bc8013c9">GPADC_CONTROL_SET_PARAM</a> = 2U
+, <a class="el" href="group__GPADC.html#gga8d2eb1e9b42ec38eda6e11a96c84c79ea3288311329cfd876b6d0207ad708a05b">GPADC_CONTROL_IS_BUSY</a> = 3U
+, <br />
+&#160;&#160;<a class="el" href="group__GPADC.html#gga8d2eb1e9b42ec38eda6e11a96c84c79ea1b4dfb7c0c5a4912d39a62400c178cf5">GPADC_CONTROL_READ_TEMPERATURE</a> = 4U
+, <a class="el" href="group__GPADC.html#gga8d2eb1e9b42ec38eda6e11a96c84c79ea36566375a01fc8228364e83a73ef5109">GPADC_CONTROL_SET_CALIB_TEMPER</a> = 5U
+, <a class="el" href="group__GPADC.html#gga8d2eb1e9b42ec38eda6e11a96c84c79eae866b05756d3952577c35d8b49195e79">GPADC_CONTROL_TEMPERATURE_COMPEN</a> = 6U
+, <a class="el" href="group__GPADC.html#gga8d2eb1e9b42ec38eda6e11a96c84c79ead80f53a17e4ac48e5a59caf5cff7839b">GPADC_CONTROL_SET_PARAM_WITHOUT_POWER_ON_PARAM</a> = 7U
+, <br />
+&#160;&#160;<a class="el" href="group__GPADC.html#gga8d2eb1e9b42ec38eda6e11a96c84c79ea42d43468d8c43ea138f48276be9c81c4">GPADC_CONTROL_CHANNEL_CFG</a> = 8U
+, <a class="el" href="group__GPADC.html#gga8d2eb1e9b42ec38eda6e11a96c84c79eac177d0ab76beff923590f2678cc08ba7">GPADC_CONTROL_GET_GAIN_ERROR</a> = 9U
+, <a class="el" href="group__GPADC.html#gga8d2eb1e9b42ec38eda6e11a96c84c79eaa09a6780d59edc7c8509bd8eb4d33244">GPADC_CONTROL_GET_VOS</a> = 10U
+, <a class="el" href="group__GPADC.html#gga8d2eb1e9b42ec38eda6e11a96c84c79eab6251b8fe18aebcdf7d8500bd481bb5c">GPADC_CONTROL_SET_AUTO_COMPEN</a> = 11U
+<br />
+ }</td></tr>
+<tr class="memdesc:ga8d2eb1e9b42ec38eda6e11a96c84c79e"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPADC control.  <a href="group__GPADC.html#ga8d2eb1e9b42ec38eda6e11a96c84c79e">More...</a><br /></td></tr>
+<tr class="separator:ga8d2eb1e9b42ec38eda6e11a96c84c79e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga44bfe8eaccd99c76666dd51bebcba994"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__GPADC.html#ga44bfe8eaccd99c76666dd51bebcba994">drv_gpadc_isr</a> (void)</td></tr>
+<tr class="memdesc:ga44bfe8eaccd99c76666dd51bebcba994"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPADC interrupt service routine.  <br /></td></tr>
+<tr class="separator:ga44bfe8eaccd99c76666dd51bebcba994"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadf1bd102646023a65618bd61346de169"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__GPADC.html#gadf1bd102646023a65618bd61346de169">drv_gpadc_init</a> (const <a class="el" href="structdrv__gpadc__config__t.html">drv_gpadc_config_t</a> *config)</td></tr>
+<tr class="memdesc:gadf1bd102646023a65618bd61346de169"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPADC initialization.  <br /></td></tr>
+<tr class="separator:gadf1bd102646023a65618bd61346de169"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0d4909955a67563449a72815899bc7a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__GPADC.html#ga0d4909955a67563449a72815899bc7a4">drv_gpadc_register_isr_callback</a> (drv_isr_callback_t cb)</td></tr>
+<tr class="memdesc:ga0d4909955a67563449a72815899bc7a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register isr callback for transmit/receive by interrupt &amp; gpdma mode.  <br /></td></tr>
+<tr class="separator:ga0d4909955a67563449a72815899bc7a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1d3128c6e7e452d00fcec457c0a56bdc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__GPADC.html#ga1d3128c6e7e452d00fcec457c0a56bdc">drv_gpadc_read</a> (uint16_t channel_p, int16_t *data, uint16_t num)</td></tr>
+<tr class="memdesc:ga1d3128c6e7e452d00fcec457c0a56bdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare receive number of data by block mode.  <br /></td></tr>
+<tr class="separator:ga1d3128c6e7e452d00fcec457c0a56bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8063bce0d13e7d89e27837dbda5f755d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__GPADC.html#ga8063bce0d13e7d89e27837dbda5f755d">drv_gpadc_read_int</a> (uint16_t channel_p, int16_t *data, uint16_t num)</td></tr>
+<tr class="memdesc:ga8063bce0d13e7d89e27837dbda5f755d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare receive number of data by interrupt mode,.  <br /></td></tr>
+<tr class="separator:ga8063bce0d13e7d89e27837dbda5f755d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga027e97ecd6f96c0bfa9917d9bcb845f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__GPADC.html#ga027e97ecd6f96c0bfa9917d9bcb845f4">drv_gpadc_gpdma_channel_allocate</a> (void)</td></tr>
+<tr class="memdesc:ga027e97ecd6f96c0bfa9917d9bcb845f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate gpdma channel for gpadc.  <br /></td></tr>
+<tr class="separator:ga027e97ecd6f96c0bfa9917d9bcb845f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa1356f585753bbab9cfe856720a28c5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__GPADC.html#gaa1356f585753bbab9cfe856720a28c5e">drv_gpadc_gpdma_channel_release</a> (void)</td></tr>
+<tr class="memdesc:gaa1356f585753bbab9cfe856720a28c5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release gpdma channel for gpadc.  <br /></td></tr>
+<tr class="separator:gaa1356f585753bbab9cfe856720a28c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacf2f55be5bd90c5a7a168300311ccdd2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__GPADC.html#gacf2f55be5bd90c5a7a168300311ccdd2">drv_gpadc_read_dma</a> (uint16_t channel_p, int16_t *data, uint16_t num)</td></tr>
+<tr class="memdesc:gacf2f55be5bd90c5a7a168300311ccdd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare receive number of data by GPDMA mode.  <br /></td></tr>
+<tr class="separator:gacf2f55be5bd90c5a7a168300311ccdd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga32d93afaafd7a2faa06fd9121c0ac8a8"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__GPADC.html#ga32d93afaafd7a2faa06fd9121c0ac8a8">drv_gpadc_control</a> (<a class="el" href="group__GPADC.html#ga8d2eb1e9b42ec38eda6e11a96c84c79e">drv_gpadc_control_t</a> control, void *argu)</td></tr>
+<tr class="memdesc:ga32d93afaafd7a2faa06fd9121c0ac8a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Control GPADC interface.  <br /></td></tr>
+<tr class="separator:ga32d93afaafd7a2faa06fd9121c0ac8a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+</div>
+</body>
+</html>

@@ -1,0 +1,888 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>User Guide: SPI</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+-->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">User Guide
+   </div>
+   <div id="projectbrief">Bluetooth Low Energy 5.4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__SPI.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">SPI<div class="ingroups"><a class="el" href="group__DRIVER.html">Driver</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>SPI driver.  
+<a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspi__config__t.html">spi_config_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">SPI Configuration.  <a href="structspi__config__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ga8ca86a080ece72454562cf2caa8ce479"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SPI.html#ga8ca86a080ece72454562cf2caa8ce479">spi_role_t</a> { <a class="el" href="group__SPI.html#gga8ca86a080ece72454562cf2caa8ce479a09c1f921b6707d02a9bd1e41817767a5">SPI_ROLE_SLAVE</a> = 0
+, <a class="el" href="group__SPI.html#gga8ca86a080ece72454562cf2caa8ce479a1f8bc6aa1f8e48dca00f24d45a7a2977">SPI_ROLE_MASTER</a> = 1
+ }</td></tr>
+<tr class="memdesc:ga8ca86a080ece72454562cf2caa8ce479"><td class="mdescLeft">&#160;</td><td class="mdescRight">SPI Role.  <a href="group__SPI.html#ga8ca86a080ece72454562cf2caa8ce479">More...</a><br /></td></tr>
+<tr class="separator:ga8ca86a080ece72454562cf2caa8ce479"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe85b3e5c8b526b9ecd230f7d3511fed"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SPI.html#gabe85b3e5c8b526b9ecd230f7d3511fed">spi_cs_t</a> { <a class="el" href="group__SPI.html#ggabe85b3e5c8b526b9ecd230f7d3511feda4d53fa3ac8f8bd8eb968a533d7248ed0">SPI_CS_LOW</a> = 0
+, <a class="el" href="group__SPI.html#ggabe85b3e5c8b526b9ecd230f7d3511fedaf1d6d95ffd77cf18f5331e37a1d9299a">SPI_CS_HIGH</a> = 1
+ }</td></tr>
+<tr class="memdesc:gabe85b3e5c8b526b9ecd230f7d3511fed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid level of CS.  <a href="group__SPI.html#gabe85b3e5c8b526b9ecd230f7d3511fed">More...</a><br /></td></tr>
+<tr class="separator:gabe85b3e5c8b526b9ecd230f7d3511fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac4b206a51636d91c5cffcbcee458c3cb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SPI.html#gac4b206a51636d91c5cffcbcee458c3cb">spi_mode_t</a> { <br />
+&#160;&#160;<a class="el" href="group__SPI.html#ggac4b206a51636d91c5cffcbcee458c3cba152359b11fb4b43ed0c5485eb0ab0673">SPI_MODE_0</a> = 0
+, <a class="el" href="group__SPI.html#ggac4b206a51636d91c5cffcbcee458c3cba7c1990cc15e9d69621be8e0e757e634c">SPI_MODE_1</a> = 1
+, <a class="el" href="group__SPI.html#ggac4b206a51636d91c5cffcbcee458c3cba4d350945d895a4acdc45ae96b0b82fc3">SPI_MODE_2</a> = 2
+, <a class="el" href="group__SPI.html#ggac4b206a51636d91c5cffcbcee458c3cbaf06ec36087996d6f328df39866ff5de6">SPI_MODE_3</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="group__SPI.html#ggac4b206a51636d91c5cffcbcee458c3cbab7d452aaee4d02a64abf2e606033c923">SPI_MODE_NUM</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:gac4b206a51636d91c5cffcbcee458c3cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">SPI Mode.  <a href="group__SPI.html#gac4b206a51636d91c5cffcbcee458c3cb">More...</a><br /></td></tr>
+<tr class="separator:gac4b206a51636d91c5cffcbcee458c3cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga03366143bbf6a0c761e2622ffbaaf23a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SPI.html#ga03366143bbf6a0c761e2622ffbaaf23a">spi_wire_t</a> { <a class="el" href="group__SPI.html#gga03366143bbf6a0c761e2622ffbaaf23aa72718b576f7eead7871ca3ff6f53a56d">SPI_WIRE_3</a> = 0
+, <a class="el" href="group__SPI.html#gga03366143bbf6a0c761e2622ffbaaf23aaf65e00e222f5d944016387f2e9c935df">SPI_WIRE_4</a> = 1
+ }</td></tr>
+<tr class="memdesc:ga03366143bbf6a0c761e2622ffbaaf23a"><td class="mdescLeft">&#160;</td><td class="mdescRight">SPI Wire.  <a href="group__SPI.html#ga03366143bbf6a0c761e2622ffbaaf23a">More...</a><br /></td></tr>
+<tr class="separator:ga03366143bbf6a0c761e2622ffbaaf23a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf5f18ca9b261f81e8649655fa1bdb3a2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SPI.html#gaf5f18ca9b261f81e8649655fa1bdb3a2">spi_first_t</a> { <a class="el" href="group__SPI.html#ggaf5f18ca9b261f81e8649655fa1bdb3a2a5a6abe145caf9794d5a70e5472ee988f">SPI_LSB_FIRST</a> = 0
+, <a class="el" href="group__SPI.html#ggaf5f18ca9b261f81e8649655fa1bdb3a2a8912f763c0e7854e08dfbe61b7a57cc6">SPI_MSB_FIRST</a> = 1
+ }</td></tr>
+<tr class="memdesc:gaf5f18ca9b261f81e8649655fa1bdb3a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">SPI MSB LSB Transmission.  <a href="group__SPI.html#gaf5f18ca9b261f81e8649655fa1bdb3a2">More...</a><br /></td></tr>
+<tr class="separator:gaf5f18ca9b261f81e8649655fa1bdb3a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9b7860b2dce7e3b15dcb97ffe5f4264a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SPI.html#ga9b7860b2dce7e3b15dcb97ffe5f4264a">spi_control_t</a> { <br />
+&#160;&#160;<a class="el" href="group__SPI.html#gga9b7860b2dce7e3b15dcb97ffe5f4264aabbc42fcf430b80ca4290844e5c57b9e0">SPI_CONTROL_CSN</a> = 0U
+, <a class="el" href="group__SPI.html#gga9b7860b2dce7e3b15dcb97ffe5f4264aaa1fe93b76db33a2fee4c7e5e5254e19a">SPI_CONTROL_DLY_SAMPLE_FE_SET</a> = 1U
+, <a class="el" href="group__SPI.html#gga9b7860b2dce7e3b15dcb97ffe5f4264aab4b6a40497c9a63bfe0d99a7f054ad53">SPI_CONTROL_DLY_SAMPLE_CYCLE_NUM_SET</a> = 2U
+, <a class="el" href="group__SPI.html#gga9b7860b2dce7e3b15dcb97ffe5f4264aa31ac9b3db22a596bfc5c71d7c191458f">SPI_CONTROL_TX_INT_MASK_SET</a> = 3U
+, <br />
+&#160;&#160;<a class="el" href="group__SPI.html#gga9b7860b2dce7e3b15dcb97ffe5f4264aaf5c018f157e93af3cbef3349a419a2bc">SPI_CONTROL_RX_INT_MASK_SET</a> = 4U
+<br />
+ }</td></tr>
+<tr class="memdesc:ga9b7860b2dce7e3b15dcb97ffe5f4264a"><td class="mdescLeft">&#160;</td><td class="mdescRight">SPI Control.  <a href="group__SPI.html#ga9b7860b2dce7e3b15dcb97ffe5f4264a">More...</a><br /></td></tr>
+<tr class="separator:ga9b7860b2dce7e3b15dcb97ffe5f4264a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:gae6454fa33d5f5aa2ae00c98dcd9d28c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SPI.html#gae6454fa33d5f5aa2ae00c98dcd9d28c1">drv_spi_init</a> (OM_SPI_Type *om_spi, <a class="el" href="structspi__config__t.html">spi_config_t</a> *cfg)</td></tr>
+<tr class="memdesc:gae6454fa33d5f5aa2ae00c98dcd9d28c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">SPI initialization.  <br /></td></tr>
+<tr class="separator:gae6454fa33d5f5aa2ae00c98dcd9d28c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaec72170916f0ebb7dd0de94df57cc614"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SPI.html#gaec72170916f0ebb7dd0de94df57cc614">drv_spi_uninit</a> (OM_SPI_Type *om_spi)</td></tr>
+<tr class="memdesc:gaec72170916f0ebb7dd0de94df57cc614"><td class="mdescLeft">&#160;</td><td class="mdescRight">SPI uninitialize, gate SPI clock.  <br /></td></tr>
+<tr class="separator:gaec72170916f0ebb7dd0de94df57cc614"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9e5e3bb9a6166935172c5cb2185ac14e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SPI.html#ga9e5e3bb9a6166935172c5cb2185ac14e">drv_spi_register_isr_callback</a> (OM_SPI_Type *om_spi, drv_isr_callback_t isr_cb)</td></tr>
+<tr class="memdesc:ga9e5e3bb9a6166935172c5cb2185ac14e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register callback for SPI transfer.  <br /></td></tr>
+<tr class="separator:ga9e5e3bb9a6166935172c5cb2185ac14e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8201db8decdaada1acf4489cdb382980"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SPI.html#ga8201db8decdaada1acf4489cdb382980">drv_spi_isr_callback</a> (OM_SPI_Type *om_spi, drv_event_t event, uint8_t *data, uint32_t num)</td></tr>
+<tr class="memdesc:ga8201db8decdaada1acf4489cdb382980"><td class="mdescLeft">&#160;</td><td class="mdescRight">The interrupt callback for SPI driver. It is a weak function. User should define their own callback in user file, other than modify it in the SPI driver.  <br /></td></tr>
+<tr class="separator:ga8201db8decdaada1acf4489cdb382980"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga401ba83e1289f3ee7c1b6cdd90c878c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SPI.html#ga401ba83e1289f3ee7c1b6cdd90c878c5">drv_spi_transfer</a> (OM_SPI_Type *om_spi, const uint8_t *tx_data, uint16_t tx_num, uint8_t *rx_data, uint16_t rx_num, uint32_t timeout_ms)</td></tr>
+<tr class="memdesc:ga401ba83e1289f3ee7c1b6cdd90c878c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start sending data to SPI transmitter by block mode.  <br /></td></tr>
+<tr class="separator:ga401ba83e1289f3ee7c1b6cdd90c878c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8b0c56c588ec3ae9210780c8018dbba4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SPI.html#ga8b0c56c588ec3ae9210780c8018dbba4">drv_spi_transfer_int</a> (OM_SPI_Type *om_spi, const uint8_t *tx_data, uint16_t tx_num, uint8_t *rx_data, uint16_t rx_num)</td></tr>
+<tr class="memdesc:ga8b0c56c588ec3ae9210780c8018dbba4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start sending data to SPI transmitter by interrupt mode.  <br /></td></tr>
+<tr class="separator:ga8b0c56c588ec3ae9210780c8018dbba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab99989d2bd7d43bce57a1fcc2354fdcb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SPI.html#gab99989d2bd7d43bce57a1fcc2354fdcb">drv_spi_gpdma_channel_allocate</a> (OM_SPI_Type *om_spi, drv_gpdma_chan_t channel)</td></tr>
+<tr class="memdesc:gab99989d2bd7d43bce57a1fcc2354fdcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate spi dma channel.  <br /></td></tr>
+<tr class="separator:gab99989d2bd7d43bce57a1fcc2354fdcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga445055f3971b42a0179d0251aabb2ffd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SPI.html#ga445055f3971b42a0179d0251aabb2ffd">drv_spi_gpdma_channel_release</a> (OM_SPI_Type *om_spi, drv_gpdma_chan_t channel)</td></tr>
+<tr class="memdesc:ga445055f3971b42a0179d0251aabb2ffd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate spi dma channel.  <br /></td></tr>
+<tr class="separator:ga445055f3971b42a0179d0251aabb2ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga05a4fa3703e256b0520eaeb0f39292ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SPI.html#ga05a4fa3703e256b0520eaeb0f39292ba">drv_spi_transfer_dma</a> (OM_SPI_Type *om_spi, const uint8_t *tx_data, uint16_t tx_num, uint8_t *rx_data, uint16_t rx_num)</td></tr>
+<tr class="memdesc:ga05a4fa3703e256b0520eaeb0f39292ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start sending data to SPI transmitter by dma mode.  <br /></td></tr>
+<tr class="separator:ga05a4fa3703e256b0520eaeb0f39292ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadb18e4bd2b8da079a1b25b21248f9fed"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SPI.html#gadb18e4bd2b8da079a1b25b21248f9fed">drv_spi_get_write_cnt</a> (OM_SPI_Type *om_spi)</td></tr>
+<tr class="memdesc:gadb18e4bd2b8da079a1b25b21248f9fed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get write count, supported IT and GPDMA write mode.  <br /></td></tr>
+<tr class="separator:gadb18e4bd2b8da079a1b25b21248f9fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga63cc1bf0dda91d1028cd8e8025ea7521"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SPI.html#ga63cc1bf0dda91d1028cd8e8025ea7521">drv_spi_get_read_cnt</a> (OM_SPI_Type *om_spi)</td></tr>
+<tr class="memdesc:ga63cc1bf0dda91d1028cd8e8025ea7521"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get read count, supported IT and GPDMA read mode.  <br /></td></tr>
+<tr class="separator:ga63cc1bf0dda91d1028cd8e8025ea7521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabf980cd2e7b672b27f4d1f4e8bdca054"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SPI.html#gabf980cd2e7b672b27f4d1f4e8bdca054">drv_spi_isr</a> (OM_SPI_Type *om_spi)</td></tr>
+<tr class="memdesc:gabf980cd2e7b672b27f4d1f4e8bdca054"><td class="mdescLeft">&#160;</td><td class="mdescRight">spi interrupt service routine  <br /></td></tr>
+<tr class="separator:gabf980cd2e7b672b27f4d1f4e8bdca054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>SPI driver. </p>
+<p>SPI driver apis and typedefs header file</p>
+<dl class="section version"><dt>Version</dt><dd>Version 1.0<ul>
+<li>Initial release </li>
+</ul>
+</dd></dl>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ga9b7860b2dce7e3b15dcb97ffe5f4264a" name="ga9b7860b2dce7e3b15dcb97ffe5f4264a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9b7860b2dce7e3b15dcb97ffe5f4264a">&#9670;&#160;</a></span>spi_control_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__SPI.html#ga9b7860b2dce7e3b15dcb97ffe5f4264a">spi_control_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SPI Control. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga9b7860b2dce7e3b15dcb97ffe5f4264aabbc42fcf430b80ca4290844e5c57b9e0" name="gga9b7860b2dce7e3b15dcb97ffe5f4264aabbc42fcf430b80ca4290844e5c57b9e0"></a>SPI_CONTROL_CSN&#160;</td><td class="fielddoc"><p>Set SPI controller CSn low/high, argu indicate csn value </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9b7860b2dce7e3b15dcb97ffe5f4264aaa1fe93b76db33a2fee4c7e5e5254e19a" name="gga9b7860b2dce7e3b15dcb97ffe5f4264aaa1fe93b76db33a2fee4c7e5e5254e19a"></a>SPI_CONTROL_DLY_SAMPLE_FE_SET&#160;</td><td class="fielddoc"><p>When argu is NULL, disable falling edge delay sample and vice versa </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9b7860b2dce7e3b15dcb97ffe5f4264aab4b6a40497c9a63bfe0d99a7f054ad53" name="gga9b7860b2dce7e3b15dcb97ffe5f4264aab4b6a40497c9a63bfe0d99a7f054ad53"></a>SPI_CONTROL_DLY_SAMPLE_CYCLE_NUM_SET&#160;</td><td class="fielddoc"><p>Set delay sample cycle num, argu is in the range [0, 3] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9b7860b2dce7e3b15dcb97ffe5f4264aa31ac9b3db22a596bfc5c71d7c191458f" name="gga9b7860b2dce7e3b15dcb97ffe5f4264aa31ac9b3db22a596bfc5c71d7c191458f"></a>SPI_CONTROL_TX_INT_MASK_SET&#160;</td><td class="fielddoc"><p>Set SPI tx total interrupt mask，1 is enable interrupt，0 is mask interrupt </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9b7860b2dce7e3b15dcb97ffe5f4264aaf5c018f157e93af3cbef3349a419a2bc" name="gga9b7860b2dce7e3b15dcb97ffe5f4264aaf5c018f157e93af3cbef3349a419a2bc"></a>SPI_CONTROL_RX_INT_MASK_SET&#160;</td><td class="fielddoc"><p>Set SPI rx total interrupt mask，1 is enable interrupt，0 is mask interrupt </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gabe85b3e5c8b526b9ecd230f7d3511fed" name="gabe85b3e5c8b526b9ecd230f7d3511fed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabe85b3e5c8b526b9ecd230f7d3511fed">&#9670;&#160;</a></span>spi_cs_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__SPI.html#gabe85b3e5c8b526b9ecd230f7d3511fed">spi_cs_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Valid level of CS. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggabe85b3e5c8b526b9ecd230f7d3511feda4d53fa3ac8f8bd8eb968a533d7248ed0" name="ggabe85b3e5c8b526b9ecd230f7d3511feda4d53fa3ac8f8bd8eb968a533d7248ed0"></a>SPI_CS_LOW&#160;</td><td class="fielddoc"><p>Valid level of CS is Low. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggabe85b3e5c8b526b9ecd230f7d3511fedaf1d6d95ffd77cf18f5331e37a1d9299a" name="ggabe85b3e5c8b526b9ecd230f7d3511fedaf1d6d95ffd77cf18f5331e37a1d9299a"></a>SPI_CS_HIGH&#160;</td><td class="fielddoc"><p>Valid level of CS is High. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gaf5f18ca9b261f81e8649655fa1bdb3a2" name="gaf5f18ca9b261f81e8649655fa1bdb3a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf5f18ca9b261f81e8649655fa1bdb3a2">&#9670;&#160;</a></span>spi_first_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__SPI.html#gaf5f18ca9b261f81e8649655fa1bdb3a2">spi_first_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SPI MSB LSB Transmission. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggaf5f18ca9b261f81e8649655fa1bdb3a2a5a6abe145caf9794d5a70e5472ee988f" name="ggaf5f18ca9b261f81e8649655fa1bdb3a2a5a6abe145caf9794d5a70e5472ee988f"></a>SPI_LSB_FIRST&#160;</td><td class="fielddoc"><p>data transfers start from LSB bit </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf5f18ca9b261f81e8649655fa1bdb3a2a8912f763c0e7854e08dfbe61b7a57cc6" name="ggaf5f18ca9b261f81e8649655fa1bdb3a2a8912f763c0e7854e08dfbe61b7a57cc6"></a>SPI_MSB_FIRST&#160;</td><td class="fielddoc"><p>data transfers start from MSB bit </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gac4b206a51636d91c5cffcbcee458c3cb" name="gac4b206a51636d91c5cffcbcee458c3cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac4b206a51636d91c5cffcbcee458c3cb">&#9670;&#160;</a></span>spi_mode_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__SPI.html#gac4b206a51636d91c5cffcbcee458c3cb">spi_mode_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SPI Mode. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggac4b206a51636d91c5cffcbcee458c3cba152359b11fb4b43ed0c5485eb0ab0673" name="ggac4b206a51636d91c5cffcbcee458c3cba152359b11fb4b43ed0c5485eb0ab0673"></a>SPI_MODE_0&#160;</td><td class="fielddoc"><p>MODE0: the idle time is low and the sampling starts from the first hop edge. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggac4b206a51636d91c5cffcbcee458c3cba7c1990cc15e9d69621be8e0e757e634c" name="ggac4b206a51636d91c5cffcbcee458c3cba7c1990cc15e9d69621be8e0e757e634c"></a>SPI_MODE_1&#160;</td><td class="fielddoc"><p>MODE1: the idle time is low and the sampling starts from the second hop edge. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggac4b206a51636d91c5cffcbcee458c3cba4d350945d895a4acdc45ae96b0b82fc3" name="ggac4b206a51636d91c5cffcbcee458c3cba4d350945d895a4acdc45ae96b0b82fc3"></a>SPI_MODE_2&#160;</td><td class="fielddoc"><p>MODE2: the idle time is high and the sampling starts from the first hop edge. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggac4b206a51636d91c5cffcbcee458c3cbaf06ec36087996d6f328df39866ff5de6" name="ggac4b206a51636d91c5cffcbcee458c3cbaf06ec36087996d6f328df39866ff5de6"></a>SPI_MODE_3&#160;</td><td class="fielddoc"><p>MODE3: the idle time is high and the sampling starts from the second hop edge. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggac4b206a51636d91c5cffcbcee458c3cbab7d452aaee4d02a64abf2e606033c923" name="ggac4b206a51636d91c5cffcbcee458c3cbab7d452aaee4d02a64abf2e606033c923"></a>SPI_MODE_NUM&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga8ca86a080ece72454562cf2caa8ce479" name="ga8ca86a080ece72454562cf2caa8ce479"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8ca86a080ece72454562cf2caa8ce479">&#9670;&#160;</a></span>spi_role_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__SPI.html#ga8ca86a080ece72454562cf2caa8ce479">spi_role_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SPI Role. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga8ca86a080ece72454562cf2caa8ce479a09c1f921b6707d02a9bd1e41817767a5" name="gga8ca86a080ece72454562cf2caa8ce479a09c1f921b6707d02a9bd1e41817767a5"></a>SPI_ROLE_SLAVE&#160;</td><td class="fielddoc"><p>Slave. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga8ca86a080ece72454562cf2caa8ce479a1f8bc6aa1f8e48dca00f24d45a7a2977" name="gga8ca86a080ece72454562cf2caa8ce479a1f8bc6aa1f8e48dca00f24d45a7a2977"></a>SPI_ROLE_MASTER&#160;</td><td class="fielddoc"><p>Master. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga03366143bbf6a0c761e2622ffbaaf23a" name="ga03366143bbf6a0c761e2622ffbaaf23a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga03366143bbf6a0c761e2622ffbaaf23a">&#9670;&#160;</a></span>spi_wire_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__SPI.html#ga03366143bbf6a0c761e2622ffbaaf23a">spi_wire_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SPI Wire. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga03366143bbf6a0c761e2622ffbaaf23aa72718b576f7eead7871ca3ff6f53a56d" name="gga03366143bbf6a0c761e2622ffbaaf23aa72718b576f7eead7871ca3ff6f53a56d"></a>SPI_WIRE_3&#160;</td><td class="fielddoc"><p>3 wire: CS&lt;-&gt;CS, CLK&lt;-&gt;CLK, DO&lt;-&gt;DO </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga03366143bbf6a0c761e2622ffbaaf23aaf65e00e222f5d944016387f2e9c935df" name="gga03366143bbf6a0c761e2622ffbaaf23aaf65e00e222f5d944016387f2e9c935df"></a>SPI_WIRE_4&#160;</td><td class="fielddoc"><p>4 wire: CS&lt;-&gt;CS, CLK&lt;-&gt;CLK, DO&lt;-&gt;DI, DI&lt;-&gt;DO </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga63cc1bf0dda91d1028cd8e8025ea7521" name="ga63cc1bf0dda91d1028cd8e8025ea7521"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga63cc1bf0dda91d1028cd8e8025ea7521">&#9670;&#160;</a></span>drv_spi_get_read_cnt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t drv_spi_get_read_cnt </td>
+          <td>(</td>
+          <td class="paramtype">OM_SPI_Type *&#160;</td>
+          <td class="paramname"><em>om_spi</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get read count, supported IT and GPDMA read mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_spi</td><td>Pointer to spi</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>count bytes of read completed </dd></dl>
+
+</div>
+</div>
+<a id="gadb18e4bd2b8da079a1b25b21248f9fed" name="gadb18e4bd2b8da079a1b25b21248f9fed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadb18e4bd2b8da079a1b25b21248f9fed">&#9670;&#160;</a></span>drv_spi_get_write_cnt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t drv_spi_get_write_cnt </td>
+          <td>(</td>
+          <td class="paramtype">OM_SPI_Type *&#160;</td>
+          <td class="paramname"><em>om_spi</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get write count, supported IT and GPDMA write mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_spi</td><td>Pointer to spi</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>count bytes of write completed </dd></dl>
+
+</div>
+</div>
+<a id="gab99989d2bd7d43bce57a1fcc2354fdcb" name="gab99989d2bd7d43bce57a1fcc2354fdcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab99989d2bd7d43bce57a1fcc2354fdcb">&#9670;&#160;</a></span>drv_spi_gpdma_channel_allocate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_spi_gpdma_channel_allocate </td>
+          <td>(</td>
+          <td class="paramtype">OM_SPI_Type *&#160;</td>
+          <td class="paramname"><em>om_spi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">drv_gpdma_chan_t&#160;</td>
+          <td class="paramname"><em>channel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allocate spi dma channel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_spi</td><td>Pointer to spi </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">channel</td><td>rx/tx channel</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="ga445055f3971b42a0179d0251aabb2ffd" name="ga445055f3971b42a0179d0251aabb2ffd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga445055f3971b42a0179d0251aabb2ffd">&#9670;&#160;</a></span>drv_spi_gpdma_channel_release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_spi_gpdma_channel_release </td>
+          <td>(</td>
+          <td class="paramtype">OM_SPI_Type *&#160;</td>
+          <td class="paramname"><em>om_spi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">drv_gpdma_chan_t&#160;</td>
+          <td class="paramname"><em>channel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allocate spi dma channel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_spi</td><td>Pointer to spi </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">channel</td><td>rx/tx channel</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="gae6454fa33d5f5aa2ae00c98dcd9d28c1" name="gae6454fa33d5f5aa2ae00c98dcd9d28c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae6454fa33d5f5aa2ae00c98dcd9d28c1">&#9670;&#160;</a></span>drv_spi_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_spi_init </td>
+          <td>(</td>
+          <td class="paramtype">OM_SPI_Type *&#160;</td>
+          <td class="paramname"><em>om_spi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structspi__config__t.html">spi_config_t</a> *&#160;</td>
+          <td class="paramname"><em>cfg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SPI initialization. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_spi</td><td>Pointer to SPI </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cfg</td><td>Configuration for SPI</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="gabf980cd2e7b672b27f4d1f4e8bdca054" name="gabf980cd2e7b672b27f4d1f4e8bdca054"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabf980cd2e7b672b27f4d1f4e8bdca054">&#9670;&#160;</a></span>drv_spi_isr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_spi_isr </td>
+          <td>(</td>
+          <td class="paramtype">OM_SPI_Type *&#160;</td>
+          <td class="paramname"><em>om_spi</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>spi interrupt service routine </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_spi</td><td>Pointer to SPI </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga8201db8decdaada1acf4489cdb382980" name="ga8201db8decdaada1acf4489cdb382980"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8201db8decdaada1acf4489cdb382980">&#9670;&#160;</a></span>drv_spi_isr_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_spi_isr_callback </td>
+          <td>(</td>
+          <td class="paramtype">OM_SPI_Type *&#160;</td>
+          <td class="paramname"><em>om_spi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">drv_event_t&#160;</td>
+          <td class="paramname"><em>event</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The interrupt callback for SPI driver. It is a weak function. User should define their own callback in user file, other than modify it in the SPI driver. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">om_spi</td><td>The SPI device address </td></tr>
+    <tr><td class="paramname">event</td><td>The driver uart event<ul>
+<li>DRV_EVENT_COMMON_TRANSFER_COMPLETED</li>
+<li>DRV_EVENT_COMMON_READ_COMPLETED</li>
+<li>DRV_EVENT_COMMON_ABORT</li>
+<li>DRV_EVENT_COMMON_ERROR</li>
+<li>DRV_EVENT_COMMON_DMA2PERIPH_COMPLETED </li>
+</ul>
+</td></tr>
+    <tr><td class="paramname">data</td><td>The data pointer of data to be read or write </td></tr>
+    <tr><td class="paramname">num</td><td>The data buffer valid data count </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga9e5e3bb9a6166935172c5cb2185ac14e" name="ga9e5e3bb9a6166935172c5cb2185ac14e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9e5e3bb9a6166935172c5cb2185ac14e">&#9670;&#160;</a></span>drv_spi_register_isr_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_spi_register_isr_callback </td>
+          <td>(</td>
+          <td class="paramtype">OM_SPI_Type *&#160;</td>
+          <td class="paramname"><em>om_spi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">drv_isr_callback_t&#160;</td>
+          <td class="paramname"><em>isr_cb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register callback for SPI transfer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_spi</td><td>Pointer to SPI </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">isr_cb</td><td>Pointer to callback </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga401ba83e1289f3ee7c1b6cdd90c878c5" name="ga401ba83e1289f3ee7c1b6cdd90c878c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga401ba83e1289f3ee7c1b6cdd90c878c5">&#9670;&#160;</a></span>drv_spi_transfer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_spi_transfer </td>
+          <td>(</td>
+          <td class="paramtype">OM_SPI_Type *&#160;</td>
+          <td class="paramname"><em>om_spi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>tx_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>tx_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>rx_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>rx_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Start sending data to SPI transmitter by block mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_spi</td><td>Pointer to SPI </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tx_data</td><td>Pointer to buffer with data to send to master SPI transmitter </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tx_num</td><td>Number of data items to send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rx_data</td><td>Pointer to buffer with data to send to master SPI receiver </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rx_num</td><td>Number of data items to receive </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout_ms</td><td>timeout</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>error </dd></dl>
+
+</div>
+</div>
+<a id="ga05a4fa3703e256b0520eaeb0f39292ba" name="ga05a4fa3703e256b0520eaeb0f39292ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga05a4fa3703e256b0520eaeb0f39292ba">&#9670;&#160;</a></span>drv_spi_transfer_dma()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_spi_transfer_dma </td>
+          <td>(</td>
+          <td class="paramtype">OM_SPI_Type *&#160;</td>
+          <td class="paramname"><em>om_spi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>tx_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>tx_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>rx_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>rx_num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Start sending data to SPI transmitter by dma mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_spi</td><td>Pointer to SPI </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tx_data</td><td>Pointer to buffer with data to send to master SPI transmitter </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tx_num</td><td>Number of data items to send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rx_data</td><td>Pointer to buffer with data to send to master SPI receiver </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rx_num</td><td>Number of data items to receive</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="ga8b0c56c588ec3ae9210780c8018dbba4" name="ga8b0c56c588ec3ae9210780c8018dbba4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8b0c56c588ec3ae9210780c8018dbba4">&#9670;&#160;</a></span>drv_spi_transfer_int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_spi_transfer_int </td>
+          <td>(</td>
+          <td class="paramtype">OM_SPI_Type *&#160;</td>
+          <td class="paramname"><em>om_spi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>tx_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>tx_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>rx_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>rx_num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Start sending data to SPI transmitter by interrupt mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_spi</td><td>Pointer to SPI </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tx_data</td><td>Pointer to buffer with data to send to master SPI transmitter </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tx_num</td><td>Number of data items to send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rx_data</td><td>Pointer to buffer with data to send to master SPI receiver </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rx_num</td><td>Number of data items to receive</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="gaec72170916f0ebb7dd0de94df57cc614" name="gaec72170916f0ebb7dd0de94df57cc614"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaec72170916f0ebb7dd0de94df57cc614">&#9670;&#160;</a></span>drv_spi_uninit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_spi_uninit </td>
+          <td>(</td>
+          <td class="paramtype">OM_SPI_Type *&#160;</td>
+          <td class="paramname"><em>om_spi</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SPI uninitialize, gate SPI clock. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_spi</td><td>Pointer to SPI </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+</div>
+</body>
+</html>

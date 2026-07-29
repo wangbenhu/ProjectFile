@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<flash_board>
+  <pass>
+    <loader>$TOOLKIT_DIR$\config\flashloader\Onmicro\OM6629X.flash</loader>
+    <range>CODE 0x404000 0x4fffff</range>
+  </pass>
+</flash_board>

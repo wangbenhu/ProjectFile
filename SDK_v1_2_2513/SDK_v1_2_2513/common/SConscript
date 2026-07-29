@@ -1,0 +1,17 @@
+from build.building import *
+
+COMMON_INCS = ['include']
+COMMON_INCS += ['source']
+
+COMMON_SRCS = ['source/om_printf.c']
+COMMON_SRCS += ['source/om_mem.c']
+COMMON_SRCS += ['source/om_ringbuff.c']
+COMMON_SRCS += ['source/om_common.c']
+COMMON_SRCS += ['source/om_fifo.c']
+COMMON_SRCS += ['source/om_libc_retarget.c']
+COMMON_SRCS += ['source/om_list.c']
+
+group = DefineGroup(name='common', srcs=COMMON_SRCS, incs=COMMON_INCS)
+
+
+Return('group')

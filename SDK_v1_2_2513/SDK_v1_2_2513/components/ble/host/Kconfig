@@ -1,0 +1,38 @@
+
+# Kconfig file for BLE controller
+menuconfig BLE_HOST
+    bool "BLE Host stack"
+    default y
+    config BLE_PROFILE
+        bool "BLE profile"
+        depends on BLE_HOST
+        default y
+
+
+if BLE_HOST
+    config LE_LL_SEC_CON
+        bool "LE Link Layer Security Connection"
+        default n
+    config LE_HOST_ATT_MTU
+        int "LE Host ATT MTU"
+        default 247
+    config LE_HOST_ATT_WRITE_CACHE_SIZE
+        int "LE Host ATT Write Cache Size"
+        default 23
+    config LE_HOST_MAX_GATT_SERV_NUM
+        int "LE Host Max GATT Service Number"
+        default 8
+    config LE_HOST_SC_PAIRING
+        bool "LE Host Secure Connections Pairing"
+        default n
+    config LE_HOST_ADV_SET_NUM
+        int "LE Host Advertising Set Number"
+        default 4
+    config LE_HOST_CONNECTION_NB
+        int "LE Host Connection Number"
+        default 8
+    config LE_HOST_MSG_SIZE
+        int "LE Host Message Size"
+        default 512
+endif
+

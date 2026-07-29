@@ -1,0 +1,19 @@
+output_path: './mbr.bin'
+
+# 当使能安全功能时，在下方填入私钥，否则留空
+private_key:
+
+# iflash config中任意一个为None,则代表不对flash进行配置
+iflash_config:
+  clk_div: 0x4                        # Flash分频系数（基于32Mhz来分频），禁止clk_div < 4, 可以选择(0x4, 0x8, 0x10, 0x20)
+  delay: 0                            # Flash Delay参数 (一般用0x0即可)
+  read_cmd: 'FLASH_FAST_READ_QO'      # 可选参数(FLASH_FAST_READ_QO, FLASH_FAST_READ_DO, FLASH_FAST_READ, FLASH_READ)
+  write_cmd: 'FLASH_PAGE_PROGRAM'     # 不可更改
+  spi_mode: 'SPI_MODE_0'              # 不可更改
+  encrypt_en: 0                       # NOT USED
+
+manifest_config:
+  img_ver: 0x00000001                 # 固件版本号(当不使能安全功能时，值不产生影响)
+  img_vma: 0x00404000                 # APP程序的存放地址
+  img_lma: 0x00460000                 # 如果需要升级时，这一项需要填写为备份区地址并将生成的MBR烧录到MBR1，如果是正常启动，这一项参数需要为0xDEADBEEF,且将生成的MBR烧录到MBR0
+  img_path: './ble_app_simple_nonrtos.bin'    # APP程序路径

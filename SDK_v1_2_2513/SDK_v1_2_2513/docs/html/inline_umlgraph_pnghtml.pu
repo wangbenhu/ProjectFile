@@ -1,0 +1,443 @@
+@startuml inline_umlgraph_1.png
+repeat :Start
+partition Event Scheduler {
+    :Event scheduler: call __evt_schedule()__;
+}
+:Enter critical section;
+if (Is there any event of __evt_set()__ here ?) then (No)
+    partition Power Manager {
+        if (Is anything prevent sleep ? (Controlled by __pm_sleep_prevent()/pm_sleep_allow()__)) then (No)
+            :Check other sleep checker status;
+            note
+                The 1st checker function is
+                __drv_pmu_deep_sleep_is_allow()__,
+                Other checker register by
+                __pm_sleep_checker_callback_register()__
+            end note
+        else (Yes)
+        endif
+        partition Sleep Flow {
+            if (Is PM_STATUS_IDLE ?) then (Yes)
+                :Call __WFI();
+            else (No)
+                :Trigger peripheral store something;
+                note
+                Register callback through
+                __pm_sleep_store_restore_callback_register()__
+
+                PM_SLEEP_STORE
+                end note
+
+                :Notify user: enter sleep;
+                note
+                Register callback through
+                __pm_sleep_notify_user_callback_register()__
+
+                PM_SLEEP_ENTRY
+                end note
+
+                ' :Lock the output state of all IO;
+                :Sleep;
+
+                #gray:System run on 'High Speed Internal Clock (RC32M)';
+
+                :Trigger peripheral restore something in RC32M;
+                note: PM_SLEEP_RESTORE_HSI
+
+                :Notify user: leave sleep (top half);
+                note: PM_SLEEP_LEAVE_TOP_HALF
+
+                ' :Unlock the output state of all IO;
+                #gray:System run on 'High Speed External Clock (XTAL32M)';
+
+                :Trigger peripheral restore something in XTAL32M;
+                note: PM_SLEEP_RESTORE_HSE
+
+                :Notify user: leave sleep (bottom half);
+                note: PM_SLEEP_LEAVE_BOTTOM_HALF
+            endif
+        }
+    }
+else (Yes)
+endif
+:Leave critical section;
+repeat while
+@enduml
+@startuml obapi_ble.png
+actor APP as app
+participant  HOST as host
+app -> host : <b><color blue>ob_event_callback_reg(callback_0)
+app -> host : <b><color blue>ob_event_callback_reg(callback_1)
+app -> host : <b><color blue>ob_event_callback_reg(callback_2)
+note over host : Event Generated
+app <- host : callback_0(...)
+app <- host : callback_1(...)
+app <- host : callback_2(...)
+app -> host : <b><color blue>ob_event_callback_unreg(callback_1)
+note over host : Event Generated
+app <- host : callback_0(...)
+app <- host : callback_2(...)
+note over host : Event Generated
+app <- host : callback_0(...)
+app -> host : <b><color blue>ob_event_abort()
+app <-- host !!: callback_2(...)
+note right : No more event received
+@enduml
+@startuml obapi_gap_accept_filter.png
+actor APP as app
+participant  HOST as host
+
+note over app, host : No filter accept list used
+app -> host : <b><color blue>ob_gap_accept_list_set(fa_addrs, len)</color></b>
+@enduml
+@startuml obapi_gap_scan.png
+actor APP as app
+participant  HOST as host
+== Scan ==
+app -> host : <b><color blue>ob_gap_scan_start(param)
+hnote over app, host: Scan Started
+app <- host : <b><color green>OB_GAP_EVT_ADV_REPORT
+app <- host : <b><color green>OB_GAP_EVT_ADV_REPORT
+app <- host : <b><color green>OB_GAP_EVT_ADV_REPORT
+app -> host : <b><color blue>ob_gap_scan_stop()
+hnote over host: Scan Stopped
+@enduml
+@startuml obapi_gap_scan_timeout.png
+actor APP as app
+participant  HOST as host
+== Scan timeout ==
+app -> host : <b><color blue>ob_gap_scan_start(param)
+hnote over app, host: Scan Started
+app <- host : <b><color green>OB_GAP_EVT_ADV_REPORT
+app <- host : <b><color green>OB_GAP_EVT_ADV_REPORT
+app <- host : <b><color green>OB_GAP_EVT_ADV_REPORT
+hnote over host: Scan Timeout
+app <- host : <b><color green>OB_GAP_EVT_TIMEOUT
+@enduml
+@startuml obapi_gap_adv.png
+actor APP as app
+participant  HOST as host
+
+== Adv Start Success ==
+app -> host : <b><color blue>ob_gap_adv_start(idx_0, param, adv_data, scan_data)
+app <- host : <b><color green>OB_GAP_EVT_ADV_STATE_CHANGED
+note right : Adv idx=0 Start Success
+app -> host : <b><color blue>ob_gap_adv_start(idx_1, param, adv_data, scan_data)
+app <- host : <b><color green>OB_GAP_EVT_ADV_STATE_CHANGED
+note right : Adv idx=1 Start Success
+app -> host : <b><color blue>ob_gap_adv_start(idx_2, param, adv_data, scan_data)
+app <- host : <b><color green>OB_GAP_EVT_ADV_STATE_CHANGED
+note right : Adv idx=2 Start Success
+
+== Adv Stop Success ==
+app -> host : <b><color blue>ob_gap_adv_stop(idx_2)
+app <- host : <b><color green>OB_GAP_EVT_ADV_STATE_CHANGED
+note right : Adv idx=2 Stop Success
+
+== Start Adv Failed ==
+app -> host : <b><color blue>ob_gap_adv_start(idx_0, err_param, ...)
+note right : Return Error Code
+
+== Update Adv Data ==
+app -> host : <b><color blue>ob_gap_adv_start(idx_0, param=NULL, adv_data, scan_data)
+note right : Adv Data Updated
+
+== Adv Stopped ==
+app <-- host : <b><color green>OB_GAP_EVT_ADV_STATE_CHANGED
+note right : (Adv Stopped) Advertising Timeout
+app <-- host : <b><color green>OB_GAP_EVT_ADV_STATE_CHANGED
+note right : (Adv Stopped) Limit Reached
+app <-- host : <b><color green>OB_GAP_EVT_ADV_STATE_CHANGED
+note right : (Adv Stopped) Connected
+@enduml
+@startuml obapi_gap_connect.png
+!pragma teoz true
+
+box Central #Beige
+actor Central as c
+participant  Stack as cs
+end box
+box Peripheral #Lavender
+participant  Stack as ps
+actor Peripheral as p
+end box
+
+== Connect Success ==
+c -> cs : <b><color blue>ob_gap_connect(conn_param)
+cs -> ps : connecting
+hnote over cs,ps: Connection established
+c <- cs : <b><color green>OB_GAP_EVT_CONNECTED
+& ps -> p : <b><color green>OB_GAP_EVT_CONNECTED
+== Connect Canceled ==
+c -> cs : <b><color blue>ob_gap_connect(conn_param)
+hnote over c: Cancel connect
+c -> cs : <b><color blue>ob_gap_connect_cancel()
+@enduml
+@startuml obapi_gap_bond.png
+!pragma teoz true
+
+box Central #Beige
+actor Central as c
+participant  Stack as cs
+end box
+box Peripheral #Lavender
+participant  Stack as ps
+actor Peripheral as p
+end box
+
+== Passkey Pairing ==
+hnote over cs,ps: Connection Established
+ps <- p : <b><color blue>ob_gap_security_request(conn_idx, auth)
+c <- cs : <b><color green>OB_GAP_EVT_SEC_REQUEST
+c -> cs : <b><color blue>ob_gap_pairing_request(conn_idx, param)
+ps -> p : <b><color green>OB_GAP_EVT_PAIRING_REQUEST
+ps <- p : <b><color blue>ob_gap_pairing_response(conn_idx, param)
+
+c <- cs : <b><color green>OB_GAP_EVT_PIN_REQUEST</color></b>(key show)
+c -> cs : <b><color blue>ob_gap_pin_response(conn_idx, param)
+ps -> p : <b><color green>OB_GAP_EVT_PIN_REQUEST</color></b>(key input)
+ps <- p : <b><color blue>ob_gap_pin_response(conn_idx, param)
+
+hnote over cs,ps: Link encrypted
+
+ps -> p : <b><color green>OB_GAP_EVT_BOND_INFO_REQUEST</color></b>(LTK)
+& c <- cs : <b><color green>OB_GAP_EVT_BOND_INFO_REQUEST</color></b>(LTK)
+ps <- p : <b><color blue>ob_gap_bond_info_response(conn_idx, LTK)
+& c -> cs : <b><color blue>ob_gap_bond_info_response(conn_idx, LTK)
+c <- cs : <b><color green>OB_GAP_EVT_BOND_INFO_REQUEST</color></b>(IRK)
+c -> cs : <b><color blue>ob_gap_bond_info_response(conn_idx, IRK)
+
+hnote over cs,ps: Bond Info
+ps -> p : <b><color green>OB_GAP_EVT_BOND_INFO</color></b>(LTK)
+& c <- cs : <b><color green>OB_GAP_EVT_BOND_INFO</color></b>(LTK)
+ps -> p : <b><color green>OB_GAP_EVT_BOND_INFO</color></b>(IRK)
+
+hnote over cs,ps: Bond Success
+
+c <- cs : <b><color green>OB_GAP_EVT_BONDED
+& ps -> p : <b><color green>OB_GAP_EVT_BONDED
+c <- cs : <b><color green>OB_GAP_EVT_ENCRYPT
+& ps -> p : <b><color green>OB_GAP_EVT_ENCRYPT
+@enduml
+@startuml obapi_gap_enc.png
+!pragma teoz true
+
+box Central #Beige
+actor Central as c
+participant  Stack as cs
+end box
+box Peripheral #Lavender
+participant  Stack as ps
+actor Peripheral as p
+end box
+
+hnote over cs,ps: Connection Established
+c -> cs : <b><color blue>ob_gap_encrypt(conn_idx, ediv, random, ltk)
+cs -> ps : encrypting
+ps -> p : <b><color green>OB_GAP_EVT_LTK_REQUEST
+ps <- p : <b><color blue>ob_gap_ltk_respons(conn_idx, ltk)
+hnote over cs,ps: Link encrypted
+
+c <- cs : <b><color green>OB_GAP_EVT_ENCRYPT
+& ps -> p : <b><color green>OB_GAP_EVT_ENCRYPT
+@enduml
+@startuml obapi_gap_param_update.png
+!pragma teoz true
+
+box Central #Beige
+actor Central as c
+participant  Stack as cs
+end box
+box Peripheral #Lavender
+participant  Stack as ps
+actor Peripheral as p
+end box
+
+hnote over cs,ps: Connection Established
+ps <- p : <b><color blue>ob_gap_conn_param_update(conn_idx, p_conn_params)
+cs <-- ps: Conn Param Update Request
+c <- cs : <b><color green>OB_GAP_EVT_CONN_PARAMS_REQUEST
+c --> cs : <b><color blue>ob_gap_conn_param_update(conn_idx, p_conn_params)
+hnote over cs,ps: Connect Param Updated
+c <- cs : <b><color green>OB_GAP_EVT_CONN_PARAMS_UPDATE
+& ps -> p : <b><color green>OB_GAP_EVT_CONN_PARAMS_UPDATE
+@enduml
+@startuml obapi_gap_data_length.png
+!pragma teoz true
+box Central #Beige
+actor Central as c
+participant  Stack as cs
+end box
+box Peripheral #Lavender
+participant  Stack as ps
+actor Peripheral as p
+end box
+
+hnote over cs,ps: Connection Established
+c --> cs : <b><color blue>ob_gap_data_length_update(conn_idx, tx_phys, rx_phys)
+& ps <-- p : <b><color blue>ob_gap_data_length_update(conn_idx, tx_phys, rx_phys)
+hnote over cs,ps: PHY updated
+c <- cs : <b><color green>OB_GAP_EVT_DATA_LEN_CHANGED
+& ps -> p : <b><color green>OB_GAP_EVT_DATA_LEN_CHANGED
+@enduml
+@startuml obapi_gap_phy_update.png
+!pragma teoz true
+box Central #Beige
+actor Central as c
+participant  Stack as cs
+end box
+box Peripheral #Lavender
+participant  Stack as ps
+actor Peripheral as p
+end box
+
+hnote over cs,ps: Connection Established
+c --> cs : <b><color blue>ob_gap_phy_update(conn_idx, tx_phys, rx_phys)
+& ps <-- p : <b><color blue>ob_gap_phy_update(conn_idx, tx_phys, rx_phys)
+hnote over cs,ps: PHY updated
+c <- cs : <b><color green>OB_GAP_EVT_PHY_UPDATED
+& ps -> p : <b><color green>OB_GAP_EVT_PHY_UPDATED
+@enduml
+@startuml obapi_gap_disconnect.png
+!pragma teoz true
+
+box Central #Beige
+actor Central as c
+participant  Stack as cs
+end box
+box Peripheral #Lavender
+participant  Stack as ps
+actor Peripheral as p
+end box
+
+== Active disconnect ==
+hnote over cs,ps: Connection Established
+c --> cs : <b><color blue>ob_gap_disconnect(conn_param)
+& ps <-- p : <b><color blue>ob_gap_disconnect(conn_param)
+cs -> ps : disconnecting
+hnote over cs,ps: Connection disconnected
+c <- cs : <b><color green>OB_GAP_EVT_DISCONNECTED
+& ps -> p : <b><color green>OB_GAP_EVT_DISCONNECTED
+== Passive disconnect ==
+hnote over cs,ps: Connection Established
+hnote over cs,ps #e9967a: Connection Timeout...
+c <- cs : <b><color green>OB_GAP_EVT_DISCONNECTED
+& ps -> p : <b><color green>OB_GAP_EVT_DISCONNECTED
+@enduml
+@startuml obapi_gatt_mtu.png
+!pragma teoz true
+
+box Client #Beige
+actor Client as c
+participant  Stack as cs
+end box
+box Server #Lavender
+participant  Stack as ss
+actor Server as p
+end box
+
+hnote over cs,ss: Connection Established
+c -> cs : <b><color blue>ob_gattc_mtu_req(conn_idx, mtu)
+hnote over cs,ss: MTU Updated
+c <- cs : <b><color green>OB_GATT_EVT_MTU_EXCHANGED
+& ss -> p : <b><color green>OB_GATT_EVT_MTU_EXCHANGED
+@enduml
+@startuml obapi_gatt_find_service.png
+!pragma teoz true
+
+box Client #Beige
+actor Client as c
+participant  Stack as cs
+end box
+box Server #Lavender
+participant  Server as ss
+end box
+
+hnote over cs,ss: Connection Established
+== Find Service By Handle ==
+c -> cs : <b><color blue>ob_gattc_find_service_by_handle(conn_idx, start_handl, end_handle)
+hnote over ss: Service Response
+c <- cs : <b><color green>OB_GATTC_EVT_FIND_SERV_RSP
+== Find Service By UUID ==
+c -> cs : <b><color blue>ob_gattc_find_service_by_uuid(conn_idx, start_handl, end_handle, uuid)
+hnote over ss: Service Response
+c <- cs : <b><color green>OB_GATTC_EVT_FIND_SERV_BY_UUID_RSP
+== Find Characteristic ==
+c -> cs : <b><color blue>ob_gattc_find_characteristic(conn_idx, start_handl, end_handle)
+hnote over ss: Char Response
+c <- cs : <b><color green>OB_GATTC_EVT_FIND_CHAR_RSP
+== Find Descriptor ==
+c -> cs : <b><color blue>ob_gattc_find_descriptor(conn_idx, start_handl, end_handle)
+hnote over ss: Desc Response
+c <- cs : <b><color green>OB_GATTC_EVT_FIND_DESC_RSP
+@enduml
+@startuml obapi_gatt_ntf_ind.png
+!pragma teoz true
+
+box Client #Beige
+actor Client as c
+participant  Stack as cs
+end box
+box Server #Lavender
+participant  Stack as ss
+actor Server as p
+end box
+
+hnote over cs,ss: Connection Established
+== Send Notification ==
+ss <- p : <b><color blue>ob_gatts_send_hvx(conn_idx, data)
+c <- cs : <b><color green>OB_GATTC_EVT_HVX_IND
+& ss -> p : <b><color green>OB_GATT_EVT_TX_COMPLETE
+== Send Indication ==
+ss <- p : <b><color blue>ob_gatts_send_hvx(conn_idx, data)
+c <- cs : <b><color green>OB_GATTC_EVT_HVX_IND
+c -> cs : <b><color blue>ob_gattc_indicate_cfm(conn_idx, att_hdl)
+ss -> p : <b><color green>OB_GATTS_EVT_INDICATE_CFM
+@enduml
+@startuml obapi_gatt_read_write.png
+!pragma teoz true
+
+box Client #Beige
+actor Client as c
+participant  Stack as cs
+end box
+box Server #Lavender
+participant  Stack as ss
+actor Server as p
+end box
+
+hnote over cs,ss: Connection Established
+== Read By Handle ==
+c -> cs : <b><color blue>ob_gattc_read(conn_idx, att_handle, offset)
+ss -> p : <b><color green>OB_GATTS_EVT_READ_REQ
+ss <- p : <b><color blue>ob_gatts_read_response(conn_idx, att_state, data)
+c <- cs : <b><color green>OB_GATTC_EVT_READ_RSP
+== Read By UUID ==
+c -> cs : <b><color blue>ob_gattc_read_by_uuid(conn_idx, start_handle, end_handle, uuid)
+ss -> p : <b><color green>OB_GATTS_EVT_READ_REQ
+ss <- p : <b><color blue>ob_gatts_read_response(conn_idx, att_state, data)
+c <- cs : <b><color green>OB_GATTC_EVT_READ_BY_UUID_RSP
+== Write Request ==
+c -> cs : <b><color blue>ob_gattc_write(conn_idx, start_handle, end_handle, uuid)
+ss -> p : <b><color green>OB_GATTS_EVT_WRITE_REQ
+ss <- p : <b><color blue>ob_gatts_write_response(conn_idx, att_state)
+c <- cs : <b><color green>OB_GATTC_EVT_WRITE_RSP
+== Write Command ==
+c -> cs : <b><color blue>ob_gattc_write(conn_idx, start_handle, end_handle, uuid)
+ss -> p : <b><color green>OB_GATTS_EVT_WRITE_REQ
+& c <- cs : <b><color green>OB_GATT_EVT_TX_COMPLETE
+@enduml
+@startuml inline_umlgraph_2.png
+|Generate firmware|
+start
+:Compile Project;
+|Generate OTA packet|
+:CreateFwTool.exe pack firmware.bin APP 0x00;
+:"firmware.zip" generated;
+|Update|
+:Transfer "firmware.zip" to the mobile device;
+:Update device firmware with DfuUpload;
+|Reboot|
+:Automatic reboot when firmware update completes;
+stop
+@enduml

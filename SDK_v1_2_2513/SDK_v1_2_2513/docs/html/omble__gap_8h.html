@@ -1,0 +1,656 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>User Guide: /mnt/data/yaoyufeng/work.svnrepo/om6627x/om6627/trunk/SDK/components/ble/host/include/omble_gap.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+-->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">User Guide
+   </div>
+   <div id="projectbrief">Bluetooth Low Energy 5.4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('omble__gap_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">omble_gap.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="omble__range_8h_source.html">omble_range.h</a>&quot;</code><br />
+</div>
+<p><a href="omble__gap_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__addr.html">ob_gap_addr</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">GAP address.  <a href="structob__gap__addr.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__adv__param.html">ob_adv_param</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advertising parameter.  <a href="structob__adv__param.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__data.html">ob_data</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__conn__params__t.html">ob_gap_conn_params_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connection parameters.  <a href="structob__gap__conn__params__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__conn__parameter__t.html">ob_gap_conn_parameter_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connection parameters V2.  <a href="structob__gap__conn__parameter__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__bond__info__t.html">ob_bond_info_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bonding information.  <a href="structob__bond__info__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__smp__pin__t.html">ob_smp_pin_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Response pin code.  <a href="structob__smp__pin__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__evt__connected__t.html">ob_gap_evt_connected_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0cad4e099d93328262d7508e521baad652b">OB_GAP_EVT_CONNECTED</a>.  <a href="structob__gap__evt__connected__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__evt__disconnected__t.html">ob_gap_evt_disconnected_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0caf3a95feb5dfd78128a4258f808a1778b">OB_GAP_EVT_DISCONNECTED</a>.  <a href="structob__gap__evt__disconnected__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__evt__adv__state__changed__t.html">ob_gap_evt_adv_state_changed_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0cab25f36920a5a8020c93ce42b7e675041">OB_GAP_EVT_ADV_STATE_CHANGED</a>.  <a href="structob__gap__evt__adv__state__changed__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__evt__conn__params__update__t.html">ob_gap_evt_conn_params_update_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca127d4887b93a9f9f84df67b6ef88dc9c">OB_GAP_EVT_CONN_PARAMS_UPDATE</a>.  <a href="structob__gap__evt__conn__params__update__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__evt__conn__params__request__t.html">ob_gap_evt_conn_params_request_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca2bcf050ad16febc5f7c6f14c0b599aef">OB_GAP_EVT_CONN_PARAMS_REQUEST</a>.  <a href="structob__gap__evt__conn__params__request__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__report__event__type__t.html">ob_gap_report_event_type_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advertising report type.  <a href="structob__gap__report__event__type__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__evt__adv__report__t.html">ob_gap_evt_adv_report_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca1513137e6b8df739999af0b7dba1115d">OB_GAP_EVT_ADV_REPORT</a>.  <a href="structob__gap__evt__adv__report__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__evt__encrypt__t.html">ob_gap_evt_encrypt_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0caee58083c5f47308252cd213fcc2d1732">OB_GAP_EVT_ENCRYPT</a>.  <a href="structob__gap__evt__encrypt__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__auth__t.html">ob_gap_auth_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">SMP Authentication requirements flags.  <a href="structob__gap__auth__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__evt__sec__request__t.html">ob_gap_evt_sec_request_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca95c3fb71d6aa106d042e807ff2c17ee0">OB_GAP_EVT_SEC_REQUEST</a>.  <a href="structob__gap__evt__sec__request__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__evt__pairing__request__t.html">ob_gap_evt_pairing_request_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0caef50270c348e747414355a7b2b9661b0">OB_GAP_EVT_PAIRING_REQUEST</a>.  <a href="structob__gap__evt__pairing__request__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__evt__pin__request__t.html">ob_gap_evt_pin_request_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0cac00d7b7b2e7db3b9513082851284f6d0">OB_GAP_EVT_PIN_REQUEST</a>.  <a href="structob__gap__evt__pin__request__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__evt__ltk__request__t.html">ob_gap_evt_ltk_request_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca6bc4bb453770d94fefe32b8a8d5234c7">OB_GAP_EVT_LTK_REQUEST</a>.  <a href="structob__gap__evt__ltk__request__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__evt__bond__info__request__t.html">ob_gap_evt_bond_info_request_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0caf678d6be0a3549995504b5bd8cd83918">OB_GAP_EVT_BOND_INFO_REQUEST</a>.  <a href="structob__gap__evt__bond__info__request__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__evt__bonded__t.html">ob_gap_evt_bonded_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0cafce5e84080c67b3d4f656f9b6aca622f">OB_GAP_EVT_BONDED</a>.  <a href="structob__gap__evt__bonded__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__evt__bond__info__t.html">ob_gap_evt_bond_info_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0cafc31129db6e88669345c9e23ffd0309a">OB_GAP_EVT_BOND_INFO</a>.  <a href="structob__gap__evt__bond__info__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__evt__timeout__t.html">ob_gap_evt_timeout_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca22566d773a8f264f640910929fda7248">OB_GAP_EVT_TIMEOUT</a>.  <a href="structob__gap__evt__timeout__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__evt__power__changed__t.html">ob_gap_evt_power_changed_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca7ec566240163633fcba717d91570243a">OB_GAP_EVT_POWER_CHANGED</a>.  <a href="structob__gap__evt__power__changed__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__evt__phy__update__t.html">ob_gap_evt_phy_update_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca89537197842ca59a2e9774bd0c1c51b5">OB_GAP_EVT_PHY_UPDATE</a>.  <a href="structob__gap__evt__phy__update__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__evt__data__len__changed__t.html">ob_gap_evt_data_len_changed_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca99ca485fb5bcfa9b3694adaf7faf150f">OB_GAP_EVT_DATA_LEN_CHANGED</a>.  <a href="structob__gap__evt__data__len__changed__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__evt__device__info__t.html">ob_gap_evt_device_info_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0cad595b102a9b0012031ac0ba994dadb02">OB_GAP_EVT_DEVICE_INFO</a>.  <a href="structob__gap__evt__device__info__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__evt__scan__req__recv__t.html">ob_gap_evt_scan_req_recv_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="structob__gap__evt__scan__req__recv__t.html">ob_gap_evt_scan_req_recv_t</a>.  <a href="structob__gap__evt__scan__req__recv__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__evt__padv__sync__t.html">ob_gap_evt_padv_sync_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca1efd8e2f239809d839dbbf7a4d4f0e3e">OB_GAP_EVT_PADV_SYNC</a>.  <a href="structob__gap__evt__padv__sync__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__evt__padv__report__t.html">ob_gap_evt_padv_report_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca1513137e6b8df739999af0b7dba1115d">OB_GAP_EVT_ADV_REPORT</a>.  <a href="structob__gap__evt__padv__report__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__evt__padv__sub__data__request__t.html">ob_gap_evt_padv_sub_data_request_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0caee4b3eb9d284a328993b9a94aadbf29e">OB_GAP_EVT_PADV_SUB_DATA_REQUEST</a>.  <a href="structob__gap__evt__padv__sub__data__request__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__evt__padv__resp__report__t.html">ob_gap_evt_padv_resp_report_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca8dafc2b3228f49861bdd6a6886cf8384">OB_GAP_EVT_PADV_RESP_REPORT</a>.  <a href="structob__gap__evt__padv__resp__report__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__evt__hci__error__t.html">ob_gap_evt_hci_error_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca8962ffc5bc861e8b14443eee8012dc29">OB_GAP_EVT_HCI_ERROR</a>.  <a href="structob__gap__evt__hci__error__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structomble__gap__evt__t.html">omble_gap_evt_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">GAP event structure.  <a href="structomble__gap__evt__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__pairing__param__t.html">ob_pairing_param_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">GAP SMP pairing parameter structure.  <a href="structob__pairing__param__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__phys__t.html">ob_gap_phys_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ob_gap_phys  <a href="structob__gap__phys__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__scanning__param__t.html">ob_scanning_param_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ob_scanning_param  <a href="structob__scanning__param__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__scan__param__t.html">ob_scan_param_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ob_scan_param  <a href="structob__scan__param__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__conn__phy__param__t.html">ob_conn_phy_param_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ob_conn_phy_param  <a href="structob__conn__phy__param__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__conn__param__t.html">ob_conn_param_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ob_conn_param  <a href="structob__conn__param__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__conn__padv__param__t.html">ob_conn_padv_param_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ob_conn_param  <a href="structob__conn__padv__param__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__padv__param.html">ob_padv_param</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Periodic Advertise parameter.  <a href="structob__padv__param.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__padv__resp__data__t.html">ob_gap_padv_resp_data_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__padv__sync__t.html">ob_gap_padv_sync_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Periodic advertising synchronization parameters.  <a href="structob__gap__padv__sync__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gap__padv__subevent__data__t.html">ob_gap_padv_subevent_data_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">subevent data structure  <a href="structob__gap__padv__subevent__data__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga73ce4444b6489efae7370773c1995c67"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga73ce4444b6489efae7370773c1995c67">OB_GAP_ADDR_LEN</a>&#160;&#160;&#160;6</td></tr>
+<tr class="memdesc:ga73ce4444b6489efae7370773c1995c67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Address length.  <br /></td></tr>
+<tr class="separator:ga73ce4444b6489efae7370773c1995c67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3d75f6808047765a9847510ae7acf0bf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga3d75f6808047765a9847510ae7acf0bf">OB_GAP_RANDOM_LEN</a>&#160;&#160;&#160;8</td></tr>
+<tr class="memdesc:ga3d75f6808047765a9847510ae7acf0bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Random value length.  <br /></td></tr>
+<tr class="separator:ga3d75f6808047765a9847510ae7acf0bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga01f1247a31adae08c385ea6e4033548a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga01f1247a31adae08c385ea6e4033548a">OB_GAP_KEY_LEN</a>&#160;&#160;&#160;16</td></tr>
+<tr class="memdesc:ga01f1247a31adae08c385ea6e4033548a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key length.  <br /></td></tr>
+<tr class="separator:ga01f1247a31adae08c385ea6e4033548a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga399d31d13841403d85a8b52799feb5be"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga399d31d13841403d85a8b52799feb5be">OB_GAP_ADV_TX_POWER_NO_AVA</a>&#160;&#160;&#160;0x7F</td></tr>
+<tr class="memdesc:ga399d31d13841403d85a8b52799feb5be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transmit power is not available.  <br /></td></tr>
+<tr class="separator:ga399d31d13841403d85a8b52799feb5be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ga2654129db4f52a994e2c1e5a1bbfa055"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structob__gap__addr.html">ob_gap_addr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga2654129db4f52a994e2c1e5a1bbfa055">ob_gap_addr_t</a></td></tr>
+<tr class="memdesc:ga2654129db4f52a994e2c1e5a1bbfa055"><td class="mdescLeft">&#160;</td><td class="mdescRight">GAP address.  <br /></td></tr>
+<tr class="separator:ga2654129db4f52a994e2c1e5a1bbfa055"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga186d96e9f433e486a1a57f31e24b9d75"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structob__adv__param.html">ob_adv_param</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga186d96e9f433e486a1a57f31e24b9d75">ob_adv_param_t</a></td></tr>
+<tr class="memdesc:ga186d96e9f433e486a1a57f31e24b9d75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advertising parameter.  <br /></td></tr>
+<tr class="separator:ga186d96e9f433e486a1a57f31e24b9d75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga198f0e8625569e833c1e49fb27187dc4"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structob__data.html">ob_data</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga198f0e8625569e833c1e49fb27187dc4">ob_data_t</a></td></tr>
+<tr class="separator:ga198f0e8625569e833c1e49fb27187dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaba4c595db0193b50d1166659a1667c10"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structob__padv__param.html">ob_padv_param</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#gaba4c595db0193b50d1166659a1667c10">ob_padv_param_t</a></td></tr>
+<tr class="memdesc:gaba4c595db0193b50d1166659a1667c10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Periodic Advertise parameter.  <br /></td></tr>
+<tr class="separator:gaba4c595db0193b50d1166659a1667c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ga60af4dcbeabe629965292ac1287a1b0c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga60af4dcbeabe629965292ac1287a1b0c">OB_GAP_EVENTS</a> { <br />
+&#160;&#160;<a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0cad4e099d93328262d7508e521baad652b">OB_GAP_EVT_CONNECTED</a> = OB_GAP_EVTS_BASE + 0x00
+, <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0caf3a95feb5dfd78128a4258f808a1778b">OB_GAP_EVT_DISCONNECTED</a> = OB_GAP_EVTS_BASE + 0x01
+, <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0cab25f36920a5a8020c93ce42b7e675041">OB_GAP_EVT_ADV_STATE_CHANGED</a> = OB_GAP_EVTS_BASE + 0x02
+, <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca127d4887b93a9f9f84df67b6ef88dc9c">OB_GAP_EVT_CONN_PARAMS_UPDATE</a> = OB_GAP_EVTS_BASE + 0x03
+, <br />
+&#160;&#160;<a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca2bcf050ad16febc5f7c6f14c0b599aef">OB_GAP_EVT_CONN_PARAMS_REQUEST</a> = OB_GAP_EVTS_BASE + 0x04
+, <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca1513137e6b8df739999af0b7dba1115d">OB_GAP_EVT_ADV_REPORT</a> = OB_GAP_EVTS_BASE + 0x05
+, <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0caee58083c5f47308252cd213fcc2d1732">OB_GAP_EVT_ENCRYPT</a> = OB_GAP_EVTS_BASE + 0x06
+, <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca95c3fb71d6aa106d042e807ff2c17ee0">OB_GAP_EVT_SEC_REQUEST</a> = OB_GAP_EVTS_BASE + 0x10
+, <br />
+&#160;&#160;<a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0caef50270c348e747414355a7b2b9661b0">OB_GAP_EVT_PAIRING_REQUEST</a> = OB_GAP_EVTS_BASE + 0x11
+, <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0cac00d7b7b2e7db3b9513082851284f6d0">OB_GAP_EVT_PIN_REQUEST</a> = OB_GAP_EVTS_BASE + 0x12
+, <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca6bc4bb453770d94fefe32b8a8d5234c7">OB_GAP_EVT_LTK_REQUEST</a> = OB_GAP_EVTS_BASE + 0x13
+, <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0caf678d6be0a3549995504b5bd8cd83918">OB_GAP_EVT_BOND_INFO_REQUEST</a> = OB_GAP_EVTS_BASE + 0x14
+, <br />
+&#160;&#160;<a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0cafce5e84080c67b3d4f656f9b6aca622f">OB_GAP_EVT_BONDED</a> = OB_GAP_EVTS_BASE + 0x15
+, <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0cafc31129db6e88669345c9e23ffd0309a">OB_GAP_EVT_BOND_INFO</a> = OB_GAP_EVTS_BASE + 0x16
+, <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca22566d773a8f264f640910929fda7248">OB_GAP_EVT_TIMEOUT</a> = OB_GAP_EVTS_BASE + 0x20
+, <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca7ec566240163633fcba717d91570243a">OB_GAP_EVT_POWER_CHANGED</a> = OB_GAP_EVTS_BASE + 0x21
+, <br />
+&#160;&#160;<a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca89537197842ca59a2e9774bd0c1c51b5">OB_GAP_EVT_PHY_UPDATE</a> = OB_GAP_EVTS_BASE + 0x22
+, <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca99ca485fb5bcfa9b3694adaf7faf150f">OB_GAP_EVT_DATA_LEN_CHANGED</a> = OB_GAP_EVTS_BASE + 0x23
+, <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0cad595b102a9b0012031ac0ba994dadb02">OB_GAP_EVT_DEVICE_INFO</a> = OB_GAP_EVTS_BASE + 0x24
+, <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca3547f58ac8559ace874c448dc1650409">OB_GAP_EVT_SCAN_REQ_RECV</a> = OB_GAP_EVTS_BASE + 0x25
+, <br />
+&#160;&#160;<a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca1efd8e2f239809d839dbbf7a4d4f0e3e">OB_GAP_EVT_PADV_SYNC</a> = OB_GAP_EVTS_BASE + 0x30
+, <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0cac12ac7d87089c0b810ae64e94621258d">OB_GAP_EVT_PADV_REPORT</a> = OB_GAP_EVTS_BASE + 0x31
+, <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0caee4b3eb9d284a328993b9a94aadbf29e">OB_GAP_EVT_PADV_SUB_DATA_REQUEST</a> = OB_GAP_EVTS_BASE + 0x32
+, <a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca8dafc2b3228f49861bdd6a6886cf8384">OB_GAP_EVT_PADV_RESP_REPORT</a> = OB_GAP_EVTS_BASE + 0x33
+, <br />
+&#160;&#160;<a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca8962ffc5bc861e8b14443eee8012dc29">OB_GAP_EVT_HCI_ERROR</a> = OB_GAP_EVTS_BASE + 0xFF
+<br />
+ }</td></tr>
+<tr class="memdesc:ga60af4dcbeabe629965292ac1287a1b0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">OB_GAP_EVENTS.  <a href="group__OMBLE__GAP.html#ga60af4dcbeabe629965292ac1287a1b0c">More...</a><br /></td></tr>
+<tr class="separator:ga60af4dcbeabe629965292ac1287a1b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae4e245053229bfa9e4cf5b8fab5d3747"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#gae4e245053229bfa9e4cf5b8fab5d3747">ob_adv_properties_bits</a> { <br />
+&#160;&#160;<a class="el" href="group__OMBLE__GAP.html#ggae4e245053229bfa9e4cf5b8fab5d3747ae49e23b7871d7381b279d024e1fa4236">OB_ADV_PROP_BIT0_CONNECTALBE</a> = 1 &lt;&lt; 0
+, <a class="el" href="group__OMBLE__GAP.html#ggae4e245053229bfa9e4cf5b8fab5d3747a53cd97d861a1e2a5225246a18651c90d">OB_ADV_PROP_BIT1_SCANNABLE</a> = 1 &lt;&lt; 1
+, <a class="el" href="group__OMBLE__GAP.html#ggae4e245053229bfa9e4cf5b8fab5d3747a1e64a4b6cfeb3bc9cc9906cad14af88f">OB_ADV_PROP_BIT2_DIRECTED_ADV</a> = 1 &lt;&lt; 2
+, <a class="el" href="group__OMBLE__GAP.html#ggae4e245053229bfa9e4cf5b8fab5d3747ad3254b2091041b86133111d44810b662">OB_ADV_PROP_BIT3_HIGH_DUTY_CYCLE</a> = 1 &lt;&lt; 3
+, <br />
+&#160;&#160;<a class="el" href="group__OMBLE__GAP.html#ggae4e245053229bfa9e4cf5b8fab5d3747a3237aa297332ed7a01029688d1e13cdc">OB_ADV_PROP_BIT4_LEGACY_ADV</a> = 1 &lt;&lt; 4
+, <a class="el" href="group__OMBLE__GAP.html#ggae4e245053229bfa9e4cf5b8fab5d3747a549ffb7ff19f26c4e60be3a459ae4d5e">OB_ADV_PROP_BIT5_OMIT_ADV_ADDRESS</a> = 1 &lt;&lt; 5
+, <a class="el" href="group__OMBLE__GAP.html#ggae4e245053229bfa9e4cf5b8fab5d3747a7fa0297817b50f385c189d274cf30787">OB_ADV_PROP_BIT6_INCLUDE_TX_POWER</a> = 1 &lt;&lt; 6
+<br />
+ }</td></tr>
+<tr class="memdesc:gae4e245053229bfa9e4cf5b8fab5d3747"><td class="mdescLeft">&#160;</td><td class="mdescRight">advertising attribute bit  <a href="group__OMBLE__GAP.html#gae4e245053229bfa9e4cf5b8fab5d3747">More...</a><br /></td></tr>
+<tr class="separator:gae4e245053229bfa9e4cf5b8fab5d3747"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga68254997fa37e3c6b1419b47caba9c1e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga68254997fa37e3c6b1419b47caba9c1e">ob_adv_properties</a> { <br />
+&#160;&#160;<a class="el" href="group__OMBLE__GAP.html#gga68254997fa37e3c6b1419b47caba9c1ea97083c8fbce32dff223ee4148a35447a">OB_ADV_PROP_LEGACY_IND</a> = 0x13
+, <a class="el" href="group__OMBLE__GAP.html#gga68254997fa37e3c6b1419b47caba9c1eabf0a638c431bfa0adb542d4dc2ba6d4b">OB_ADV_PROP_LEGACY_DIRECT_IND_LOW</a> = 0x15
+, <a class="el" href="group__OMBLE__GAP.html#gga68254997fa37e3c6b1419b47caba9c1eaf71b18c8a20050db273cbf3b408dc73f">OB_ADV_PROP_LEGACY_DIRECT_IND_HIGH</a> = 0x1D
+, <a class="el" href="group__OMBLE__GAP.html#gga68254997fa37e3c6b1419b47caba9c1ea2ec4bfb0aa911b8bf4bc2e3c0e317fd4">OB_ADV_PROP_LEGACY_SCAN_IND</a> = 0x12
+, <br />
+&#160;&#160;<a class="el" href="group__OMBLE__GAP.html#gga68254997fa37e3c6b1419b47caba9c1eaf6334d9cd6891fd96e194a4cfbb66d1c">OB_ADV_PROP_LEGACY_NONCONN_IND</a> = 0x10
+, <a class="el" href="group__OMBLE__GAP.html#gga68254997fa37e3c6b1419b47caba9c1eab609b78aae549ec5a28177cbecc0e946">OB_ADV_PROP_EXT_CONN_NONSCAN</a> = 0x01
+, <a class="el" href="group__OMBLE__GAP.html#gga68254997fa37e3c6b1419b47caba9c1eaf03971f80330eb5e32d894c6d62b9d64">OB_ADV_PROP_EXT_NONCONN_SCAN</a> = 0x02
+, <a class="el" href="group__OMBLE__GAP.html#gga68254997fa37e3c6b1419b47caba9c1ea9dd9696007fde3d39013963b523e351c">OB_ADV_PROP_EXT_NONCONN_NONSCAN</a> = 0x00
+, <br />
+&#160;&#160;<a class="el" href="group__OMBLE__GAP.html#gga68254997fa37e3c6b1419b47caba9c1eabe0d4e0ba41ea23788059b40068016b5">OB_ADV_PROP_EXT_ANONYMOUS</a> = 0x20
+<br />
+ }</td></tr>
+<tr class="memdesc:ga68254997fa37e3c6b1419b47caba9c1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predefined advertising attributes.  <a href="group__OMBLE__GAP.html#ga68254997fa37e3c6b1419b47caba9c1e">More...</a><br /></td></tr>
+<tr class="separator:ga68254997fa37e3c6b1419b47caba9c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9b412cc0b624acfcc32aca5a97859698"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga9b412cc0b624acfcc32aca5a97859698">ob_adv_filter_policy</a> { <a class="el" href="group__OMBLE__GAP.html#gga9b412cc0b624acfcc32aca5a97859698a3958f0e145f5317aeea93fa5b6502624">OB_ADV_FILTER_NONE</a>
+, <a class="el" href="group__OMBLE__GAP.html#gga9b412cc0b624acfcc32aca5a97859698ab6e60643c6529294072eadf2b2452bf2">OB_ADV_FILTER_SCAN</a>
+, <a class="el" href="group__OMBLE__GAP.html#gga9b412cc0b624acfcc32aca5a97859698a0408745a932fd9ed48199a9826129c48">OB_ADV_FILTER_CONN</a>
+, <a class="el" href="group__OMBLE__GAP.html#gga9b412cc0b624acfcc32aca5a97859698a1944ca78fa857210320811b25d9a67e7">OB_ADV_FILTER_CONN_SCAN</a>
+ }</td></tr>
+<tr class="memdesc:ga9b412cc0b624acfcc32aca5a97859698"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advertising Filter Accept List settings.  <a href="group__OMBLE__GAP.html#ga9b412cc0b624acfcc32aca5a97859698">More...</a><br /></td></tr>
+<tr class="separator:ga9b412cc0b624acfcc32aca5a97859698"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga640b93365823560d608b07ecca17a5c2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga640b93365823560d608b07ecca17a5c2">ob_conn_filter_policy</a> { <a class="el" href="group__OMBLE__GAP.html#gga640b93365823560d608b07ecca17a5c2ac9c5f49f934c4bca16c27509194e924f">OB_CONN_FILTER_NOT_USE</a>
+, <a class="el" href="group__OMBLE__GAP.html#gga640b93365823560d608b07ecca17a5c2a49774e723124ad99d897c39ab353ecfc">OB_CONN_FILTER_USE</a>
+ }</td></tr>
+<tr class="memdesc:ga640b93365823560d608b07ecca17a5c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connection Filter Accept List settings.  <a href="group__OMBLE__GAP.html#ga640b93365823560d608b07ecca17a5c2">More...</a><br /></td></tr>
+<tr class="separator:ga640b93365823560d608b07ecca17a5c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae7736ccd31b34c6cd05bb96b81eca0f1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#gae7736ccd31b34c6cd05bb96b81eca0f1">ob_scan_filter_policy</a> { <a class="el" href="group__OMBLE__GAP.html#ggae7736ccd31b34c6cd05bb96b81eca0f1ae404fe388923104d53845574eb04c8da">OB_SCAN_FILTER_BASIC_UNFILTER</a>
+, <a class="el" href="group__OMBLE__GAP.html#ggae7736ccd31b34c6cd05bb96b81eca0f1a429bc80fbcfe3cc51c67167916c3031d">OB_SCAN_FILTER_BASIC_FILTER</a>
+, <a class="el" href="group__OMBLE__GAP.html#ggae7736ccd31b34c6cd05bb96b81eca0f1a2be79971b1e54d8fd7d9a8761ab790a8">OB_SCAN_FILTER_EXT_UNFILTER</a>
+, <a class="el" href="group__OMBLE__GAP.html#ggae7736ccd31b34c6cd05bb96b81eca0f1a0230fe4c8e8a513234929e1cc3a1360d">OB_SCAN_FILTER_EXT_FILTER</a>
+ }</td></tr>
+<tr class="memdesc:gae7736ccd31b34c6cd05bb96b81eca0f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scan Filter Accept List settings.  <a href="group__OMBLE__GAP.html#gae7736ccd31b34c6cd05bb96b81eca0f1">More...</a><br /></td></tr>
+<tr class="separator:gae7736ccd31b34c6cd05bb96b81eca0f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga22abbbd42ff8badea09e5b8523b946cb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga22abbbd42ff8badea09e5b8523b946cb">ob_adv_channel</a> { <a class="el" href="group__OMBLE__GAP.html#gga22abbbd42ff8badea09e5b8523b946cba981e342a9f1304d425fca80595817743">OB_ADV_CH_37</a> = 0x01
+, <a class="el" href="group__OMBLE__GAP.html#gga22abbbd42ff8badea09e5b8523b946cba4ff930606509d49ffbe423014892b921">OB_ADV_CH_38</a> = 0x02
+, <a class="el" href="group__OMBLE__GAP.html#gga22abbbd42ff8badea09e5b8523b946cbaa784efe3cc4739520d7259908c48fba8">OB_ADV_CH_39</a> = 0x04
+, <a class="el" href="group__OMBLE__GAP.html#gga22abbbd42ff8badea09e5b8523b946cbade143e7527bda1bf60b997330c4644ea">OB_ADV_CH_ALL</a> = 0x07
+ }</td></tr>
+<tr class="memdesc:ga22abbbd42ff8badea09e5b8523b946cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advertising channel.  <a href="group__OMBLE__GAP.html#ga22abbbd42ff8badea09e5b8523b946cb">More...</a><br /></td></tr>
+<tr class="separator:ga22abbbd42ff8badea09e5b8523b946cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga472d3c39d695466017851ede30da0a58"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga472d3c39d695466017851ede30da0a58">ob_adv_addr_type</a> { <a class="el" href="group__OMBLE__GAP.html#gga472d3c39d695466017851ede30da0a58a043df54087b1d1455d453deae4d435cd">OB_ADV_ADDR_TYPE_PUBLIC</a>
+, <a class="el" href="group__OMBLE__GAP.html#gga472d3c39d695466017851ede30da0a58a9c5079e0a6c06ac2114f54cd3ce26949">OB_ADV_ADDR_TYPE_RANDOM</a>
+ }</td></tr>
+<tr class="memdesc:ga472d3c39d695466017851ede30da0a58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advertising address type.  <a href="group__OMBLE__GAP.html#ga472d3c39d695466017851ede30da0a58">More...</a><br /></td></tr>
+<tr class="separator:ga472d3c39d695466017851ede30da0a58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga30ba55c9aa16b22cf1b5093a86ce9f94"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga30ba55c9aa16b22cf1b5093a86ce9f94">ob_adv_phy</a> { <a class="el" href="group__OMBLE__GAP.html#gga30ba55c9aa16b22cf1b5093a86ce9f94aac10f64cc4477ec2990b76e3c1fd8d97">OB_ADV_PHY_1M</a> = 0x01
+, <a class="el" href="group__OMBLE__GAP.html#gga30ba55c9aa16b22cf1b5093a86ce9f94a7af5fd34f700518ae27479d8193eba90">OB_ADV_PHY_2M</a> = 0x02
+, <a class="el" href="group__OMBLE__GAP.html#gga30ba55c9aa16b22cf1b5093a86ce9f94aa05ba96d4b2761fe92ca268007cd604c">OB_ADV_PHY_CODED</a> = 0x03
+ }</td></tr>
+<tr class="memdesc:ga30ba55c9aa16b22cf1b5093a86ce9f94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advertising PHY.  <a href="group__OMBLE__GAP.html#ga30ba55c9aa16b22cf1b5093a86ce9f94">More...</a><br /></td></tr>
+<tr class="separator:ga30ba55c9aa16b22cf1b5093a86ce9f94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga72ea199c40674da9eac20e1e7dd4f308"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga72ea199c40674da9eac20e1e7dd4f308">ob_bond_info_type</a> { <a class="el" href="group__OMBLE__GAP.html#gga72ea199c40674da9eac20e1e7dd4f308a32c53841cfa358914b1aef2fdd60c3be">OB_BOND_INFO_LTK</a>
+, <a class="el" href="group__OMBLE__GAP.html#gga72ea199c40674da9eac20e1e7dd4f308ab369916c1547d8e8a0ecbf0f96774ff3">OB_BOND_INFO_IRK</a>
+ }</td></tr>
+<tr class="memdesc:ga72ea199c40674da9eac20e1e7dd4f308"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binding information type.  <a href="group__OMBLE__GAP.html#ga72ea199c40674da9eac20e1e7dd4f308">More...</a><br /></td></tr>
+<tr class="separator:ga72ea199c40674da9eac20e1e7dd4f308"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga235f19bbcd8632b6c6812b9f9d68f99b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga235f19bbcd8632b6c6812b9f9d68f99b">ob_smp_io_capability</a> { <br />
+&#160;&#160;<a class="el" href="group__OMBLE__GAP.html#gga235f19bbcd8632b6c6812b9f9d68f99bacc765f972d28d4c3cbf2c210725cefdb">OB_SMP_IOCAP_DIS_ONLY</a>
+, <a class="el" href="group__OMBLE__GAP.html#gga235f19bbcd8632b6c6812b9f9d68f99ba39a93667fdaf5ebf62bedcb622f7bc20">OB_SMP_IOCAP_DISP_YN</a>
+, <a class="el" href="group__OMBLE__GAP.html#gga235f19bbcd8632b6c6812b9f9d68f99ba42073d5e19b07cb506369b8428aa2f2b">OB_SMP_IOCAP_KBD_ONLY</a>
+, <a class="el" href="group__OMBLE__GAP.html#gga235f19bbcd8632b6c6812b9f9d68f99bac3b20d464dce67ddba8de43a31660a65">OB_SMP_IOCAP_NONE</a>
+, <br />
+&#160;&#160;<a class="el" href="group__OMBLE__GAP.html#gga235f19bbcd8632b6c6812b9f9d68f99ba182930fe41f53661b8bbd881cdf677e8">OB_SMP_IOCAP_KDB_DISP</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga235f19bbcd8632b6c6812b9f9d68f99b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pairing IO capability type.  <a href="group__OMBLE__GAP.html#ga235f19bbcd8632b6c6812b9f9d68f99b">More...</a><br /></td></tr>
+<tr class="separator:ga235f19bbcd8632b6c6812b9f9d68f99b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5bc9ea71e3bacde54b467cc7001f4ade"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga5bc9ea71e3bacde54b467cc7001f4ade">ob_smp_pin_type</a> { <br />
+&#160;&#160;<a class="el" href="group__OMBLE__GAP.html#gga5bc9ea71e3bacde54b467cc7001f4adea1b8adb860129755577e1f002e4810ca6">OB_SMP_PIN_TYPE_NONE</a>
+, <a class="el" href="group__OMBLE__GAP.html#gga5bc9ea71e3bacde54b467cc7001f4adea97780ed92350fa71929485b60dd2129a">OB_SMP_PIN_TYPE_OOB_REQ</a>
+, <a class="el" href="group__OMBLE__GAP.html#gga5bc9ea71e3bacde54b467cc7001f4adea977b17eb4283e975501f9056ade6fa35">OB_SMP_PIN_TYPE_DIS_YN</a>
+, <a class="el" href="group__OMBLE__GAP.html#gga5bc9ea71e3bacde54b467cc7001f4adeab16b41cf02a84fc2bc6d7c57bf9e8e1c">OB_SMP_PIN_TYPE_PK_REQ</a>
+, <br />
+&#160;&#160;<a class="el" href="group__OMBLE__GAP.html#gga5bc9ea71e3bacde54b467cc7001f4adeacddf75bc25850bca2c015d895ee45033">OB_SMP_PIN_TYPE_DIS</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga5bc9ea71e3bacde54b467cc7001f4ade"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pairing pin type.  <a href="group__OMBLE__GAP.html#ga5bc9ea71e3bacde54b467cc7001f4ade">More...</a><br /></td></tr>
+<tr class="separator:ga5bc9ea71e3bacde54b467cc7001f4ade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab42e08a3658cb8cecb9c22ea2b34f736"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#gab42e08a3658cb8cecb9c22ea2b34f736">ob_gap_conn_role</a> { <a class="el" href="group__OMBLE__GAP.html#ggab42e08a3658cb8cecb9c22ea2b34f736ac3838cd3220ee7a237ddb5049a873957">OB_GAP_ROLE_CENTRAL</a>
+, <a class="el" href="group__OMBLE__GAP.html#ggab42e08a3658cb8cecb9c22ea2b34f736a7a54f64ce1c3c4293667d33369d39b5b">OB_GAP_ROLE_PHERIPHERAL</a>
+, <a class="el" href="group__OMBLE__GAP.html#ggab42e08a3658cb8cecb9c22ea2b34f736ace69911786df4aa78925686cc2601bf1">OB_GAP_ROLE_CENTRAL_PAWR</a>
+, <a class="el" href="group__OMBLE__GAP.html#ggab42e08a3658cb8cecb9c22ea2b34f736af519c718ddbc96a41af7a170f05f68d3">OB_GAP_ROLE_PHERIPHERAL_PAWR</a>
+ }</td></tr>
+<tr class="memdesc:gab42e08a3658cb8cecb9c22ea2b34f736"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connection role.  <a href="group__OMBLE__GAP.html#gab42e08a3658cb8cecb9c22ea2b34f736">More...</a><br /></td></tr>
+<tr class="separator:gab42e08a3658cb8cecb9c22ea2b34f736"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaac44795633905c6e1c2256ff56b3b3f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#gaaac44795633905c6e1c2256ff56b3b3f">ob_smp_distribution</a> { <a class="el" href="group__OMBLE__GAP.html#ggaaac44795633905c6e1c2256ff56b3b3fa3b80c7b77f6ba0dae7c2bbeababa899e">OB_SMP_DIST_BIT_ENC_KEY</a> = 0x01
+, <a class="el" href="group__OMBLE__GAP.html#ggaaac44795633905c6e1c2256ff56b3b3faf800aeb5735539b878f0b1dc9581efd4">OB_SMP_DIST_BIT_ID_KEY</a> = 0x02
+ }</td></tr>
+<tr class="memdesc:gaaac44795633905c6e1c2256ff56b3b3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distribution key type.  <a href="group__OMBLE__GAP.html#gaaac44795633905c6e1c2256ff56b3b3f">More...</a><br /></td></tr>
+<tr class="separator:gaaac44795633905c6e1c2256ff56b3b3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2d2881f46ec7cffa23e05d74cd24f7f5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga2d2881f46ec7cffa23e05d74cd24f7f5">ob_gap_timeout_source_t</a> { <a class="el" href="group__OMBLE__GAP.html#gga2d2881f46ec7cffa23e05d74cd24f7f5ad5f4851749498410035a518eeed10683">OB_GAP_TOUT_SCAN</a>
+, <a class="el" href="group__OMBLE__GAP.html#gga2d2881f46ec7cffa23e05d74cd24f7f5af644caeb71051b56479bb82ec44094dd">OB_GAP_TOUT_CONN_PARAM_UPDATE</a>
+ }</td></tr>
+<tr class="memdesc:ga2d2881f46ec7cffa23e05d74cd24f7f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timeout reason.  <a href="group__OMBLE__GAP.html#ga2d2881f46ec7cffa23e05d74cd24f7f5">More...</a><br /></td></tr>
+<tr class="separator:ga2d2881f46ec7cffa23e05d74cd24f7f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac9af50f1f377ba69f38d324dc497d9bd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#gac9af50f1f377ba69f38d324dc497d9bd">ob_dev_info_type</a> { <br />
+&#160;&#160;<a class="el" href="group__OMBLE__GAP.html#ggac9af50f1f377ba69f38d324dc497d9bdab551328829fb595d52632c53dba79f5b">OB_DEV_INFO_PEER_VERSION</a>
+, <a class="el" href="group__OMBLE__GAP.html#ggac9af50f1f377ba69f38d324dc497d9bdab00c1fc14bee754f4455259da096b21e">OB_DEV_INFO_PEER_LE_FEATURE</a>
+, <a class="el" href="group__OMBLE__GAP.html#ggac9af50f1f377ba69f38d324dc497d9bda8f2730e4731ee38885c10e2027e61c8d">OB_DEV_INFO_LOCAL_VERSION</a>
+, <a class="el" href="group__OMBLE__GAP.html#ggac9af50f1f377ba69f38d324dc497d9bda6a630c751a63a61d7fea8015e7f5a0e1">OB_DEV_INFO_LOCAL_LE_FEATURE</a>
+, <br />
+&#160;&#160;<a class="el" href="group__OMBLE__GAP.html#ggac9af50f1f377ba69f38d324dc497d9bdaa0207a1d2d212230015d2c02d7801c4f">OB_DEV_INFO_RSSI</a>
+, <a class="el" href="group__OMBLE__GAP.html#ggac9af50f1f377ba69f38d324dc497d9bdadde43f2b6d5cc90c0b1f5f4e04f086af">OB_DEV_INFO_CHANNEL_MAP</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:gac9af50f1f377ba69f38d324dc497d9bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device information type.  <a href="group__OMBLE__GAP.html#gac9af50f1f377ba69f38d324dc497d9bd">More...</a><br /></td></tr>
+<tr class="separator:gac9af50f1f377ba69f38d324dc497d9bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaab5d0d0a4a324164605bc53d18d97ddc"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#gaab5d0d0a4a324164605bc53d18d97ddc">ob_gap_phy</a> { <a class="el" href="group__OMBLE__GAP.html#ggaab5d0d0a4a324164605bc53d18d97ddca34bb415ccb66a4318ee4b75523371b9b">OB_GAP_PHY_1M</a> = 0x01
+, <a class="el" href="group__OMBLE__GAP.html#ggaab5d0d0a4a324164605bc53d18d97ddca499364809ffd019fb181cc14cd1c4b77">OB_GAP_PHY_2M</a> = 0x02
+, <a class="el" href="group__OMBLE__GAP.html#ggaab5d0d0a4a324164605bc53d18d97ddcab7ec829ae6e7e31e929ed1ae21fd91d9">OB_GAP_PHY_CODED</a> = 0x03
+ }</td></tr>
+<tr class="memdesc:gaab5d0d0a4a324164605bc53d18d97ddc"><td class="mdescLeft">&#160;</td><td class="mdescRight">PHY type.  <a href="group__OMBLE__GAP.html#gaab5d0d0a4a324164605bc53d18d97ddc">More...</a><br /></td></tr>
+<tr class="separator:gaab5d0d0a4a324164605bc53d18d97ddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga51aae11bf7f9f9e810b49ca7888c379f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga51aae11bf7f9f9e810b49ca7888c379f">ob_gap_adv_state</a> { <br />
+&#160;&#160;<a class="el" href="group__OMBLE__GAP.html#gga51aae11bf7f9f9e810b49ca7888c379fa9fc18962efacb7939535e392aeef2d49">OB_GAP_ADV_ST_STARTED</a>
+, <a class="el" href="group__OMBLE__GAP.html#gga51aae11bf7f9f9e810b49ca7888c379fad10f545d2365ba89154c9a83337be362">OB_GAP_ADV_ST_STOPPED_BY_USER</a>
+, <a class="el" href="group__OMBLE__GAP.html#gga51aae11bf7f9f9e810b49ca7888c379faad9f056dcf8ae61ae080f1ae959a91eb">OB_GAP_ADV_ST_STOPPED_BY_CONNECTED</a>
+, <a class="el" href="group__OMBLE__GAP.html#gga51aae11bf7f9f9e810b49ca7888c379faa709737e726045075ee96b9da96dfcbf">OB_GAP_ADV_ST_STOPPED_BY_TIMEOUT</a>
+, <br />
+&#160;&#160;<a class="el" href="group__OMBLE__GAP.html#gga51aae11bf7f9f9e810b49ca7888c379fa8ad80396af9fad7ceb34df87c9bddcba">OB_GAP_ADV_ST_STOPPED_BY_EVENT</a>
+, <a class="el" href="group__OMBLE__GAP.html#gga51aae11bf7f9f9e810b49ca7888c379fa2dccc5a84a1d150b5b95f6ba95152477">OB_GAP_ADV_ST_STOPPED_UNEXPECTED</a>
+, <a class="el" href="group__OMBLE__GAP.html#gga51aae11bf7f9f9e810b49ca7888c379fa24da6688beeb55f5df7dd92fddc737db">OB_GAP_PADV_ST_STARTED</a>
+, <a class="el" href="group__OMBLE__GAP.html#gga51aae11bf7f9f9e810b49ca7888c379faf83459be7dd5e9b9111ffe2bbe2d6f7d">OB_GAP_PADV_ST_STOPPED</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga51aae11bf7f9f9e810b49ca7888c379f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advertising changed status.  <a href="group__OMBLE__GAP.html#ga51aae11bf7f9f9e810b49ca7888c379f">More...</a><br /></td></tr>
+<tr class="separator:ga51aae11bf7f9f9e810b49ca7888c379f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6929edcf32f87c8cccffe7ef15aaf90e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga6929edcf32f87c8cccffe7ef15aaf90e">ob_gap_tx_pwr_level_flag</a> { <a class="el" href="group__OMBLE__GAP.html#gga6929edcf32f87c8cccffe7ef15aaf90eaeb4a0d8054a016660b2b13a941fc00cd">OB_GAP_TX_PWR_LEVEL_MIN</a> = 0x01
+, <a class="el" href="group__OMBLE__GAP.html#gga6929edcf32f87c8cccffe7ef15aaf90eabba16b91233333703faaf9336d2b7e53">OB_GAP_TX_PWR_LEVEL_MAX</a> = 0x02
+ }</td></tr>
+<tr class="memdesc:ga6929edcf32f87c8cccffe7ef15aaf90e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transmit power level mark.  <a href="group__OMBLE__GAP.html#ga6929edcf32f87c8cccffe7ef15aaf90e">More...</a><br /></td></tr>
+<tr class="separator:ga6929edcf32f87c8cccffe7ef15aaf90e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac5b0c2955349012c0dd5171c3d2819f0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#gac5b0c2955349012c0dd5171c3d2819f0">ob_gap_report_state</a> { <a class="el" href="group__OMBLE__GAP.html#ggac5b0c2955349012c0dd5171c3d2819f0acc96807e7d753f7abf401f6493c622f3">OB_GAP_REPORT_ST_COMPLETE</a>
+, <a class="el" href="group__OMBLE__GAP.html#ggac5b0c2955349012c0dd5171c3d2819f0a80d982743414884109702bce8522a6e1">OB_GAP_REPORT_ST_MORE_DATA</a>
+, <a class="el" href="group__OMBLE__GAP.html#ggac5b0c2955349012c0dd5171c3d2819f0a893b11e7509bb9f27dc4df90235a3eff">OB_GAP_REPORT_ST_TRUNCATED</a>
+ }</td></tr>
+<tr class="memdesc:gac5b0c2955349012c0dd5171c3d2819f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advertising data status.  <a href="group__OMBLE__GAP.html#gac5b0c2955349012c0dd5171c3d2819f0">More...</a><br /></td></tr>
+<tr class="separator:gac5b0c2955349012c0dd5171c3d2819f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga60fb3f1b2cebbd176f6c9a46e7d72845"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga60fb3f1b2cebbd176f6c9a46e7d72845">ob_padv_sync_state_type</a> { <br />
+&#160;&#160;<a class="el" href="group__OMBLE__GAP.html#gga60fb3f1b2cebbd176f6c9a46e7d72845a01c5d70ed1070892f9fd45b889e8c69f">OB_PADV_SYNC_STATE_SUCCESS</a>
+, <a class="el" href="group__OMBLE__GAP.html#gga60fb3f1b2cebbd176f6c9a46e7d72845a5724b46af2123a5c9831ca3a956b1d27">OB_PADV_SYNC_STATE_TIMEOUT</a>
+, <a class="el" href="group__OMBLE__GAP.html#gga60fb3f1b2cebbd176f6c9a46e7d72845ac47f83ec2b2c003d0574633014cb347c">OB_PADV_SYNC_STATE_CANCEL</a>
+, <a class="el" href="group__OMBLE__GAP.html#gga60fb3f1b2cebbd176f6c9a46e7d72845a009f816d342154e416d9e59606bf8539">OB_PADV_SYNC_STATE_STOPPED</a>
+, <br />
+&#160;&#160;<a class="el" href="group__OMBLE__GAP.html#gga60fb3f1b2cebbd176f6c9a46e7d72845a3d90c9c85709267647dd5a7be75371b7">OB_PADV_SYNC_STATE_LOST</a>
+, <a class="el" href="group__OMBLE__GAP.html#gga60fb3f1b2cebbd176f6c9a46e7d72845ab66fbea686fee2b73a375f2733d99329">OB_PADV_SYNC_STATE_FAILED</a>
+, <a class="el" href="group__OMBLE__GAP.html#gga60fb3f1b2cebbd176f6c9a46e7d72845aaae32648f8b1dc2c5190ab47298f2046">OB_PADV_SYNC_TRANS_SUCCESS</a>
+, <a class="el" href="group__OMBLE__GAP.html#gga60fb3f1b2cebbd176f6c9a46e7d72845ad23e8ebaed8df558d827e51df47ffe38">OB_PADV_SYNC_TRANS_FAILED</a>
+<br />
+ }</td></tr>
+<tr class="separator:ga60fb3f1b2cebbd176f6c9a46e7d72845"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga38917f2667cf8e9ab427c00411a879ba"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga38917f2667cf8e9ab427c00411a879ba">ob_gap_padv_sync_trans_type</a> { <a class="el" href="group__OMBLE__GAP.html#gga38917f2667cf8e9ab427c00411a879baa388748073abad825006437a803f1bd18">OB_GAP_PAST_SYNC_TYPE_SYNC_IDX</a>
+, <a class="el" href="group__OMBLE__GAP.html#gga38917f2667cf8e9ab427c00411a879baa6c81520019969ccea5f9f2b6f97b8cac">OB_GAP_PAST_SYNC_TYPE_ADV_IDX</a>
+ }</td></tr>
+<tr class="separator:ga38917f2667cf8e9ab427c00411a879ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga46e56b4bc65d9cef6fc9432abedcbfc8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga46e56b4bc65d9cef6fc9432abedcbfc8">ob_gap_padv_sync_trans_recv_mode</a> { <a class="el" href="group__OMBLE__GAP.html#gga46e56b4bc65d9cef6fc9432abedcbfc8a1a70349a2dceca8ece87301792e4e252">OB_GAP_PAST_RECV_MODE_NO_SYNC</a>
+, <a class="el" href="group__OMBLE__GAP.html#gga46e56b4bc65d9cef6fc9432abedcbfc8ab02af8bf29ad30bbd9a1e0c3c3273c27">OB_GAP_PAST_RECV_MODE_SYNC_NO_REPORT</a>
+, <a class="el" href="group__OMBLE__GAP.html#gga46e56b4bc65d9cef6fc9432abedcbfc8af0dd55f3493a801df66372f4fb4b9662">OB_GAP_PAST_RECV_MODE_SYNC_REPORT</a>
+ }</td></tr>
+<tr class="separator:ga46e56b4bc65d9cef6fc9432abedcbfc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga2a12010003649f726f60aafb38db8396"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga2a12010003649f726f60aafb38db8396">ob_gap_addr_set</a> (uint8_t addr_type, const uint8_t addr[<a class="el" href="group__OMBLE__GAP.html#ga73ce4444b6489efae7370773c1995c67">OB_GAP_ADDR_LEN</a>])</td></tr>
+<tr class="memdesc:ga2a12010003649f726f60aafb38db8396"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the default address.  <br /></td></tr>
+<tr class="separator:ga2a12010003649f726f60aafb38db8396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa3017ec51000b46a839868cb46c416b1"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#gaa3017ec51000b46a839868cb46c416b1">ob_gap_addr_get</a> (uint8_t addr_type, uint8_t addr[<a class="el" href="group__OMBLE__GAP.html#ga73ce4444b6489efae7370773c1995c67">OB_GAP_ADDR_LEN</a>])</td></tr>
+<tr class="memdesc:gaa3017ec51000b46a839868cb46c416b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the default address.  <br /></td></tr>
+<tr class="separator:gaa3017ec51000b46a839868cb46c416b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga86b486d3dfa2d4ebe47de276f6c32050"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga86b486d3dfa2d4ebe47de276f6c32050">ob_gap_accept_list_set</a> (const <a class="el" href="group__OMBLE__GAP.html#ga2654129db4f52a994e2c1e5a1bbfa055">ob_gap_addr_t</a> *fa_addrs, uint8_t len)</td></tr>
+<tr class="memdesc:ga86b486d3dfa2d4ebe47de276f6c32050"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Filter Accept List.  <br /></td></tr>
+<tr class="separator:ga86b486d3dfa2d4ebe47de276f6c32050"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad507ed3b4eda5a3157f77ac91bd875c0"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#gad507ed3b4eda5a3157f77ac91bd875c0">ob_gap_adv_start</a> (uint8_t adv_idx, <a class="el" href="group__OMBLE__GAP.html#ga186d96e9f433e486a1a57f31e24b9d75">ob_adv_param_t</a> *adv_param, <a class="el" href="group__OMBLE__GAP.html#ga198f0e8625569e833c1e49fb27187dc4">ob_data_t</a> *adv_data, <a class="el" href="group__OMBLE__GAP.html#ga198f0e8625569e833c1e49fb27187dc4">ob_data_t</a> *scan_rsp_data)</td></tr>
+<tr class="memdesc:gad507ed3b4eda5a3157f77ac91bd875c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the advertising of the specified adv_idx, or update the advertising data.  <br /></td></tr>
+<tr class="separator:gad507ed3b4eda5a3157f77ac91bd875c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab5947a4af794ec96ff287e7db9197c64"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#gab5947a4af794ec96ff287e7db9197c64">ob_gap_adv_stop</a> (uint8_t adv_idx)</td></tr>
+<tr class="memdesc:gab5947a4af794ec96ff287e7db9197c64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the advertising of the specified index.  <br /></td></tr>
+<tr class="separator:gab5947a4af794ec96ff287e7db9197c64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1f77fa7b4e75d585f041fa6b9190665b"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga1f77fa7b4e75d585f041fa6b9190665b">ob_gap_conn_param_update</a> (uint8_t conn_idx, <a class="el" href="structob__gap__conn__params__t.html">ob_gap_conn_params_t</a> const *p_conn_params)</td></tr>
+<tr class="memdesc:ga1f77fa7b4e75d585f041fa6b9190665b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request connection parameter update.  <br /></td></tr>
+<tr class="separator:ga1f77fa7b4e75d585f041fa6b9190665b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga10aa544d374cf3e5e539c12ee219e70d"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga10aa544d374cf3e5e539c12ee219e70d">ob_gap_conn_param_request</a> (uint8_t conn_idx, <a class="el" href="structob__gap__conn__parameter__t.html">ob_gap_conn_parameter_t</a> const *p_conn_params)</td></tr>
+<tr class="memdesc:ga10aa544d374cf3e5e539c12ee219e70d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request connection parameter update V2.  <br /></td></tr>
+<tr class="separator:ga10aa544d374cf3e5e539c12ee219e70d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0accda9ba7f542a632e2fb45176a3f28"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga0accda9ba7f542a632e2fb45176a3f28">ob_gap_disconnect</a> (uint8_t conn_idx, uint8_t hci_status_code)</td></tr>
+<tr class="memdesc:ga0accda9ba7f542a632e2fb45176a3f28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnect.  <br /></td></tr>
+<tr class="separator:ga0accda9ba7f542a632e2fb45176a3f28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga80e29bddba0b76fb8289cad501c6633e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga80e29bddba0b76fb8289cad501c6633e">ob_gap_security_request</a> (uint8_t conn_idx, <a class="el" href="structob__gap__auth__t.html">ob_gap_auth_t</a> auth)</td></tr>
+<tr class="memdesc:ga80e29bddba0b76fb8289cad501c6633e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pairing/encryption request.  <br /></td></tr>
+<tr class="separator:ga80e29bddba0b76fb8289cad501c6633e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacce9ca33468882750ec3442eae1834e9"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#gacce9ca33468882750ec3442eae1834e9">ob_gap_pairing_request</a> (uint8_t conn_idx, <a class="el" href="structob__pairing__param__t.html">ob_pairing_param_t</a> *request)</td></tr>
+<tr class="memdesc:gacce9ca33468882750ec3442eae1834e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pairing/bonding request.  <br /></td></tr>
+<tr class="separator:gacce9ca33468882750ec3442eae1834e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaaaffa4abc24522f9a0c5aa4c72a8a59"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#gaaaaffa4abc24522f9a0c5aa4c72a8a59">ob_gap_pairing_response</a> (uint8_t conn_idx, <a class="el" href="structob__pairing__param__t.html">ob_pairing_param_t</a> *response)</td></tr>
+<tr class="memdesc:gaaaaffa4abc24522f9a0c5aa4c72a8a59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pairing/bonding response.  <br /></td></tr>
+<tr class="separator:gaaaaffa4abc24522f9a0c5aa4c72a8a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacbb7d16d1ab2ad006342184142de6051"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#gacbb7d16d1ab2ad006342184142de6051">ob_gap_pairing_abort</a> (uint8_t conn_idx, uint16_t reason)</td></tr>
+<tr class="memdesc:gacbb7d16d1ab2ad006342184142de6051"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abort the pairing operation.  <br /></td></tr>
+<tr class="separator:gacbb7d16d1ab2ad006342184142de6051"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae6b708e715773d4d9556582df42654ef"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#gae6b708e715773d4d9556582df42654ef">ob_gap_encrypt</a> (uint8_t conn_idx, uint16_t ediv, uint8_t *rand, uint8_t *ltk)</td></tr>
+<tr class="memdesc:gae6b708e715773d4d9556582df42654ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Link encryption request.  <br /></td></tr>
+<tr class="separator:gae6b708e715773d4d9556582df42654ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9f6792834ea5ebe1260851a1b84ceff1"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga9f6792834ea5ebe1260851a1b84ceff1">ob_gap_ltk_response</a> (uint8_t conn_idx, uint8_t *ltk)</td></tr>
+<tr class="memdesc:ga9f6792834ea5ebe1260851a1b84ceff1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Link Encryption Response.  <br /></td></tr>
+<tr class="separator:ga9f6792834ea5ebe1260851a1b84ceff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga07631480d0b133593800b52f199a6a0e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga07631480d0b133593800b52f199a6a0e">ob_gap_bond_info_response</a> (uint8_t conn_idx, <a class="el" href="structob__bond__info__t.html">ob_bond_info_t</a> *bond_info)</td></tr>
+<tr class="memdesc:ga07631480d0b133593800b52f199a6a0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pairing information response.  <br /></td></tr>
+<tr class="separator:ga07631480d0b133593800b52f199a6a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa7fedd40f22abf123b2c933d631c34ea"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#gaa7fedd40f22abf123b2c933d631c34ea">ob_gap_pin_response</a> (uint8_t conn_idx, uint8_t accept, <a class="el" href="structob__smp__pin__t.html">ob_smp_pin_t</a> *pin_info)</td></tr>
+<tr class="memdesc:gaa7fedd40f22abf123b2c933d631c34ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">PIN code response.  <br /></td></tr>
+<tr class="separator:gaa7fedd40f22abf123b2c933d631c34ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga53ff9e80500cb6bde01745beac60c567"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga53ff9e80500cb6bde01745beac60c567">ob_gap_get_encrypt_state</a> (uint8_t conn_idx, uint8_t *state)</td></tr>
+<tr class="memdesc:ga53ff9e80500cb6bde01745beac60c567"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current encryption status.  <br /></td></tr>
+<tr class="separator:ga53ff9e80500cb6bde01745beac60c567"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf16d2f03770da27f9188a2dcd531214d"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#gaf16d2f03770da27f9188a2dcd531214d">ob_gap_phy_update</a> (uint8_t conn_idx, <a class="el" href="structob__gap__phys__t.html">ob_gap_phys_t</a> tx_phys, <a class="el" href="structob__gap__phys__t.html">ob_gap_phys_t</a> rx_phys)</td></tr>
+<tr class="memdesc:gaf16d2f03770da27f9188a2dcd531214d"><td class="mdescLeft">&#160;</td><td class="mdescRight">phy update request  <br /></td></tr>
+<tr class="separator:gaf16d2f03770da27f9188a2dcd531214d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga90f534508080f22ca5e0d0b1979af858"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga90f534508080f22ca5e0d0b1979af858">ob_gap_data_length_update</a> (uint8_t conn_idx, uint16_t tx_octets, uint16_t tx_time)</td></tr>
+<tr class="memdesc:ga90f534508080f22ca5e0d0b1979af858"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update data length.  <br /></td></tr>
+<tr class="separator:ga90f534508080f22ca5e0d0b1979af858"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaea4e5a46b8e1ecdc9aad74f7ac502159"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#gaea4e5a46b8e1ecdc9aad74f7ac502159">ob_gap_host_channel_map_update</a> (const uint8_t channel_map[5])</td></tr>
+<tr class="memdesc:gaea4e5a46b8e1ecdc9aad74f7ac502159"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Host Channel Classification.  <br /></td></tr>
+<tr class="separator:gaea4e5a46b8e1ecdc9aad74f7ac502159"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga59abb1e9c6473bc36a017dbce4ce1e4d"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga59abb1e9c6473bc36a017dbce4ce1e4d">ob_gap_scan_start</a> (<a class="el" href="structob__scan__param__t.html">ob_scan_param_t</a> *param)</td></tr>
+<tr class="memdesc:ga59abb1e9c6473bc36a017dbce4ce1e4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start Scanning.  <br /></td></tr>
+<tr class="separator:ga59abb1e9c6473bc36a017dbce4ce1e4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa0c388a09f684dbaa541f5a44b147e56"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#gaa0c388a09f684dbaa541f5a44b147e56">ob_gap_scan_stop</a> (void)</td></tr>
+<tr class="memdesc:gaa0c388a09f684dbaa541f5a44b147e56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop Scanning.  <br /></td></tr>
+<tr class="separator:gaa0c388a09f684dbaa541f5a44b147e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga26ad11614c608e787bf31fb18fb45a82"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga26ad11614c608e787bf31fb18fb45a82">ob_gap_connect</a> (<a class="el" href="structob__conn__param__t.html">ob_conn_param_t</a> *param)</td></tr>
+<tr class="memdesc:ga26ad11614c608e787bf31fb18fb45a82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a connection.  <br /></td></tr>
+<tr class="separator:ga26ad11614c608e787bf31fb18fb45a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5531e6f7089e040c3ef23679f2ea91b6"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga5531e6f7089e040c3ef23679f2ea91b6">ob_gap_padv_connect</a> (<a class="el" href="structob__conn__padv__param__t.html">ob_conn_padv_param_t</a> *conn_padv_param)</td></tr>
+<tr class="memdesc:ga5531e6f7089e040c3ef23679f2ea91b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a connection through padv handle.  <br /></td></tr>
+<tr class="separator:ga5531e6f7089e040c3ef23679f2ea91b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga63e8d43d6b40b9c3434cace8f6f19ebd"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga63e8d43d6b40b9c3434cace8f6f19ebd">ob_gap_connect_cancel</a> (void)</td></tr>
+<tr class="memdesc:ga63e8d43d6b40b9c3434cace8f6f19ebd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancel the connection.  <br /></td></tr>
+<tr class="separator:ga63e8d43d6b40b9c3434cace8f6f19ebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac604c9497bc18b3fbe73c58d85729b63"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#gac604c9497bc18b3fbe73c58d85729b63">ob_gap_period_adv_start</a> (uint8_t padv_index, <a class="el" href="group__OMBLE__GAP.html#gaba4c595db0193b50d1166659a1667c10">ob_padv_param_t</a> *padv_param, <a class="el" href="group__OMBLE__GAP.html#ga198f0e8625569e833c1e49fb27187dc4">ob_data_t</a> *adv_data, <a class="el" href="group__OMBLE__GAP.html#ga198f0e8625569e833c1e49fb27187dc4">ob_data_t</a> *period_data)</td></tr>
+<tr class="memdesc:gac604c9497bc18b3fbe73c58d85729b63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable periodic advertising.  <br /></td></tr>
+<tr class="separator:gac604c9497bc18b3fbe73c58d85729b63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga893f8304cffc254132e5585595e53253"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga893f8304cffc254132e5585595e53253">ob_gap_period_adv_stop</a> (uint8_t padv_index)</td></tr>
+<tr class="memdesc:ga893f8304cffc254132e5585595e53253"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable periodic advertising.  <br /></td></tr>
+<tr class="separator:ga893f8304cffc254132e5585595e53253"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga47ca6faeb1b5c5d0fd907fdd4f48848e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga47ca6faeb1b5c5d0fd907fdd4f48848e">ob_gap_period_adv_response_data_set</a> (uint8_t sync_idx, const <a class="el" href="structob__gap__padv__resp__data__t.html">ob_gap_padv_resp_data_t</a> *resp_data)</td></tr>
+<tr class="memdesc:ga47ca6faeb1b5c5d0fd907fdd4f48848e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set PAwR response data.  <br /></td></tr>
+<tr class="separator:ga47ca6faeb1b5c5d0fd907fdd4f48848e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6a0b8a4b09a463011129df2a0e15b1bd"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga6a0b8a4b09a463011129df2a0e15b1bd">ob_gap_period_adv_sync</a> (const <a class="el" href="structob__gap__padv__sync__t.html">ob_gap_padv_sync_t</a> *sync_param)</td></tr>
+<tr class="memdesc:ga6a0b8a4b09a463011129df2a0e15b1bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start periodic advertising synchronization.  <br /></td></tr>
+<tr class="separator:ga6a0b8a4b09a463011129df2a0e15b1bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad90b453ed7d0ab26dbce7f22ca7ce8ff"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#gad90b453ed7d0ab26dbce7f22ca7ce8ff">ob_gap_period_adv_sync_cancel</a> (void)</td></tr>
+<tr class="memdesc:gad90b453ed7d0ab26dbce7f22ca7ce8ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancel periodic advertising synchronization.  <br /></td></tr>
+<tr class="separator:gad90b453ed7d0ab26dbce7f22ca7ce8ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga62d172a028014ea88d36f703732792f9"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga62d172a028014ea88d36f703732792f9">ob_gap_period_adv_sync_terminate</a> (uint8_t sync_idx)</td></tr>
+<tr class="memdesc:ga62d172a028014ea88d36f703732792f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop periodic advertising synchronization status.  <br /></td></tr>
+<tr class="separator:ga62d172a028014ea88d36f703732792f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaa8059b477b0173c3b7e5b1bb5380f94"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#gaaa8059b477b0173c3b7e5b1bb5380f94">ob_gap_period_adv_list_set</a> (const <a class="el" href="group__OMBLE__GAP.html#ga2654129db4f52a994e2c1e5a1bbfa055">ob_gap_addr_t</a> *fa_addrs, uint8_t num)</td></tr>
+<tr class="memdesc:gaaa8059b477b0173c3b7e5b1bb5380f94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Periodic Advertiser List.  <br /></td></tr>
+<tr class="separator:gaaa8059b477b0173c3b7e5b1bb5380f94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae9ebd495a8860f383c2f93b3934a5727"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#gae9ebd495a8860f383c2f93b3934a5727">ob_gap_period_adv_report_en</a> (uint8_t sync_idx, uint8_t enable)</td></tr>
+<tr class="memdesc:gae9ebd495a8860f383c2f93b3934a5727"><td class="mdescLeft">&#160;</td><td class="mdescRight">Periodic advertising data reporting switch.  <br /></td></tr>
+<tr class="separator:gae9ebd495a8860f383c2f93b3934a5727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7c5ebd486f0f7daa8bd703ee8850c183"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga7c5ebd486f0f7daa8bd703ee8850c183">ob_gap_padv_sync_trans</a> (uint8_t conn_idx, uint16_t service_data, uint8_t type, uint8_t index)</td></tr>
+<tr class="memdesc:ga7c5ebd486f0f7daa8bd703ee8850c183"><td class="mdescLeft">&#160;</td><td class="mdescRight">Periodic Advertising Sync Transfer.  <br /></td></tr>
+<tr class="separator:ga7c5ebd486f0f7daa8bd703ee8850c183"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga49e8df406bf7e68a46fe1c29a44f1d67"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga49e8df406bf7e68a46fe1c29a44f1d67">ob_gap_padv_set_sync_trans_param</a> (uint8_t conn_idx, uint8_t mode, uint16_t skip, uint16_t timeout)</td></tr>
+<tr class="memdesc:ga49e8df406bf7e68a46fe1c29a44f1d67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current connection PAST parameters.  <br /></td></tr>
+<tr class="separator:ga49e8df406bf7e68a46fe1c29a44f1d67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac0eab13aa5aead266b15e5bbaad93514"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#gac0eab13aa5aead266b15e5bbaad93514">ob_gap_period_adv_sync_subevent_set</a> (uint8_t sync_idx, uint16_t padv_prop, uint32_t subevent_bit)</td></tr>
+<tr class="memdesc:gac0eab13aa5aead266b15e5bbaad93514"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synchronize with a subset of the subevents within a PAwR train.  <br /></td></tr>
+<tr class="separator:gac0eab13aa5aead266b15e5bbaad93514"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae5f2a07d9d1c66e9a77a82de37195287"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#gae5f2a07d9d1c66e9a77a82de37195287">ob_gap_period_adv_subevent_data_set</a> (uint8_t padv_index, const <a class="el" href="structob__gap__padv__subevent__data__t.html">ob_gap_padv_subevent_data_t</a> *sub_data)</td></tr>
+<tr class="memdesc:gae5f2a07d9d1c66e9a77a82de37195287"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set PAwR subevent data.  <br /></td></tr>
+<tr class="separator:gae5f2a07d9d1c66e9a77a82de37195287"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga196109e68330aa9337d0202f1f404bd6"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#ga196109e68330aa9337d0202f1f404bd6">ob_gap_get_device_info</a> (uint8_t type, uint8_t conn_idx)</td></tr>
+<tr class="memdesc:ga196109e68330aa9337d0202f1f404bd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get device information.  <br /></td></tr>
+<tr class="separator:ga196109e68330aa9337d0202f1f404bd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa98758afd0abf7c6e04c1075d97e0f2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#gaa98758afd0abf7c6e04c1075d97e0f2d">ob_gap_rpa_gen</a> (const uint8_t irk[16], uint8_t rpa[6])</td></tr>
+<tr class="memdesc:gaa98758afd0abf7c6e04c1075d97e0f2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate RPA based on specified IRK.  <br /></td></tr>
+<tr class="separator:gaa98758afd0abf7c6e04c1075d97e0f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab121499bafd84a03a247999ab8870292"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GAP.html#gab121499bafd84a03a247999ab8870292">ob_gap_rpa_check</a> (const uint8_t irk[16], const uint8_t rpa[6])</td></tr>
+<tr class="memdesc:gab121499bafd84a03a247999ab8870292"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether the specified RPA and IRK match.  <br /></td></tr>
+<tr class="separator:gab121499bafd84a03a247999ab8870292"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+</div>
+</body>
+</html>

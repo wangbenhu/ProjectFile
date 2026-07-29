@@ -1,0 +1,1127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>User Guide: UART</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+-->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">User Guide
+   </div>
+   <div id="projectbrief">Bluetooth Low Energy 5.4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__UART.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">UART<div class="ingroups"><a class="el" href="group__DRIVER.html">Driver</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>UART driver.  
+<a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuart__config__t.html">uart_config_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART config.  <a href="structuart__config__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ga7882852eb00c56bff774f58d88e6d8f0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__UART.html#ga7882852eb00c56bff774f58d88e6d8f0">uart_flow_control_t</a> { <a class="el" href="group__UART.html#gga7882852eb00c56bff774f58d88e6d8f0aa32b32f489672ac0fecac58bd918c11c">UART_FLOW_CONTROL_NONE</a> = 0
+, <a class="el" href="group__UART.html#gga7882852eb00c56bff774f58d88e6d8f0a6e9cbd18337056933f0a93a6df523a8d">UART_FLOW_CONTROL_RTS_CTS</a> = 1
+ }</td></tr>
+<tr class="memdesc:ga7882852eb00c56bff774f58d88e6d8f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART Hardware Flow Control.  <a href="group__UART.html#ga7882852eb00c56bff774f58d88e6d8f0">More...</a><br /></td></tr>
+<tr class="separator:ga7882852eb00c56bff774f58d88e6d8f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8672e9d7de4cca336a56ae117f3eab22"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__UART.html#ga8672e9d7de4cca336a56ae117f3eab22">uart_stop_bit_t</a> { <a class="el" href="group__UART.html#gga8672e9d7de4cca336a56ae117f3eab22a890f4cd218f6a253d6a886c716249b4d">UART_STOP_BIT_1</a> = 0
+, <a class="el" href="group__UART.html#gga8672e9d7de4cca336a56ae117f3eab22a23aac41d6f5d0b5c55c6498247453054">UART_STOP_BIT_2</a> = 1
+, <a class="el" href="group__UART.html#gga8672e9d7de4cca336a56ae117f3eab22ad1e8feee676bc1c6815dc4aa093e9743">UART_STOP_BIT_1_5</a> = 2
+ }</td></tr>
+<tr class="memdesc:ga8672e9d7de4cca336a56ae117f3eab22"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART Number of Stop Bits.  <a href="group__UART.html#ga8672e9d7de4cca336a56ae117f3eab22">More...</a><br /></td></tr>
+<tr class="separator:ga8672e9d7de4cca336a56ae117f3eab22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga265c6cb7cc77361f14dc29448869608c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__UART.html#ga265c6cb7cc77361f14dc29448869608c">uart_data_bit_t</a> { <br />
+&#160;&#160;<a class="el" href="group__UART.html#gga265c6cb7cc77361f14dc29448869608cabaa92bed3247eb56593e6b09f0ec9253">UART_DATA_BIT_5</a> = 0
+, <a class="el" href="group__UART.html#gga265c6cb7cc77361f14dc29448869608cac01e8fd21d30104b7f44e76321f1d1a1">UART_DATA_BIT_6</a> = 1
+, <a class="el" href="group__UART.html#gga265c6cb7cc77361f14dc29448869608caa70cfadb5d459625763a14b82c6c040a">UART_DATA_BIT_7</a> = 2
+, <a class="el" href="group__UART.html#gga265c6cb7cc77361f14dc29448869608ca8b943a36b293915badbaaf8f7cb1131d">UART_DATA_BIT_8</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="group__UART.html#gga265c6cb7cc77361f14dc29448869608caee0c348ed628073da501d2f1e521cb56">UART_DATA_BIT_9</a> = 4
+<br />
+ }</td></tr>
+<tr class="memdesc:ga265c6cb7cc77361f14dc29448869608c"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART Number of Data Bits.  <a href="group__UART.html#ga265c6cb7cc77361f14dc29448869608c">More...</a><br /></td></tr>
+<tr class="separator:ga265c6cb7cc77361f14dc29448869608c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6bcc37e31dd40c204b4ac6f6189e8878"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__UART.html#ga6bcc37e31dd40c204b4ac6f6189e8878">uart_parity_t</a> { <a class="el" href="group__UART.html#gga6bcc37e31dd40c204b4ac6f6189e8878aa80d2d8ea61454045ebe71d155e85b3d">UART_PARITY_NONE</a> = 0
+, <a class="el" href="group__UART.html#gga6bcc37e31dd40c204b4ac6f6189e8878ad90cc425f5ba447773a44a75be6593e2">UART_PARITY_ODD</a> = 1
+, <a class="el" href="group__UART.html#gga6bcc37e31dd40c204b4ac6f6189e8878ad908a637b1dd23f93b149dd2d8bdfdb8">UART_PARITY_EVEN</a> = 2
+ }</td></tr>
+<tr class="memdesc:ga6bcc37e31dd40c204b4ac6f6189e8878"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART Parity.  <a href="group__UART.html#ga6bcc37e31dd40c204b4ac6f6189e8878">More...</a><br /></td></tr>
+<tr class="separator:ga6bcc37e31dd40c204b4ac6f6189e8878"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga17e137969c67cd0eb58323f6ca63b6d9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__UART.html#ga17e137969c67cd0eb58323f6ca63b6d9">uart_control_t</a> { <a class="el" href="group__UART.html#gga17e137969c67cd0eb58323f6ca63b6d9ab52d1efb11937a16f57ef7614e04cf7c">UART_CONTROL_GET_IS_BUSY</a>
+ }</td></tr>
+<tr class="separator:ga17e137969c67cd0eb58323f6ca63b6d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga9a28ac9e4cf598f36a9376c2e2bdfd35"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__UART.html#ga9a28ac9e4cf598f36a9376c2e2bdfd35">drv_uart_init</a> (OM_UART_Type *om_uart, const <a class="el" href="structuart__config__t.html">uart_config_t</a> *uart_cfg)</td></tr>
+<tr class="memdesc:ga9a28ac9e4cf598f36a9376c2e2bdfd35"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART initialization.  <br /></td></tr>
+<tr class="separator:ga9a28ac9e4cf598f36a9376c2e2bdfd35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacea2b5119068a067d0fa307f40090736"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__UART.html#gacea2b5119068a067d0fa307f40090736">drv_uart_set_baudrate</a> (OM_UART_Type *om_uart, uint32_t baudrate)</td></tr>
+<tr class="memdesc:gacea2b5119068a067d0fa307f40090736"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modified baudrate.  <br /></td></tr>
+<tr class="separator:gacea2b5119068a067d0fa307f40090736"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5cb28fc4e0067709a6d3950871de1496"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__UART.html#ga5cb28fc4e0067709a6d3950871de1496">drv_uart_uninit</a> (OM_UART_Type *om_uart)</td></tr>
+<tr class="memdesc:ga5cb28fc4e0067709a6d3950871de1496"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART uninitialize, gate clock.  <br /></td></tr>
+<tr class="separator:ga5cb28fc4e0067709a6d3950871de1496"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5fc2978c6f364eebbaf8559ff4417645"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__UART.html#ga5fc2978c6f364eebbaf8559ff4417645">drv_uart_isr_callback</a> (OM_UART_Type *om_uart, drv_event_t event, uint8_t *data, uint32_t num)</td></tr>
+<tr class="memdesc:ga5fc2978c6f364eebbaf8559ff4417645"><td class="mdescLeft">&#160;</td><td class="mdescRight">The interrupt callback for UART driver. It is a weak function. User should define their own callback in user file, other than modify it in the UART driver.  <br /></td></tr>
+<tr class="separator:ga5fc2978c6f364eebbaf8559ff4417645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3b2d1c90f6e04e796dd8e77fd9a9acb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__UART.html#ga3b2d1c90f6e04e796dd8e77fd9a9acb3">drv_uart_lin_send_break</a> (OM_UART_Type *om_uart)</td></tr>
+<tr class="memdesc:ga3b2d1c90f6e04e796dd8e77fd9a9acb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART send sync break filed when work in LIN mode.  <br /></td></tr>
+<tr class="separator:ga3b2d1c90f6e04e796dd8e77fd9a9acb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad8a41977a277dd2ec277d4c5b9d85ce6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__UART.html#gad8a41977a277dd2ec277d4c5b9d85ce6">drv_uart_write</a> (OM_UART_Type *om_uart, const uint8_t *data, uint16_t num, uint32_t timeout_ms)</td></tr>
+<tr class="memdesc:gad8a41977a277dd2ec277d4c5b9d85ce6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transmit number of bytes from UART by block mode.  <br /></td></tr>
+<tr class="separator:gad8a41977a277dd2ec277d4c5b9d85ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga07ef597ed7c86d5da895919b53982b50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__UART.html#ga07ef597ed7c86d5da895919b53982b50">drv_uart_write_int</a> (OM_UART_Type *om_uart, const uint8_t *data, uint16_t num)</td></tr>
+<tr class="memdesc:ga07ef597ed7c86d5da895919b53982b50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transmit number of bytes from UART by interrupt mode.  <br /></td></tr>
+<tr class="separator:ga07ef597ed7c86d5da895919b53982b50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab4dab6893d15bd90ac360d09943b99f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__UART.html#gab4dab6893d15bd90ac360d09943b99f4">drv_uart_gpdma_channel_allocate</a> (OM_UART_Type *om_uart, drv_gpdma_chan_t channel)</td></tr>
+<tr class="memdesc:gab4dab6893d15bd90ac360d09943b99f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate uart dma channel.  <br /></td></tr>
+<tr class="separator:gab4dab6893d15bd90ac360d09943b99f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaabbb258e6504be4285266125b4fa0f4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__UART.html#gaabbb258e6504be4285266125b4fa0f4e">drv_uart_gpdma_channel_release</a> (OM_UART_Type *om_uart, drv_gpdma_chan_t channel)</td></tr>
+<tr class="memdesc:gaabbb258e6504be4285266125b4fa0f4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release uart dma channel.  <br /></td></tr>
+<tr class="separator:gaabbb258e6504be4285266125b4fa0f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3613f9c733254926d7071367538bcd90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__UART.html#ga3613f9c733254926d7071367538bcd90">drv_uart_write_dma</a> (OM_UART_Type *om_uart, const uint8_t *data, uint16_t num)</td></tr>
+<tr class="memdesc:ga3613f9c733254926d7071367538bcd90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transmit number of bytes from UART by DMA mode.  <br /></td></tr>
+<tr class="separator:ga3613f9c733254926d7071367538bcd90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9bdb6f0b91661737c2e09876bac12f3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__UART.html#ga9bdb6f0b91661737c2e09876bac12f3a">drv_uart_abort_write</a> (OM_UART_Type *om_uart)</td></tr>
+<tr class="memdesc:ga9bdb6f0b91661737c2e09876bac12f3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abort uart writing.  <br /></td></tr>
+<tr class="separator:ga9bdb6f0b91661737c2e09876bac12f3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae0306823617164e7eff14775940f23ec"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__UART.html#gae0306823617164e7eff14775940f23ec">drv_uart_get_write_count</a> (OM_UART_Type *om_uart)</td></tr>
+<tr class="memdesc:gae0306823617164e7eff14775940f23ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">get write count for interrupt/gpdma mode  <br /></td></tr>
+<tr class="separator:gae0306823617164e7eff14775940f23ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4d3d8f4d3558cb614201d8907229352b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__UART.html#ga4d3d8f4d3558cb614201d8907229352b">drv_uart_read</a> (OM_UART_Type *om_uart, uint8_t *data, uint16_t num, uint32_t timeout_ms)</td></tr>
+<tr class="memdesc:ga4d3d8f4d3558cb614201d8907229352b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare receive number of bytes by block mode.  <br /></td></tr>
+<tr class="separator:ga4d3d8f4d3558cb614201d8907229352b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabaf7f60b488b2790d3cdb606906fda66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__UART.html#gabaf7f60b488b2790d3cdb606906fda66">drv_uart_read_int</a> (OM_UART_Type *om_uart, uint8_t *data, uint16_t num)</td></tr>
+<tr class="memdesc:gabaf7f60b488b2790d3cdb606906fda66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare receive number of bytes by interrupt mode, if num is 0, uart would receive data until drv_uart_control with UART_CONTROL_ABORT_RECEIVE is called.  <br /></td></tr>
+<tr class="separator:gabaf7f60b488b2790d3cdb606906fda66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab697e3945ed7bd12ab57c876c74dbea9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__UART.html#gab697e3945ed7bd12ab57c876c74dbea9">drv_uart_read_dma</a> (OM_UART_Type *om_uart, uint8_t *data, uint16_t num)</td></tr>
+<tr class="memdesc:gab697e3945ed7bd12ab57c876c74dbea9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare receive number of bytes by DMA mode.  <br /></td></tr>
+<tr class="separator:gab697e3945ed7bd12ab57c876c74dbea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5bbabe4e8e6eeded870b5313b3ac17cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__UART.html#ga5bbabe4e8e6eeded870b5313b3ac17cb">drv_uart_abort_read</a> (OM_UART_Type *om_uart)</td></tr>
+<tr class="memdesc:ga5bbabe4e8e6eeded870b5313b3ac17cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abort uart reading.  <br /></td></tr>
+<tr class="separator:ga5bbabe4e8e6eeded870b5313b3ac17cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2da2d6e5822ff1e8695c44d07d665239"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__UART.html#ga2da2d6e5822ff1e8695c44d07d665239">drv_uart_get_read_count</a> (OM_UART_Type *om_uart)</td></tr>
+<tr class="memdesc:ga2da2d6e5822ff1e8695c44d07d665239"><td class="mdescLeft">&#160;</td><td class="mdescRight">get read count for interrupt/gpdma mode  <br /></td></tr>
+<tr class="separator:ga2da2d6e5822ff1e8695c44d07d665239"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaff3ec9d6747cd8fbacff4bd4a32ac92a"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__UART.html#gaff3ec9d6747cd8fbacff4bd4a32ac92a">drv_uart_get_is_busy</a> (OM_UART_Type *om_uart)</td></tr>
+<tr class="memdesc:gaff3ec9d6747cd8fbacff4bd4a32ac92a"><td class="mdescLeft">&#160;</td><td class="mdescRight">get busy status for uart  <br /></td></tr>
+<tr class="separator:gaff3ec9d6747cd8fbacff4bd4a32ac92a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6ba23ea0219c4f087adf09b059308177"><td class="memItemLeft" align="right" valign="top">__STATIC_INLINE void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__UART.html#ga6ba23ea0219c4f087adf09b059308177">drv_uart_control</a> (OM_UART_Type *om_uart, <a class="el" href="group__UART.html#ga17e137969c67cd0eb58323f6ca63b6d9">uart_control_t</a> control, void *argu)</td></tr>
+<tr class="memdesc:ga6ba23ea0219c4f087adf09b059308177"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uart control.  <br /></td></tr>
+<tr class="separator:ga6ba23ea0219c4f087adf09b059308177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2c3f95c0139b03c4df3599216587095d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__UART.html#ga2c3f95c0139b03c4df3599216587095d">drv_uart_isr</a> (OM_UART_Type *om_uart)</td></tr>
+<tr class="memdesc:ga2c3f95c0139b03c4df3599216587095d"><td class="mdescLeft">&#160;</td><td class="mdescRight">uart interrupt service routine  <br /></td></tr>
+<tr class="separator:ga2c3f95c0139b03c4df3599216587095d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>UART driver. </p>
+<p>UART driver apis and typedefs header file</p>
+<dl class="section version"><dt>Version</dt><dd>Version 1.0<ul>
+<li>Initial release </li>
+</ul>
+</dd></dl>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ga17e137969c67cd0eb58323f6ca63b6d9" name="ga17e137969c67cd0eb58323f6ca63b6d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga17e137969c67cd0eb58323f6ca63b6d9">&#9670;&#160;</a></span>uart_control_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__UART.html#ga17e137969c67cd0eb58323f6ca63b6d9">uart_control_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga17e137969c67cd0eb58323f6ca63b6d9ab52d1efb11937a16f57ef7614e04cf7c" name="gga17e137969c67cd0eb58323f6ca63b6d9ab52d1efb11937a16f57ef7614e04cf7c"></a>UART_CONTROL_GET_IS_BUSY&#160;</td><td class="fielddoc"><p>Uart get busy status </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga265c6cb7cc77361f14dc29448869608c" name="ga265c6cb7cc77361f14dc29448869608c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga265c6cb7cc77361f14dc29448869608c">&#9670;&#160;</a></span>uart_data_bit_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__UART.html#ga265c6cb7cc77361f14dc29448869608c">uart_data_bit_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UART Number of Data Bits. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga265c6cb7cc77361f14dc29448869608cabaa92bed3247eb56593e6b09f0ec9253" name="gga265c6cb7cc77361f14dc29448869608cabaa92bed3247eb56593e6b09f0ec9253"></a>UART_DATA_BIT_5&#160;</td><td class="fielddoc"><p>5-bit long UART frame </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga265c6cb7cc77361f14dc29448869608cac01e8fd21d30104b7f44e76321f1d1a1" name="gga265c6cb7cc77361f14dc29448869608cac01e8fd21d30104b7f44e76321f1d1a1"></a>UART_DATA_BIT_6&#160;</td><td class="fielddoc"><p>6-bit long UART frame </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga265c6cb7cc77361f14dc29448869608caa70cfadb5d459625763a14b82c6c040a" name="gga265c6cb7cc77361f14dc29448869608caa70cfadb5d459625763a14b82c6c040a"></a>UART_DATA_BIT_7&#160;</td><td class="fielddoc"><p>7-bit long UART frame </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga265c6cb7cc77361f14dc29448869608ca8b943a36b293915badbaaf8f7cb1131d" name="gga265c6cb7cc77361f14dc29448869608ca8b943a36b293915badbaaf8f7cb1131d"></a>UART_DATA_BIT_8&#160;</td><td class="fielddoc"><p>8-bit long UART frame </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga265c6cb7cc77361f14dc29448869608caee0c348ed628073da501d2f1e521cb56" name="gga265c6cb7cc77361f14dc29448869608caee0c348ed628073da501d2f1e521cb56"></a>UART_DATA_BIT_9&#160;</td><td class="fielddoc"><p>9-bit long LIN frame, only valid for LIN mode </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga7882852eb00c56bff774f58d88e6d8f0" name="ga7882852eb00c56bff774f58d88e6d8f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7882852eb00c56bff774f58d88e6d8f0">&#9670;&#160;</a></span>uart_flow_control_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__UART.html#ga7882852eb00c56bff774f58d88e6d8f0">uart_flow_control_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UART Hardware Flow Control. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga7882852eb00c56bff774f58d88e6d8f0aa32b32f489672ac0fecac58bd918c11c" name="gga7882852eb00c56bff774f58d88e6d8f0aa32b32f489672ac0fecac58bd918c11c"></a>UART_FLOW_CONTROL_NONE&#160;</td><td class="fielddoc"><p>No hardware control. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga7882852eb00c56bff774f58d88e6d8f0a6e9cbd18337056933f0a93a6df523a8d" name="gga7882852eb00c56bff774f58d88e6d8f0a6e9cbd18337056933f0a93a6df523a8d"></a>UART_FLOW_CONTROL_RTS_CTS&#160;</td><td class="fielddoc"><p>Request and Clear To Send. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga6bcc37e31dd40c204b4ac6f6189e8878" name="ga6bcc37e31dd40c204b4ac6f6189e8878"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6bcc37e31dd40c204b4ac6f6189e8878">&#9670;&#160;</a></span>uart_parity_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__UART.html#ga6bcc37e31dd40c204b4ac6f6189e8878">uart_parity_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UART Parity. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga6bcc37e31dd40c204b4ac6f6189e8878aa80d2d8ea61454045ebe71d155e85b3d" name="gga6bcc37e31dd40c204b4ac6f6189e8878aa80d2d8ea61454045ebe71d155e85b3d"></a>UART_PARITY_NONE&#160;</td><td class="fielddoc"><p>No parity. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga6bcc37e31dd40c204b4ac6f6189e8878ad90cc425f5ba447773a44a75be6593e2" name="gga6bcc37e31dd40c204b4ac6f6189e8878ad90cc425f5ba447773a44a75be6593e2"></a>UART_PARITY_ODD&#160;</td><td class="fielddoc"><p>Odd parity. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga6bcc37e31dd40c204b4ac6f6189e8878ad908a637b1dd23f93b149dd2d8bdfdb8" name="gga6bcc37e31dd40c204b4ac6f6189e8878ad908a637b1dd23f93b149dd2d8bdfdb8"></a>UART_PARITY_EVEN&#160;</td><td class="fielddoc"><p>Even parity. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga8672e9d7de4cca336a56ae117f3eab22" name="ga8672e9d7de4cca336a56ae117f3eab22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8672e9d7de4cca336a56ae117f3eab22">&#9670;&#160;</a></span>uart_stop_bit_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__UART.html#ga8672e9d7de4cca336a56ae117f3eab22">uart_stop_bit_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UART Number of Stop Bits. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga8672e9d7de4cca336a56ae117f3eab22a890f4cd218f6a253d6a886c716249b4d" name="gga8672e9d7de4cca336a56ae117f3eab22a890f4cd218f6a253d6a886c716249b4d"></a>UART_STOP_BIT_1&#160;</td><td class="fielddoc"><p>UART frame with 1 stop bit. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga8672e9d7de4cca336a56ae117f3eab22a23aac41d6f5d0b5c55c6498247453054" name="gga8672e9d7de4cca336a56ae117f3eab22a23aac41d6f5d0b5c55c6498247453054"></a>UART_STOP_BIT_2&#160;</td><td class="fielddoc"><p>UART frame with 2 stop bit. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga8672e9d7de4cca336a56ae117f3eab22ad1e8feee676bc1c6815dc4aa093e9743" name="gga8672e9d7de4cca336a56ae117f3eab22ad1e8feee676bc1c6815dc4aa093e9743"></a>UART_STOP_BIT_1_5&#160;</td><td class="fielddoc"><p>UART frame with 1.5 stop bit. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga5bbabe4e8e6eeded870b5313b3ac17cb" name="ga5bbabe4e8e6eeded870b5313b3ac17cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5bbabe4e8e6eeded870b5313b3ac17cb">&#9670;&#160;</a></span>drv_uart_abort_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_uart_abort_read </td>
+          <td>(</td>
+          <td class="paramtype">OM_UART_Type *&#160;</td>
+          <td class="paramname"><em>om_uart</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Abort uart reading. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_uart</td><td>Pointer to UART </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga9bdb6f0b91661737c2e09876bac12f3a" name="ga9bdb6f0b91661737c2e09876bac12f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9bdb6f0b91661737c2e09876bac12f3a">&#9670;&#160;</a></span>drv_uart_abort_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_uart_abort_write </td>
+          <td>(</td>
+          <td class="paramtype">OM_UART_Type *&#160;</td>
+          <td class="paramname"><em>om_uart</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Abort uart writing. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_uart</td><td>Pointer to UART </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga6ba23ea0219c4f087adf09b059308177" name="ga6ba23ea0219c4f087adf09b059308177"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6ba23ea0219c4f087adf09b059308177">&#9670;&#160;</a></span>drv_uart_control()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_INLINE void * drv_uart_control </td>
+          <td>(</td>
+          <td class="paramtype">OM_UART_Type *&#160;</td>
+          <td class="paramname"><em>om_uart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__UART.html#ga17e137969c67cd0eb58323f6ca63b6d9">uart_control_t</a>&#160;</td>
+          <td class="paramname"><em>control</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>argu</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Uart control. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_uart</td><td>Pointer to UART </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">control</td><td>Uart control type </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">argu</td><td>Control argument</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>status or error code </dd></dl>
+
+</div>
+</div>
+<a id="gaff3ec9d6747cd8fbacff4bd4a32ac92a" name="gaff3ec9d6747cd8fbacff4bd4a32ac92a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaff3ec9d6747cd8fbacff4bd4a32ac92a">&#9670;&#160;</a></span>drv_uart_get_is_busy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t drv_uart_get_is_busy </td>
+          <td>(</td>
+          <td class="paramtype">OM_UART_Type *&#160;</td>
+          <td class="paramname"><em>om_uart</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get busy status for uart </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_uart</td><td>Pointer to UART</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0: not busy, 1: busy </dd></dl>
+
+</div>
+</div>
+<a id="ga2da2d6e5822ff1e8695c44d07d665239" name="ga2da2d6e5822ff1e8695c44d07d665239"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2da2d6e5822ff1e8695c44d07d665239">&#9670;&#160;</a></span>drv_uart_get_read_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t drv_uart_get_read_count </td>
+          <td>(</td>
+          <td class="paramtype">OM_UART_Type *&#160;</td>
+          <td class="paramname"><em>om_uart</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get read count for interrupt/gpdma mode </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_uart</td><td>Pointer to UART</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>read count </dd></dl>
+
+</div>
+</div>
+<a id="gae0306823617164e7eff14775940f23ec" name="gae0306823617164e7eff14775940f23ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae0306823617164e7eff14775940f23ec">&#9670;&#160;</a></span>drv_uart_get_write_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t drv_uart_get_write_count </td>
+          <td>(</td>
+          <td class="paramtype">OM_UART_Type *&#160;</td>
+          <td class="paramname"><em>om_uart</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get write count for interrupt/gpdma mode </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_uart</td><td>Pointer to UART</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>write count </dd></dl>
+
+</div>
+</div>
+<a id="gab4dab6893d15bd90ac360d09943b99f4" name="gab4dab6893d15bd90ac360d09943b99f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab4dab6893d15bd90ac360d09943b99f4">&#9670;&#160;</a></span>drv_uart_gpdma_channel_allocate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_uart_gpdma_channel_allocate </td>
+          <td>(</td>
+          <td class="paramtype">OM_UART_Type *&#160;</td>
+          <td class="paramname"><em>om_uart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">drv_gpdma_chan_t&#160;</td>
+          <td class="paramname"><em>channel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allocate uart dma channel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_uart</td><td>Pointer to uart </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">channel</td><td>UART rx/tx channel</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="gaabbb258e6504be4285266125b4fa0f4e" name="gaabbb258e6504be4285266125b4fa0f4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaabbb258e6504be4285266125b4fa0f4e">&#9670;&#160;</a></span>drv_uart_gpdma_channel_release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_uart_gpdma_channel_release </td>
+          <td>(</td>
+          <td class="paramtype">OM_UART_Type *&#160;</td>
+          <td class="paramname"><em>om_uart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">drv_gpdma_chan_t&#160;</td>
+          <td class="paramname"><em>channel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Release uart dma channel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_uart</td><td>Pointer to uart </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">channel</td><td>UART rx/tx channel</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="ga9a28ac9e4cf598f36a9376c2e2bdfd35" name="ga9a28ac9e4cf598f36a9376c2e2bdfd35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9a28ac9e4cf598f36a9376c2e2bdfd35">&#9670;&#160;</a></span>drv_uart_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_uart_init </td>
+          <td>(</td>
+          <td class="paramtype">OM_UART_Type *&#160;</td>
+          <td class="paramname"><em>om_uart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structuart__config__t.html">uart_config_t</a> *&#160;</td>
+          <td class="paramname"><em>uart_cfg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UART initialization. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_uart</td><td>Pointer to UART </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">uart_cfg</td><td>Configuration for uart</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="ga2c3f95c0139b03c4df3599216587095d" name="ga2c3f95c0139b03c4df3599216587095d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2c3f95c0139b03c4df3599216587095d">&#9670;&#160;</a></span>drv_uart_isr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_uart_isr </td>
+          <td>(</td>
+          <td class="paramtype">OM_UART_Type *&#160;</td>
+          <td class="paramname"><em>om_uart</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>uart interrupt service routine </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_uart</td><td>Pointer to UART </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga5fc2978c6f364eebbaf8559ff4417645" name="ga5fc2978c6f364eebbaf8559ff4417645"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5fc2978c6f364eebbaf8559ff4417645">&#9670;&#160;</a></span>drv_uart_isr_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_uart_isr_callback </td>
+          <td>(</td>
+          <td class="paramtype">OM_UART_Type *&#160;</td>
+          <td class="paramname"><em>om_uart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">drv_event_t&#160;</td>
+          <td class="paramname"><em>event</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The interrupt callback for UART driver. It is a weak function. User should define their own callback in user file, other than modify it in the UART driver. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">om_uart</td><td>The UART device address </td></tr>
+    <tr><td class="paramname">event</td><td>The driver uart event<ul>
+<li>DRV_EVENT_COMMON_WRITE_COMPLETED</li>
+<li>DRV_EVENT_COMMON_READ_COMPLETED</li>
+<li>DRV_EVENT_UART_RX_TIMEOUT</li>
+<li>DRV_EVENT_COMMON_RX_OVERFLOW</li>
+<li>DRV_EVENT_UART_RX_PARITY_ERROR</li>
+<li>DRV_EVENT_UART_RX_BREAK</li>
+<li>DRV_EVENT_UART_RX_FRAME_ERROR </li>
+</ul>
+</td></tr>
+    <tr><td class="paramname">data</td><td>The data pointer of data to be read or write </td></tr>
+    <tr><td class="paramname">num</td><td>The data buffer valid data count </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga3b2d1c90f6e04e796dd8e77fd9a9acb3" name="ga3b2d1c90f6e04e796dd8e77fd9a9acb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3b2d1c90f6e04e796dd8e77fd9a9acb3">&#9670;&#160;</a></span>drv_uart_lin_send_break()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_uart_lin_send_break </td>
+          <td>(</td>
+          <td class="paramtype">OM_UART_Type *&#160;</td>
+          <td class="paramname"><em>om_uart</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UART send sync break filed when work in LIN mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_uart</td><td>Pointer to UART </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga4d3d8f4d3558cb614201d8907229352b" name="ga4d3d8f4d3558cb614201d8907229352b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4d3d8f4d3558cb614201d8907229352b">&#9670;&#160;</a></span>drv_uart_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_uart_read </td>
+          <td>(</td>
+          <td class="paramtype">OM_UART_Type *&#160;</td>
+          <td class="paramname"><em>om_uart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prepare receive number of bytes by block mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_uart</td><td>Pointer to UART </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>Pointer to data buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num</td><td>Number of data bytes to be received </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout_ms</td><td>time out(ms)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="gab697e3945ed7bd12ab57c876c74dbea9" name="gab697e3945ed7bd12ab57c876c74dbea9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab697e3945ed7bd12ab57c876c74dbea9">&#9670;&#160;</a></span>drv_uart_read_dma()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_uart_read_dma </td>
+          <td>(</td>
+          <td class="paramtype">OM_UART_Type *&#160;</td>
+          <td class="paramname"><em>om_uart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prepare receive number of bytes by DMA mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_uart</td><td>Pointer to UART </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>Pointer to data buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num</td><td>Number of data bytes to be received</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="gabaf7f60b488b2790d3cdb606906fda66" name="gabaf7f60b488b2790d3cdb606906fda66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabaf7f60b488b2790d3cdb606906fda66">&#9670;&#160;</a></span>drv_uart_read_int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_uart_read_int </td>
+          <td>(</td>
+          <td class="paramtype">OM_UART_Type *&#160;</td>
+          <td class="paramname"><em>om_uart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prepare receive number of bytes by interrupt mode, if num is 0, uart would receive data until drv_uart_control with UART_CONTROL_ABORT_RECEIVE is called. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_uart</td><td>Pointer to UART </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>Pointer to data buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num</td><td>Number of data bytes to be received</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="gacea2b5119068a067d0fa307f40090736" name="gacea2b5119068a067d0fa307f40090736"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacea2b5119068a067d0fa307f40090736">&#9670;&#160;</a></span>drv_uart_set_baudrate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_uart_set_baudrate </td>
+          <td>(</td>
+          <td class="paramtype">OM_UART_Type *&#160;</td>
+          <td class="paramname"><em>om_uart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>baudrate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modified baudrate. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">om_uart</td><td>Pointer to UART </td></tr>
+    <tr><td class="paramname">baudrate</td><td>baudrate</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno OM_ERROR_OK indicates modified successed, others is failed </dd></dl>
+
+</div>
+</div>
+<a id="ga5cb28fc4e0067709a6d3950871de1496" name="ga5cb28fc4e0067709a6d3950871de1496"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5cb28fc4e0067709a6d3950871de1496">&#9670;&#160;</a></span>drv_uart_uninit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_uart_uninit </td>
+          <td>(</td>
+          <td class="paramtype">OM_UART_Type *&#160;</td>
+          <td class="paramname"><em>om_uart</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UART uninitialize, gate clock. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_uart</td><td>Pointer to UART </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gad8a41977a277dd2ec277d4c5b9d85ce6" name="gad8a41977a277dd2ec277d4c5b9d85ce6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad8a41977a277dd2ec277d4c5b9d85ce6">&#9670;&#160;</a></span>drv_uart_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_uart_write </td>
+          <td>(</td>
+          <td class="paramtype">OM_UART_Type *&#160;</td>
+          <td class="paramname"><em>om_uart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Transmit number of bytes from UART by block mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_uart</td><td>Pointer to UART </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>Pointer to data buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num</td><td>Number of data bytes to be sent </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout_ms</td><td>time out(ms), maybe used for flow control</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="ga3613f9c733254926d7071367538bcd90" name="ga3613f9c733254926d7071367538bcd90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3613f9c733254926d7071367538bcd90">&#9670;&#160;</a></span>drv_uart_write_dma()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_uart_write_dma </td>
+          <td>(</td>
+          <td class="paramtype">OM_UART_Type *&#160;</td>
+          <td class="paramname"><em>om_uart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Transmit number of bytes from UART by DMA mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_uart</td><td>Pointer to UART </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>Pointer to data buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num</td><td>Number of data bytes to be sent</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="ga07ef597ed7c86d5da895919b53982b50" name="ga07ef597ed7c86d5da895919b53982b50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga07ef597ed7c86d5da895919b53982b50">&#9670;&#160;</a></span>drv_uart_write_int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_uart_write_int </td>
+          <td>(</td>
+          <td class="paramtype">OM_UART_Type *&#160;</td>
+          <td class="paramname"><em>om_uart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Transmit number of bytes from UART by interrupt mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_uart</td><td>Pointer to UART </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>Pointer to data buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num</td><td>Number of data bytes to be sent</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+</div>
+</body>
+</html>

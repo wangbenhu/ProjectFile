@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>User Guide: BLE Direct Test Mode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+-->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">User Guide
+   </div>
+   <div id="projectbrief">Bluetooth Low Energy 5.4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('BLE_DTM.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">BLE Direct Test Mode </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="md_doxygen_source_ble_ble_dtm"></a></p>
+<h1><a class="anchor" id="autotoc_md170"></a>
+Overview</h1>
+<p>Direct Test Mode is used to control the DUT and provides a report back to the Tester. Direct Test Mode shall be set up by one of two alternative methods:</p><ul>
+<li>over HCI</li>
+<li>through a 2-wire UART interface</li>
+</ul>
+<p>Each DUT shall implement one of the two Direct Test Mode methods in order to test the Low Energy PHY layer. DUT implements the second method, means through HCI UART interface. The test framework of through HCI UART interface is shown as follow:</p>
+<div class="image">
+<img src="dtm_framework.jpg" alt=""/>
+<div class="caption">
+Test Framework through HCI UART Interface</div></div>
+    <p>DUT runs DTM application, and test equipment of CMW500 sends DTM commands to DUT. DTM application analyzes those commands and invokes related API to send packets to CMW500 (transmitter test) or receive packets from CMW500 (receiver test). Afterwards DTM application collects test result and sends to CMW500 by DTM events. CMW500 judges and displays results according to the DTM events.</p>
+<h1><a class="anchor" id="autotoc_md171"></a>
+Source Code</h1>
+<p>Source code can be seen in <code>projects/ble_hci</code>. The important communication UART parametter is shown as follow:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#define PAD_UART0_TXD       16</span></div>
+<div class="line"><span class="preprocessor">#define PAD_UART0_RXD       17</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_struct" href="structuart__config__t.html">uart_config_t</a> hci_uart_cfg = {</div>
+<div class="line">    .<a class="code hl_variable" href="structuart__config__t.html#a736260dfb0b24aa8bf3bee3ada0d4a4e">baudrate</a>       = 115200, <span class="comment">//115200, // 1000000</span></div>
+<div class="line">    .flow_control   = <a class="code hl_enumvalue" href="group__UART.html#gga7882852eb00c56bff774f58d88e6d8f0aa32b32f489672ac0fecac58bd918c11c">UART_FLOW_CONTROL_NONE</a>,</div>
+<div class="line">    .data_bit       = <a class="code hl_enumvalue" href="group__UART.html#gga265c6cb7cc77361f14dc29448869608ca8b943a36b293915badbaaf8f7cb1131d">UART_DATA_BIT_8</a>,</div>
+<div class="line">    .stop_bit       = <a class="code hl_enumvalue" href="group__UART.html#gga8672e9d7de4cca336a56ae117f3eab22a890f4cd218f6a253d6a886c716249b4d">UART_STOP_BIT_1</a>,</div>
+<div class="line">    .parity         = <a class="code hl_enumvalue" href="group__UART.html#gga6bcc37e31dd40c204b4ac6f6189e8878aa80d2d8ea61454045ebe71d155e85b3d">UART_PARITY_NONE</a>,</div>
+<div class="line">    .half_duplex_en = 0,</div>
+<div class="line">    .lin_enable     = 0,</div>
+<div class="line">};</div>
+<div class="ttc" id="agroup__UART_html_gga265c6cb7cc77361f14dc29448869608ca8b943a36b293915badbaaf8f7cb1131d"><div class="ttname"><a href="group__UART.html#gga265c6cb7cc77361f14dc29448869608ca8b943a36b293915badbaaf8f7cb1131d">UART_DATA_BIT_8</a></div><div class="ttdeci">@ UART_DATA_BIT_8</div><div class="ttdoc">8-bit long UART frame</div><div class="ttdef"><b>Definition:</b> drv_uart.h:70</div></div>
+<div class="ttc" id="agroup__UART_html_gga6bcc37e31dd40c204b4ac6f6189e8878aa80d2d8ea61454045ebe71d155e85b3d"><div class="ttname"><a href="group__UART.html#gga6bcc37e31dd40c204b4ac6f6189e8878aa80d2d8ea61454045ebe71d155e85b3d">UART_PARITY_NONE</a></div><div class="ttdeci">@ UART_PARITY_NONE</div><div class="ttdoc">No parity.</div><div class="ttdef"><b>Definition:</b> drv_uart.h:78</div></div>
+<div class="ttc" id="agroup__UART_html_gga7882852eb00c56bff774f58d88e6d8f0aa32b32f489672ac0fecac58bd918c11c"><div class="ttname"><a href="group__UART.html#gga7882852eb00c56bff774f58d88e6d8f0aa32b32f489672ac0fecac58bd918c11c">UART_FLOW_CONTROL_NONE</a></div><div class="ttdeci">@ UART_FLOW_CONTROL_NONE</div><div class="ttdoc">No hardware control.</div><div class="ttdef"><b>Definition:</b> drv_uart.h:46</div></div>
+<div class="ttc" id="agroup__UART_html_gga8672e9d7de4cca336a56ae117f3eab22a890f4cd218f6a253d6a886c716249b4d"><div class="ttname"><a href="group__UART.html#gga8672e9d7de4cca336a56ae117f3eab22a890f4cd218f6a253d6a886c716249b4d">UART_STOP_BIT_1</a></div><div class="ttdeci">@ UART_STOP_BIT_1</div><div class="ttdoc">UART frame with 1 stop bit.</div><div class="ttdef"><b>Definition:</b> drv_uart.h:54</div></div>
+<div class="ttc" id="astructuart__config__t_html"><div class="ttname"><a href="structuart__config__t.html">uart_config_t</a></div><div class="ttdoc">UART config.</div><div class="ttdef"><b>Definition:</b> drv_uart.h:90</div></div>
+<div class="ttc" id="astructuart__config__t_html_a736260dfb0b24aa8bf3bee3ada0d4a4e"><div class="ttname"><a href="structuart__config__t.html#a736260dfb0b24aa8bf3bee3ada0d4a4e">uart_config_t::baudrate</a></div><div class="ttdeci">uint32_t baudrate</div><div class="ttdef"><b>Definition:</b> drv_uart.h:91</div></div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md172"></a>
+Message Sequence Charts</h1>
+<p>Lower tester and upper tester are on behalf of CMW500. Test message sequences are shown as follow:</p>
+<div class="image">
+<img src="dtm_tx_test_msc.jpg" alt=""/>
+<div class="caption">
+Transmitter Test MSC</div></div>
+    <p>Upper tester sends command to DUT to order it to transmit test packets to lower tester. DUT reports event to upper tester after transmit procedure is terminated.</p>
+<div class="image">
+<img src="dtm_rx_test_msc.jpg" alt=""/>
+<div class="caption">
+Receiver Test MSC</div></div>
+    <p>Upper tester sends command to DUT to order DUT prepare to receive test packets from lower tester. Lower tester sends test packets to DUT, and DUT reports event to upper tester after receive procedure is terminated.</p>
+<h1><a class="anchor" id="autotoc_md173"></a>
+Test Procedure</h1>
+<h2><a class="anchor" id="autotoc_md174"></a>
+Transmitter test</h2>
+<ol type="1">
+<li>Output power <blockquote class="doxtable">
+<p>&zwj;The CMW500 transmits a test control message over the RS232, USB, or HCI UART interface instructing the DUT to transmit reference test packets. The CMW500 measures the average power of the received packets over at least 20% to 80% of the duration of the burst. </p>
+</blockquote>
+</li>
+<li>Carrier &amp; Drift Test <blockquote class="doxtable">
+<p>&zwj;The carrier drift test performs a frequency drift measurement over the length of the packet received. The carrier frequency offset is measured in the same manner as basic rate initial carrier test, but on the eight preamble bits in the low energy reference packet. </p>
+</blockquote>
+</li>
+<li>Modulation Index Test <blockquote class="doxtable">
+<p>&zwj;This test measures the modulation characteristics on the DUT output for each of the selected frequency ranges (LOW, MEDIUM and HIGH). </p>
+</blockquote>
+</li>
+</ol>
+<h2><a class="anchor" id="autotoc_md175"></a>
+Receiver test</h2>
+<ol type="1">
+<li>Sensitivity Test <blockquote class="doxtable">
+<p>&zwj;After sending a test control message to the DUT, the CMW500 sends BLE reference packets to the DUT. The number of packets DUT received is counted and this data is then read by the CMW500 over the HCI UART connection. </p>
+</blockquote>
+</li>
+<li>PER Integrity <blockquote class="doxtable">
+<p>&zwj;The CMW500 sends a random even number of BLE reference packets to the DUT at -30 dBm with a PRBS9 payload. The CRC value for the packets is alternated between a valid and invalid value. The DUT counts the number of received packets, and this value is read by the CMW500 over the HCI UART interface for frame error rate (FER) calculation. The test is repeated three times at the frequency selected. </p>
+</blockquote>
+</li>
+<li>Maximum Input Power Test <blockquote class="doxtable">
+<p>&zwj;After sending a test control message, the CMW500 sends BLE reference packets to the DUT. The number of packets received at the DUT is counted, and this value is then read by the CMW500 over the HCI UART connection[1]. </p>
+</blockquote>
+</li>
+</ol>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+</div>
+</body>
+</html>

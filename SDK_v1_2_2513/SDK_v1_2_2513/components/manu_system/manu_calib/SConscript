@@ -1,0 +1,10 @@
+from build.building import *
+
+group = []
+
+MANU_CALIB_INCS =  ['.']
+MANU_CALIB_SRCS =  ['manu_calib.c']
+
+group = DefineGroup(name='manu_calib', srcs=MANU_CALIB_SRCS, incs=MANU_CALIB_INCS)
+
+Return('group')

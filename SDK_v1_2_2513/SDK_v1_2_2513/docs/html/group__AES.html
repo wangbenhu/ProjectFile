@@ -1,0 +1,1617 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>User Guide: AES</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+-->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">User Guide
+   </div>
+   <div id="projectbrief">Bluetooth Low Energy 5.4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__AES.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">AES<div class="ingroups"><a class="el" href="group__DRIVER.html">Driver</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>AES driver.  
+<a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaes__ecb__config__t.html">aes_ecb_config_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaes__cbc__config__t.html">aes_cbc_config_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaes__cfb__config__t.html">aes_cfb_config_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaes__ofb__config__t.html">aes_ofb_config_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaes__ctr__config__t.html">aes_ctr_config_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaes__gcm__config__t.html">aes_gcm_config_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaes__ccm__le__config__t.html">aes_ccm_le_config_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaes__cmac__config__t.html">aes_cmac_config_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga0776c4312f92c5a01aacd053d406cc45"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#ga0776c4312f92c5a01aacd053d406cc45">OM_AES0</a>&#160;&#160;&#160;0x1000</td></tr>
+<tr class="separator:ga0776c4312f92c5a01aacd053d406cc45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf19ab913a847ad1e91c5291215116de1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#gaf19ab913a847ad1e91c5291215116de1">AES_BLOCK_SIZE</a>&#160;&#160;&#160;16</td></tr>
+<tr class="separator:gaf19ab913a847ad1e91c5291215116de1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:gada33c599fcb1245f8be8ab3376bf30da"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#gada33c599fcb1245f8be8ab3376bf30da">drv_aes_mode_t</a> { <br />
+&#160;&#160;<a class="el" href="group__AES.html#ggada33c599fcb1245f8be8ab3376bf30daa0d8d868a186f214c8c4189a761f69b25">DRV_AES_MODE_ECB</a> = 0
+, <a class="el" href="group__AES.html#ggada33c599fcb1245f8be8ab3376bf30daa29a8ac502c7de9628b200b5afd49ace4">DRV_AES_MODE_CBC</a> = 1
+, <a class="el" href="group__AES.html#ggada33c599fcb1245f8be8ab3376bf30daac8907f6dbadc2ec32aa42114ac795e09">DRV_AES_MODE_CFB</a> = 2
+, <a class="el" href="group__AES.html#ggada33c599fcb1245f8be8ab3376bf30daa12ecbee0cddfce65e1260f5f46ecea8e">DRV_AES_MODE_OFB</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="group__AES.html#ggada33c599fcb1245f8be8ab3376bf30daa1a6f4892b0d1fe60d327559b98c5924a">DRV_AES_MODE_CTR</a> = 4
+, <a class="el" href="group__AES.html#ggada33c599fcb1245f8be8ab3376bf30daa989fefac7d8ab4f8025fb7fdb5a885fb">DRV_AES_MODE_GCM</a> = 5
+<br />
+ }</td></tr>
+<tr class="separator:gada33c599fcb1245f8be8ab3376bf30da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad1a8a3bf9a82d3221ae347ccb67450a8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#gad1a8a3bf9a82d3221ae347ccb67450a8">aes_operation_t</a> { <a class="el" href="group__AES.html#ggad1a8a3bf9a82d3221ae347ccb67450a8ac84eefd475d1422843089266af5f1f56">AES_OP_DECRYPT</a> = 0
+, <a class="el" href="group__AES.html#ggad1a8a3bf9a82d3221ae347ccb67450a8a298b281bcd7ee70d2c214ae0ef7c407a">AES_OP_ENCRYPT</a> = 1
+ }</td></tr>
+<tr class="separator:gad1a8a3bf9a82d3221ae347ccb67450a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae397f0876d1775796b478fe1275bd62e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#gae397f0876d1775796b478fe1275bd62e">gcm_operation_t</a> { <a class="el" href="group__AES.html#ggae397f0876d1775796b478fe1275bd62ea25849b280171771bdccc4d778bc6cd39">GCM_OP_DECRYPT</a> = 0
+, <a class="el" href="group__AES.html#ggae397f0876d1775796b478fe1275bd62ea0904562d1b1112e24e00858a11d5c1f2">GCM_OP_ENCRYPT</a> = 1
+ }</td></tr>
+<tr class="separator:gae397f0876d1775796b478fe1275bd62e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga02c517103062e4ab104b12ab0abcbc29"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#ga02c517103062e4ab104b12ab0abcbc29">aes_keybits_t</a> { <a class="el" href="group__AES.html#gga02c517103062e4ab104b12ab0abcbc29a6cab52d40d1f9b325589d4587139ea89">AES_KEYBITS_128</a> = 0
+, <a class="el" href="group__AES.html#gga02c517103062e4ab104b12ab0abcbc29a4e1d631563f09a9b4fa100c82fb48a72">AES_KEYBITS_192</a> = 1
+, <a class="el" href="group__AES.html#gga02c517103062e4ab104b12ab0abcbc29af1c7c78d8622f58c6f3b68d5a6fdd41b">AES_KEYBITS_256</a> = 2
+ }</td></tr>
+<tr class="separator:ga02c517103062e4ab104b12ab0abcbc29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga082eca9df53c641afba2bbb47bebbb32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#ga082eca9df53c641afba2bbb47bebbb32">drv_aes_hw_setkey_enc</a> (OM_AES_HW_Type *om_aes, const uint8_t *key, uint32_t keybits)</td></tr>
+<tr class="memdesc:ga082eca9df53c641afba2bbb47bebbb32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set hardware AES encrypt key.  <br /></td></tr>
+<tr class="separator:ga082eca9df53c641afba2bbb47bebbb32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1a5658c4a42c4d96e0fd2bd1df51afd3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#ga1a5658c4a42c4d96e0fd2bd1df51afd3">drv_aes_hw_encrypt</a> (OM_AES_HW_Type *om_aes, const uint8_t input[16], uint8_t output[16])</td></tr>
+<tr class="memdesc:ga1a5658c4a42c4d96e0fd2bd1df51afd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hardware AES encrypt engine.  <br /></td></tr>
+<tr class="separator:ga1a5658c4a42c4d96e0fd2bd1df51afd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga97079e41a15d41f20544c2cc387481dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#ga97079e41a15d41f20544c2cc387481dd">drv_aes_setkey_enc</a> (uint32_t om_aes, const uint8_t *key, uint32_t keybits)</td></tr>
+<tr class="memdesc:ga97079e41a15d41f20544c2cc387481dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set AES encrypt key.  <br /></td></tr>
+<tr class="separator:ga97079e41a15d41f20544c2cc387481dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga72b2b213c15d89d9704880ca3ec9032f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#ga72b2b213c15d89d9704880ca3ec9032f">drv_aes_setkey_dec</a> (uint32_t om_aes, const uint8_t *key, uint32_t keybits)</td></tr>
+<tr class="memdesc:ga72b2b213c15d89d9704880ca3ec9032f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set AES decrypt key.  <br /></td></tr>
+<tr class="separator:ga72b2b213c15d89d9704880ca3ec9032f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7567597631525bcb7746fcabbc830165"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#ga7567597631525bcb7746fcabbc830165">drv_aes_encrypt</a> (uint32_t om_aes, const uint8_t input[16], uint8_t output[16])</td></tr>
+<tr class="memdesc:ga7567597631525bcb7746fcabbc830165"><td class="mdescLeft">&#160;</td><td class="mdescRight">AES encrypt engine.  <br /></td></tr>
+<tr class="separator:ga7567597631525bcb7746fcabbc830165"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga84ba86ba329899083fbbe77ba4743696"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#ga84ba86ba329899083fbbe77ba4743696">drv_aes_decrypt</a> (uint32_t om_aes, const uint8_t input[16], uint8_t output[16])</td></tr>
+<tr class="memdesc:ga84ba86ba329899083fbbe77ba4743696"><td class="mdescLeft">&#160;</td><td class="mdescRight">AES decrypt engine.  <br /></td></tr>
+<tr class="separator:ga84ba86ba329899083fbbe77ba4743696"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga271518869cd3ae18bde60b23013bec11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#ga271518869cd3ae18bde60b23013bec11">drv_aes_ecb_start</a> (uint32_t om_aes, const <a class="el" href="structaes__ecb__config__t.html">aes_ecb_config_t</a> *cfg)</td></tr>
+<tr class="memdesc:ga271518869cd3ae18bde60b23013bec11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start AES using ECB mode.  <br /></td></tr>
+<tr class="separator:ga271518869cd3ae18bde60b23013bec11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5a78896e46f34b0fd887738f4f6298d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#ga5a78896e46f34b0fd887738f4f6298d4">drv_aes_ecb_crypt_continue</a> (uint32_t om_aes, const uint8_t *input, uint8_t *output, uint32_t length)</td></tr>
+<tr class="memdesc:ga5a78896e46f34b0fd887738f4f6298d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Continue AES calculation using ECB mode.  <br /></td></tr>
+<tr class="separator:ga5a78896e46f34b0fd887738f4f6298d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf7984ff73adf6e9efddfaccb88e2ce7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#gaf7984ff73adf6e9efddfaccb88e2ce7f">drv_aes_ecb_crypt_stop</a> (uint32_t om_aes)</td></tr>
+<tr class="memdesc:gaf7984ff73adf6e9efddfaccb88e2ce7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop AES calculation using ECB mode.  <br /></td></tr>
+<tr class="separator:gaf7984ff73adf6e9efddfaccb88e2ce7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga95398237c666c9d90836a10d707d5838"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#ga95398237c666c9d90836a10d707d5838">drv_aes_cbc_start</a> (uint32_t om_aes, const <a class="el" href="structaes__cbc__config__t.html">aes_cbc_config_t</a> *cfg)</td></tr>
+<tr class="memdesc:ga95398237c666c9d90836a10d707d5838"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start AES using CBC mode.  <br /></td></tr>
+<tr class="separator:ga95398237c666c9d90836a10d707d5838"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3b0809c29a3a0b41651fd5425dd00f3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#ga3b0809c29a3a0b41651fd5425dd00f3f">drv_aes_cbc_crypt_continue</a> (uint32_t om_aes, const uint8_t *input, uint8_t *output, uint32_t length)</td></tr>
+<tr class="memdesc:ga3b0809c29a3a0b41651fd5425dd00f3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Continue AES calculation using CBC mode.  <br /></td></tr>
+<tr class="separator:ga3b0809c29a3a0b41651fd5425dd00f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3639f72fdb455da8955b99004fd78656"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#ga3639f72fdb455da8955b99004fd78656">drv_aes_cbc_crypt_stop</a> (uint32_t om_aes)</td></tr>
+<tr class="memdesc:ga3639f72fdb455da8955b99004fd78656"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop AES calculation using CBC mode.  <br /></td></tr>
+<tr class="separator:ga3639f72fdb455da8955b99004fd78656"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5b06e8a9d13c7fc9bda6d68dffe5cabb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#ga5b06e8a9d13c7fc9bda6d68dffe5cabb">drv_aes_cfb_start</a> (uint32_t om_aes, const <a class="el" href="structaes__cfb__config__t.html">aes_cfb_config_t</a> *cfg)</td></tr>
+<tr class="memdesc:ga5b06e8a9d13c7fc9bda6d68dffe5cabb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start AES using CFB mode.  <br /></td></tr>
+<tr class="separator:ga5b06e8a9d13c7fc9bda6d68dffe5cabb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1bedbd6b7de2ad0f4777aba7764a164a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#ga1bedbd6b7de2ad0f4777aba7764a164a">drv_aes_cfb_crypt_continue</a> (uint32_t om_aes, const uint8_t *input, uint8_t *output, uint32_t length)</td></tr>
+<tr class="memdesc:ga1bedbd6b7de2ad0f4777aba7764a164a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Continue AES calculation using CFB mode.  <br /></td></tr>
+<tr class="separator:ga1bedbd6b7de2ad0f4777aba7764a164a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab3c2e468aae78f9322939d09b9bf9a6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#gab3c2e468aae78f9322939d09b9bf9a6e">drv_aes_cfb_crypt_stop</a> (uint32_t om_aes)</td></tr>
+<tr class="memdesc:gab3c2e468aae78f9322939d09b9bf9a6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop AES calculation using CFB mode.  <br /></td></tr>
+<tr class="separator:gab3c2e468aae78f9322939d09b9bf9a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0325ab6ead548aa0efb1adf86fc81dd5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#ga0325ab6ead548aa0efb1adf86fc81dd5">drv_aes_ofb_start</a> (uint32_t om_aes, const <a class="el" href="structaes__ofb__config__t.html">aes_ofb_config_t</a> *cfg)</td></tr>
+<tr class="memdesc:ga0325ab6ead548aa0efb1adf86fc81dd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start AES using OFB mode.  <br /></td></tr>
+<tr class="separator:ga0325ab6ead548aa0efb1adf86fc81dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga578389e2b25583e0ae03093ca5f97434"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#ga578389e2b25583e0ae03093ca5f97434">drv_aes_ofb_crypt_continue</a> (uint32_t om_aes, const uint8_t *input, uint8_t *output, uint32_t length)</td></tr>
+<tr class="memdesc:ga578389e2b25583e0ae03093ca5f97434"><td class="mdescLeft">&#160;</td><td class="mdescRight">Continue AES calculation using OFB mode.  <br /></td></tr>
+<tr class="separator:ga578389e2b25583e0ae03093ca5f97434"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga778b1b82c231d210afbbdfbeec49c4ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#ga778b1b82c231d210afbbdfbeec49c4ad">drv_aes_ofb_crypt_stop</a> (uint32_t om_aes)</td></tr>
+<tr class="memdesc:ga778b1b82c231d210afbbdfbeec49c4ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop AES calculation using OFB mode.  <br /></td></tr>
+<tr class="separator:ga778b1b82c231d210afbbdfbeec49c4ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0603f1a876bc1bfaa28bca0c9d9470bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#ga0603f1a876bc1bfaa28bca0c9d9470bb">drv_aes_ctr_start</a> (uint32_t om_aes, const <a class="el" href="structaes__ctr__config__t.html">aes_ctr_config_t</a> *cfg)</td></tr>
+<tr class="memdesc:ga0603f1a876bc1bfaa28bca0c9d9470bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start AES using CTR mode.  <br /></td></tr>
+<tr class="separator:ga0603f1a876bc1bfaa28bca0c9d9470bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad40edf4727b226a12b9c89282547a0a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#gad40edf4727b226a12b9c89282547a0a9">drv_aes_ctr_crypt_continue</a> (uint32_t om_aes, const uint8_t *input, uint8_t *output, uint32_t length)</td></tr>
+<tr class="memdesc:gad40edf4727b226a12b9c89282547a0a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Continue AES calculation using CTR mode.  <br /></td></tr>
+<tr class="separator:gad40edf4727b226a12b9c89282547a0a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga00cd62ede04b6c5c8f3317640e9c6851"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#ga00cd62ede04b6c5c8f3317640e9c6851">drv_aes_ctr_crypt_stop</a> (uint32_t om_aes)</td></tr>
+<tr class="memdesc:ga00cd62ede04b6c5c8f3317640e9c6851"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop AES calculation using CTR mode.  <br /></td></tr>
+<tr class="separator:ga00cd62ede04b6c5c8f3317640e9c6851"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab96f5c3004eb20114a7a6a1ddc010d04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#gab96f5c3004eb20114a7a6a1ddc010d04">drv_aes_gcm_start</a> (uint32_t om_aes, const <a class="el" href="structaes__gcm__config__t.html">aes_gcm_config_t</a> *cfg)</td></tr>
+<tr class="memdesc:gab96f5c3004eb20114a7a6a1ddc010d04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start AES calculation using GCM mode, NOTE: this is BIG-ENDIAN.  <br /></td></tr>
+<tr class="separator:gab96f5c3004eb20114a7a6a1ddc010d04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga99c03d7f516ba808acc10166b4e6ca1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#ga99c03d7f516ba808acc10166b4e6ca1e">drv_aes_gcm_crypt_continue</a> (uint32_t om_aes, const uint8_t *input, uint8_t *output, uint32_t length)</td></tr>
+<tr class="memdesc:ga99c03d7f516ba808acc10166b4e6ca1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Continue AES calculation using GCM mode, NOTE: this is BIG-ENDIAN.  <br /></td></tr>
+<tr class="separator:ga99c03d7f516ba808acc10166b4e6ca1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga920035346830aaa675d5563f71e0376a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#ga920035346830aaa675d5563f71e0376a">drv_aes_gcm_crypt_stop</a> (uint32_t om_aes, uint8_t *tag, uint8_t tag_len)</td></tr>
+<tr class="memdesc:ga920035346830aaa675d5563f71e0376a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop AES calculation using GCM mode, NOTE: this is BIG-ENDIAN.  <br /></td></tr>
+<tr class="separator:ga920035346830aaa675d5563f71e0376a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3a717cfa394b7685549437ab57743f29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#ga3a717cfa394b7685549437ab57743f29">drv_aes_ccm_le_encrypt</a> (<a class="el" href="structaes__ccm__le__config__t.html">aes_ccm_le_config_t</a> *cfg, uint8_t *plain_text, uint8_t *cipher_text_and_tag, uint32_t text_len)</td></tr>
+<tr class="memdesc:ga3a717cfa394b7685549437ab57743f29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start AES-CCM LE encrypt.  <br /></td></tr>
+<tr class="separator:ga3a717cfa394b7685549437ab57743f29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6a10d07d00e7b0acb7190628240e114c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#ga6a10d07d00e7b0acb7190628240e114c">drv_aes_ccm_le_decrypt</a> (<a class="el" href="structaes__ccm__le__config__t.html">aes_ccm_le_config_t</a> *cfg, uint8_t *cipher_text_and_tag, uint8_t *plain_text, uint32_t text_len)</td></tr>
+<tr class="memdesc:ga6a10d07d00e7b0acb7190628240e114c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start AES-CCM LE decrypt.  <br /></td></tr>
+<tr class="separator:ga6a10d07d00e7b0acb7190628240e114c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9d22e6e1858195544783672910862bff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#ga9d22e6e1858195544783672910862bff">drv_aes_cmac_start</a> (uint32_t om_aes, <a class="el" href="structaes__cmac__config__t.html">aes_cmac_config_t</a> *cfg)</td></tr>
+<tr class="memdesc:ga9d22e6e1858195544783672910862bff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start cmac calculation.  <br /></td></tr>
+<tr class="separator:ga9d22e6e1858195544783672910862bff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga875815734a9023e7d634c480c800a500"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#ga875815734a9023e7d634c480c800a500">drv_aes_cmac_crypt_continue</a> (uint32_t om_aes, const uint8_t *input, uint32_t len)</td></tr>
+<tr class="memdesc:ga875815734a9023e7d634c480c800a500"><td class="mdescLeft">&#160;</td><td class="mdescRight">Continue cmac calculation.  <br /></td></tr>
+<tr class="separator:ga875815734a9023e7d634c480c800a500"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac195c42cec081ea70caa0952911deed0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__AES.html#gac195c42cec081ea70caa0952911deed0">drv_aes_cmac_crypt_stop</a> (uint32_t om_aes, uint8_t mac[<a class="el" href="group__AES.html#gaf19ab913a847ad1e91c5291215116de1">AES_BLOCK_SIZE</a>])</td></tr>
+<tr class="memdesc:gac195c42cec081ea70caa0952911deed0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop cmac calculation.  <br /></td></tr>
+<tr class="separator:gac195c42cec081ea70caa0952911deed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>AES driver. </p>
+<p>AES driver apis and typedefs header file ECB Encrypt: implemented by hardware when keybits=128/256, otherwise implemented by software. ECB Decrypt: implemented by software CBC Encrypt: implemented by hardware when keybits=128/256, otherwise implemented by software. CBC Decrypt: implemented by software CFB Encrypt: implemented by hardware when keybits=128/256, otherwise implemented by software. CFB Decrypt: implemented by hardware when keybits=128/256, otherwise implemented by software. OFB Encrypt: implemented by hardware when keybits=128/256, otherwise implemented by software. OFB Decrypt: implemented by hardware when keybits=128/256, otherwise implemented by software. CTR Encrypt: implemented by hardware when keybits=128/256, otherwise implemented by software. CTR Decrypt: implemented by hardware when keybits=128/256, otherwise implemented by software. GCM Encrypt: implemented by hardware when keybits=128/256, otherwise implemented by software. GCM Decrypt: implemented by hardware when keybits=128/256, otherwise implemented by software. CMAC: implemented by hardware when keybits=128/256, otherwise implemented by software. LE CCM: implemented by hardware. </p><dl class="section version"><dt>Version</dt><dd>Version 1.0<ul>
+<li>Initial release </li>
+</ul>
+</dd></dl>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="gaf19ab913a847ad1e91c5291215116de1" name="gaf19ab913a847ad1e91c5291215116de1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf19ab913a847ad1e91c5291215116de1">&#9670;&#160;</a></span>AES_BLOCK_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AES_BLOCK_SIZE&#160;&#160;&#160;16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga0776c4312f92c5a01aacd053d406cc45" name="ga0776c4312f92c5a01aacd053d406cc45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0776c4312f92c5a01aacd053d406cc45">&#9670;&#160;</a></span>OM_AES0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OM_AES0&#160;&#160;&#160;0x1000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ga02c517103062e4ab104b12ab0abcbc29" name="ga02c517103062e4ab104b12ab0abcbc29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga02c517103062e4ab104b12ab0abcbc29">&#9670;&#160;</a></span>aes_keybits_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__AES.html#ga02c517103062e4ab104b12ab0abcbc29">aes_keybits_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga02c517103062e4ab104b12ab0abcbc29a6cab52d40d1f9b325589d4587139ea89" name="gga02c517103062e4ab104b12ab0abcbc29a6cab52d40d1f9b325589d4587139ea89"></a>AES_KEYBITS_128&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga02c517103062e4ab104b12ab0abcbc29a4e1d631563f09a9b4fa100c82fb48a72" name="gga02c517103062e4ab104b12ab0abcbc29a4e1d631563f09a9b4fa100c82fb48a72"></a>AES_KEYBITS_192&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga02c517103062e4ab104b12ab0abcbc29af1c7c78d8622f58c6f3b68d5a6fdd41b" name="gga02c517103062e4ab104b12ab0abcbc29af1c7c78d8622f58c6f3b68d5a6fdd41b"></a>AES_KEYBITS_256&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="gad1a8a3bf9a82d3221ae347ccb67450a8" name="gad1a8a3bf9a82d3221ae347ccb67450a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad1a8a3bf9a82d3221ae347ccb67450a8">&#9670;&#160;</a></span>aes_operation_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__AES.html#gad1a8a3bf9a82d3221ae347ccb67450a8">aes_operation_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggad1a8a3bf9a82d3221ae347ccb67450a8ac84eefd475d1422843089266af5f1f56" name="ggad1a8a3bf9a82d3221ae347ccb67450a8ac84eefd475d1422843089266af5f1f56"></a>AES_OP_DECRYPT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggad1a8a3bf9a82d3221ae347ccb67450a8a298b281bcd7ee70d2c214ae0ef7c407a" name="ggad1a8a3bf9a82d3221ae347ccb67450a8a298b281bcd7ee70d2c214ae0ef7c407a"></a>AES_OP_ENCRYPT&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="gada33c599fcb1245f8be8ab3376bf30da" name="gada33c599fcb1245f8be8ab3376bf30da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gada33c599fcb1245f8be8ab3376bf30da">&#9670;&#160;</a></span>drv_aes_mode_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__AES.html#gada33c599fcb1245f8be8ab3376bf30da">drv_aes_mode_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggada33c599fcb1245f8be8ab3376bf30daa0d8d868a186f214c8c4189a761f69b25" name="ggada33c599fcb1245f8be8ab3376bf30daa0d8d868a186f214c8c4189a761f69b25"></a>DRV_AES_MODE_ECB&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggada33c599fcb1245f8be8ab3376bf30daa29a8ac502c7de9628b200b5afd49ace4" name="ggada33c599fcb1245f8be8ab3376bf30daa29a8ac502c7de9628b200b5afd49ace4"></a>DRV_AES_MODE_CBC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggada33c599fcb1245f8be8ab3376bf30daac8907f6dbadc2ec32aa42114ac795e09" name="ggada33c599fcb1245f8be8ab3376bf30daac8907f6dbadc2ec32aa42114ac795e09"></a>DRV_AES_MODE_CFB&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggada33c599fcb1245f8be8ab3376bf30daa12ecbee0cddfce65e1260f5f46ecea8e" name="ggada33c599fcb1245f8be8ab3376bf30daa12ecbee0cddfce65e1260f5f46ecea8e"></a>DRV_AES_MODE_OFB&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggada33c599fcb1245f8be8ab3376bf30daa1a6f4892b0d1fe60d327559b98c5924a" name="ggada33c599fcb1245f8be8ab3376bf30daa1a6f4892b0d1fe60d327559b98c5924a"></a>DRV_AES_MODE_CTR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggada33c599fcb1245f8be8ab3376bf30daa989fefac7d8ab4f8025fb7fdb5a885fb" name="ggada33c599fcb1245f8be8ab3376bf30daa989fefac7d8ab4f8025fb7fdb5a885fb"></a>DRV_AES_MODE_GCM&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="gae397f0876d1775796b478fe1275bd62e" name="gae397f0876d1775796b478fe1275bd62e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae397f0876d1775796b478fe1275bd62e">&#9670;&#160;</a></span>gcm_operation_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__AES.html#gae397f0876d1775796b478fe1275bd62e">gcm_operation_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggae397f0876d1775796b478fe1275bd62ea25849b280171771bdccc4d778bc6cd39" name="ggae397f0876d1775796b478fe1275bd62ea25849b280171771bdccc4d778bc6cd39"></a>GCM_OP_DECRYPT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggae397f0876d1775796b478fe1275bd62ea0904562d1b1112e24e00858a11d5c1f2" name="ggae397f0876d1775796b478fe1275bd62ea0904562d1b1112e24e00858a11d5c1f2"></a>GCM_OP_ENCRYPT&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga3b0809c29a3a0b41651fd5425dd00f3f" name="ga3b0809c29a3a0b41651fd5425dd00f3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3b0809c29a3a0b41651fd5425dd00f3f">&#9670;&#160;</a></span>drv_aes_cbc_crypt_continue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_aes_cbc_crypt_continue </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>om_aes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Continue AES calculation using CBC mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_aes</td><td>AES ID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">input</td><td>Pointer to input data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output</td><td>Pointer to output data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>Length of input data</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>om_error </dd></dl>
+
+</div>
+</div>
+<a id="ga3639f72fdb455da8955b99004fd78656" name="ga3639f72fdb455da8955b99004fd78656"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3639f72fdb455da8955b99004fd78656">&#9670;&#160;</a></span>drv_aes_cbc_crypt_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_aes_cbc_crypt_stop </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>om_aes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stop AES calculation using CBC mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_aes</td><td>AES ID</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>om_error </dd></dl>
+
+</div>
+</div>
+<a id="ga95398237c666c9d90836a10d707d5838" name="ga95398237c666c9d90836a10d707d5838"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga95398237c666c9d90836a10d707d5838">&#9670;&#160;</a></span>drv_aes_cbc_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_aes_cbc_start </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>om_aes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structaes__cbc__config__t.html">aes_cbc_config_t</a> *&#160;</td>
+          <td class="paramname"><em>cfg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Start AES using CBC mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_aes</td><td>AES ID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cfg</td><td>AES CBC configuration</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>om_error </dd></dl>
+
+</div>
+</div>
+<a id="ga6a10d07d00e7b0acb7190628240e114c" name="ga6a10d07d00e7b0acb7190628240e114c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6a10d07d00e7b0acb7190628240e114c">&#9670;&#160;</a></span>drv_aes_ccm_le_decrypt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_aes_ccm_le_decrypt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structaes__ccm__le__config__t.html">aes_ccm_le_config_t</a> *&#160;</td>
+          <td class="paramname"><em>cfg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>cipher_text_and_tag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>plain_text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>text_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Start AES-CCM LE decrypt. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cfg</td><td>CCM configuration </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cipher_text_and_tag</td><td>Pointer to cipher text and tag </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">plain_text</td><td>Pointer to plain text </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">text_len</td><td>Length of plain text</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>om_error </dd></dl>
+
+</div>
+</div>
+<a id="ga3a717cfa394b7685549437ab57743f29" name="ga3a717cfa394b7685549437ab57743f29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3a717cfa394b7685549437ab57743f29">&#9670;&#160;</a></span>drv_aes_ccm_le_encrypt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_aes_ccm_le_encrypt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structaes__ccm__le__config__t.html">aes_ccm_le_config_t</a> *&#160;</td>
+          <td class="paramname"><em>cfg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>plain_text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>cipher_text_and_tag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>text_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Start AES-CCM LE encrypt. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cfg</td><td>CCM configuration </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">plain_text</td><td>Pointer to plain text </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">cipher_text_and_tag</td><td>Pointer to cipher text and tag </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">text_len</td><td>Length of plain text</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>om_error </dd></dl>
+
+</div>
+</div>
+<a id="ga1bedbd6b7de2ad0f4777aba7764a164a" name="ga1bedbd6b7de2ad0f4777aba7764a164a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1bedbd6b7de2ad0f4777aba7764a164a">&#9670;&#160;</a></span>drv_aes_cfb_crypt_continue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_aes_cfb_crypt_continue </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>om_aes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Continue AES calculation using CFB mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_aes</td><td>AES ID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">input</td><td>Pointer to input data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output</td><td>Pointer to output data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>Length of input data</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>om_error </dd></dl>
+
+</div>
+</div>
+<a id="gab3c2e468aae78f9322939d09b9bf9a6e" name="gab3c2e468aae78f9322939d09b9bf9a6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab3c2e468aae78f9322939d09b9bf9a6e">&#9670;&#160;</a></span>drv_aes_cfb_crypt_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_aes_cfb_crypt_stop </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>om_aes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stop AES calculation using CFB mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_aes</td><td>AES ID</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>om_error </dd></dl>
+
+</div>
+</div>
+<a id="ga5b06e8a9d13c7fc9bda6d68dffe5cabb" name="ga5b06e8a9d13c7fc9bda6d68dffe5cabb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5b06e8a9d13c7fc9bda6d68dffe5cabb">&#9670;&#160;</a></span>drv_aes_cfb_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_aes_cfb_start </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>om_aes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structaes__cfb__config__t.html">aes_cfb_config_t</a> *&#160;</td>
+          <td class="paramname"><em>cfg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Start AES using CFB mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_aes</td><td>AES ID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cfg</td><td>AES CFB configuration</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>om_error </dd></dl>
+
+</div>
+</div>
+<a id="ga875815734a9023e7d634c480c800a500" name="ga875815734a9023e7d634c480c800a500"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga875815734a9023e7d634c480c800a500">&#9670;&#160;</a></span>drv_aes_cmac_crypt_continue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_aes_cmac_crypt_continue </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>om_aes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Continue cmac calculation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_aes</td><td>AES ID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">input</td><td>Pointer to input data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>Length of input data</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>om_error </dd></dl>
+
+</div>
+</div>
+<a id="gac195c42cec081ea70caa0952911deed0" name="gac195c42cec081ea70caa0952911deed0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac195c42cec081ea70caa0952911deed0">&#9670;&#160;</a></span>drv_aes_cmac_crypt_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_aes_cmac_crypt_stop </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>om_aes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>mac</em>[AES_BLOCK_SIZE]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stop cmac calculation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_aes</td><td>AES ID </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">mac</td><td>Pointer to mac</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>om_error </dd></dl>
+
+</div>
+</div>
+<a id="ga9d22e6e1858195544783672910862bff" name="ga9d22e6e1858195544783672910862bff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9d22e6e1858195544783672910862bff">&#9670;&#160;</a></span>drv_aes_cmac_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_aes_cmac_start </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>om_aes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structaes__cmac__config__t.html">aes_cmac_config_t</a> *&#160;</td>
+          <td class="paramname"><em>cfg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Start cmac calculation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_aes</td><td>AES ID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cfg</td><td>Pointer to cmac configuration</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>om_error </dd></dl>
+
+</div>
+</div>
+<a id="gad40edf4727b226a12b9c89282547a0a9" name="gad40edf4727b226a12b9c89282547a0a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad40edf4727b226a12b9c89282547a0a9">&#9670;&#160;</a></span>drv_aes_ctr_crypt_continue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_aes_ctr_crypt_continue </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>om_aes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Continue AES calculation using CTR mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_aes</td><td>AES ID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">input</td><td>Pointer to input data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output</td><td>Pointer to output data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>Length of input data</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>om_error </dd></dl>
+
+</div>
+</div>
+<a id="ga00cd62ede04b6c5c8f3317640e9c6851" name="ga00cd62ede04b6c5c8f3317640e9c6851"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga00cd62ede04b6c5c8f3317640e9c6851">&#9670;&#160;</a></span>drv_aes_ctr_crypt_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_aes_ctr_crypt_stop </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>om_aes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stop AES calculation using CTR mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_aes</td><td>AES ID</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>om_error </dd></dl>
+
+</div>
+</div>
+<a id="ga0603f1a876bc1bfaa28bca0c9d9470bb" name="ga0603f1a876bc1bfaa28bca0c9d9470bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0603f1a876bc1bfaa28bca0c9d9470bb">&#9670;&#160;</a></span>drv_aes_ctr_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_aes_ctr_start </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>om_aes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structaes__ctr__config__t.html">aes_ctr_config_t</a> *&#160;</td>
+          <td class="paramname"><em>cfg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Start AES using CTR mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_aes</td><td>AES ID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cfg</td><td>AES CTR configuration</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>om_error </dd></dl>
+
+</div>
+</div>
+<a id="ga84ba86ba329899083fbbe77ba4743696" name="ga84ba86ba329899083fbbe77ba4743696"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga84ba86ba329899083fbbe77ba4743696">&#9670;&#160;</a></span>drv_aes_decrypt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_aes_decrypt </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>om_aes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>input</em>[16], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>output</em>[16]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>AES decrypt engine. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_aes</td><td>aes id </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">input</td><td>Pointer to input data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output</td><td>Pointer to output data </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga5a78896e46f34b0fd887738f4f6298d4" name="ga5a78896e46f34b0fd887738f4f6298d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5a78896e46f34b0fd887738f4f6298d4">&#9670;&#160;</a></span>drv_aes_ecb_crypt_continue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_aes_ecb_crypt_continue </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>om_aes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Continue AES calculation using ECB mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_aes</td><td>AES ID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">input</td><td>Pointer to input data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output</td><td>Pointer to output data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>Length of input data</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>om_error </dd></dl>
+
+</div>
+</div>
+<a id="gaf7984ff73adf6e9efddfaccb88e2ce7f" name="gaf7984ff73adf6e9efddfaccb88e2ce7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf7984ff73adf6e9efddfaccb88e2ce7f">&#9670;&#160;</a></span>drv_aes_ecb_crypt_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_aes_ecb_crypt_stop </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>om_aes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stop AES calculation using ECB mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_aes</td><td>AES ID</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>om_error </dd></dl>
+
+</div>
+</div>
+<a id="ga271518869cd3ae18bde60b23013bec11" name="ga271518869cd3ae18bde60b23013bec11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga271518869cd3ae18bde60b23013bec11">&#9670;&#160;</a></span>drv_aes_ecb_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_aes_ecb_start </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>om_aes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structaes__ecb__config__t.html">aes_ecb_config_t</a> *&#160;</td>
+          <td class="paramname"><em>cfg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Start AES using ECB mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_aes</td><td>AES ID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cfg</td><td>AES ECB configuration</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>om_error </dd></dl>
+
+</div>
+</div>
+<a id="ga7567597631525bcb7746fcabbc830165" name="ga7567597631525bcb7746fcabbc830165"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7567597631525bcb7746fcabbc830165">&#9670;&#160;</a></span>drv_aes_encrypt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_aes_encrypt </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>om_aes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>input</em>[16], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>output</em>[16]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>AES encrypt engine. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_aes</td><td>aes id </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">input</td><td>Pointer to input data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output</td><td>Pointer to output data </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga99c03d7f516ba808acc10166b4e6ca1e" name="ga99c03d7f516ba808acc10166b4e6ca1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga99c03d7f516ba808acc10166b4e6ca1e">&#9670;&#160;</a></span>drv_aes_gcm_crypt_continue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_aes_gcm_crypt_continue </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>om_aes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Continue AES calculation using GCM mode, NOTE: this is BIG-ENDIAN. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_aes</td><td>AES ID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">input</td><td>Pointer to input data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output</td><td>Pointer to output data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>Length of input data</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>om_error </dd></dl>
+
+</div>
+</div>
+<a id="ga920035346830aaa675d5563f71e0376a" name="ga920035346830aaa675d5563f71e0376a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga920035346830aaa675d5563f71e0376a">&#9670;&#160;</a></span>drv_aes_gcm_crypt_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_aes_gcm_crypt_stop </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>om_aes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>tag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>tag_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stop AES calculation using GCM mode, NOTE: this is BIG-ENDIAN. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_aes</td><td>AES ID </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">tag</td><td>Pointer to tag(hash) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tag_len</td><td>Length of tag</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>om_error </dd></dl>
+
+</div>
+</div>
+<a id="gab96f5c3004eb20114a7a6a1ddc010d04" name="gab96f5c3004eb20114a7a6a1ddc010d04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab96f5c3004eb20114a7a6a1ddc010d04">&#9670;&#160;</a></span>drv_aes_gcm_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_aes_gcm_start </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>om_aes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structaes__gcm__config__t.html">aes_gcm_config_t</a> *&#160;</td>
+          <td class="paramname"><em>cfg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Start AES calculation using GCM mode, NOTE: this is BIG-ENDIAN. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_aes</td><td>AES ID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cfg</td><td>GCM configuration</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>om_error </dd></dl>
+
+</div>
+</div>
+<a id="ga1a5658c4a42c4d96e0fd2bd1df51afd3" name="ga1a5658c4a42c4d96e0fd2bd1df51afd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1a5658c4a42c4d96e0fd2bd1df51afd3">&#9670;&#160;</a></span>drv_aes_hw_encrypt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_aes_hw_encrypt </td>
+          <td>(</td>
+          <td class="paramtype">OM_AES_HW_Type *&#160;</td>
+          <td class="paramname"><em>om_aes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>input</em>[16], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>output</em>[16]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Hardware AES encrypt engine. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_aes</td><td>Pointer to HW AES </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">input</td><td>Pointer to input data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output</td><td>Pointer to output data </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga082eca9df53c641afba2bbb47bebbb32" name="ga082eca9df53c641afba2bbb47bebbb32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga082eca9df53c641afba2bbb47bebbb32">&#9670;&#160;</a></span>drv_aes_hw_setkey_enc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_aes_hw_setkey_enc </td>
+          <td>(</td>
+          <td class="paramtype">OM_AES_HW_Type *&#160;</td>
+          <td class="paramname"><em>om_aes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>keybits</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set hardware AES encrypt key. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_aes</td><td>Pointer to HW AES </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>Pointer to aes key </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">keybits</td><td>Bits of key</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>om_error </dd></dl>
+
+</div>
+</div>
+<a id="ga578389e2b25583e0ae03093ca5f97434" name="ga578389e2b25583e0ae03093ca5f97434"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga578389e2b25583e0ae03093ca5f97434">&#9670;&#160;</a></span>drv_aes_ofb_crypt_continue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_aes_ofb_crypt_continue </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>om_aes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Continue AES calculation using OFB mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_aes</td><td>AES ID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">input</td><td>Pointer to input data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output</td><td>Pointer to output data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>Length of input data</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>om_error </dd></dl>
+
+</div>
+</div>
+<a id="ga778b1b82c231d210afbbdfbeec49c4ad" name="ga778b1b82c231d210afbbdfbeec49c4ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga778b1b82c231d210afbbdfbeec49c4ad">&#9670;&#160;</a></span>drv_aes_ofb_crypt_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_aes_ofb_crypt_stop </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>om_aes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stop AES calculation using OFB mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_aes</td><td>AES ID</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>om_error </dd></dl>
+
+</div>
+</div>
+<a id="ga0325ab6ead548aa0efb1adf86fc81dd5" name="ga0325ab6ead548aa0efb1adf86fc81dd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0325ab6ead548aa0efb1adf86fc81dd5">&#9670;&#160;</a></span>drv_aes_ofb_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_aes_ofb_start </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>om_aes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structaes__ofb__config__t.html">aes_ofb_config_t</a> *&#160;</td>
+          <td class="paramname"><em>cfg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Start AES using OFB mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_aes</td><td>AES ID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cfg</td><td>AES OFB configuration</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>om_error </dd></dl>
+
+</div>
+</div>
+<a id="ga72b2b213c15d89d9704880ca3ec9032f" name="ga72b2b213c15d89d9704880ca3ec9032f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga72b2b213c15d89d9704880ca3ec9032f">&#9670;&#160;</a></span>drv_aes_setkey_dec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_aes_setkey_dec </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>om_aes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>keybits</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set AES decrypt key. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_aes</td><td>AES id </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>Pointer to aes key </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">keybits</td><td>Bits of key</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>om_error </dd></dl>
+
+</div>
+</div>
+<a id="ga97079e41a15d41f20544c2cc387481dd" name="ga97079e41a15d41f20544c2cc387481dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga97079e41a15d41f20544c2cc387481dd">&#9670;&#160;</a></span>drv_aes_setkey_enc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_aes_setkey_enc </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>om_aes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>keybits</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set AES encrypt key. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_aes</td><td>AES id </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>Pointer to aes key </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">keybits</td><td>Bits of key</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>om_error </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+</div>
+</body>
+</html>

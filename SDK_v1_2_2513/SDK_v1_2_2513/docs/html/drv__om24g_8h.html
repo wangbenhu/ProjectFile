@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>User Guide: /mnt/data/yaoyufeng/work.svnrepo/om6627x/om6627/trunk/SDK/hal/driver/source/drv_om24g.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+-->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">User Guide
+   </div>
+   <div id="projectbrief">Bluetooth Low Energy 5.4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('drv__om24g_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">drv_om24g.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;RTE_driver.h&quot;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+</div>
+<p><a href="drv__om24g_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structom24g__config__t.html">om24g_config_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">OM24G config.  <a href="structom24g__config__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ga1dc411a0b026390c8164ae82e4255e2c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#ga1dc411a0b026390c8164ae82e4255e2c">om24g_structure_t</a> { <a class="el" href="group__OM24G.html#gga1dc411a0b026390c8164ae82e4255e2ca065c09ef2eeb6d549f3642b636977eb0">OM24G_STRUCTURE_A</a> = 0
+, <a class="el" href="group__OM24G.html#gga1dc411a0b026390c8164ae82e4255e2caaa317eaed5fdcdaf5a4b1e1bc44b065f">OM24G_STRUCTURE_B</a> = 1
+ }</td></tr>
+<tr class="memdesc:ga1dc411a0b026390c8164ae82e4255e2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">OM24G PACKET STRUCTURE.  <a href="group__OM24G.html#ga1dc411a0b026390c8164ae82e4255e2c">More...</a><br /></td></tr>
+<tr class="separator:ga1dc411a0b026390c8164ae82e4255e2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga96b05113bafbc1519292e29c02b85f70"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#ga96b05113bafbc1519292e29c02b85f70">om24g_syncword_t</a> { <a class="el" href="group__OM24G.html#gga96b05113bafbc1519292e29c02b85f70a3add0bcfdac207d5bad196eeec368258">OM24G_SYNCWORD0</a> = 0
+, <a class="el" href="group__OM24G.html#gga96b05113bafbc1519292e29c02b85f70a5473b8f9912cb3a7ffeb36c93d40e770">OM24G_SYNCWORD1</a> = 1
+ }</td></tr>
+<tr class="memdesc:ga96b05113bafbc1519292e29c02b85f70"><td class="mdescLeft">&#160;</td><td class="mdescRight">OM24G SYNCWORD SEL.  <a href="group__OM24G.html#ga96b05113bafbc1519292e29c02b85f70">More...</a><br /></td></tr>
+<tr class="separator:ga96b05113bafbc1519292e29c02b85f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad2ea52473caa75deeb8108826d4f9980"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#gad2ea52473caa75deeb8108826d4f9980">om24g_role_t</a> { <a class="el" href="group__OM24G.html#ggad2ea52473caa75deeb8108826d4f9980a6676c60ca9188424833c159d2452c522">OM24G_ROLE_PRX</a>
+, <a class="el" href="group__OM24G.html#ggad2ea52473caa75deeb8108826d4f9980aa941b09af458ed54a3807fd922bbc5e7">OM24G_ROLE_PTX</a>
+ }</td></tr>
+<tr class="memdesc:gad2ea52473caa75deeb8108826d4f9980"><td class="mdescLeft">&#160;</td><td class="mdescRight">OM24G transfer mode.  <a href="group__OM24G.html#gad2ea52473caa75deeb8108826d4f9980">More...</a><br /></td></tr>
+<tr class="separator:gad2ea52473caa75deeb8108826d4f9980"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga638c48dc36ab3bc3627f969f5dbfba62"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#ga638c48dc36ab3bc3627f969f5dbfba62">om24g_rate_t</a> { <br />
+&#160;&#160;<a class="el" href="group__OM24G.html#gga638c48dc36ab3bc3627f969f5dbfba62a8c1d92ca5eaa37a4c9521e365e568639">OM24G_RATE_250K</a>
+, <a class="el" href="group__OM24G.html#gga638c48dc36ab3bc3627f969f5dbfba62af4c6597cea7948fd0db19f1703880bf7">OM24G_RATE_500K</a>
+, <a class="el" href="group__OM24G.html#gga638c48dc36ab3bc3627f969f5dbfba62a3421dcfb7299708758c593314dc1c94b">OM24G_RATE_1M</a>
+, <a class="el" href="group__OM24G.html#gga638c48dc36ab3bc3627f969f5dbfba62a80b04f2b0a0c8d8c975d653d7b1dd18d">OM24G_RATE_2M</a>
+, <br />
+&#160;&#160;<a class="el" href="group__OM24G.html#gga638c48dc36ab3bc3627f969f5dbfba62a2ed6d1f3618476047d342bf2a46b6324">OM24G_RATE_100K</a>
+, <a class="el" href="group__OM24G.html#gga638c48dc36ab3bc3627f969f5dbfba62a0d0ec164921e418a61fee9a56a862fc1">OM24G_RATE_125K</a>
+, <a class="el" href="group__OM24G.html#gga638c48dc36ab3bc3627f969f5dbfba62a7a2fad4c9c77fc2b7c83ae74244b1697">OM24G_RATE_50K</a>
+, <a class="el" href="group__OM24G.html#gga638c48dc36ab3bc3627f969f5dbfba62add16ba3a51dd0aba237d8c94e0db6b8a">OM24G_RATE_25K</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga638c48dc36ab3bc3627f969f5dbfba62"><td class="mdescLeft">&#160;</td><td class="mdescRight">OM24G RATE.  <a href="group__OM24G.html#ga638c48dc36ab3bc3627f969f5dbfba62">More...</a><br /></td></tr>
+<tr class="separator:ga638c48dc36ab3bc3627f969f5dbfba62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5c8c2add84a36c778079a03c72c5c28c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#ga5c8c2add84a36c778079a03c72c5c28c">om24g_crc_byte_t</a> { <a class="el" href="group__OM24G.html#gga5c8c2add84a36c778079a03c72c5c28caa580833ed8423a988a47d781bafdc989">OM24G_CRC_1BYTE</a>
+, <a class="el" href="group__OM24G.html#gga5c8c2add84a36c778079a03c72c5c28ca4fc8714464770a2523ea8cf135d65624">OM24G_CRC_2BYTE</a>
+, <a class="el" href="group__OM24G.html#gga5c8c2add84a36c778079a03c72c5c28ca2db7df65f44f40ad2c3bd60af471fd89">OM24G_CRC_3BYTE</a>
+, <a class="el" href="group__OM24G.html#gga5c8c2add84a36c778079a03c72c5c28cade405e554c26690686b9d2453569a1ee">OM24G_CRC_4BYTE</a>
+ }</td></tr>
+<tr class="memdesc:ga5c8c2add84a36c778079a03c72c5c28c"><td class="mdescLeft">&#160;</td><td class="mdescRight">OM24G CRC_BYTE.  <a href="group__OM24G.html#ga5c8c2add84a36c778079a03c72c5c28c">More...</a><br /></td></tr>
+<tr class="separator:ga5c8c2add84a36c778079a03c72c5c28c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad8bd2a1ef4d7c135619dce290d7ffb2c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#gad8bd2a1ef4d7c135619dce290d7ffb2c">om24g_modulation_t</a> { <a class="el" href="group__OM24G.html#ggad8bd2a1ef4d7c135619dce290d7ffb2cad3e38094242934cafb308836b69a0722">OM24G_MODULATION_GFSK</a> = 0
+, <a class="el" href="group__OM24G.html#ggad8bd2a1ef4d7c135619dce290d7ffb2cac666ed45793d217296731d36934607e6">OM24G_MODULATION_FSK</a> = 1
+ }</td></tr>
+<tr class="memdesc:gad8bd2a1ef4d7c135619dce290d7ffb2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">OM24G MODULATION MODE.  <a href="group__OM24G.html#gad8bd2a1ef4d7c135619dce290d7ffb2c">More...</a><br /></td></tr>
+<tr class="separator:gad8bd2a1ef4d7c135619dce290d7ffb2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga704ab7c57d3eb6a485b507b2fee6e4ef"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#ga704ab7c57d3eb6a485b507b2fee6e4ef">om24g_endian_t</a> { <a class="el" href="group__OM24G.html#gga704ab7c57d3eb6a485b507b2fee6e4efaa45dfae25d51f2c4299ad03598f5fd45">OM24G_ENDIAN_LSB</a> = 0
+, <a class="el" href="group__OM24G.html#gga704ab7c57d3eb6a485b507b2fee6e4efa6d9818a1f7cd45d0a52f23cbc81a80ce">OM24G_ENDIAN_MSB</a> = 1
+ }</td></tr>
+<tr class="memdesc:ga704ab7c57d3eb6a485b507b2fee6e4ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">OM24G ENDIAN.  <a href="group__OM24G.html#ga704ab7c57d3eb6a485b507b2fee6e4ef">More...</a><br /></td></tr>
+<tr class="separator:ga704ab7c57d3eb6a485b507b2fee6e4ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga89021274417aae2990b2daf3399fc824"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#ga89021274417aae2990b2daf3399fc824">om24g_detect_mode_t</a> { <a class="el" href="group__OM24G.html#gga89021274417aae2990b2daf3399fc824aa3f2f617cfbe7d5ddf4f83e6d820b4c4">OM24G_SOFT_DETECTION</a>
+, <a class="el" href="group__OM24G.html#gga89021274417aae2990b2daf3399fc824ac757a04713e9d4013bb410aefc2ce483">OM24G_HARD_DETECTION</a>
+, <a class="el" href="group__OM24G.html#gga89021274417aae2990b2daf3399fc824ae3d26379306f7b13c83f25426b6d87d2">OM24G_DPLL_DETECTION</a>
+ }</td></tr>
+<tr class="memdesc:ga89021274417aae2990b2daf3399fc824"><td class="mdescLeft">&#160;</td><td class="mdescRight">OM24G DEMODULATION MODE.  <a href="group__OM24G.html#ga89021274417aae2990b2daf3399fc824">More...</a><br /></td></tr>
+<tr class="separator:ga89021274417aae2990b2daf3399fc824"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga339207288ae9096a83b774bc7ad0479d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#ga339207288ae9096a83b774bc7ad0479d">om24g_pipe_t</a> { <br />
+&#160;&#160;<a class="el" href="group__OM24G.html#gga339207288ae9096a83b774bc7ad0479da7a8ed4e277d1a62e67b5274384afca73">OM24G_PIPE0</a>
+, <a class="el" href="group__OM24G.html#gga339207288ae9096a83b774bc7ad0479dad22821487084ba1ccb5274d7760c1e2f">OM24G_PIPE1</a>
+, <a class="el" href="group__OM24G.html#gga339207288ae9096a83b774bc7ad0479dae0e5db03098e14cd0f97ff7e1d2669f4">OM24G_PIPE2</a>
+, <a class="el" href="group__OM24G.html#gga339207288ae9096a83b774bc7ad0479da5366ae4fa8e515a739cc3808d2239e83">OM24G_PIPE3</a>
+, <br />
+&#160;&#160;<a class="el" href="group__OM24G.html#gga339207288ae9096a83b774bc7ad0479dae9ca0a47c7043574802cc4e1557a78a8">OM24G_PIPE4</a>
+, <a class="el" href="group__OM24G.html#gga339207288ae9096a83b774bc7ad0479da78304bc801c665ae3592091e4c832e16">OM24G_PIPE5</a>
+, <a class="el" href="group__OM24G.html#gga339207288ae9096a83b774bc7ad0479da9427da24cf810975d00cd9f365f4a3e3">OM24G_PIPE_TX</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga339207288ae9096a83b774bc7ad0479d"><td class="mdescLeft">&#160;</td><td class="mdescRight">OM24G PIPE.  <a href="group__OM24G.html#ga339207288ae9096a83b774bc7ad0479d">More...</a><br /></td></tr>
+<tr class="separator:ga339207288ae9096a83b774bc7ad0479d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae1cdaf1a2293c5c321f24e41f7d56f46"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#gae1cdaf1a2293c5c321f24e41f7d56f46">om24g_control_t</a> { <a class="el" href="group__OM24G.html#ggae1cdaf1a2293c5c321f24e41f7d56f46a666cb7e8786fc04539f1a93c9430f5c3">OM24G_CONTROL_CLK_DISABLE</a> = 0U
+, <a class="el" href="group__OM24G.html#ggae1cdaf1a2293c5c321f24e41f7d56f46ad60a94fa9c6cfdfddd94d829e39c82e0">OM24G_CONTROL_CLK_ENABLE</a> = 1U
+, <a class="el" href="group__OM24G.html#ggae1cdaf1a2293c5c321f24e41f7d56f46ae1a3b987f9b69531d4ff8ae1d0f8d4b3">OM24G_CONTROL_RESET</a> = 2U
+ }</td></tr>
+<tr class="memdesc:gae1cdaf1a2293c5c321f24e41f7d56f46"><td class="mdescLeft">&#160;</td><td class="mdescRight">om24g control  <a href="group__OM24G.html#gae1cdaf1a2293c5c321f24e41f7d56f46">More...</a><br /></td></tr>
+<tr class="separator:gae1cdaf1a2293c5c321f24e41f7d56f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafcbe9df471b2c3d5c425efe37b2a42c1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#gafcbe9df471b2c3d5c425efe37b2a42c1">om24g_transfer_t</a> { <br />
+&#160;&#160;<a class="el" href="group__OM24G.html#ggafcbe9df471b2c3d5c425efe37b2a42c1a59782c780d8f331c5be1c15b4f4da6dd">OM24G_SENSITIVITY</a>
+, <a class="el" href="group__OM24G.html#ggafcbe9df471b2c3d5c425efe37b2a42c1a983dc6417084c2a6ce38810f82368790">OM24G_POLL_STRUCTURE_A</a>
+, <a class="el" href="group__OM24G.html#ggafcbe9df471b2c3d5c425efe37b2a42c1af2e485b1119f8fea13ae5304ae915329">OM24G_INT_STRUCTURE_A</a>
+, <a class="el" href="group__OM24G.html#ggafcbe9df471b2c3d5c425efe37b2a42c1afc6f100e73f13188e3644c54ffbde07e">OM24G_INT_STRUCTURE_B</a>
+, <br />
+&#160;&#160;<a class="el" href="group__OM24G.html#ggafcbe9df471b2c3d5c425efe37b2a42c1afc448e260d58951e5bd837bace246fcf">OM24G_ACK_MODE_STRUCTURE_A</a>
+, <a class="el" href="group__OM24G.html#ggafcbe9df471b2c3d5c425efe37b2a42c1a7f64d3a1d00ce7832687fc2537c28d31">OM24G_INT_ACK_MODE_STRUCTURE_A</a>
+, <a class="el" href="group__OM24G.html#ggafcbe9df471b2c3d5c425efe37b2a42c1ae90b9ca4de432154b5379bdaf1e6b092">OM24G_TX_RX_SWITCH_POLL</a>
+, <a class="el" href="group__OM24G.html#ggafcbe9df471b2c3d5c425efe37b2a42c1a21e5a71104eb5283176296f089a5b658">OM24G_TX_RX_SWITCH_INT</a>
+, <br />
+&#160;&#160;<a class="el" href="group__OM24G.html#ggafcbe9df471b2c3d5c425efe37b2a42c1a96ed01ba169345e7ea6c3336f3565568">OM24G_RX_ADDR_CHECK</a>
+, <a class="el" href="group__OM24G.html#ggafcbe9df471b2c3d5c425efe37b2a42c1ae9ad6c9a1e6dba3172a8c8b233575d77">OM24G_STATIC_LENTH</a>
+, <a class="el" href="group__OM24G.html#ggafcbe9df471b2c3d5c425efe37b2a42c1a1e5f8026ece0b6ce0a0c30c8c7b05e3b">OM24G_BLE_MODE</a>
+, <a class="el" href="group__OM24G.html#ggafcbe9df471b2c3d5c425efe37b2a42c1a26a49d5dc0bc92ed85c9c6264a9bb447">OM24G_HARDWARE_TIMER_TX</a>
+, <br />
+&#160;&#160;<a class="el" href="group__OM24G.html#ggafcbe9df471b2c3d5c425efe37b2a42c1ab21a31c046b59a6967c5bf4f9f28d918">OM24G_TIMESTAMP</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:gafcbe9df471b2c3d5c425efe37b2a42c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">om24g transfer case  <a href="group__OM24G.html#gafcbe9df471b2c3d5c425efe37b2a42c1">More...</a><br /></td></tr>
+<tr class="separator:gafcbe9df471b2c3d5c425efe37b2a42c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:gac48dff912cde9bf68a4069cb1ab480d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#gac48dff912cde9bf68a4069cb1ab480d4">drv_om24g_set_addr</a> (uint8_t pipenum, uint8_t addr)</td></tr>
+<tr class="memdesc:gac48dff912cde9bf68a4069cb1ab480d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">set RX check_address value.  <br /></td></tr>
+<tr class="separator:gac48dff912cde9bf68a4069cb1ab480d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga98f5fb705a6b188a1189821c2db5411b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#ga98f5fb705a6b188a1189821c2db5411b">drv_om24g_switch_role</a> (<a class="el" href="group__OM24G.html#gad2ea52473caa75deeb8108826d4f9980">om24g_role_t</a> role)</td></tr>
+<tr class="memdesc:ga98f5fb705a6b188a1189821c2db5411b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch between transmitting and receiving devices..  <br /></td></tr>
+<tr class="separator:ga98f5fb705a6b188a1189821c2db5411b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac15cf60bdbe1a754048be01495285f99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#gac15cf60bdbe1a754048be01495285f99">drv_om24g_set_rate</a> (uint8_t data_rate, bool en_arb, uint8_t n_avr, uint8_t n_rep)</td></tr>
+<tr class="memdesc:gac15cf60bdbe1a754048be01495285f99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the 2.4G data rate. Please use function drv_om24g_set_rf_parameters to set the rate, drv_om24g_set_rate did not configure the frequency offset.  <br /></td></tr>
+<tr class="separator:gac15cf60bdbe1a754048be01495285f99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0622fa284faad1ea906cc5b0259de699"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#ga0622fa284faad1ea906cc5b0259de699">drv_om24g_set_rf_parameters</a> (<a class="el" href="group__OM24G.html#ga638c48dc36ab3bc3627f969f5dbfba62">om24g_rate_t</a> data_rate, uint16_t frequency, float fract_freq)</td></tr>
+<tr class="memdesc:ga0622fa284faad1ea906cc5b0259de699"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set transmission rate, frequency point. The speed only allows the use of speeds listed in enumeration om24g_rate_t in drv_24g.h. Please do not configure them arbitrarily. For special requirements, please contact the developer.  <br /></td></tr>
+<tr class="separator:ga0622fa284faad1ea906cc5b0259de699"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga67263fe48b00aab69e9ff78e7c3eaee1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#ga67263fe48b00aab69e9ff78e7c3eaee1">drv_om24g_detection_mode</a> (uint8_t detc_mode)</td></tr>
+<tr class="memdesc:ga67263fe48b00aab69e9ff78e7c3eaee1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set demodulation mode.  <br /></td></tr>
+<tr class="separator:ga67263fe48b00aab69e9ff78e7c3eaee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga75b0acb88bc19e587510806962e45230"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#ga75b0acb88bc19e587510806962e45230">drv_om24g_get_rssi</a> (void)</td></tr>
+<tr class="memdesc:ga75b0acb88bc19e587510806962e45230"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the rssi value..  <br /></td></tr>
+<tr class="separator:ga75b0acb88bc19e587510806962e45230"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga446564d9dced67dbc1d1a03c95c83299"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#ga446564d9dced67dbc1d1a03c95c83299">drv_om24g_init</a> (const <a class="el" href="structom24g__config__t.html">om24g_config_t</a> *cfg)</td></tr>
+<tr class="memdesc:ga446564d9dced67dbc1d1a03c95c83299"><td class="mdescLeft">&#160;</td><td class="mdescRight">init the 2.4g transerive when the event begin. If the deviation is dynamically switched, it is prohibited to repeatedly call drv_om24g_init.  <br /></td></tr>
+<tr class="separator:ga446564d9dced67dbc1d1a03c95c83299"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaca59ebdec28355a11126656175db0d9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#gaca59ebdec28355a11126656175db0d9f">drv_om24g_register_event_callback</a> (drv_isr_callback_t event_cb)</td></tr>
+<tr class="memdesc:gaca59ebdec28355a11126656175db0d9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registering 2.4G Callbacks In interrupt mode.  <br /></td></tr>
+<tr class="separator:gaca59ebdec28355a11126656175db0d9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga43dc04c9a58b35d31dbb21e3ae16a444"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#ga43dc04c9a58b35d31dbb21e3ae16a444">drv_om24g_set_freq</a> (uint16_t freq_channel, float fract_freq)</td></tr>
+<tr class="memdesc:ga43dc04c9a58b35d31dbb21e3ae16a444"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set 2.4G frequency point.  <br /></td></tr>
+<tr class="separator:ga43dc04c9a58b35d31dbb21e3ae16a444"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga63b6e2da7e889f4b38b9dfdfcbdbbe40"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#ga63b6e2da7e889f4b38b9dfdfcbdbbe40">drv_om24g_write</a> (const uint8_t *tx_payload, uint16_t tx_num)</td></tr>
+<tr class="memdesc:ga63b6e2da7e889f4b38b9dfdfcbdbbe40"><td class="mdescLeft">&#160;</td><td class="mdescRight">sending data to transmit FIFO by polling mode.  <br /></td></tr>
+<tr class="separator:ga63b6e2da7e889f4b38b9dfdfcbdbbe40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9942935b5bc43f47cd1c3bb134d4980f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#ga9942935b5bc43f47cd1c3bb134d4980f">drv_om24g_write_int</a> (const uint8_t *tx_payload, uint16_t tx_num)</td></tr>
+<tr class="memdesc:ga9942935b5bc43f47cd1c3bb134d4980f"><td class="mdescLeft">&#160;</td><td class="mdescRight">sending data to transmit FIFO by interrupt mode.  <br /></td></tr>
+<tr class="separator:ga9942935b5bc43f47cd1c3bb134d4980f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga814c3033da86faf476fab10d41a52574"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#ga814c3033da86faf476fab10d41a52574">drv_om24g_read</a> (uint8_t *rx_payload, uint32_t timeout_ms)</td></tr>
+<tr class="memdesc:ga814c3033da86faf476fab10d41a52574"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive data from receive FIFO by polling mode.  <br /></td></tr>
+<tr class="separator:ga814c3033da86faf476fab10d41a52574"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga06dec9c73c6673bd09b06d1dcf79fd53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#ga06dec9c73c6673bd09b06d1dcf79fd53">drv_om24g_read_int</a> (uint8_t *rx_payload, uint16_t max_rx_num)</td></tr>
+<tr class="memdesc:ga06dec9c73c6673bd09b06d1dcf79fd53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive data from receive FIFO by interrupt mode. The received data and length can be obtained from the callback function.  <br /></td></tr>
+<tr class="separator:ga06dec9c73c6673bd09b06d1dcf79fd53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad1a82c1a143a297d98e71857f3d63bda"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#gad1a82c1a143a297d98e71857f3d63bda">drv_om24g_read_ack</a> (void)</td></tr>
+<tr class="memdesc:gad1a82c1a143a297d98e71857f3d63bda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive ack data from receive FIFO.  <br /></td></tr>
+<tr class="separator:gad1a82c1a143a297d98e71857f3d63bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga919b2d84e83d74e1587bcdecd8e47dab"><td class="memItemLeft" align="right" valign="top">__STATIC_FORCEINLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#ga919b2d84e83d74e1587bcdecd8e47dab">drv_om24g_write_ack</a> (uint8_t tx_num)</td></tr>
+<tr class="memdesc:ga919b2d84e83d74e1587bcdecd8e47dab"><td class="mdescLeft">&#160;</td><td class="mdescRight">write ack data to transmit FIFO.  <br /></td></tr>
+<tr class="separator:ga919b2d84e83d74e1587bcdecd8e47dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga088e6f3a4fafe96f9c2bc65340778ad7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#ga088e6f3a4fafe96f9c2bc65340778ad7">drv_om24g_isr</a> (void)</td></tr>
+<tr class="memdesc:ga088e6f3a4fafe96f9c2bc65340778ad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">om24g interrupt service routine  <br /></td></tr>
+<tr class="separator:ga088e6f3a4fafe96f9c2bc65340778ad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0974a7bf8e632ebd294e897ff6589b92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#ga0974a7bf8e632ebd294e897ff6589b92">drv_om24g_tim_wakeup_isr</a> (void)</td></tr>
+<tr class="memdesc:ga0974a7bf8e632ebd294e897ff6589b92"><td class="mdescLeft">&#160;</td><td class="mdescRight">om24g timer wakeup interrupt service routine  <br /></td></tr>
+<tr class="separator:ga0974a7bf8e632ebd294e897ff6589b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaec4bd4171e5e9867c18d6d1b893136fc"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#gaec4bd4171e5e9867c18d6d1b893136fc">drv_om24g_control</a> (<a class="el" href="group__OM24G.html#gae1cdaf1a2293c5c321f24e41f7d56f46">om24g_control_t</a> control, void *argu)</td></tr>
+<tr class="memdesc:gaec4bd4171e5e9867c18d6d1b893136fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Control the OM24G CLK and Printing registers. <a class="el" href="group__OM24G.html#gaec4bd4171e5e9867c18d6d1b893136fc" title="Control the OM24G CLK and Printing registers. drv_om24g_control() contains drv_pmu_ana_enable(),...">drv_om24g_control()</a> contains <a class="el" href="group__PMU.html#ga284fe9c21b853396cfd89debe3e94a8f" title="pmu analog power enable, call by system">drv_pmu_ana_enable()</a>, so turning on or turning off the clock only requires calling <a class="el" href="group__OM24G.html#gaec4bd4171e5e9867c18d6d1b893136fc" title="Control the OM24G CLK and Printing registers. drv_om24g_control() contains drv_pmu_ana_enable(),...">drv_om24g_control()</a>.  <br /></td></tr>
+<tr class="separator:gaec4bd4171e5e9867c18d6d1b893136fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf617810ca6a0677bb54bd680f738a423"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#gaf617810ca6a0677bb54bd680f738a423">drv_om24g_tx_idle</a> (void)</td></tr>
+<tr class="memdesc:gaf617810ca6a0677bb54bd680f738a423"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the TX is idle.  <br /></td></tr>
+<tr class="separator:gaf617810ca6a0677bb54bd680f738a423"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2ee1f2c5459af8a48fa8c68ca93f70d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#ga2ee1f2c5459af8a48fa8c68ca93f70d3">drv_om24g_rx_idle</a> (void)</td></tr>
+<tr class="memdesc:ga2ee1f2c5459af8a48fa8c68ca93f70d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the RX is idle.  <br /></td></tr>
+<tr class="separator:ga2ee1f2c5459af8a48fa8c68ca93f70d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga30248cd1beb56a5d80a1822290c1ca63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#ga30248cd1beb56a5d80a1822290c1ca63">drv_om24g_pll_continue_open</a> (bool enable)</td></tr>
+<tr class="memdesc:ga30248cd1beb56a5d80a1822290c1ca63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Continuously turn on PLL to shorten the packet transmission time.  <br /></td></tr>
+<tr class="separator:ga30248cd1beb56a5d80a1822290c1ca63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6d399b0c7cbd2a3f3bec0f9e02410018"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#ga6d399b0c7cbd2a3f3bec0f9e02410018">drv_om24g_dump_rf_register</a> (void)</td></tr>
+<tr class="memdesc:ga6d399b0c7cbd2a3f3bec0f9e02410018"><td class="mdescLeft">&#160;</td><td class="mdescRight">printf 24G register value.  <br /></td></tr>
+<tr class="separator:ga6d399b0c7cbd2a3f3bec0f9e02410018"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga272be06bf8ef998bac8d9491a9802ddf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#ga272be06bf8ef998bac8d9491a9802ddf">drv_om24g_store</a> (void)</td></tr>
+<tr class="separator:ga272be06bf8ef998bac8d9491a9802ddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabd50450289c38c4808f58a5456cab2e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#gabd50450289c38c4808f58a5456cab2e6">drv_om24g_restore</a> (void)</td></tr>
+<tr class="separator:gabd50450289c38c4808f58a5456cab2e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6810eb5526f7459b755430549bea67de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OM24G.html#ga6810eb5526f7459b755430549bea67de">drv_om24g_rf_init_seq</a> (void)</td></tr>
+<tr class="memdesc:ga6810eb5526f7459b755430549bea67de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization sequence for Ripple radio.  <br /></td></tr>
+<tr class="separator:ga6810eb5526f7459b755430549bea67de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+</div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+config TRACE
+    bool "Trace enable"
+    default n
+if TRACE
+    config TRACE_IO_EVENT_NUM
+    int "maximum trace io number"
+    default 4
+endif

@@ -1,0 +1,759 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>User Guide: SM4</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+-->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">User Guide
+   </div>
+   <div id="projectbrief">Bluetooth Low Energy 5.4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__SM4.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">SM4<div class="ingroups"><a class="el" href="group__DRIVER.html">Driver</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>SM4 driver.  
+<a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsm4__ctx__t.html">sm4_ctx_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsm4__cbc__mac__ctx__t.html">sm4_cbc_mac_ctx_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga6e5c486d36abbaf9e89363e5d1b37c51"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SM4.html#ga6e5c486d36abbaf9e89363e5d1b37c51">OM_SM4_CCM_0</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ga6e5c486d36abbaf9e89363e5d1b37c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab2c7defe2c4ca8e3991bb7e2efaf31f9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SM4.html#gab2c7defe2c4ca8e3991bb7e2efaf31f9">SM4_KEY_SIZE</a>&#160;&#160;&#160;16</td></tr>
+<tr class="separator:gab2c7defe2c4ca8e3991bb7e2efaf31f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae6af6c781da311d81ddbd242f068c697"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SM4.html#gae6af6c781da311d81ddbd242f068c697">SM4_BLOCK_SIZE</a>&#160;&#160;&#160;16</td></tr>
+<tr class="separator:gae6af6c781da311d81ddbd242f068c697"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga99ae239f7dc5e78e83262c9e3e37b1e1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SM4.html#ga99ae239f7dc5e78e83262c9e3e37b1e1">SM4_NUM_ROUNDS</a>&#160;&#160;&#160;32</td></tr>
+<tr class="separator:ga99ae239f7dc5e78e83262c9e3e37b1e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga18d5f068f3e57d775ced4187352e99da"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SM4.html#ga18d5f068f3e57d775ced4187352e99da">SM4_CCM_MIN_IV_SIZE</a>&#160;&#160;&#160;7</td></tr>
+<tr class="separator:ga18d5f068f3e57d775ced4187352e99da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga03bd15b8fd02fac56df3f33b74526076"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SM4.html#ga03bd15b8fd02fac56df3f33b74526076">SM4_CCM_MAX_IV_SIZE</a>&#160;&#160;&#160;13</td></tr>
+<tr class="separator:ga03bd15b8fd02fac56df3f33b74526076"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga50664795f67aff67c95844c56d177415"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SM4.html#ga50664795f67aff67c95844c56d177415">SM4_CCM_MIN_TAG_SIZE</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:ga50664795f67aff67c95844c56d177415"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf77d2e055b99d7debdcf234067c144d4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SM4.html#gaf77d2e055b99d7debdcf234067c144d4">SM4_CCM_MAX_TAG_SIZE</a>&#160;&#160;&#160;16</td></tr>
+<tr class="separator:gaf77d2e055b99d7debdcf234067c144d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga0795ce98fc6f1f184d5eb7cd8eebd258"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SM4.html#ga0795ce98fc6f1f184d5eb7cd8eebd258">drv_sm4_set_encrypt_key</a> (<a class="el" href="structsm4__ctx__t.html">sm4_ctx_t</a> *ctx, const uint8_t user_key[16])</td></tr>
+<tr class="memdesc:ga0795ce98fc6f1f184d5eb7cd8eebd258"><td class="mdescLeft">&#160;</td><td class="mdescRight">SM4 encryption key setting.  <br /></td></tr>
+<tr class="separator:ga0795ce98fc6f1f184d5eb7cd8eebd258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga17b69b21fcc5ad9a00316e865bc241d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SM4.html#ga17b69b21fcc5ad9a00316e865bc241d4">drv_sm4_set_decrypt_key</a> (<a class="el" href="structsm4__ctx__t.html">sm4_ctx_t</a> *ctx, const uint8_t user_key[16])</td></tr>
+<tr class="memdesc:ga17b69b21fcc5ad9a00316e865bc241d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">SM4 decryption key setting.  <br /></td></tr>
+<tr class="separator:ga17b69b21fcc5ad9a00316e865bc241d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga02cf3177cdcfab3270ab7cb773176817"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SM4.html#ga02cf3177cdcfab3270ab7cb773176817">drv_sm4_encrypt</a> (const <a class="el" href="structsm4__ctx__t.html">sm4_ctx_t</a> *ctx, const uint8_t in[16], uint8_t out[16])</td></tr>
+<tr class="memdesc:ga02cf3177cdcfab3270ab7cb773176817"><td class="mdescLeft">&#160;</td><td class="mdescRight">SM4 encryption.  <br /></td></tr>
+<tr class="separator:ga02cf3177cdcfab3270ab7cb773176817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga754e7b5eb11c8f132e60dda9ba1e46d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SM4.html#ga754e7b5eb11c8f132e60dda9ba1e46d7">drv_sm4_cbc_mac_init</a> (<a class="el" href="structsm4__cbc__mac__ctx__t.html">sm4_cbc_mac_ctx_t</a> *ctx, const uint8_t key[16])</td></tr>
+<tr class="memdesc:ga754e7b5eb11c8f132e60dda9ba1e46d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">SM4 CBC intialization.  <br /></td></tr>
+<tr class="separator:ga754e7b5eb11c8f132e60dda9ba1e46d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3edb9a3a00f9b65e09dee9b01dd0b202"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SM4.html#ga3edb9a3a00f9b65e09dee9b01dd0b202">drv_sm4_cbc_mac_update</a> (<a class="el" href="structsm4__cbc__mac__ctx__t.html">sm4_cbc_mac_ctx_t</a> *ctx, const uint8_t *data, uint32_t datalen)</td></tr>
+<tr class="memdesc:ga3edb9a3a00f9b65e09dee9b01dd0b202"><td class="mdescLeft">&#160;</td><td class="mdescRight">SM4 CBC update.  <br /></td></tr>
+<tr class="separator:ga3edb9a3a00f9b65e09dee9b01dd0b202"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga59a6285a8dc9a1b212bc1fae55b81c29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SM4.html#ga59a6285a8dc9a1b212bc1fae55b81c29">drv_sm4_cbc_mac_finish</a> (<a class="el" href="structsm4__cbc__mac__ctx__t.html">sm4_cbc_mac_ctx_t</a> *ctx, uint8_t mac[16])</td></tr>
+<tr class="memdesc:ga59a6285a8dc9a1b212bc1fae55b81c29"><td class="mdescLeft">&#160;</td><td class="mdescRight">SM4 CBC finalization.  <br /></td></tr>
+<tr class="separator:ga59a6285a8dc9a1b212bc1fae55b81c29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5ac592b7fdaa1173c334927eb0386aad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SM4.html#ga5ac592b7fdaa1173c334927eb0386aad">drv_sm4_ccm_encrypt</a> (uint32_t om_sm4_ccm, const uint8_t key[16], const uint8_t *iv, uint32_t ivlen, const uint8_t *aad, size_t aadlen, const uint8_t *in, uint32_t inlen, uint8_t *out, uint8_t *tag, uint32_t taglen)</td></tr>
+<tr class="memdesc:ga5ac592b7fdaa1173c334927eb0386aad"><td class="mdescLeft">&#160;</td><td class="mdescRight">SM4 CCM encryption.  <br /></td></tr>
+<tr class="separator:ga5ac592b7fdaa1173c334927eb0386aad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf92cd3cf6a288736cdad9ab9ed67d676"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SM4.html#gaf92cd3cf6a288736cdad9ab9ed67d676">drv_sm4_ccm_decrypt</a> (uint32_t om_sm4_ccm, const uint8_t key[16], const uint8_t *iv, uint32_t ivlen, const uint8_t *aad, uint32_t aadlen, const uint8_t *in, uint32_t inlen, uint8_t *out, const uint8_t *tag, uint32_t taglen)</td></tr>
+<tr class="memdesc:gaf92cd3cf6a288736cdad9ab9ed67d676"><td class="mdescLeft">&#160;</td><td class="mdescRight">SM4 CCM decryption.  <br /></td></tr>
+<tr class="separator:gaf92cd3cf6a288736cdad9ab9ed67d676"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>SM4 driver. </p>
+<p>SM4 driver apis and typedefs header file. Implemeted by software.</p>
+<dl class="section version"><dt>Version</dt><dd>Version 1.0<ul>
+<li>Initial release </li>
+</ul>
+</dd></dl>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga6e5c486d36abbaf9e89363e5d1b37c51" name="ga6e5c486d36abbaf9e89363e5d1b37c51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6e5c486d36abbaf9e89363e5d1b37c51">&#9670;&#160;</a></span>OM_SM4_CCM_0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OM_SM4_CCM_0&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gae6af6c781da311d81ddbd242f068c697" name="gae6af6c781da311d81ddbd242f068c697"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae6af6c781da311d81ddbd242f068c697">&#9670;&#160;</a></span>SM4_BLOCK_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SM4_BLOCK_SIZE&#160;&#160;&#160;16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga03bd15b8fd02fac56df3f33b74526076" name="ga03bd15b8fd02fac56df3f33b74526076"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga03bd15b8fd02fac56df3f33b74526076">&#9670;&#160;</a></span>SM4_CCM_MAX_IV_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SM4_CCM_MAX_IV_SIZE&#160;&#160;&#160;13</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaf77d2e055b99d7debdcf234067c144d4" name="gaf77d2e055b99d7debdcf234067c144d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf77d2e055b99d7debdcf234067c144d4">&#9670;&#160;</a></span>SM4_CCM_MAX_TAG_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SM4_CCM_MAX_TAG_SIZE&#160;&#160;&#160;16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga18d5f068f3e57d775ced4187352e99da" name="ga18d5f068f3e57d775ced4187352e99da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga18d5f068f3e57d775ced4187352e99da">&#9670;&#160;</a></span>SM4_CCM_MIN_IV_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SM4_CCM_MIN_IV_SIZE&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga50664795f67aff67c95844c56d177415" name="ga50664795f67aff67c95844c56d177415"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga50664795f67aff67c95844c56d177415">&#9670;&#160;</a></span>SM4_CCM_MIN_TAG_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SM4_CCM_MIN_TAG_SIZE&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gab2c7defe2c4ca8e3991bb7e2efaf31f9" name="gab2c7defe2c4ca8e3991bb7e2efaf31f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab2c7defe2c4ca8e3991bb7e2efaf31f9">&#9670;&#160;</a></span>SM4_KEY_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SM4_KEY_SIZE&#160;&#160;&#160;16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga99ae239f7dc5e78e83262c9e3e37b1e1" name="ga99ae239f7dc5e78e83262c9e3e37b1e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga99ae239f7dc5e78e83262c9e3e37b1e1">&#9670;&#160;</a></span>SM4_NUM_ROUNDS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SM4_NUM_ROUNDS&#160;&#160;&#160;32</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga59a6285a8dc9a1b212bc1fae55b81c29" name="ga59a6285a8dc9a1b212bc1fae55b81c29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga59a6285a8dc9a1b212bc1fae55b81c29">&#9670;&#160;</a></span>drv_sm4_cbc_mac_finish()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_sm4_cbc_mac_finish </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsm4__cbc__mac__ctx__t.html">sm4_cbc_mac_ctx_t</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>mac</em>[16]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SM4 CBC finalization. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>SM4 CBC context </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">mac</td><td>output mac </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga754e7b5eb11c8f132e60dda9ba1e46d7" name="ga754e7b5eb11c8f132e60dda9ba1e46d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga754e7b5eb11c8f132e60dda9ba1e46d7">&#9670;&#160;</a></span>drv_sm4_cbc_mac_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_sm4_cbc_mac_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsm4__cbc__mac__ctx__t.html">sm4_cbc_mac_ctx_t</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>key</em>[16]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SM4 CBC intialization. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>SM4 CBC context </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>SM4 key </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga3edb9a3a00f9b65e09dee9b01dd0b202" name="ga3edb9a3a00f9b65e09dee9b01dd0b202"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3edb9a3a00f9b65e09dee9b01dd0b202">&#9670;&#160;</a></span>drv_sm4_cbc_mac_update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_sm4_cbc_mac_update </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsm4__cbc__mac__ctx__t.html">sm4_cbc_mac_ctx_t</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>datalen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SM4 CBC update. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>SM4 CBC context </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>input data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">datalen</td><td>input data length </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaf92cd3cf6a288736cdad9ab9ed67d676" name="gaf92cd3cf6a288736cdad9ab9ed67d676"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf92cd3cf6a288736cdad9ab9ed67d676">&#9670;&#160;</a></span>drv_sm4_ccm_decrypt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_sm4_ccm_decrypt </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>om_sm4_ccm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>key</em>[16], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>iv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>ivlen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>aad</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>aadlen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>inlen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>tag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>taglen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SM4 CCM decryption. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_sm4_ccm</td><td>SM4 CCM ID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>SM4 key </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">iv</td><td>initialization vector </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ivlen</td><td>initialization vector length </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aad</td><td>additional authenticated data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aadlen</td><td>additional authenticated data length </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">in</td><td>encrypted data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">inlen</td><td>encrypted data length </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out</td><td>plaintext data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tag</td><td>authentication tag </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">taglen</td><td>authentication tag length</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>om_error </dd></dl>
+
+</div>
+</div>
+<a id="ga5ac592b7fdaa1173c334927eb0386aad" name="ga5ac592b7fdaa1173c334927eb0386aad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5ac592b7fdaa1173c334927eb0386aad">&#9670;&#160;</a></span>drv_sm4_ccm_encrypt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_sm4_ccm_encrypt </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>om_sm4_ccm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>key</em>[16], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>iv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>ivlen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>aad</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>aadlen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>inlen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>tag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>taglen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SM4 CCM encryption. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_sm4_ccm</td><td>SM4 CCM ID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>SM4 key </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">iv</td><td>initialization vector </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ivlen</td><td>initialization vector length </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aad</td><td>additional authenticated data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aadlen</td><td>additional authenticated data length </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">in</td><td>plaintext data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">inlen</td><td>plaintext data length </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out</td><td>encrypted data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">tag</td><td>authentication tag </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">taglen</td><td>authentication tag length</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>om_error </dd></dl>
+
+</div>
+</div>
+<a id="ga02cf3177cdcfab3270ab7cb773176817" name="ga02cf3177cdcfab3270ab7cb773176817"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga02cf3177cdcfab3270ab7cb773176817">&#9670;&#160;</a></span>drv_sm4_encrypt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_sm4_encrypt </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structsm4__ctx__t.html">sm4_ctx_t</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>in</em>[16], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>out</em>[16]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SM4 encryption. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>SM4 context </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">in</td><td>input data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out</td><td>output data </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga17b69b21fcc5ad9a00316e865bc241d4" name="ga17b69b21fcc5ad9a00316e865bc241d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga17b69b21fcc5ad9a00316e865bc241d4">&#9670;&#160;</a></span>drv_sm4_set_decrypt_key()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_sm4_set_decrypt_key </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsm4__ctx__t.html">sm4_ctx_t</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>user_key</em>[16]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SM4 decryption key setting. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>SM4 context </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">user_key</td><td>SM4 user key </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga0795ce98fc6f1f184d5eb7cd8eebd258" name="ga0795ce98fc6f1f184d5eb7cd8eebd258"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0795ce98fc6f1f184d5eb7cd8eebd258">&#9670;&#160;</a></span>drv_sm4_set_encrypt_key()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_sm4_set_encrypt_key </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsm4__ctx__t.html">sm4_ctx_t</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>user_key</em>[16]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SM4 encryption key setting. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>SM4 context </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">user_key</td><td>SM4 user key </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+</div>
+</body>
+</html>

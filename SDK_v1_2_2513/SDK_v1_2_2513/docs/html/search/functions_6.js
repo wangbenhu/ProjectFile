@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['pm_5finit_0',['pm_init',['../group__PM.html#ga2f05280c58e66ae51481d75ed4f7c97c',1,'pm.h']]],
+  ['pm_5fpower_5fmanage_1',['pm_power_manage',['../group__PM.html#gaca065483cfe789215a4d194eda3fc931',1,'pm.h']]],
+  ['pm_5fsleep_2',['pm_sleep',['../group__PM.html#gafcf762ea13dde196e7918b394a4c6e41',1,'pm.h']]],
+  ['pm_5fsleep_5fallow_3',['pm_sleep_allow',['../group__PM.html#ga3de7dba19bee189c19e82e5cc0dcc603',1,'pm.h']]],
+  ['pm_5fsleep_5fchecker_5fcallback_5fregister_4',['pm_sleep_checker_callback_register',['../group__PM.html#gaec024639daf77b28278ef0a8d61b99ef',1,'pm.h']]],
+  ['pm_5fsleep_5fchecker_5fcheck_5',['pm_sleep_checker_check',['../group__PM.html#gac28984d434d1e36259c5f15310d7a7ef',1,'pm.h']]],
+  ['pm_5fsleep_5fenable_6',['pm_sleep_enable',['../group__PM.html#ga9de92c7182c5638b6fcc51ac520d004c',1,'pm.h']]],
+  ['pm_5fsleep_5fmin_5ftime_5fget_7',['pm_sleep_min_time_get',['../group__PM.html#gafd7c05c5156175aabbbe55543aab6069',1,'pm.h']]],
+  ['pm_5fsleep_5fmin_5ftime_5fset_8',['pm_sleep_min_time_set',['../group__PM.html#gafdee3015b3e6a0c9ebd7cad51c81e531',1,'pm.h']]],
+  ['pm_5fsleep_5fnotify_5fuser_5fcallback_5fregister_9',['pm_sleep_notify_user_callback_register',['../group__PM.html#ga7552fcc5d722c306d82b0ab62508571c',1,'pm.h']]],
+  ['pm_5fsleep_5fprevent_10',['pm_sleep_prevent',['../group__PM.html#gaae0a5bf0f02a1932a9c7e67d1dd4c890',1,'pm.h']]],
+  ['pm_5fsleep_5fstore_5frestore_5fcallback_5fregister_11',['pm_sleep_store_restore_callback_register',['../group__PM.html#gaf2990811ecb4e54150e5c3568fbca1e1',1,'pm.h']]],
+  ['pm_5fsleep_5fultra_5fsleep_5fmode_5fenable_12',['pm_sleep_ultra_sleep_mode_enable',['../group__PM.html#ga3a9ac8f95cc515b08db680dcf5e2cf6e',1,'pm.h']]],
+  ['pm_5fsleep_5fultra_5fsleep_5fmode_5fis_5fenabled_13',['pm_sleep_ultra_sleep_mode_is_enabled',['../group__PM.html#gaea65ede1ac738e843c32a8c3fdc53bbe',1,'pm.h']]],
+  ['pmu_5ftimer_5fcalc_5fincr_5fby_5freal_5ffreq_14',['pmu_timer_calc_incr_by_real_freq',['../group__PMU__TIMER.html#gabe0c99b2d969412cccff2545fa15910a',1,'drv_pmu_timer.h']]],
+  ['pmu_5ftimer_5fcalc_5fincr_5fby_5ftime_15',['pmu_timer_calc_incr_by_time',['../group__PMU__TIMER.html#ga258ec2f6fd7046224f0deabaf0884dc9',1,'drv_pmu_timer.h']]]
+];

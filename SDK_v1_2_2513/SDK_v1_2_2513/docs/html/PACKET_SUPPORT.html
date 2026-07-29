@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>User Guide: Packet Support</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+-->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">User Guide
+   </div>
+   <div id="projectbrief">Bluetooth Low Energy 5.4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('PACKET_SUPPORT.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Packet Support </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="md_doxygen_source_24g_packet_support"></a> </p>
+<h1><a class="anchor" id="autotoc_md196"></a>
+Air Data Rate</h1>
+<p>The air data rate is the modulated signaling rate the chip uses when transmitting and receiving data. It can be 25kbps to 2Mbps. Using lower air data rate gives better receiver sensitivity than higher air data rate. But, high air data rate gives lower average current consumption and reduced probability of on-air collisions. The air data rate is set by the RF_DR register. A transmitter and a receiver must be programmed with the same air data rate to communicate with each other.</p>
+<p>The following table shows all configurable configurations of tx/rx air data rates:</p>
+<dl class="section note"><dt>Note</dt><dd>Only the first four rate configurations are supported when PHY uses soft decision mode(OM24G_SOFT_DETECTION). The application can directly call <a class="el" href="group__OM24G.html#ga0622fa284faad1ea906cc5b0259de699" title="Set transmission rate, frequency point. The speed only allows the use of speeds listed in enumeration...">drv_om24g_set_rf_parameters(om24g_rate_t data_rate, uint16_t frequency, float fract_freq)</a> for configuration without the need to follow the following methods for setting.</dd></dl>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">TX_RF_DR or RX_RF_DR   </th><th class="markdownTableHeadLeft">3   </th><th class="markdownTableHeadLeft">2   </th><th class="markdownTableHeadLeft">1   </th><th class="markdownTableHeadLeft">0   </th><th class="markdownTableHeadLeft">2   </th><th class="markdownTableHeadLeft">2   </th><th class="markdownTableHeadLeft">2   </th><th class="markdownTableHeadLeft">2   </th><th class="markdownTableHeadLeft">2   </th><th class="markdownTableHeadLeft">1    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">EN_TX_ARB or EN_RX_ARB   </td><td class="markdownTableBodyLeft">x   </td><td class="markdownTableBodyLeft">0   </td><td class="markdownTableBodyLeft">0   </td><td class="markdownTableBodyLeft">0   </td><td class="markdownTableBodyLeft">1   </td><td class="markdownTableBodyLeft">1   </td><td class="markdownTableBodyLeft">1   </td><td class="markdownTableBodyLeft">1   </td><td class="markdownTableBodyLeft">1   </td><td class="markdownTableBodyLeft">1    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">N_REP or N_AVR   </td><td class="markdownTableBodyLeft">x   </td><td class="markdownTableBodyLeft">x   </td><td class="markdownTableBodyLeft">x   </td><td class="markdownTableBodyLeft">x   </td><td class="markdownTableBodyLeft">2   </td><td class="markdownTableBodyLeft">4   </td><td class="markdownTableBodyLeft">5   </td><td class="markdownTableBodyLeft">8   </td><td class="markdownTableBodyLeft">10   </td><td class="markdownTableBodyLeft">2    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Data Rate   </td><td class="markdownTableBodyLeft">2m   </td><td class="markdownTableBodyLeft">1m   </td><td class="markdownTableBodyLeft">500k   </td><td class="markdownTableBodyLeft">250k   </td><td class="markdownTableBodyLeft">500k   </td><td class="markdownTableBodyLeft">250k   </td><td class="markdownTableBodyLeft">200k   </td><td class="markdownTableBodyLeft">125k   </td><td class="markdownTableBodyLeft">100k   </td><td class="markdownTableBodyLeft">250k   </td></tr>
+</table>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">TX_RF_DR or RX_RF_DR   </th><th class="markdownTableHeadLeft">1   </th><th class="markdownTableHeadLeft">1   </th><th class="markdownTableHeadLeft">1   </th><th class="markdownTableHeadLeft">1   </th><th class="markdownTableHeadLeft">0   </th><th class="markdownTableHeadLeft">0   </th><th class="markdownTableHeadLeft">0   </th><th class="markdownTableHeadLeft">0   </th><th class="markdownTableHeadLeft">0    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">EN_TX_ARB or EN_RX_ARB   </td><td class="markdownTableBodyLeft">1   </td><td class="markdownTableBodyLeft">1   </td><td class="markdownTableBodyLeft">1   </td><td class="markdownTableBodyLeft">1   </td><td class="markdownTableBodyLeft">1   </td><td class="markdownTableBodyLeft">1   </td><td class="markdownTableBodyLeft">1   </td><td class="markdownTableBodyLeft">1   </td><td class="markdownTableBodyLeft">1    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">N_REP or N_AVR   </td><td class="markdownTableBodyLeft">4   </td><td class="markdownTableBodyLeft">5   </td><td class="markdownTableBodyLeft">8   </td><td class="markdownTableBodyLeft">10   </td><td class="markdownTableBodyLeft">2   </td><td class="markdownTableBodyLeft">4   </td><td class="markdownTableBodyLeft">5   </td><td class="markdownTableBodyLeft">8   </td><td class="markdownTableBodyLeft">10    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Data Rate   </td><td class="markdownTableBodyLeft">125k   </td><td class="markdownTableBodyLeft">100k   </td><td class="markdownTableBodyLeft">62.5k   </td><td class="markdownTableBodyLeft">50k   </td><td class="markdownTableBodyLeft">125k   </td><td class="markdownTableBodyLeft">62.5k   </td><td class="markdownTableBodyLeft">50k   </td><td class="markdownTableBodyLeft">31.25k   </td><td class="markdownTableBodyLeft">25k   </td></tr>
+</table>
+<p>example：Without enabling the TX low rate mode(EN_TX_ARB = 0), TX_RF_DR is 2, indicating a base rate of 1M. If EN_TX_ARB is 1, N_REP(2) is the frequency division value, The final data rate is equal to TX_RF_DR divided by N_REP (1M / 2 = 500k). The sending and receiving data rate can be independently configured with different values.</p>
+<h1><a class="anchor" id="autotoc_md197"></a>
+Frequency  Setting</h1>
+<p>Configure frequency points by <a class="el" href="group__OM24G.html#ga43dc04c9a58b35d31dbb21e3ae16a444" title="Set 2.4G frequency point.">drv_om24g_set_freq(uint16_t freq, float fract_freq)</a>; For example, if you want to configure 2412.378456MHZ frequency points, set freq to 2412 and fract_freq to 0.378456.</p>
+<h1><a class="anchor" id="autotoc_md198"></a>
+DMA</h1>
+<ul>
+<li>DMA realizes automatic data transfer from system RAM to TX FIFO and RX FIFO to system RAM without participation of MCU.</li>
+<li>As a PTX device, if DMA TX function is enabled, the data in system RAM will be read out by DMA and written into TX FIFO.</li>
+<li>As a PRX device, when PRX received a packet, the data in RX FIFO will be read out by DMA and written into system RAM automatic.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md199"></a>
+Address Match</h1>
+<ul>
+<li>Address match Setting <a class="el" href="structom24g__config__t.html#a9fcf8eaf553582afb28f250521af31da" title="If it is 1, check if rx pipe address matches, and if it is 0, do not check.">om24g_config_t::addr_chk</a> to 1 enables the packet address match.</li>
+<li>address match has an attribute called data pipe, for a detail description of data pipe see chapter transfer mode section.</li>
+<li>The packet handler engine will compare the destination address in the packet with the programmed node address in the RX_ADDR_Px(x:0~5) register and the 0x00 broadcast address when <a class="el" href="structom24g__config__t.html#a9fcf8eaf553582afb28f250521af31da" title="If it is 1, check if rx pipe address matches, and if it is 0, do not check.">om24g_config_t::addr_chk</a> = 0x02 or both 0x00 and 0xFF broadcast addresses when <a class="el" href="structom24g__config__t.html#a9fcf8eaf553582afb28f250521af31da" title="If it is 1, check if rx pipe address matches, and if it is 0, do not check.">om24g_config_t::addr_chk</a> = 0x03. If the received address matches a valid address, the packet is accepted. If the address match fails, the packet is discarded and receive mode restarted.</li>
+<li>In different packet frame structure, different address field will be used for address match.</li>
+<li>If packet structure A is selected, adress0 subfield would be used for address match.</li>
+<li>If packet structure B is selected, adress1 subfield in head field (or before/after head field) would be used for address match.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md200"></a>
+RX Termination Timer</h1>
+<ul>
+<li>When chip is a PTX and acknowledgement function is enabled, it has a function for automatic termination of RX after a programmable time. The termination timer starts when in RX state. The timeout is programmable with register FA_SETUP_RETR.ARD. When the timer expires, there’s that different operation.</li>
+<li>In packet structure A, the radio controller will go to TX MODE and retransmitted last packet until transmit successful or it reaches auto Retransmit Count value.</li>
+<li>In packet structure B, the radio controller will go to TX MODE.</li>
+<li>A RX timeout interrupt will happen if the interrupt is enabled.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md201"></a>
+Bit Count Match</h1>
+<ul>
+<li>The radio implements a simple counter that can be configured to generate an event after a specific number of bits have been received.</li>
+<li>The bit counter is started by set INT_MASK.MASK_BCM = 1, and stopped by set INT_MASK.MASK_BCM = 0. A INT_BCC_MATCH event will be generated when the bit counter has counted the number of bits specified in the BCC.CNT register. The bit counter will continue to count bits until set INT_MASK.MASK_BCM = 0 or radio is disabled. The MCU can therefore, after a BCMATCH event, reconfigure the BCC.CNT value for new BCMATCH events within the same packet.</li>
+<li>For packet structure A, the bit counter can only be started after the radio has received the address.</li>
+<li>For packet structure B, the bit counter can only be started after the radio has received the sync word.</li>
+<li>The bit counter will stop and reset with INT_MASK.MASK_BCM = 0 or a packet receive is finish.</li>
+<li>The figure below illustrates how the bit counter can be used to generate a BCMATCH event in the beginning of the packet payload, and again generate a second BCMATCH event after received 1 byte (8 bits) of the payload.</li>
+</ul>
+<div class="image">
+<img src="Frame_A_bit_counter_example.png" alt=""/>
+<div class="caption">
+structure A bit counter example</div></div>
+    <p>The figure illustrates the situation in structure B, the bit counter can be used to generate a BCMATCH event in the beginning of the packet header field, and again generate a second BCMATCH event after received 1 byte (8 bits) of the payload. In this case, the size of header is 16 bits.</p>
+<div class="image">
+<img src="Frame_B_bit_counter_example.png" alt=""/>
+<div class="caption">
+structure B bit counter example</div></div>
+    <h1><a class="anchor" id="autotoc_md202"></a>
+Timestamp</h1>
+<p>The software uses the 32bit counter to realize the timestamp function and completes the synchronization process of different device time. If timestamp function is enabled, timestamp field will be transmitted after the payload field. The 4-bytes timestamp is included in payload field. The timestamp of the transmitting device is locked after sending the header. The four byte timestamp is included in the length.</p>
+<h1><a class="anchor" id="autotoc_md203"></a>
+CRC</h1>
+<p>The CRC polynomial is configurable as illustrated in Figure CRC generation of an n bit CRC where bit0 in the CRCPOLY register corresponds to X0 and bit1 corresponds to X1 etc. Polynomial is set by <a class="el" href="structom24g__config__t.html#a7c5559cef5f3c7c8724e041305c3adbd" title="CRC Polynomial.">om24g_config_t::crc_poly</a>. CRC initital value is set by <a class="el" href="structom24g__config__t.html#a290a8d80ab65e8eaa4eed683cf5f7dc3" title="CRC initital value.">om24g_config_t::crc_init</a>.</p>
+<div class="image">
+<img src="CRC_generation_of_mode0.png" alt=""/>
+<div class="caption">
+CRC generation of mode_0</div></div>
+    <p>As illustrated in figure CRC generation of an n bit CRC, the CRC is calculated by feeding the packet serially through the CRC generator. Before the packet is clocked through the CRC generator, the CRC generator's latches b0 through bn will be initialized with a predefined value specified in the CRCINIT register. When the whole packet is clocked through the CRC generator, latches b0 through bn will hold the resulting CRC. This value will be used by the radio during both transmission and reception but it is not available to be read by the MCU at any time. A received CRC can however be read by the MCU via the RXCRC register independent of whether or not it has passed the CRC check.</p>
+<p>The length (n) of the CRC is configurable to 1/2/3/4 bytes by <a class="el" href="structom24g__config__t.html#afc83b163d81ce75c2ab29adc27b5e837" title="lenth of crc.">om24g_config_t::crc_len</a> to set. If <a class="el" href="structom24g__config__t.html#afc83b163d81ce75c2ab29adc27b5e837" title="lenth of crc.">om24g_config_t::crc_len</a> = 0x01, CRC length is one byte and CRC calculation are enabled.</p>
+<div class="image">
+<img src="CRC_generation_of_mode1.png" alt=""/>
+<div class="caption">
+CRC generation of mode_1</div></div>
+    <p>After the whole packet including the CRC has been received, the radio will generate a CRCERROR event if CRC errors were detected.</p>
+<p><b>CRC Scope:</b></p>
+<p>In packet structure A, the scope of CRC is fixed: includes sync_word, 1-byte address field, 2 bytes guard field (if guard field exist), header field, and payload field.</p>
+<p>In packet structure B, the scope of CRC includes sync_word, header, payload and timestamp field. The scope of CRC for these field is individual optional.</p>
+<dl class="section note"><dt>Note</dt><dd>If you need to modify the CRC configuration again, for example, CRC_CFG, CRC_SKIP, you needs to call OM24G_CE_LOW() to turn off the RF, and then perform new data communication (for example, the CRC calculation of ADDR is calculated immediately after the last receive). The CRC_SKIP_ADDR modified later will not work in the current transfer).</dd></dl>
+<h1><a class="anchor" id="autotoc_md204"></a>
+Date  Whitening</h1>
+<p>From a radio perspective, the ideal over the air data are random and DC free. This results in the smoothest power distribution over the occupied bandwidth. This also gives the regulation loops in the receiver uniform operation conditions (no data dependencies). Real world data often contain long sequences of zeros and ones. Performance can then be improved by whitening the data before transmitting, and de-whitening the data in the receiver. Selected field data are then XOR-ed with pseudo-random sequence before being transmitted. At the receiver end, the data are XOR-ed with the same pseudo-random sequence. This way, the whitening is reversed, and the original data appear in the receiver. In OM6XXX, this can be done automatically by setting <a class="el" href="structom24g__config__t.html#ae427283a87e2fceb359536c85b8de8d4" title="Enable whitening.">om24g_config_t::white_en</a> = 1. <br  />
+</p>
+<p>Seven types of data whitening are supported, which can be selected by setting <a class="el" href="structom24g__config__t.html#a092b0c9835ffcbb27f9436db658b2a83" title="select whiten mode(0~7) to Adapt to different chips.">om24g_config_t::white_sel</a>. In addition, <a class="el" href="structom24g__config__t.html#ab76bf7a46d0ef970b5667e0529b63866" title="white seed value.">om24g_config_t::white_seed</a> is used to select the initial value of data whitening LSFR, and <a class="el" href="structom24g__config__t.html#a33d0a07c1125e618cfd1716d672300a7" title="white out bit.">om24g_config_t::white_obit</a> selects which register output in LSFR is used to perform exclusive OR processing with data. Specific Settings need to be set by users according to their own needs. Schematics corresponding to different whitening types and polynomials are listed below.</p>
+<p>Set <a class="el" href="structom24g__config__t.html#a092b0c9835ffcbb27f9436db658b2a83" title="select whiten mode(0~7) to Adapt to different chips.">om24g_config_t::white_sel</a> = 0, then select Onmicro 66xx whitening method: PN8 = x8+x4+x+1. (set <a class="el" href="structom24g__config__t.html#ab76bf7a46d0ef970b5667e0529b63866" title="white seed value.">om24g_config_t::white_seed</a> = 0x80, <a class="el" href="structom24g__config__t.html#a33d0a07c1125e618cfd1716d672300a7" title="white out bit.">om24g_config_t::white_obit</a> = 0x07)</p>
+<div class="image">
+<img src="Fibonacci.png" alt=""/>
+<div class="caption">
+PN8 = x8+x4+x+1 (Fibonacci) (WHITE_SEL = 0)</div></div>
+    <p><br  />
+</p>
+<div class="image">
+<img src="WHITE_SEL_1.png" alt=""/>
+<div class="caption">
+PN8 = x8+1 (WHITE_SEL = 1)</div></div>
+    <p><br  />
+</p>
+<div class="image">
+<img src="WHITE_SEL_5.png" alt=""/>
+<div class="caption">
+PN9 = x9+x5+1 (Galois) (WHITE_SEL = 5)</div></div>
+    <p><br  />
+</p>
+<div class="image">
+<img src="WHITE_SEL_3.png" alt=""/>
+<div class="caption">
+PN16 = x14+X13+x11+1 (Galois) (WHITE_SEL = 3)</div></div>
+    <p><br  />
+</p>
+<div class="image">
+<img src="WHITE_SEL_6.png" alt=""/>
+<div class="caption">
+PN8 = x8+x4+x+1 (Fibonacci) (WHITE_SEL = 6)</div></div>
+    <p><br  />
+</p>
+<div class="image">
+<img src="WHITE_SEL_7.png" alt=""/>
+<div class="caption">
+State grid iot table whitening (Galois) (WHITE_SEL = 7)</div></div>
+    <p><b>Data Whitening Range:</b></p>
+<p>Data whitening ranges include header field, addr1 field, payload field, and crc field. You can set whitening Fields that are not whitened by setting <a class="el" href="structom24g__config__t.html#ac2589f4fb7ebd786211a0c1e8321b931" title="1: Do not whiten the pipe address.">om24g_config_t::white_skip_addr</a>, <a class="el" href="structom24g__config__t.html#a06d14f0fadcda54aafc360881355a82a" title="1: Do not whiten the header.">om24g_config_t::white_skip_hdr</a> and <a class="el" href="structom24g__config__t.html#a58f979584fe89fc795c58c4b19db105e" title="1: Do not whiten CRC.">om24g_config_t::white_skip_crc</a>. When the addr1 field is inside the header, white_skip_addr is invalid. In the case of header whitening, addr1 field is forcibly whitened(FB_PKTCTRL.ADDR1_LOC = 0x00). When the address is outside the header, white_skip_addr is valid.</p>
+<h1><a class="anchor" id="autotoc_md205"></a>
+Demodulation Mode</h1>
+<p>To prevent improper use by customers, modifying the demodulation mode in the config structure is invalid for 66xx. Forcefully set the demodulation mode for each rate in the <a class="el" href="group__OM24G.html#ga0622fa284faad1ea906cc5b0259de699" title="Set transmission rate, frequency point. The speed only allows the use of speeds listed in enumeration...">drv_om24g_set_rf_parameters()</a> function, which is suitable for most chips' reception, but can be switched in this function if the reception effect is poor. There are three demodulation modes:</p>
+<h3><a class="anchor" id="autotoc_md206"></a>
+SOFT DETECTION</h3>
+<ul>
+<li>The modulation index supports 0.5 and 0.32.</li>
+<li>The speed supports 1M, 2M, 500K, and 250K, but does not support low-speed mode. Enter low rate mode when EN_TX_ARB or EN_RX_ARB is set to 1.</li>
+<li>Highest accruacy, highest latency.</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md207"></a>
+HARD DETECTION</h3>
+<ul>
+<li>Suport all modulation index(0~2).</li>
+<li>The speed supports 1M, 500K, 250K and low-speed mode(25k~250k), but does not support 2M.</li>
+<li>Middle accruacy, middle latency.</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md208"></a>
+DPLL DETECTION</h3>
+<ul>
+<li>Suport all modulation index(0~2).</li>
+<li>Supports all rates.(25K~2M).</li>
+<li>Lowest accruacy, lowest latency.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md209"></a>
+MSB/LSB Endian</h1>
+<p>Byte endianness of sync word field、bit endianness of sync word field、byte endianness of CRC field、bit endianness of CRC field、 bit endianness of header field、bit endianness of address field and bit endianness of payload field can be configured through the ENDIAN register. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+</div>
+</body>
+</html>

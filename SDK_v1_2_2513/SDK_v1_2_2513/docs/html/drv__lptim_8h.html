@@ -1,0 +1,297 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>User Guide: /mnt/data/yaoyufeng/work.svnrepo/om6627x/om6627/trunk/SDK/hal/driver/source/drv_lptim.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+-->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">User Guide
+   </div>
+   <div id="projectbrief">Bluetooth Low Energy 5.4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('drv__lptim_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">drv_lptim.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;RTE_driver.h&quot;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="om__driver_8h_source.html">om_driver.h</a>&quot;</code><br />
+</div>
+<p><a href="drv__lptim_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlptim__out__config__t.html">lptim_out_config_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">LP Timer OUT Configuration.  <a href="structlptim__out__config__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlptim__free__running__config__t.html">lptim_free_running_config_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">LP Timer Free Running Configuration.  <a href="structlptim__free__running__config__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlptim__one__shot__config__t.html">lptim_one_shot_config_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">LP Timer One Shot Configuration.  <a href="structlptim__one__shot__config__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlptim__buffered__config__t.html">lptim_buffered_config_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">LP Timer Buffered Configuration.  <a href="structlptim__buffered__config__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlptim__double__config__t.html">lptim_double_config_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">LP Timer Double Configuration.  <a href="structlptim__double__config__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlptim__multimode__config__t.html">lptim_multimode_config_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">LP Timer multimode Configuration.  <a href="structlptim__multimode__config__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:gaaeae307094be06e7a73fbd0c7b5bbbb7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LPTIMER.html#gaaeae307094be06e7a73fbd0c7b5bbbb7">lptim_control_t</a> { <br />
+&#160;&#160;<a class="el" href="group__LPTIMER.html#ggaaeae307094be06e7a73fbd0c7b5bbbb7ae3cdb47f66a33a36cdaca6495104e18e">LPTIM_CONTROL_ENABLE</a>
+, <a class="el" href="group__LPTIMER.html#ggaaeae307094be06e7a73fbd0c7b5bbbb7ac7dc3db69023a8ec6129c2b5a475f821">LPTIM_CONTROL_START</a>
+, <a class="el" href="group__LPTIMER.html#ggaaeae307094be06e7a73fbd0c7b5bbbb7adaf15be8ce77c500d89c6b18bc4c23fe">LPTIM_CONTROL_STOP</a>
+, <a class="el" href="group__LPTIMER.html#ggaaeae307094be06e7a73fbd0c7b5bbbb7a621cb7845634087da0ec8f5405d61bb4">LPTIM_CONTROL_CLEAR</a>
+, <br />
+&#160;&#160;<a class="el" href="group__LPTIMER.html#ggaaeae307094be06e7a73fbd0c7b5bbbb7a65f65e9f037191afa6242b367ba17b1a">LPTIM_CONTROL_CTO0</a>
+, <a class="el" href="group__LPTIMER.html#ggaaeae307094be06e7a73fbd0c7b5bbbb7aef2bd1425669316b22574364629396ff">LPTIM_CONTROL_CTO1</a>
+, <a class="el" href="group__LPTIMER.html#ggaaeae307094be06e7a73fbd0c7b5bbbb7a9ad3601d70c037c1434e9499a922695f">LPTIM_CONTROL_CTO2</a>
+, <a class="el" href="group__LPTIMER.html#ggaaeae307094be06e7a73fbd0c7b5bbbb7a030cfe960b5f235baf21da45cda030de">LPTIM_CONTROL_CTO3</a>
+, <br />
+&#160;&#160;<a class="el" href="group__LPTIMER.html#ggaaeae307094be06e7a73fbd0c7b5bbbb7a47fbb09cd0b5690f2a785d761ee055bc">LPTIM_CONTROL_CNT_SET</a>
+, <a class="el" href="group__LPTIMER.html#ggaaeae307094be06e7a73fbd0c7b5bbbb7ab562a991648b6dfe947e7b9bb2399845">LPTIM_CONTROL_TOP_SET</a>
+, <a class="el" href="group__LPTIMER.html#ggaaeae307094be06e7a73fbd0c7b5bbbb7aa82e2b8333a2d37002308960088dc299">LPTIM_CONTROL_REP0_SET</a>
+, <a class="el" href="group__LPTIMER.html#ggaaeae307094be06e7a73fbd0c7b5bbbb7a194d6fa5b9720327be333d656748cb92">LPTIM_CONTROL_REP1_SET</a>
+, <br />
+&#160;&#160;<a class="el" href="group__LPTIMER.html#ggaaeae307094be06e7a73fbd0c7b5bbbb7a7a7b7d219a56379b6b237a023b2125ef">LPTIM_CONTROL_REP2_SET</a>
+, <a class="el" href="group__LPTIMER.html#ggaaeae307094be06e7a73fbd0c7b5bbbb7a5c5bc22b8bf18a5308c44edf37b05cad">LPTIM_CONTROL_REP3_SET</a>
+, <a class="el" href="group__LPTIMER.html#ggaaeae307094be06e7a73fbd0c7b5bbbb7aeb06b72b37f2cf1a5efed194d76ca76b">LPTIM_CONTROL_POWER_IN_SLEEP</a>
+, <a class="el" href="group__LPTIMER.html#ggaaeae307094be06e7a73fbd0c7b5bbbb7a4f1cbfe3dea1984e73fdb022b2067f4e">LPTIM_CONTROL_INT_EN</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:gaaeae307094be06e7a73fbd0c7b5bbbb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">LP Timer Control.  <a href="group__LPTIMER.html#gaaeae307094be06e7a73fbd0c7b5bbbb7">More...</a><br /></td></tr>
+<tr class="separator:gaaeae307094be06e7a73fbd0c7b5bbbb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaab06e0d35e26a800a07164667048d15d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LPTIMER.html#gaab06e0d35e26a800a07164667048d15d">lptim_stop_mode_t</a> { <a class="el" href="group__LPTIMER.html#ggaab06e0d35e26a800a07164667048d15da8e8e5527b4ba48f43d5f695f37bfe71d">LPTIM_STOP_MODE_FREE</a> = 0U
+, <a class="el" href="group__LPTIMER.html#ggaab06e0d35e26a800a07164667048d15daa119f030c5f173f9fa5461f0a75a3fb8">LPTIM_STOP_MODE_STOP_01</a> = 1U
+, <a class="el" href="group__LPTIMER.html#ggaab06e0d35e26a800a07164667048d15da8fc320c4194c003632341bebb17bef64">LPTIM_STOP_MODE_STOP_OR</a> = 2U
+, <a class="el" href="group__LPTIMER.html#ggaab06e0d35e26a800a07164667048d15dac528feee6b5184af2145c7023249fc52">LPTIM_STOP_MODE_STOPBOTH</a> = 3U
+ }</td></tr>
+<tr class="memdesc:gaab06e0d35e26a800a07164667048d15d"><td class="mdescLeft">&#160;</td><td class="mdescRight">LP Timer Stop Mode：Repeat Mode for two group output channel 23 and 01.  <a href="group__LPTIMER.html#gaab06e0d35e26a800a07164667048d15d">More...</a><br /></td></tr>
+<tr class="separator:gaab06e0d35e26a800a07164667048d15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga66ba337c7560e4347d52036b179cf65c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LPTIMER.html#ga66ba337c7560e4347d52036b179cf65c">lptim_rep_mode_t</a> { <a class="el" href="group__LPTIMER.html#gga66ba337c7560e4347d52036b179cf65ca2879e862bd91063fecc74281f8997319">LPTIM_MODE_FREE_RUNNING</a> = 0U
+, <a class="el" href="group__LPTIMER.html#gga66ba337c7560e4347d52036b179cf65ca5dedfef49700aea010423b54683f0367">LPTIM_MODE_ONE_SHOT</a> = 1U
+, <a class="el" href="group__LPTIMER.html#gga66ba337c7560e4347d52036b179cf65ca6589e4a9dc5022230d32db7afd8a85f3">LPTIM_MODE_BUFFERED</a> = 2U
+, <a class="el" href="group__LPTIMER.html#gga66ba337c7560e4347d52036b179cf65ca208a87e1f80dc8ede0e1e925f8229b99">LPTIM_MODE_DOUBLE</a> = 3U
+ }</td></tr>
+<tr class="memdesc:ga66ba337c7560e4347d52036b179cf65c"><td class="mdescLeft">&#160;</td><td class="mdescRight">LP Timer Reption Mode.  <a href="group__LPTIMER.html#ga66ba337c7560e4347d52036b179cf65c">More...</a><br /></td></tr>
+<tr class="separator:ga66ba337c7560e4347d52036b179cf65c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga815d23ce9d9ef7b893332957ef7e50ae"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LPTIMER.html#ga815d23ce9d9ef7b893332957ef7e50ae">lptim_top_en_t</a> { <a class="el" href="group__LPTIMER.html#gga815d23ce9d9ef7b893332957ef7e50aea1ad9b14b06e05539a05f91875da56d76">LPTIM_TOP_DISABLE</a> = 0U
+, <a class="el" href="group__LPTIMER.html#gga815d23ce9d9ef7b893332957ef7e50aeae43796d70083c3f45d7638ceaecad7c4">LPTIM_TOP_ENABLE</a> = 1U
+ }</td></tr>
+<tr class="memdesc:ga815d23ce9d9ef7b893332957ef7e50ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decide whether to load TOP val into Counter on each underflow.  <a href="group__LPTIMER.html#ga815d23ce9d9ef7b893332957ef7e50ae">More...</a><br /></td></tr>
+<tr class="separator:ga815d23ce9d9ef7b893332957ef7e50ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadcb3409606e5cc9a39206a18d830e100"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LPTIMER.html#gadcb3409606e5cc9a39206a18d830e100">lptim_buftop_en_t</a> { <a class="el" href="group__LPTIMER.html#ggadcb3409606e5cc9a39206a18d830e100afe29af16cae53ce8495054b512fe1582">LPTIM_BUFTOP_DISABLE</a> = 0U
+, <a class="el" href="group__LPTIMER.html#ggadcb3409606e5cc9a39206a18d830e100abccea19096cbc08858c02513636d1559">LPTIM_BUFTOP_ENABLE</a> = 1U
+ }</td></tr>
+<tr class="memdesc:gadcb3409606e5cc9a39206a18d830e100"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decide whether to load TOPBUF val into TOP when REP0 is about to decrement to 0.  <a href="group__LPTIMER.html#gadcb3409606e5cc9a39206a18d830e100">More...</a><br /></td></tr>
+<tr class="separator:gadcb3409606e5cc9a39206a18d830e100"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf3a91184525773d4d25c9476698c8bea"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LPTIMER.html#gaf3a91184525773d4d25c9476698c8bea">lptim_presc_t</a> { <br />
+&#160;&#160;<a class="el" href="group__LPTIMER.html#ggaf3a91184525773d4d25c9476698c8beaacbb28d49573fd4239a6774f12f3d3b31">LPTIM_PRESC_DIV1</a> = 0U
+, <a class="el" href="group__LPTIMER.html#ggaf3a91184525773d4d25c9476698c8beaa50ad0ec5bf788fc0a1774ede8512cb44">LPTIM_PRESC_DIV2</a> = 1U
+, <a class="el" href="group__LPTIMER.html#ggaf3a91184525773d4d25c9476698c8beaa0b5f8b0f70199252af5a6ab1405973fe">LPTIM_PRESC_DIV4</a> = 2U
+, <a class="el" href="group__LPTIMER.html#ggaf3a91184525773d4d25c9476698c8beaaf099e79abdcf43a175404cb96adb64c4">LPTIM_PRESC_DIV8</a> = 3U
+, <br />
+&#160;&#160;<a class="el" href="group__LPTIMER.html#ggaf3a91184525773d4d25c9476698c8beaa773ddca4b71cf6b6dd5bb94896bb8235">LPTIM_PRESC_DIV16</a> = 4U
+, <a class="el" href="group__LPTIMER.html#ggaf3a91184525773d4d25c9476698c8beaa6854e2a1a1586ac01e659cb4a665642a">LPTIM_PRESC_DIV32</a> = 5U
+, <a class="el" href="group__LPTIMER.html#ggaf3a91184525773d4d25c9476698c8beaaa334adadf96b93a651fbf4ad9ff62d34">LPTIM_PRESC_DIV64</a> = 6U
+, <a class="el" href="group__LPTIMER.html#ggaf3a91184525773d4d25c9476698c8beaa3ad0a7ead46c5bd83e26442b78f05571">LPTIM_PRESC_DIV128</a> = 7U
+, <br />
+&#160;&#160;<a class="el" href="group__LPTIMER.html#ggaf3a91184525773d4d25c9476698c8beaaaf4647d2224fa8026acdfa3f34e9efdb">LPTIM_PRESC_DIV256</a> = 8U
+<br />
+ }</td></tr>
+<tr class="memdesc:gaf3a91184525773d4d25c9476698c8bea"><td class="mdescLeft">&#160;</td><td class="mdescRight">LP Timer Clock Frequency Division.  <a href="group__LPTIMER.html#gaf3a91184525773d4d25c9476698c8bea">More...</a><br /></td></tr>
+<tr class="separator:gaf3a91184525773d4d25c9476698c8bea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6bb5f673776c4aca970dfeea82abad48"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LPTIMER.html#ga6bb5f673776c4aca970dfeea82abad48">lptim_chan_out_t</a> { <a class="el" href="group__LPTIMER.html#gga6bb5f673776c4aca970dfeea82abad48a4906ba6c3459839a59e6c6fd110e4b02">LPTIM_CHAN_OUT0</a>
+, <a class="el" href="group__LPTIMER.html#gga6bb5f673776c4aca970dfeea82abad48a95520d6378b0980426ee5352a879b668">LPTIM_CHAN_OUT1</a>
+, <a class="el" href="group__LPTIMER.html#gga6bb5f673776c4aca970dfeea82abad48a6e3dd2e2b99d321026db6df28e576229">LPTIM_CHAN_OUT2</a>
+, <a class="el" href="group__LPTIMER.html#gga6bb5f673776c4aca970dfeea82abad48a51354f49b51ad58203d2615dcf601e0e">LPTIM_CHAN_OUT3</a>
+ }</td></tr>
+<tr class="memdesc:ga6bb5f673776c4aca970dfeea82abad48"><td class="mdescLeft">&#160;</td><td class="mdescRight">LP Timer Channel.  <a href="group__LPTIMER.html#ga6bb5f673776c4aca970dfeea82abad48">More...</a><br /></td></tr>
+<tr class="separator:ga6bb5f673776c4aca970dfeea82abad48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4d60289b5c44a40543bafafcd3f41894"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LPTIMER.html#ga4d60289b5c44a40543bafafcd3f41894">lptim_out_pol_t</a> { <a class="el" href="group__LPTIMER.html#gga4d60289b5c44a40543bafafcd3f41894a17b35cf9e07d3fa1c81187e192f88026">LPTIM_POL_IDLE_LOW</a> = 0U
+, <a class="el" href="group__LPTIMER.html#gga4d60289b5c44a40543bafafcd3f41894a4a05d686cc647ac3672d8d07a6a59398">LPTIM_POL_IDLE_HIGH</a> = 1U
+ }</td></tr>
+<tr class="memdesc:ga4d60289b5c44a40543bafafcd3f41894"><td class="mdescLeft">&#160;</td><td class="mdescRight">IDLE Level Defination.  <a href="group__LPTIMER.html#ga4d60289b5c44a40543bafafcd3f41894">More...</a><br /></td></tr>
+<tr class="separator:ga4d60289b5c44a40543bafafcd3f41894"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga480d00f09a196ab685958f4ce176cbc7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LPTIMER.html#ga480d00f09a196ab685958f4ce176cbc7">lptim_underflow_out_action_t</a> { <a class="el" href="group__LPTIMER.html#gga480d00f09a196ab685958f4ce176cbc7a3060fcbb791d0760569a73fb5d984987">LPTIM_UFOA_NONE</a> = 0U
+, <a class="el" href="group__LPTIMER.html#gga480d00f09a196ab685958f4ce176cbc7ac91a138c8abb924a82a7e23af4736230">LPTIM_UFOA_TOGGLE</a> = 1U
+, <a class="el" href="group__LPTIMER.html#gga480d00f09a196ab685958f4ce176cbc7ae0928de5d0b832b11640933e2250ce1e">LPTIM_UFOA_PULSE</a> = 2U
+, <a class="el" href="group__LPTIMER.html#gga480d00f09a196ab685958f4ce176cbc7a0fb159058e9948fbf2bdc8baef14f35c">LPTIM_UFOA_PWM</a> = 3U
+ }</td></tr>
+<tr class="memdesc:ga480d00f09a196ab685958f4ce176cbc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">LP Timer UnderFlow Out Action Defination.  <a href="group__LPTIMER.html#ga480d00f09a196ab685958f4ce176cbc7">More...</a><br /></td></tr>
+<tr class="separator:ga480d00f09a196ab685958f4ce176cbc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaccfe7cb74be4e6ea827792a7cbfde367"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LPTIMER.html#gaccfe7cb74be4e6ea827792a7cbfde367">lptim_int_en_t</a> { <br />
+&#160;&#160;<a class="el" href="group__LPTIMER.html#ggaccfe7cb74be4e6ea827792a7cbfde367a5dced2efbf8a8e1af7acd9182d057bae">LPTIM_INTE_COMP0_EN</a> = (0x1U &lt;&lt; 0)
+, <a class="el" href="group__LPTIMER.html#ggaccfe7cb74be4e6ea827792a7cbfde367a880e662585e8b2eba5e58e1e12222b8b">LPTIM_INTE_COMP1_EN</a> = (0x1U &lt;&lt; 1)
+, <a class="el" href="group__LPTIMER.html#ggaccfe7cb74be4e6ea827792a7cbfde367a6fa059b59410de7d3054c8a524b1e498">LPTIM_INTE_UF_EN</a> = (0x1U &lt;&lt; 2)
+, <a class="el" href="group__LPTIMER.html#ggaccfe7cb74be4e6ea827792a7cbfde367a37d2bf376f78151c64ecc16d64352df8">LPTIM_INTE_REP0_EN</a> = (0x1U &lt;&lt; 3)
+, <br />
+&#160;&#160;<a class="el" href="group__LPTIMER.html#ggaccfe7cb74be4e6ea827792a7cbfde367abf24dfb1657eb3e7f70f31191432e03a">LPTIM_INTE_REP1_EN</a> = (0x1U &lt;&lt; 4)
+<br />
+ }</td></tr>
+<tr class="memdesc:gaccfe7cb74be4e6ea827792a7cbfde367"><td class="mdescLeft">&#160;</td><td class="mdescRight">LP Timer interrupt enable type.  <a href="group__LPTIMER.html#gaccfe7cb74be4e6ea827792a7cbfde367">More...</a><br /></td></tr>
+<tr class="separator:gaccfe7cb74be4e6ea827792a7cbfde367"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:gafe37ad66980251be00dea38d5c97cfc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LPTIMER.html#gafe37ad66980251be00dea38d5c97cfc6">drv_lptim_isr_callback</a> (OM_LPTIM_Type *om_lptim, drv_event_t event, void *param0, void *param1)</td></tr>
+<tr class="memdesc:gafe37ad66980251be00dea38d5c97cfc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The interrupt callback for LP Timer driver. It is a weak function. User should define their own callback in user file, other than modify it in the LP Timer driver.  <br /></td></tr>
+<tr class="separator:gafe37ad66980251be00dea38d5c97cfc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabc36ccafd6c31a7a45f11200279ab707"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LPTIMER.html#gabc36ccafd6c31a7a45f11200279ab707">drv_lptim_free_running_init</a> (OM_LPTIM_Type *om_lptim, const <a class="el" href="structlptim__free__running__config__t.html">lptim_free_running_config_t</a> *cfg)</td></tr>
+<tr class="memdesc:gabc36ccafd6c31a7a45f11200279ab707"><td class="mdescLeft">&#160;</td><td class="mdescRight">LP Timer free-running config.  <br /></td></tr>
+<tr class="separator:gabc36ccafd6c31a7a45f11200279ab707"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga64a9e6f6643500733df88c5a148c691d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LPTIMER.html#ga64a9e6f6643500733df88c5a148c691d">drv_lptim_one_shot_init</a> (OM_LPTIM_Type *om_lptim, const <a class="el" href="structlptim__one__shot__config__t.html">lptim_one_shot_config_t</a> *cfg)</td></tr>
+<tr class="memdesc:ga64a9e6f6643500733df88c5a148c691d"><td class="mdescLeft">&#160;</td><td class="mdescRight">LP Timer one shot config.  <br /></td></tr>
+<tr class="separator:ga64a9e6f6643500733df88c5a148c691d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga25c0164b5334800b04a8ff8614320fda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LPTIMER.html#ga25c0164b5334800b04a8ff8614320fda">drv_lptim_buffered_init</a> (OM_LPTIM_Type *om_lptim, const <a class="el" href="structlptim__buffered__config__t.html">lptim_buffered_config_t</a> *cfg)</td></tr>
+<tr class="memdesc:ga25c0164b5334800b04a8ff8614320fda"><td class="mdescLeft">&#160;</td><td class="mdescRight">LP Timer buffered config.  <br /></td></tr>
+<tr class="separator:ga25c0164b5334800b04a8ff8614320fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab3f33f3c0f99fae12239869b23b9c451"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LPTIMER.html#gab3f33f3c0f99fae12239869b23b9c451">drv_lptim_double_init</a> (OM_LPTIM_Type *om_lptim, const <a class="el" href="structlptim__double__config__t.html">lptim_double_config_t</a> *cfg)</td></tr>
+<tr class="memdesc:gab3f33f3c0f99fae12239869b23b9c451"><td class="mdescLeft">&#160;</td><td class="mdescRight">LP Timer double config.  <br /></td></tr>
+<tr class="separator:gab3f33f3c0f99fae12239869b23b9c451"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf9418c2fe66636314a5290a37f5e28a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LPTIMER.html#gaf9418c2fe66636314a5290a37f5e28a8">drv_lptim_multimode_init</a> (OM_LPTIM_Type *om_lptim, const <a class="el" href="structlptim__multimode__config__t.html">lptim_multimode_config_t</a> *cfg)</td></tr>
+<tr class="memdesc:gaf9418c2fe66636314a5290a37f5e28a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">lp tim multimode config  <br /></td></tr>
+<tr class="separator:gaf9418c2fe66636314a5290a37f5e28a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab361ece58ac6b0c3ec9b167884ece5bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LPTIMER.html#gab361ece58ac6b0c3ec9b167884ece5bf">drv_lptim_outx_config</a> (OM_LPTIM_Type *om_lptim, <a class="el" href="group__LPTIMER.html#ga6bb5f673776c4aca970dfeea82abad48">lptim_chan_out_t</a> chan_outx, const <a class="el" href="structlptim__out__config__t.html">lptim_out_config_t</a> *cfg)</td></tr>
+<tr class="memdesc:gab361ece58ac6b0c3ec9b167884ece5bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">LP Timer out config.  <br /></td></tr>
+<tr class="separator:gab361ece58ac6b0c3ec9b167884ece5bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9eb496b9cc57a7a1abcd1cfb50f211cb"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LPTIMER.html#ga9eb496b9cc57a7a1abcd1cfb50f211cb">drv_lptim_control</a> (OM_LPTIM_Type *om_lptim, <a class="el" href="group__LPTIMER.html#gaaeae307094be06e7a73fbd0c7b5bbbb7">lptim_control_t</a> ctrl, void *argu)</td></tr>
+<tr class="memdesc:ga9eb496b9cc57a7a1abcd1cfb50f211cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">LP Timer control.  <br /></td></tr>
+<tr class="separator:ga9eb496b9cc57a7a1abcd1cfb50f211cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad529d0c952299be73b481a76da872ac4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LPTIMER.html#gad529d0c952299be73b481a76da872ac4">drv_lptim_isr</a> (OM_LPTIM_Type *om_lptim)</td></tr>
+<tr class="memdesc:gad529d0c952299be73b481a76da872ac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">lp tim interrupt service routine  <br /></td></tr>
+<tr class="separator:gad529d0c952299be73b481a76da872ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+</div>
+</body>
+</html>

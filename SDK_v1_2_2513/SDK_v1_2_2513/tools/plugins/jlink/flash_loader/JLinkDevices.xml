@@ -1,0 +1,13 @@
+<DataBase>
+  <Device>
+    <ChipInfo Vendor="Onmicro" Name="OM6627X" Core="JLINK_CORE_CORTEX_M4" WorkRAMAddr="0x20000000" WorkRAMSize="0x00020000" />
+    <FlashBankInfo Name="QSPI IFlash" BaseAddr="0x00400000" MaxSize="0x00200000" Loader="Devices/Onmicro/OM6627X.elf" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1"/>
+    <FlashBankInfo Name="QSPI OFlash" BaseAddr="0x08000000" MaxSize="0x00200000" Loader="Devices/Onmicro/OM6627X.elf" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1"/>
+  </Device>
+
+  <Device>
+    <ChipInfo Vendor="Onmicro" Name="OM6629X" Core="JLINK_CORE_CORTEX_M4" WorkRAMAddr="0x20000000" WorkRAMSize="0x00040000" />
+    <FlashBankInfo Name="QSPI IFlash" BaseAddr="0x00400000" MaxSize="0x00200000" Loader="Devices/Onmicro/OM6629X.elf" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1"/>
+    <FlashBankInfo Name="QSPI OFlash" BaseAddr="0x08000000" MaxSize="0x00200000" Loader="Devices/Onmicro/OM6629X.elf" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1"/>
+  </Device>
+</DataBase>

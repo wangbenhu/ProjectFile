@@ -1,0 +1,564 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>User Guide: EVT</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+-->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">User Guide
+   </div>
+   <div id="projectbrief">Bluetooth Low Energy 5.4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__EVT.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#groups">Modules</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">EVT<div class="ingroups"><a class="el" href="group__COMPONENTS.html">Components</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>event  
+<a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="groups" name="groups"></a>
+Modules</h2></td></tr>
+<tr class="memitem:group__EVT__TIMER"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__EVT__TIMER.html">EVT_TIMER</a></td></tr>
+<tr class="memdesc:group__EVT__TIMER"><td class="mdescLeft">&#160;</td><td class="mdescRight">event timer <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga7637add679a369a980ab41e268b3caf3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__EVT.html#ga7637add679a369a980ab41e268b3caf3">CONFIG_EVT_RTOS_SUPPORT</a></td></tr>
+<tr class="separator:ga7637add679a369a980ab41e268b3caf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ga37d1965205e6fc498f39ae4ec45dadb5"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__EVT.html#ga37d1965205e6fc498f39ae4ec45dadb5">evt_callback_t</a>) (void)</td></tr>
+<tr class="memdesc:ga37d1965205e6fc498f39ae4ec45dadb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format of an event callback function.  <br /></td></tr>
+<tr class="separator:ga37d1965205e6fc498f39ae4ec45dadb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ga40b0d01dd5339e4b8e1c32cb98f0caf3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__EVT.html#ga40b0d01dd5339e4b8e1c32cb98f0caf3">evt_type_t</a> { <br />
+&#160;&#160;<a class="el" href="group__EVT.html#gga40b0d01dd5339e4b8e1c32cb98f0caf3add1060f5be41c3af0f860f3fd56370fc">EVT_TYPE_RESERVE</a>
+, <a class="el" href="group__EVT.html#gga40b0d01dd5339e4b8e1c32cb98f0caf3a6b37e5fe7f7af25f288a725026e421a6">EVT_TYPE_BLE</a>
+, <a class="el" href="group__EVT.html#gga40b0d01dd5339e4b8e1c32cb98f0caf3a6c27a1bfe53cf72850f60d46685f3d8f">EVT_TYPE_TIMER</a>
+, <a class="el" href="group__EVT.html#gga40b0d01dd5339e4b8e1c32cb98f0caf3afaeebca49644f6c959668a2e397950ee">EVT_TYPE_SHELL</a>
+, <br />
+&#160;&#160;<a class="el" href="group__EVT.html#gga40b0d01dd5339e4b8e1c32cb98f0caf3a2f57bb408bd4e9165e969c99309ec06f">EVT_TYPE_USR_FIRST</a> = 16
+, <a class="el" href="group__EVT.html#gga40b0d01dd5339e4b8e1c32cb98f0caf3a8515942154a9fed2350a8a1d5d2c83be">EVT_TYPE_USR_LAST</a> = 31
+, <a class="el" href="group__EVT.html#gga40b0d01dd5339e4b8e1c32cb98f0caf3ac3e6ccfc8dc55c46ed3f8322e95737c7">EVT_TYPE_NUM</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga40b0d01dd5339e4b8e1c32cb98f0caf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">event type  <a href="group__EVT.html#ga40b0d01dd5339e4b8e1c32cb98f0caf3">More...</a><br /></td></tr>
+<tr class="separator:ga40b0d01dd5339e4b8e1c32cb98f0caf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga71fe5361d76b43ec1fd1947d47dbfb16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__EVT.html#ga71fe5361d76b43ec1fd1947d47dbfb16">evt_init</a> (void)</td></tr>
+<tr class="memdesc:ga71fe5361d76b43ec1fd1947d47dbfb16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize Kernel event module.  <br /></td></tr>
+<tr class="separator:ga71fe5361d76b43ec1fd1947d47dbfb16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga91ed2ba8578e3d7d11603a482029b3c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__EVT.html#ga91ed2ba8578e3d7d11603a482029b3c0">evt_callback_set</a> (<a class="el" href="group__EVT.html#ga40b0d01dd5339e4b8e1c32cb98f0caf3">evt_type_t</a> evt_type, <a class="el" href="group__EVT.html#ga37d1965205e6fc498f39ae4ec45dadb5">evt_callback_t</a> callback)</td></tr>
+<tr class="memdesc:ga91ed2ba8578e3d7d11603a482029b3c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register an event callback.  <br /></td></tr>
+<tr class="separator:ga91ed2ba8578e3d7d11603a482029b3c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa20a7f42654b50fb221da4ebdf7e2a05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__EVT.html#ga37d1965205e6fc498f39ae4ec45dadb5">evt_callback_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__EVT.html#gaa20a7f42654b50fb221da4ebdf7e2a05">evt_callback_get</a> (<a class="el" href="group__EVT.html#ga40b0d01dd5339e4b8e1c32cb98f0caf3">evt_type_t</a> evt_type)</td></tr>
+<tr class="memdesc:gaa20a7f42654b50fb221da4ebdf7e2a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an event callback.  <br /></td></tr>
+<tr class="separator:gaa20a7f42654b50fb221da4ebdf7e2a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga79fc177d16a37390bc54924ba6275909"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__EVT.html#ga79fc177d16a37390bc54924ba6275909">evt_schedule_trigger_callback_set</a> (<a class="el" href="group__EVT.html#ga37d1965205e6fc498f39ae4ec45dadb5">evt_callback_t</a> callback)</td></tr>
+<tr class="memdesc:ga79fc177d16a37390bc54924ba6275909"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register an event set callback.  <br /></td></tr>
+<tr class="separator:ga79fc177d16a37390bc54924ba6275909"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8b3b37b758d883c4e2152ff405bf8675"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__EVT.html#ga8b3b37b758d883c4e2152ff405bf8675">evt_set</a> (<a class="el" href="group__EVT.html#ga40b0d01dd5339e4b8e1c32cb98f0caf3">evt_type_t</a> evt_type)</td></tr>
+<tr class="memdesc:ga8b3b37b758d883c4e2152ff405bf8675"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set an event.  <br /></td></tr>
+<tr class="separator:ga8b3b37b758d883c4e2152ff405bf8675"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6585e07fe781b5e1f37b68c2c5883b1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__EVT.html#ga6585e07fe781b5e1f37b68c2c5883b1a">evt_clear</a> (<a class="el" href="group__EVT.html#ga40b0d01dd5339e4b8e1c32cb98f0caf3">evt_type_t</a> evt_type)</td></tr>
+<tr class="memdesc:ga6585e07fe781b5e1f37b68c2c5883b1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear an event.  <br /></td></tr>
+<tr class="separator:ga6585e07fe781b5e1f37b68c2c5883b1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5b73e3a2e340ec4ea8fb0b9d906d0de7"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__EVT.html#ga5b73e3a2e340ec4ea8fb0b9d906d0de7">evt_get</a> (<a class="el" href="group__EVT.html#ga40b0d01dd5339e4b8e1c32cb98f0caf3">evt_type_t</a> evt_type)</td></tr>
+<tr class="memdesc:ga5b73e3a2e340ec4ea8fb0b9d906d0de7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the status of an event.  <br /></td></tr>
+<tr class="separator:ga5b73e3a2e340ec4ea8fb0b9d906d0de7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga17b20b414c5f1de2f23b87ea0bf5c53f"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__EVT.html#ga17b20b414c5f1de2f23b87ea0bf5c53f">evt_get_all</a> (void)</td></tr>
+<tr class="memdesc:ga17b20b414c5f1de2f23b87ea0bf5c53f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all event status.  <br /></td></tr>
+<tr class="separator:ga17b20b414c5f1de2f23b87ea0bf5c53f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac3d8c37fb8c800e3157084ca800186a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__EVT.html#gac3d8c37fb8c800e3157084ca800186a0">evt_flush</a> (void)</td></tr>
+<tr class="memdesc:gac3d8c37fb8c800e3157084ca800186a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flush all pending events.  <br /></td></tr>
+<tr class="separator:gac3d8c37fb8c800e3157084ca800186a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5e9d76dd6b10db3022d38f057193fe36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__EVT.html#ga5e9d76dd6b10db3022d38f057193fe36">evt_schedule</a> (void)</td></tr>
+<tr class="memdesc:ga5e9d76dd6b10db3022d38f057193fe36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event scheduler entry point.  <br /></td></tr>
+<tr class="separator:ga5e9d76dd6b10db3022d38f057193fe36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab4b1fef9ef4eaacde2c97d3e54134051"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__EVT.html#gab4b1fef9ef4eaacde2c97d3e54134051">evt_schedule_once</a> (void)</td></tr>
+<tr class="memdesc:gab4b1fef9ef4eaacde2c97d3e54134051"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event scheduler once entry point.  <br /></td></tr>
+<tr class="separator:gab4b1fef9ef4eaacde2c97d3e54134051"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>event </p>
+<p>event</p>
+<dl class="section version"><dt>Version</dt><dd>Version 1.0<ul>
+<li>Initial release </li>
+</ul>
+</dd></dl>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga7637add679a369a980ab41e268b3caf3" name="ga7637add679a369a980ab41e268b3caf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7637add679a369a980ab41e268b3caf3">&#9670;&#160;</a></span>CONFIG_EVT_RTOS_SUPPORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONFIG_EVT_RTOS_SUPPORT</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="ga37d1965205e6fc498f39ae4ec45dadb5" name="ga37d1965205e6fc498f39ae4ec45dadb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga37d1965205e6fc498f39ae4ec45dadb5">&#9670;&#160;</a></span>evt_callback_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* evt_callback_t) (void)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Format of an event callback function. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ga40b0d01dd5339e4b8e1c32cb98f0caf3" name="ga40b0d01dd5339e4b8e1c32cb98f0caf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga40b0d01dd5339e4b8e1c32cb98f0caf3">&#9670;&#160;</a></span>evt_type_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__EVT.html#ga40b0d01dd5339e4b8e1c32cb98f0caf3">evt_type_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>event type </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga40b0d01dd5339e4b8e1c32cb98f0caf3add1060f5be41c3af0f860f3fd56370fc" name="gga40b0d01dd5339e4b8e1c32cb98f0caf3add1060f5be41c3af0f860f3fd56370fc"></a>EVT_TYPE_RESERVE&#160;</td><td class="fielddoc"><p>Reserved. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga40b0d01dd5339e4b8e1c32cb98f0caf3a6b37e5fe7f7af25f288a725026e421a6" name="gga40b0d01dd5339e4b8e1c32cb98f0caf3a6b37e5fe7f7af25f288a725026e421a6"></a>EVT_TYPE_BLE&#160;</td><td class="fielddoc"><p>Event type for BLE. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga40b0d01dd5339e4b8e1c32cb98f0caf3a6c27a1bfe53cf72850f60d46685f3d8f" name="gga40b0d01dd5339e4b8e1c32cb98f0caf3a6c27a1bfe53cf72850f60d46685f3d8f"></a>EVT_TYPE_TIMER&#160;</td><td class="fielddoc"><p>Event type for Timer. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga40b0d01dd5339e4b8e1c32cb98f0caf3afaeebca49644f6c959668a2e397950ee" name="gga40b0d01dd5339e4b8e1c32cb98f0caf3afaeebca49644f6c959668a2e397950ee"></a>EVT_TYPE_SHELL&#160;</td><td class="fielddoc"><p>Event type for Shell. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga40b0d01dd5339e4b8e1c32cb98f0caf3a2f57bb408bd4e9165e969c99309ec06f" name="gga40b0d01dd5339e4b8e1c32cb98f0caf3a2f57bb408bd4e9165e969c99309ec06f"></a>EVT_TYPE_USR_FIRST&#160;</td><td class="fielddoc"><p>Event type user first. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga40b0d01dd5339e4b8e1c32cb98f0caf3a8515942154a9fed2350a8a1d5d2c83be" name="gga40b0d01dd5339e4b8e1c32cb98f0caf3a8515942154a9fed2350a8a1d5d2c83be"></a>EVT_TYPE_USR_LAST&#160;</td><td class="fielddoc"><p>Event type user last. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga40b0d01dd5339e4b8e1c32cb98f0caf3ac3e6ccfc8dc55c46ed3f8322e95737c7" name="gga40b0d01dd5339e4b8e1c32cb98f0caf3ac3e6ccfc8dc55c46ed3f8322e95737c7"></a>EVT_TYPE_NUM&#160;</td><td class="fielddoc"><p>Event number. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="gaa20a7f42654b50fb221da4ebdf7e2a05" name="gaa20a7f42654b50fb221da4ebdf7e2a05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa20a7f42654b50fb221da4ebdf7e2a05">&#9670;&#160;</a></span>evt_callback_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__EVT.html#ga37d1965205e6fc498f39ae4ec45dadb5">evt_callback_t</a> evt_callback_get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__EVT.html#ga40b0d01dd5339e4b8e1c32cb98f0caf3">evt_type_t</a>&#160;</td>
+          <td class="paramname"><em>evt_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get an event callback. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">evt_type</td><td>Event type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>callback </dd></dl>
+
+</div>
+</div>
+<a id="ga91ed2ba8578e3d7d11603a482029b3c0" name="ga91ed2ba8578e3d7d11603a482029b3c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga91ed2ba8578e3d7d11603a482029b3c0">&#9670;&#160;</a></span>evt_callback_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void evt_callback_set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__EVT.html#ga40b0d01dd5339e4b8e1c32cb98f0caf3">evt_type_t</a>&#160;</td>
+          <td class="paramname"><em>evt_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__EVT.html#ga37d1965205e6fc498f39ae4ec45dadb5">evt_callback_t</a>&#160;</td>
+          <td class="paramname"><em>callback</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register an event callback. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">evt_type</td><td>Event type. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>Pointer to callback function. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga6585e07fe781b5e1f37b68c2c5883b1a" name="ga6585e07fe781b5e1f37b68c2c5883b1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6585e07fe781b5e1f37b68c2c5883b1a">&#9670;&#160;</a></span>evt_clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void evt_clear </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__EVT.html#ga40b0d01dd5339e4b8e1c32cb98f0caf3">evt_type_t</a>&#160;</td>
+          <td class="paramname"><em>evt_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clear an event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">evt_type</td><td>Event to be cleared. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gac3d8c37fb8c800e3157084ca800186a0" name="gac3d8c37fb8c800e3157084ca800186a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac3d8c37fb8c800e3157084ca800186a0">&#9670;&#160;</a></span>evt_flush()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void evt_flush </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flush all pending events. </p>
+
+</div>
+</div>
+<a id="ga5b73e3a2e340ec4ea8fb0b9d906d0de7" name="ga5b73e3a2e340ec4ea8fb0b9d906d0de7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5b73e3a2e340ec4ea8fb0b9d906d0de7">&#9670;&#160;</a></span>evt_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t evt_get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__EVT.html#ga40b0d01dd5339e4b8e1c32cb98f0caf3">evt_type_t</a>&#160;</td>
+          <td class="paramname"><em>evt_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the status of an event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">evt_type</td><td>Event to get.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Event status (0: not set / 1: set) </dd></dl>
+
+</div>
+</div>
+<a id="ga17b20b414c5f1de2f23b87ea0bf5c53f" name="ga17b20b414c5f1de2f23b87ea0bf5c53f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga17b20b414c5f1de2f23b87ea0bf5c53f">&#9670;&#160;</a></span>evt_get_all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t evt_get_all </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get all event status. </p>
+<dl class="section return"><dt>Returns</dt><dd>Events bit field </dd></dl>
+
+</div>
+</div>
+<a id="ga71fe5361d76b43ec1fd1947d47dbfb16" name="ga71fe5361d76b43ec1fd1947d47dbfb16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga71fe5361d76b43ec1fd1947d47dbfb16">&#9670;&#160;</a></span>evt_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void evt_init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize Kernel event module. </p>
+
+</div>
+</div>
+<a id="ga5e9d76dd6b10db3022d38f057193fe36" name="ga5e9d76dd6b10db3022d38f057193fe36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5e9d76dd6b10db3022d38f057193fe36">&#9670;&#160;</a></span>evt_schedule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void evt_schedule </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Event scheduler entry point. </p>
+<p>This primitive is the entry point of Kernel event scheduling. </p>
+
+</div>
+</div>
+<a id="gab4b1fef9ef4eaacde2c97d3e54134051" name="gab4b1fef9ef4eaacde2c97d3e54134051"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab4b1fef9ef4eaacde2c97d3e54134051">&#9670;&#160;</a></span>evt_schedule_once()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t evt_schedule_once </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Event scheduler once entry point. </p>
+<p>This primitive is the entry point of Kernel event scheduling. </p>
+
+</div>
+</div>
+<a id="ga79fc177d16a37390bc54924ba6275909" name="ga79fc177d16a37390bc54924ba6275909"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga79fc177d16a37390bc54924ba6275909">&#9670;&#160;</a></span>evt_schedule_trigger_callback_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void evt_schedule_trigger_callback_set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__EVT.html#ga37d1965205e6fc498f39ae4ec45dadb5">evt_callback_t</a>&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register an event set callback. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>Pointer to callback function. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga8b3b37b758d883c4e2152ff405bf8675" name="ga8b3b37b758d883c4e2152ff405bf8675"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8b3b37b758d883c4e2152ff405bf8675">&#9670;&#160;</a></span>evt_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void evt_set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__EVT.html#ga40b0d01dd5339e4b8e1c32cb98f0caf3">evt_type_t</a>&#160;</td>
+          <td class="paramname"><em>evt_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set an event. </p>
+<p>This primitive sets one event. It will trigger the call to the corresponding event handler in the next scheduling call.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">evt_type</td><td>Event to be set. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+</div>
+</body>
+</html>

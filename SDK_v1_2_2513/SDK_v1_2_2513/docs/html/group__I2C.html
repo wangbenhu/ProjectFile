@@ -1,0 +1,1432 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>User Guide: I2C</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+-->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">User Guide
+   </div>
+   <div id="projectbrief">Bluetooth Low Energy 5.4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__I2C.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">I2C<div class="ingroups"><a class="el" href="group__DRIVER.html">Driver</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>I2C driver.  
+<a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structi2c__config__t.html">i2c_config_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Config.  <a href="structi2c__config__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:gac1e2996ebee909590af8e3cc1c316c25"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__I2C.html#gac1e2996ebee909590af8e3cc1c316c25">i2c_mode_t</a> { <a class="el" href="group__I2C.html#ggac1e2996ebee909590af8e3cc1c316c25a166443f9a57684d8e4970f28a7acf982">I2C_MODE_MASTER</a> = 0
+, <a class="el" href="group__I2C.html#ggac1e2996ebee909590af8e3cc1c316c25a10a3fafafb52ab45984aa5d5a17171a0">I2C_MODE_SLAVE</a> = 1
+, <a class="el" href="group__I2C.html#ggac1e2996ebee909590af8e3cc1c316c25a9ad08d4cebb279947e1661ab3838e6be">I2C_MODE_SMBUS_DEVICE</a> = 2
+, <a class="el" href="group__I2C.html#ggac1e2996ebee909590af8e3cc1c316c25a707d3b11fb2a7be6b3d68edf579e1eb7">I2C_MODE_SMBUS_HOST</a> = 3
+ }</td></tr>
+<tr class="memdesc:gac1e2996ebee909590af8e3cc1c316c25"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Mode.  <a href="group__I2C.html#gac1e2996ebee909590af8e3cc1c316c25">More...</a><br /></td></tr>
+<tr class="separator:gac1e2996ebee909590af8e3cc1c316c25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6e6a870f98abb8cffa95373b69fb8243"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__I2C.html#ga6e6a870f98abb8cffa95373b69fb8243">i2c_speed_t</a> { <br />
+&#160;&#160;<a class="el" href="group__I2C.html#gga6e6a870f98abb8cffa95373b69fb8243a9fa8ddb792ee888c9eb3afbf7faad2dd">I2C_SPEED_100K</a> = 1
+, <a class="el" href="group__I2C.html#gga6e6a870f98abb8cffa95373b69fb8243af6b6047205cdb412da6d5f8da7a1fc71">I2C_SPEED_400K</a> = 2
+, <a class="el" href="group__I2C.html#gga6e6a870f98abb8cffa95373b69fb8243a9fddc5c1c631a6069f5bd233f66fedfa">I2C_SPEED_1M</a> = 3
+, <a class="el" href="group__I2C.html#gga6e6a870f98abb8cffa95373b69fb8243a1cbbd6d5b76ebe24e28500afb904e91b">I2C_SPEED_2M</a> = 4
+, <br />
+&#160;&#160;<a class="el" href="group__I2C.html#gga6e6a870f98abb8cffa95373b69fb8243af04b29debd31855b84dca12ff11705a3">I2C_SPEED_MAX</a> = 5
+<br />
+ }</td></tr>
+<tr class="memdesc:ga6e6a870f98abb8cffa95373b69fb8243"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Speed.  <a href="group__I2C.html#ga6e6a870f98abb8cffa95373b69fb8243">More...</a><br /></td></tr>
+<tr class="separator:ga6e6a870f98abb8cffa95373b69fb8243"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga959f71dc73216bb24a1640a4ea619522"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__I2C.html#ga959f71dc73216bb24a1640a4ea619522">i2c_control_t</a> { <a class="el" href="group__I2C.html#gga959f71dc73216bb24a1640a4ea619522a5bbb8b5067db4180f71e7ecae94ea442">I2C_CONTROL_IS_BUSY</a> = 0U
+, <a class="el" href="group__I2C.html#gga959f71dc73216bb24a1640a4ea619522ae61a8d9e55444cab71c52c0c1901eee3">I2C_CONTROL_DEV_IS_VALID</a> = 1U
+ }</td></tr>
+<tr class="memdesc:ga959f71dc73216bb24a1640a4ea619522"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Control.  <a href="group__I2C.html#ga959f71dc73216bb24a1640a4ea619522">More...</a><br /></td></tr>
+<tr class="separator:ga959f71dc73216bb24a1640a4ea619522"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga1bb6da6f10383f0491fcc585905f6a7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__I2C.html#ga1bb6da6f10383f0491fcc585905f6a7e">drv_i2c_init</a> (OM_I2C_Type *om_i2c, const <a class="el" href="structi2c__config__t.html">i2c_config_t</a> *cfg)</td></tr>
+<tr class="memdesc:ga1bb6da6f10383f0491fcc585905f6a7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C initialization.  <br /></td></tr>
+<tr class="separator:ga1bb6da6f10383f0491fcc585905f6a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga32048ee64bce27a1609933f61c48d93c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__I2C.html#ga32048ee64bce27a1609933f61c48d93c">drv_i2c_uninit</a> (OM_I2C_Type *om_i2c)</td></tr>
+<tr class="memdesc:ga32048ee64bce27a1609933f61c48d93c"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C deinitialization.  <br /></td></tr>
+<tr class="separator:ga32048ee64bce27a1609933f61c48d93c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga30218ff3050590da31acb4591a1c903d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__I2C.html#ga30218ff3050590da31acb4591a1c903d">drv_i2c_register_isr_callback</a> (OM_I2C_Type *om_i2c, drv_isr_callback_t isr_cb)</td></tr>
+<tr class="memdesc:ga30218ff3050590da31acb4591a1c903d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register event callback for transmit/receive by interrupt &amp; dma mode.  <br /></td></tr>
+<tr class="separator:ga30218ff3050590da31acb4591a1c903d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6b9ac83b8376e81375391150056a3522"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__I2C.html#ga6b9ac83b8376e81375391150056a3522">drv_i2c_isr_callback</a> (OM_I2C_Type *om_i2c, drv_event_t event, uint8_t *data, uint32_t num)</td></tr>
+<tr class="memdesc:ga6b9ac83b8376e81375391150056a3522"><td class="mdescLeft">&#160;</td><td class="mdescRight">The interrupt callback for I2C driver. It is a weak function. User should define their own callback in user file, other than modify it in the I2C driver.  <br /></td></tr>
+<tr class="separator:ga6b9ac83b8376e81375391150056a3522"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaea555df0bada815c60dd4cf2b54c1464"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__I2C.html#gaea555df0bada815c60dd4cf2b54c1464">drv_i2c_master_write</a> (OM_I2C_Type *om_i2c, uint16_t dev_addr, const uint8_t *tx_data, uint32_t tx_num, uint32_t timeout_ms)</td></tr>
+<tr class="memdesc:gaea555df0bada815c60dd4cf2b54c1464"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C master start sending data to slave device by block mode.  <br /></td></tr>
+<tr class="separator:gaea555df0bada815c60dd4cf2b54c1464"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga921cf97fe6b3114702393e65d94209f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__I2C.html#ga921cf97fe6b3114702393e65d94209f9">drv_i2c_master_write_int</a> (OM_I2C_Type *om_i2c, uint16_t dev_addr, const uint8_t *tx_data, uint32_t tx_num, uint32_t timeout_ms)</td></tr>
+<tr class="memdesc:ga921cf97fe6b3114702393e65d94209f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C master start sending data to slave device by interrupt mode.  <br /></td></tr>
+<tr class="separator:ga921cf97fe6b3114702393e65d94209f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9c052aa8a61d509876610a5cce4dc288"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__I2C.html#ga9c052aa8a61d509876610a5cce4dc288">drv_i2c_gpdma_channel_allocate</a> (OM_I2C_Type *om_i2c, drv_gpdma_chan_t channel)</td></tr>
+<tr class="memdesc:ga9c052aa8a61d509876610a5cce4dc288"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate dma channel for i2c.  <br /></td></tr>
+<tr class="separator:ga9c052aa8a61d509876610a5cce4dc288"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3054d3e11a28ad2912cd5030fcbdb9b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__I2C.html#ga3054d3e11a28ad2912cd5030fcbdb9b1">drv_i2c_gpdma_channel_release</a> (OM_I2C_Type *om_i2c, drv_gpdma_chan_t channel)</td></tr>
+<tr class="memdesc:ga3054d3e11a28ad2912cd5030fcbdb9b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release dma channel for i2c.  <br /></td></tr>
+<tr class="separator:ga3054d3e11a28ad2912cd5030fcbdb9b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga48def01758ee818719587dd3c2e937cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__I2C.html#ga48def01758ee818719587dd3c2e937cb">drv_i2c_master_write_dma</a> (OM_I2C_Type *om_i2c, uint16_t dev_addr, const uint8_t *tx_data, uint32_t tx_num, uint32_t timeout_ms)</td></tr>
+<tr class="memdesc:ga48def01758ee818719587dd3c2e937cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C master start sending data to slave device by interrupt dma mode.  <br /></td></tr>
+<tr class="separator:ga48def01758ee818719587dd3c2e937cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae45d4b618cf84bd7508020e0260b5f55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__I2C.html#gae45d4b618cf84bd7508020e0260b5f55">drv_i2c_master_read</a> (OM_I2C_Type *om_i2c, uint16_t dev_addr, const uint8_t *tx_data, uint16_t tx_num, uint8_t *rx_data, uint16_t rx_num, uint32_t timeout_ms)</td></tr>
+<tr class="memdesc:gae45d4b618cf84bd7508020e0260b5f55"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C master start receiving data from slave device by block mode.  <br /></td></tr>
+<tr class="separator:gae45d4b618cf84bd7508020e0260b5f55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga43c213ecafabb08d928f86bedd918dae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__I2C.html#ga43c213ecafabb08d928f86bedd918dae">drv_i2c_master_read_int</a> (OM_I2C_Type *om_i2c, uint16_t dev_addr, const uint8_t *tx_data, uint16_t tx_num, uint8_t *rx_data, uint16_t rx_num, uint32_t timeout_ms)</td></tr>
+<tr class="memdesc:ga43c213ecafabb08d928f86bedd918dae"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C master start receiving data from slave device by interrupt mode.  <br /></td></tr>
+<tr class="separator:ga43c213ecafabb08d928f86bedd918dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5738bcf135ea0ef13a53487e2f25cb4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__I2C.html#ga5738bcf135ea0ef13a53487e2f25cb4e">drv_i2c_master_read_dma</a> (OM_I2C_Type *om_i2c, uint16_t dev_addr, const uint8_t *tx_data, uint16_t tx_num, uint8_t *rx_data, uint16_t rx_num, uint32_t timeout_ms)</td></tr>
+<tr class="memdesc:ga5738bcf135ea0ef13a53487e2f25cb4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C master start receiving data from slave device by dma mode.  <br /></td></tr>
+<tr class="separator:ga5738bcf135ea0ef13a53487e2f25cb4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7783ed05b1289fc5d78ce0e0e75270e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__I2C.html#ga7783ed05b1289fc5d78ce0e0e75270e8">drv_i2c_slave_write</a> (OM_I2C_Type *om_i2c, uint16_t dev_addr, const uint8_t *tx_data, uint16_t tx_num)</td></tr>
+<tr class="memdesc:ga7783ed05b1289fc5d78ce0e0e75270e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C slave start sending data to master device by block mode.  <br /></td></tr>
+<tr class="separator:ga7783ed05b1289fc5d78ce0e0e75270e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8b5bcff167b67fc5d4304eb99f261bf1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__I2C.html#ga8b5bcff167b67fc5d4304eb99f261bf1">drv_i2c_slave_write_int</a> (OM_I2C_Type *om_i2c, uint16_t dev_addr, const uint8_t *tx_data, uint16_t tx_num)</td></tr>
+<tr class="memdesc:ga8b5bcff167b67fc5d4304eb99f261bf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C slave start sending data to master device by interrupt mode.  <br /></td></tr>
+<tr class="separator:ga8b5bcff167b67fc5d4304eb99f261bf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga43519c7df42902e1626616f08d00759c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__I2C.html#ga43519c7df42902e1626616f08d00759c">drv_i2c_slave_write_dma</a> (OM_I2C_Type *om_i2c, uint16_t dev_addr, const uint8_t *tx_data, uint16_t tx_num)</td></tr>
+<tr class="memdesc:ga43519c7df42902e1626616f08d00759c"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C slave start sending data to master device by dma mode.  <br /></td></tr>
+<tr class="separator:ga43519c7df42902e1626616f08d00759c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9a7b461177584225731bffb1cd28d283"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__I2C.html#ga9a7b461177584225731bffb1cd28d283">drv_i2c_slave_read</a> (OM_I2C_Type *om_i2c, uint16_t dev_addr, uint8_t *rx_data, uint16_t rx_num)</td></tr>
+<tr class="memdesc:ga9a7b461177584225731bffb1cd28d283"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C slave start receiving data from master device by block mode.  <br /></td></tr>
+<tr class="separator:ga9a7b461177584225731bffb1cd28d283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafd00bfdfea64cf35d3f8570eeab5e65d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__I2C.html#gafd00bfdfea64cf35d3f8570eeab5e65d">drv_i2c_slave_read_int</a> (OM_I2C_Type *om_i2c, uint16_t dev_addr, uint8_t *rx_data, uint16_t rx_num)</td></tr>
+<tr class="memdesc:gafd00bfdfea64cf35d3f8570eeab5e65d"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C slave start receiving data from master device by interrupt mode.  <br /></td></tr>
+<tr class="separator:gafd00bfdfea64cf35d3f8570eeab5e65d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga44de2e3a44e8c623e3fd4178c7502fbe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__I2C.html#ga44de2e3a44e8c623e3fd4178c7502fbe">drv_i2c_slave_read_dma</a> (OM_I2C_Type *om_i2c, uint16_t dev_addr, uint8_t *rx_data, uint16_t rx_num)</td></tr>
+<tr class="memdesc:ga44de2e3a44e8c623e3fd4178c7502fbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C slave start receiving data from master device by dma mode.  <br /></td></tr>
+<tr class="separator:ga44de2e3a44e8c623e3fd4178c7502fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7346e336791991d9cbf8075287b84be3"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__I2C.html#ga7346e336791991d9cbf8075287b84be3">drv_i2c_control</a> (OM_I2C_Type *om_i2c, <a class="el" href="group__I2C.html#ga959f71dc73216bb24a1640a4ea619522">i2c_control_t</a> control, void *argu)</td></tr>
+<tr class="memdesc:ga7346e336791991d9cbf8075287b84be3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Control i2c.  <br /></td></tr>
+<tr class="separator:ga7346e336791991d9cbf8075287b84be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1d2b03b69eac449bede1f707652019b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__I2C.html#ga1d2b03b69eac449bede1f707652019b5">drv_i2c_isr</a> (OM_I2C_Type *om_i2c)</td></tr>
+<tr class="memdesc:ga1d2b03b69eac449bede1f707652019b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2c interrupt service routine.  <br /></td></tr>
+<tr class="separator:ga1d2b03b69eac449bede1f707652019b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga609f672e00f664906195769e20c35c0e"><td class="memItemLeft" align="right" valign="top">__STATIC_FORCEINLINE uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__I2C.html#ga609f672e00f664906195769e20c35c0e">drv_i2c_get_tx_abrt</a> (OM_I2C_Type *om_i2c)</td></tr>
+<tr class="memdesc:ga609f672e00f664906195769e20c35c0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get I2C TX ABRT SOURCE.  <br /></td></tr>
+<tr class="separator:ga609f672e00f664906195769e20c35c0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga104e03ab23ed00dd6d020aa492531317"><td class="memItemLeft" align="right" valign="top">__STATIC_FORCEINLINE uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__I2C.html#ga104e03ab23ed00dd6d020aa492531317">drv_i2c_get_timeout_rawstate</a> (OM_I2C_Type *om_i2c)</td></tr>
+<tr class="memdesc:ga104e03ab23ed00dd6d020aa492531317"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get I2C TIMEOUT RAW INTR STAT.  <br /></td></tr>
+<tr class="separator:ga104e03ab23ed00dd6d020aa492531317"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0866f6f1ffe97be0077e91949b26c631"><td class="memItemLeft" align="right" valign="top">__STATIC_FORCEINLINE uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__I2C.html#ga0866f6f1ffe97be0077e91949b26c631">drv_i2c_get_rxunder_rawstate</a> (OM_I2C_Type *om_i2c)</td></tr>
+<tr class="memdesc:ga0866f6f1ffe97be0077e91949b26c631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get I2C RX UNDER RAW INTR STAT.  <br /></td></tr>
+<tr class="separator:ga0866f6f1ffe97be0077e91949b26c631"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>I2C driver. </p>
+<p>I2C driver apis and typedefs header file</p>
+<dl class="section version"><dt>Version</dt><dd>Version 1.0<ul>
+<li>Initial release </li>
+</ul>
+</dd></dl>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ga959f71dc73216bb24a1640a4ea619522" name="ga959f71dc73216bb24a1640a4ea619522"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga959f71dc73216bb24a1640a4ea619522">&#9670;&#160;</a></span>i2c_control_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__I2C.html#ga959f71dc73216bb24a1640a4ea619522">i2c_control_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C Control. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga959f71dc73216bb24a1640a4ea619522a5bbb8b5067db4180f71e7ecae94ea442" name="gga959f71dc73216bb24a1640a4ea619522a5bbb8b5067db4180f71e7ecae94ea442"></a>I2C_CONTROL_IS_BUSY&#160;</td><td class="fielddoc"><p>check I2C is busy </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga959f71dc73216bb24a1640a4ea619522ae61a8d9e55444cab71c52c0c1901eee3" name="gga959f71dc73216bb24a1640a4ea619522ae61a8d9e55444cab71c52c0c1901eee3"></a>I2C_CONTROL_DEV_IS_VALID&#160;</td><td class="fielddoc"><p>check device is valid, argu is i2c_addr </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gac1e2996ebee909590af8e3cc1c316c25" name="gac1e2996ebee909590af8e3cc1c316c25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac1e2996ebee909590af8e3cc1c316c25">&#9670;&#160;</a></span>i2c_mode_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__I2C.html#gac1e2996ebee909590af8e3cc1c316c25">i2c_mode_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C Mode. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggac1e2996ebee909590af8e3cc1c316c25a166443f9a57684d8e4970f28a7acf982" name="ggac1e2996ebee909590af8e3cc1c316c25a166443f9a57684d8e4970f28a7acf982"></a>I2C_MODE_MASTER&#160;</td><td class="fielddoc"><p>Master Mode, 7-bit addressing mode. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggac1e2996ebee909590af8e3cc1c316c25a10a3fafafb52ab45984aa5d5a17171a0" name="ggac1e2996ebee909590af8e3cc1c316c25a10a3fafafb52ab45984aa5d5a17171a0"></a>I2C_MODE_SLAVE&#160;</td><td class="fielddoc"><p>Slave Mode, 7-bit addressing mode. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggac1e2996ebee909590af8e3cc1c316c25a9ad08d4cebb279947e1661ab3838e6be" name="ggac1e2996ebee909590af8e3cc1c316c25a9ad08d4cebb279947e1661ab3838e6be"></a>I2C_MODE_SMBUS_DEVICE&#160;</td><td class="fielddoc"><p>Slave Mode, 10-bit addressing mode. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggac1e2996ebee909590af8e3cc1c316c25a707d3b11fb2a7be6b3d68edf579e1eb7" name="ggac1e2996ebee909590af8e3cc1c316c25a707d3b11fb2a7be6b3d68edf579e1eb7"></a>I2C_MODE_SMBUS_HOST&#160;</td><td class="fielddoc"><p>Master Mode, 10-bit addressing mode. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga6e6a870f98abb8cffa95373b69fb8243" name="ga6e6a870f98abb8cffa95373b69fb8243"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6e6a870f98abb8cffa95373b69fb8243">&#9670;&#160;</a></span>i2c_speed_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__I2C.html#ga6e6a870f98abb8cffa95373b69fb8243">i2c_speed_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C Speed. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga6e6a870f98abb8cffa95373b69fb8243a9fa8ddb792ee888c9eb3afbf7faad2dd" name="gga6e6a870f98abb8cffa95373b69fb8243a9fa8ddb792ee888c9eb3afbf7faad2dd"></a>I2C_SPEED_100K&#160;</td><td class="fielddoc"><p>Speed: 100khz. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga6e6a870f98abb8cffa95373b69fb8243af6b6047205cdb412da6d5f8da7a1fc71" name="gga6e6a870f98abb8cffa95373b69fb8243af6b6047205cdb412da6d5f8da7a1fc71"></a>I2C_SPEED_400K&#160;</td><td class="fielddoc"><p>Speed: 400khz. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga6e6a870f98abb8cffa95373b69fb8243a9fddc5c1c631a6069f5bd233f66fedfa" name="gga6e6a870f98abb8cffa95373b69fb8243a9fddc5c1c631a6069f5bd233f66fedfa"></a>I2C_SPEED_1M&#160;</td><td class="fielddoc"><p>Speed: 1Mhz. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga6e6a870f98abb8cffa95373b69fb8243a1cbbd6d5b76ebe24e28500afb904e91b" name="gga6e6a870f98abb8cffa95373b69fb8243a1cbbd6d5b76ebe24e28500afb904e91b"></a>I2C_SPEED_2M&#160;</td><td class="fielddoc"><p>Speed: 2Mhz. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga6e6a870f98abb8cffa95373b69fb8243af04b29debd31855b84dca12ff11705a3" name="gga6e6a870f98abb8cffa95373b69fb8243af04b29debd31855b84dca12ff11705a3"></a>I2C_SPEED_MAX&#160;</td><td class="fielddoc"><p>Speed: MAX. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga7346e336791991d9cbf8075287b84be3" name="ga7346e336791991d9cbf8075287b84be3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7346e336791991d9cbf8075287b84be3">&#9670;&#160;</a></span>drv_i2c_control()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * drv_i2c_control </td>
+          <td>(</td>
+          <td class="paramtype">OM_I2C_Type *&#160;</td>
+          <td class="paramname"><em>om_i2c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__I2C.html#ga959f71dc73216bb24a1640a4ea619522">i2c_control_t</a>&#160;</td>
+          <td class="paramname"><em>control</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>argu</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Control i2c. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_i2c</td><td>Pointer to I2C </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">control</td><td>Control command </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">argu</td><td>Control argument</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>control status </dd></dl>
+
+</div>
+</div>
+<a id="ga0866f6f1ffe97be0077e91949b26c631" name="ga0866f6f1ffe97be0077e91949b26c631"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0866f6f1ffe97be0077e91949b26c631">&#9670;&#160;</a></span>drv_i2c_get_rxunder_rawstate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_FORCEINLINE uint32_t drv_i2c_get_rxunder_rawstate </td>
+          <td>(</td>
+          <td class="paramtype">OM_I2C_Type *&#160;</td>
+          <td class="paramname"><em>om_i2c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get I2C RX UNDER RAW INTR STAT. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_i2c</td><td>Pointer to I2C</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>I2C RX UNDER RAW INTR STAT value </dd></dl>
+
+</div>
+</div>
+<a id="ga104e03ab23ed00dd6d020aa492531317" name="ga104e03ab23ed00dd6d020aa492531317"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga104e03ab23ed00dd6d020aa492531317">&#9670;&#160;</a></span>drv_i2c_get_timeout_rawstate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_FORCEINLINE uint32_t drv_i2c_get_timeout_rawstate </td>
+          <td>(</td>
+          <td class="paramtype">OM_I2C_Type *&#160;</td>
+          <td class="paramname"><em>om_i2c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get I2C TIMEOUT RAW INTR STAT. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_i2c</td><td>Pointer to I2C</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>I2C TIMEOUT RAW INTR STAT value </dd></dl>
+
+</div>
+</div>
+<a id="ga609f672e00f664906195769e20c35c0e" name="ga609f672e00f664906195769e20c35c0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga609f672e00f664906195769e20c35c0e">&#9670;&#160;</a></span>drv_i2c_get_tx_abrt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_FORCEINLINE uint32_t drv_i2c_get_tx_abrt </td>
+          <td>(</td>
+          <td class="paramtype">OM_I2C_Type *&#160;</td>
+          <td class="paramname"><em>om_i2c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get I2C TX ABRT SOURCE. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_i2c</td><td>Pointer to I2C</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>I2C TX ABRT SOURCE value </dd></dl>
+
+</div>
+</div>
+<a id="ga9c052aa8a61d509876610a5cce4dc288" name="ga9c052aa8a61d509876610a5cce4dc288"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9c052aa8a61d509876610a5cce4dc288">&#9670;&#160;</a></span>drv_i2c_gpdma_channel_allocate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_i2c_gpdma_channel_allocate </td>
+          <td>(</td>
+          <td class="paramtype">OM_I2C_Type *&#160;</td>
+          <td class="paramname"><em>om_i2c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">drv_gpdma_chan_t&#160;</td>
+          <td class="paramname"><em>channel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allocate dma channel for i2c. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_i2c</td><td>Pointer for I2C </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">channel</td><td>I2C rx/tx channel</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="ga3054d3e11a28ad2912cd5030fcbdb9b1" name="ga3054d3e11a28ad2912cd5030fcbdb9b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3054d3e11a28ad2912cd5030fcbdb9b1">&#9670;&#160;</a></span>drv_i2c_gpdma_channel_release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_i2c_gpdma_channel_release </td>
+          <td>(</td>
+          <td class="paramtype">OM_I2C_Type *&#160;</td>
+          <td class="paramname"><em>om_i2c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">drv_gpdma_chan_t&#160;</td>
+          <td class="paramname"><em>channel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Release dma channel for i2c. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_i2c</td><td>Pointer for I2C </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">channel</td><td>I2C rx/tx channel</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="ga1bb6da6f10383f0491fcc585905f6a7e" name="ga1bb6da6f10383f0491fcc585905f6a7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1bb6da6f10383f0491fcc585905f6a7e">&#9670;&#160;</a></span>drv_i2c_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_i2c_init </td>
+          <td>(</td>
+          <td class="paramtype">OM_I2C_Type *&#160;</td>
+          <td class="paramname"><em>om_i2c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structi2c__config__t.html">i2c_config_t</a> *&#160;</td>
+          <td class="paramname"><em>cfg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C initialization. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_i2c</td><td>Pointer to I2C </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cfg</td><td>Configuration for I2C</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="ga1d2b03b69eac449bede1f707652019b5" name="ga1d2b03b69eac449bede1f707652019b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1d2b03b69eac449bede1f707652019b5">&#9670;&#160;</a></span>drv_i2c_isr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_i2c_isr </td>
+          <td>(</td>
+          <td class="paramtype">OM_I2C_Type *&#160;</td>
+          <td class="paramname"><em>om_i2c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2c interrupt service routine. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_i2c</td><td>Pointer to I2C </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga6b9ac83b8376e81375391150056a3522" name="ga6b9ac83b8376e81375391150056a3522"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6b9ac83b8376e81375391150056a3522">&#9670;&#160;</a></span>drv_i2c_isr_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_i2c_isr_callback </td>
+          <td>(</td>
+          <td class="paramtype">OM_I2C_Type *&#160;</td>
+          <td class="paramname"><em>om_i2c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">drv_event_t&#160;</td>
+          <td class="paramname"><em>event</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The interrupt callback for I2C driver. It is a weak function. User should define their own callback in user file, other than modify it in the I2C driver. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">om_i2c</td><td>The I2C device address </td></tr>
+    <tr><td class="paramname">event</td><td>The I2C event<ul>
+<li>DRV_EVENT_COMMON_WRITE_COMPLETED</li>
+<li>DRV_EVENT_COMMON_READ_COMPLETED</li>
+<li>DRV_EVENT_COMMON_ABORT</li>
+<li>DRV_EVENT_COMMON_ERROR</li>
+<li>DRV_EVENT_COMMON_DMA2PERIPH_COMPLETED </li>
+</ul>
+</td></tr>
+    <tr><td class="paramname">data</td><td>The data pointer of data to be read or write </td></tr>
+    <tr><td class="paramname">num</td><td>The data buffer valid data count </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gae45d4b618cf84bd7508020e0260b5f55" name="gae45d4b618cf84bd7508020e0260b5f55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae45d4b618cf84bd7508020e0260b5f55">&#9670;&#160;</a></span>drv_i2c_master_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_i2c_master_read </td>
+          <td>(</td>
+          <td class="paramtype">OM_I2C_Type *&#160;</td>
+          <td class="paramname"><em>om_i2c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>dev_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>tx_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>tx_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>rx_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>rx_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C master start receiving data from slave device by block mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_i2c</td><td>Pointer to I2C </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dev_addr</td><td>Slave device address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tx_data</td><td>Pointer to buffer with data to send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tx_num</td><td>Number of data items to send </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">rx_data</td><td>Pointer to buffer with data to receive </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rx_num</td><td>Number of data items to receive </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout_ms</td><td>timeout(ms)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="ga5738bcf135ea0ef13a53487e2f25cb4e" name="ga5738bcf135ea0ef13a53487e2f25cb4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5738bcf135ea0ef13a53487e2f25cb4e">&#9670;&#160;</a></span>drv_i2c_master_read_dma()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_i2c_master_read_dma </td>
+          <td>(</td>
+          <td class="paramtype">OM_I2C_Type *&#160;</td>
+          <td class="paramname"><em>om_i2c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>dev_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>tx_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>tx_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>rx_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>rx_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C master start receiving data from slave device by dma mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_i2c</td><td>Pointer to I2C </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dev_addr</td><td>Slave device address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tx_data</td><td>Pointer to buffer with data to send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tx_num</td><td>Number of data items to send </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">rx_data</td><td>Pointer to buffer with data to receive </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rx_num</td><td>Number of data items to receive </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout_ms</td><td>timeout(ms)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="ga43c213ecafabb08d928f86bedd918dae" name="ga43c213ecafabb08d928f86bedd918dae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga43c213ecafabb08d928f86bedd918dae">&#9670;&#160;</a></span>drv_i2c_master_read_int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_i2c_master_read_int </td>
+          <td>(</td>
+          <td class="paramtype">OM_I2C_Type *&#160;</td>
+          <td class="paramname"><em>om_i2c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>dev_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>tx_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>tx_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>rx_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>rx_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C master start receiving data from slave device by interrupt mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_i2c</td><td>Pointer to I2C </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dev_addr</td><td>Slave device address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tx_data</td><td>Pointer to buffer with data to send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tx_num</td><td>Number of data items to send(tx_num &lt;= 16) </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">rx_data</td><td>Pointer to buffer with data to receive </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rx_num</td><td>Number of data items to receive </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout_ms</td><td>timeout(ms)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="gaea555df0bada815c60dd4cf2b54c1464" name="gaea555df0bada815c60dd4cf2b54c1464"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaea555df0bada815c60dd4cf2b54c1464">&#9670;&#160;</a></span>drv_i2c_master_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_i2c_master_write </td>
+          <td>(</td>
+          <td class="paramtype">OM_I2C_Type *&#160;</td>
+          <td class="paramname"><em>om_i2c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>dev_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>tx_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>tx_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C master start sending data to slave device by block mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_i2c</td><td>Pointer to I2C </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dev_addr</td><td>Slave device address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tx_data</td><td>Pointer to buffer with data to send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tx_num</td><td>Number of data items to send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout_ms</td><td>timeout(ms)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="ga48def01758ee818719587dd3c2e937cb" name="ga48def01758ee818719587dd3c2e937cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga48def01758ee818719587dd3c2e937cb">&#9670;&#160;</a></span>drv_i2c_master_write_dma()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_i2c_master_write_dma </td>
+          <td>(</td>
+          <td class="paramtype">OM_I2C_Type *&#160;</td>
+          <td class="paramname"><em>om_i2c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>dev_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>tx_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>tx_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C master start sending data to slave device by interrupt dma mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_i2c</td><td>Pointer to I2C </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dev_addr</td><td>Slave device address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tx_data</td><td>Pointer to buffer with data to send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tx_num</td><td>Number of data items to send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout_ms</td><td>timeout(ms)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="ga921cf97fe6b3114702393e65d94209f9" name="ga921cf97fe6b3114702393e65d94209f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga921cf97fe6b3114702393e65d94209f9">&#9670;&#160;</a></span>drv_i2c_master_write_int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_i2c_master_write_int </td>
+          <td>(</td>
+          <td class="paramtype">OM_I2C_Type *&#160;</td>
+          <td class="paramname"><em>om_i2c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>dev_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>tx_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>tx_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C master start sending data to slave device by interrupt mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_i2c</td><td>Pointer to I2C </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dev_addr</td><td>Slave device address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tx_data</td><td>Pointer to buffer with data to send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tx_num</td><td>Number of data items to send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout_ms</td><td>timeout(ms)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="ga30218ff3050590da31acb4591a1c903d" name="ga30218ff3050590da31acb4591a1c903d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga30218ff3050590da31acb4591a1c903d">&#9670;&#160;</a></span>drv_i2c_register_isr_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_i2c_register_isr_callback </td>
+          <td>(</td>
+          <td class="paramtype">OM_I2C_Type *&#160;</td>
+          <td class="paramname"><em>om_i2c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">drv_isr_callback_t&#160;</td>
+          <td class="paramname"><em>isr_cb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register event callback for transmit/receive by interrupt &amp; dma mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_i2c</td><td>Pointer to I2C </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">isr_cb</td><td>Pointer to callback </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga9a7b461177584225731bffb1cd28d283" name="ga9a7b461177584225731bffb1cd28d283"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9a7b461177584225731bffb1cd28d283">&#9670;&#160;</a></span>drv_i2c_slave_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_i2c_slave_read </td>
+          <td>(</td>
+          <td class="paramtype">OM_I2C_Type *&#160;</td>
+          <td class="paramname"><em>om_i2c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>dev_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>rx_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>rx_num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C slave start receiving data from master device by block mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_i2c</td><td>Pointer to I2C </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dev_addr</td><td>Slave device address </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">rx_data</td><td>Pointer to buffer with data to receive </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rx_num</td><td>Number of data items to receive</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="ga44de2e3a44e8c623e3fd4178c7502fbe" name="ga44de2e3a44e8c623e3fd4178c7502fbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga44de2e3a44e8c623e3fd4178c7502fbe">&#9670;&#160;</a></span>drv_i2c_slave_read_dma()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_i2c_slave_read_dma </td>
+          <td>(</td>
+          <td class="paramtype">OM_I2C_Type *&#160;</td>
+          <td class="paramname"><em>om_i2c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>dev_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>rx_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>rx_num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C slave start receiving data from master device by dma mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_i2c</td><td>Pointer to I2C </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dev_addr</td><td>Slave device address </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">rx_data</td><td>Pointer to buffer with data to receive </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rx_num</td><td>Number of data items to receive</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="gafd00bfdfea64cf35d3f8570eeab5e65d" name="gafd00bfdfea64cf35d3f8570eeab5e65d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafd00bfdfea64cf35d3f8570eeab5e65d">&#9670;&#160;</a></span>drv_i2c_slave_read_int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_i2c_slave_read_int </td>
+          <td>(</td>
+          <td class="paramtype">OM_I2C_Type *&#160;</td>
+          <td class="paramname"><em>om_i2c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>dev_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>rx_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>rx_num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C slave start receiving data from master device by interrupt mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_i2c</td><td>Pointer to I2C </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dev_addr</td><td>Slave device address </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">rx_data</td><td>Pointer to buffer with data to receive </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rx_num</td><td>Number of data items to receive</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="ga7783ed05b1289fc5d78ce0e0e75270e8" name="ga7783ed05b1289fc5d78ce0e0e75270e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7783ed05b1289fc5d78ce0e0e75270e8">&#9670;&#160;</a></span>drv_i2c_slave_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_i2c_slave_write </td>
+          <td>(</td>
+          <td class="paramtype">OM_I2C_Type *&#160;</td>
+          <td class="paramname"><em>om_i2c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>dev_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>tx_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>tx_num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C slave start sending data to master device by block mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_i2c</td><td>Pointer to I2C </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dev_addr</td><td>Slave device address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tx_data</td><td>Pointer to buffer with data to send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tx_num</td><td>Number of data items to send</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="ga43519c7df42902e1626616f08d00759c" name="ga43519c7df42902e1626616f08d00759c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga43519c7df42902e1626616f08d00759c">&#9670;&#160;</a></span>drv_i2c_slave_write_dma()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_i2c_slave_write_dma </td>
+          <td>(</td>
+          <td class="paramtype">OM_I2C_Type *&#160;</td>
+          <td class="paramname"><em>om_i2c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>dev_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>tx_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>tx_num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C slave start sending data to master device by dma mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_i2c</td><td>Pointer to I2C </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dev_addr</td><td>Slave device address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tx_data</td><td>Pointer to buffer with data to send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tx_num</td><td>Number of data items to send</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="ga8b5bcff167b67fc5d4304eb99f261bf1" name="ga8b5bcff167b67fc5d4304eb99f261bf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8b5bcff167b67fc5d4304eb99f261bf1">&#9670;&#160;</a></span>drv_i2c_slave_write_int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_i2c_slave_write_int </td>
+          <td>(</td>
+          <td class="paramtype">OM_I2C_Type *&#160;</td>
+          <td class="paramname"><em>om_i2c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>dev_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>tx_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>tx_num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C slave start sending data to master device by interrupt mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_i2c</td><td>Pointer to I2C </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dev_addr</td><td>Slave device address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tx_data</td><td>Pointer to buffer with data to send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tx_num</td><td>Number of data items to send</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="ga32048ee64bce27a1609933f61c48d93c" name="ga32048ee64bce27a1609933f61c48d93c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga32048ee64bce27a1609933f61c48d93c">&#9670;&#160;</a></span>drv_i2c_uninit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_i2c_uninit </td>
+          <td>(</td>
+          <td class="paramtype">OM_I2C_Type *&#160;</td>
+          <td class="paramname"><em>om_i2c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C deinitialization. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_i2c</td><td>Pointer to I2C</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['value_5fhdl_0',['value_hdl',['../structob__gatt__characteristic__t.html#a43c390e68d11a90aabdf647a1ebe92b1',1,'ob_gatt_characteristic_t']]],
+  ['vbat_5fdata_1',['vbat_data',['../structdrv__gpadc__temperature__compen__t.html#a9a9ca1b82a14dac7122a1fd03036c2a6',1,'drv_gpadc_temperature_compen_t']]],
+  ['vbg_5fcode_5ftrim_5f1_5fvbat_5f2p3v_2',['vbg_code_trim_1_vbat_2p3v',['../struct____PACKED.html#acdb2575f207924c6aa17f83d2f7ac6f1',1,'__PACKED']]],
+  ['vbg_5fcode_5ftrim_5f1_5fvbat_5f3p3v_3',['vbg_code_trim_1_vbat_3p3v',['../struct____PACKED.html#af9242f099c22e096e03f2470abfbd828',1,'__PACKED']]],
+  ['vbg_5fcode_5ftrim_5f1_5fvbat_5f3p3v_5fdiff_4',['vbg_code_trim_1_vbat_3p3v_diff',['../struct____PACKED.html#afb241e8dc0834baffa45cfa64e84b942',1,'__PACKED']]],
+  ['vbg_5fcode_5ftrim_5f1_5fvbat_5f3p3v_5fgain_5f1_5',['vbg_code_trim_1_vbat_3p3v_gain_1',['../struct____PACKED.html#a5c58d1be2a3db3557bb39558b39f0fec',1,'__PACKED']]],
+  ['vbg_5fcode_5ftrim_5f1_5fvbat_5f3p3v_5fgain_5f1_5fdiff_6',['vbg_code_trim_1_vbat_3p3v_gain_1_diff',['../struct____PACKED.html#a6ed62993ffa9c9ca2b5e63c09927e2b8',1,'__PACKED']]],
+  ['vbg_5fcode_5ftrim_5f3_5fvbat_5f2p3v_7',['vbg_code_trim_3_vbat_2p3v',['../struct____PACKED.html#a264a5dfde6cc7d76f7f96eb0fac5c9c1',1,'__PACKED']]],
+  ['vbg_5fcode_5ftrim_5f3_5fvbat_5f3p3v_8',['vbg_code_trim_3_vbat_3p3v',['../struct____PACKED.html#a22068a823c7bac1954dc592f48c3da28',1,'__PACKED']]],
+  ['vbg_5fcode_5ftrim_5f3_5fvbat_5f3p3v_5fdiff_9',['vbg_code_trim_3_vbat_3p3v_diff',['../struct____PACKED.html#a88aa931118018b1e794d9158bbb1e36d',1,'__PACKED']]],
+  ['vbg_5fcode_5ftrim_5f3_5fvbat_5f3p3v_5fgain_5f1_10',['vbg_code_trim_3_vbat_3p3v_gain_1',['../struct____PACKED.html#a9658619da25365460bfbc866f69c36fa',1,'__PACKED']]],
+  ['vbg_5fcode_5ftrim_5f3_5fvbat_5f3p3v_5fgain_5f1_5fdiff_11',['vbg_code_trim_3_vbat_3p3v_gain_1_diff',['../struct____PACKED.html#abda64e11e942cc26632a787c7df70a78',1,'__PACKED']]],
+  ['vco_5fcur_12',['vco_cur',['../structdrv__calib__repair__t.html#a86c9e2d0e48137cf852d4dc17b512a93',1,'drv_calib_repair_t']]],
+  ['vco_5fldo_13',['vco_ldo',['../structdrv__calib__repair__t.html#a7d1cfdd0dea73e31461617de2b53fe75',1,'drv_calib_repair_t']]],
+  ['vendor_14',['vendor',['../structmsh__api__mdl__send__ack.html#a3dd86600c339440dd719a92f040cc952',1,'msh_api_mdl_send_ack']]],
+  ['version_15',['version',['../structob__gap__evt__device__info__t.html#a7b932c74a733f056dbbf91ec3310c3a0',1,'ob_gap_evt_device_info_t::version()'],['../structob__gap__evt__device__info__t.html#a45fe734ff193960c1a54879e70067645',1,'ob_gap_evt_device_info_t::version()']]],
+  ['version_5fid_16',['version_id',['../structmsh__api__node__id.html#a8b9fa35c727c374bf12d07450cf7524c',1,'msh_api_node_id']]],
+  ['volume_17',['volume',['../structaudio__play__config__t.html#af78e49ebed154490d013f0fca3154359',1,'audio_play_config_t::volume()'],['../structaudio__record__config__t.html#ae6496212236d7b9f506e368465e818ae',1,'audio_record_config_t::volume()']]],
+  ['vos_18',['vos',['../struct____PACKED.html#aad35bef4b6539896b884012401ada883',1,'__PACKED']]],
+  ['vos_5ftemp_19',['vos_temp',['../struct____PACKED.html#a2abe7d1b9788c5dd4b6fdf6956f9243f',1,'__PACKED']]]
+];
