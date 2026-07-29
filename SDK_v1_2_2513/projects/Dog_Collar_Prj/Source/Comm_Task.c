@@ -66,7 +66,7 @@
 #define EVENT_SYSTEM_RESERVE_MASK   0x00FF
 
 #define COMM_TASK_PRIORITY (osPriorityNormal)//(osPriorityNormal) osPriorityAboveNormal
-#define COMM_TASK_STACK_SIZE (8192)
+#define COMM_TASK_STACK_SIZE (4*1024)
 
 #define TIMER_SYNCHRONIZE_INTERVAL (10)
 #define APP_AUDIO_REALTIME_LEN_MAX (200 * 1024)
@@ -1603,23 +1603,6 @@ int data_upStream_handler(char **deviceStr, RESPONSE_TYPES type)
 			cJSON_AddStringToObject(fgv, "reqId", (char *)b_message_data.reqId);
 			payload = fgv; break;
 		}
-		case TRACK_REPORT_TYPE_GEOFENCE_CONFIG:
-		case TRACK_REPORT_TYPE_DEVICE_LIGHT:
-		case TRACK_REPORT_TYPE_DEVICE_CONFIG:
-		{
-			const char *cn = "geofenceConfig";
-			if (type == TRACK_REPORT_TYPE_DEVICE_LIGHT) cn = "deviceLight";
-			else if (type == TRACK_REPORT_TYPE_DEVICE_CONFIG) cn = "deviceConfig";
-			cJSON *ad = cJSON_CreateObject();
-			cJSON_AddNumberToObject(ad, "errorCode", b_message_data.device_exeErrorCode);
-			cJSON *av = cJSON_CreateObject();
-			cJSON_AddNumberToObject(av, "ds", b_message_data.dataResourse);
-			cJSON_AddStringToObject(av, "cmd", cn);
-			cJSON_AddItemToObject(av, "data", ad);
-			cJSON_AddNumberToObject(av, "ts", b_message_data.device_timestamp);
-			cJSON_AddStringToObject(av, "reqId", (char *)b_message_data.reqId);
-			payload = av; break;
-		}
 		case TRACK_REPORT_TYPE_HEALTH_INFO:
 		{
 			cJSON *hd = cJSON_CreateObject();
@@ -1994,7 +1977,8 @@ int dataDownStream_handler(APP_CONTROL_Type controlType,uint16_t dataResourse)
 	 * 解析阶段仅暂存字段无副作用, 在此单点拦截即可; BLE流控信号量在外层照常释放, 框架不受影响 */
 	if (CurrentModeDataGet() == CURRENT_MODE_CHARGE
 	    && controlType != CONTROL_AUTO_DEVICE_STATE
-	    && controlType != CONTROL_SET_DEVICE_AUTH)
+	    && controlType != CONTROL_SET_DEVICE_AUTH
+	    && controlType != CONTROL_SET_DEVICE_CONFIG)	/* BLE config table works while charging */
 	{
 		COMM_LOG_DEBUG("[COMM][STA] M4 charge: downlink cmd %d blocked\r\n", controlType);
 		return 0;
@@ -2195,6 +2179,10 @@ int dataDownStream_handler(APP_CONTROL_Type controlType,uint16_t dataResourse)
 			}
 			ret = dataUpStream_handler(TRACK_REPORT_TYPE_ERRORCODE, dataResourse);
 					/* ============ V1.6 新增控制执行 ============ */
+		case CONTROL_BLE_HEART:
+			b_message_data.device_exeErrorCode = 0;
+			ret = dataUpStream_handler(TRACK_REPORT_TYPE_ERRORCODE, dataResourse);
+			controlType = CONTROL_NO_TASK; break;
 		case CONTROL_QUERY_VOICE:
 			b_message_data.appControl_voiceIndex = 0;
 			ret = dataUpStream_handler(TRACK_REPORT_TYPE_VOICE_GET, dataResourse);
@@ -2209,7 +2197,7 @@ int dataDownStream_handler(APP_CONTROL_Type controlType,uint16_t dataResourse)
 		case CONTROL_CONFIG_FENCE:
 			/* V1.6: 围栏开关无独立数据包, switch字段已在geofenceConfig解析时写入device_geofence.switch_on */
 			b_message_data.device_exeErrorCode = 0;
-			ret = dataUpStream_handler(TRACK_REPORT_TYPE_GEOFENCE_CONFIG, dataResourse);
+			ret = dataUpStream_handler(TRACK_REPORT_TYPE_ERRORCODE, dataResourse);
 			controlType = CONTROL_NO_TASK; break;
 		case CONTROL_SET_LIGHT:
 			
@@ -2224,11 +2212,11 @@ int dataDownStream_handler(APP_CONTROL_Type controlType,uint16_t dataResourse)
 				b_message_data.device_exeErrorCode = 1;
 			}
 		
-			ret = dataUpStream_handler(TRACK_REPORT_TYPE_DEVICE_LIGHT, dataResourse);
+			ret = dataUpStream_handler(TRACK_REPORT_TYPE_ERRORCODE, dataResourse);
 			controlType = CONTROL_NO_TASK; break;
 		case CONTROL_SET_DEVICE_CONFIG:
 			b_message_data.device_exeErrorCode = 0;
-			ret = dataUpStream_handler(TRACK_REPORT_TYPE_DEVICE_CONFIG, dataResourse);
+			ret = dataUpStream_handler(TRACK_REPORT_TYPE_ERRORCODE, dataResourse);
 			controlType = CONTROL_NO_TASK; break;
 			break;
 		default:
@@ -2501,6 +2489,7 @@ int data_downStream_handler(unsigned char * msg, unsigned int len)
 	 * 只堵执行层会留副作用; 主动上报不经过本函数, 不受影响 */
 	if (CurrentModeDataGet() == CURRENT_MODE_CHARGE
 	    && strcmp(itemSid->valuestring, "deviceAuth") != 0
+	    && strcmp(itemSid->valuestring, "deviceConfig") != 0	/* BLE config table works while charging */
 	    && strncmp(itemSid->valuestring, "product", 7) != 0)
 	{
 		COMM_LOG_DEBUG("[COMM][STA] M4 charge: cmd %s dropped\r\n", itemSid->valuestring);
@@ -3229,6 +3218,16 @@ int data_downStream_handler(unsigned char * msg, unsigned int len)
 			ret = dataDownStream_handler(CONTROL_SET_DEVICE_DELETE, b_message_data.dataResourse);
     }
 	//=============== V1.6 新增指令解析 ===============
+	else if (!strcmp(itemSid->valuestring, "deviceHeart"))
+    {
+			cJSON *dataResourse = cJSON_GetObjectItem(cjson_buff, "ds");
+			cJSON *timestamp = cJSON_GetObjectItem(cjson_buff, "ts");
+			cJSON *reqId = cJSON_GetObjectItem(cjson_buff, "reqId");
+			if (dataResourse != NULL && (strcmp(dataResourse->string, "ds") == 0)) b_message_data.dataResourse = dataResourse->valueint;
+			if (timestamp != NULL) b_message_data.appControl_timestamp = timestamp->valueint;
+			if (reqId != NULL && (strcmp(reqId->string, "reqId") == 0)) { memset(b_message_data.reqId, 0, sizeof(b_message_data.reqId)); strncpy((char *)b_message_data.reqId, reqId->valuestring, sizeof(b_message_data.reqId)-1); } else { ret = 0; goto EXIT; }
+			ret = dataDownStream_handler(CONTROL_BLE_HEART, b_message_data.dataResourse);
+    }
 	else if (!strcmp(itemSid->valuestring, "voiceGet"))
     {
 			cJSON *dataResourse = cJSON_GetObjectItem(cjson_buff, "ds");
@@ -4053,14 +4052,6 @@ static void vCommTask(void *argument)
 					
 					}
 				}
-//				if(received_comm_msg.command == TASK_DATA_VAL_UPDATA)
-//				{
-//					dataUpStream_handler(TRACK_REPORT_TYPE_DEVICE_STATE, DATA_SOURCE_4G);
-//				}
-//				if(received_comm_msg.command == TASK_CAT1_QUERY_ENODEB)
-//				{
-//					dataUpStream_handler(TRACK_REPORT_TYPE_ENODEB_INFO, DATA_SOURCE_4G);
-//				}
 				if(received_comm_msg.command == TASK_AUDIO_REALTIME)
 				{
 					b_message_data.device_exeErrorCode = 0;

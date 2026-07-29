@@ -121,6 +121,7 @@ typedef enum{
     SENSOR_TASK_ID,
     TEST_TASK_ID,
 	MOTOR_TASK_ID,
+	STACK_TASK_ID,
 	LED_TASK_ID,
     END_TASK_ID,
 }TASK_ID_T;

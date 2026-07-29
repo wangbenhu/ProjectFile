@@ -45,7 +45,7 @@
 #define EVENT_SYSTEM_RESERVE_MASK 0x00FF
 
 #define CAT1_UART_TASK_PRIORITY (osPriorityNormal)
-#define CAT1_UART_TASK_STACK_SIZE (5120)
+#define CAT1_UART_TASK_STACK_SIZE (8192)
 
 #define CAT1_POWER_VCC_TIME (2000)
 
@@ -84,6 +84,8 @@ bool CAT1_IsMqttConnected(void)
     return isMqttConnected;
 }
 static bool is_reconnecting = false;
+
+static bool qmtconn_info_seen = false;
 static osMutexId_t ReconnectMutex = NULL;
 /*********************************************************************
  * CONSTANTS
@@ -1249,6 +1251,7 @@ static void func_lte_type(lte_at_type_t type)
 		case LTE_MQTT_ISSTATE: // 查询MQTT连接状态
 			// DTR设置
 	lteExitsleepDtrLow();
+			qmtconn_info_seen = false;  // 新一轮查询，清除信息行标记
 			sprintf(mqtt_payload_str, "AT+QMTCONN?\r\n");
 			mqtt_payload_len = strlen(mqtt_payload_str);
 			break;
@@ -3019,6 +3022,13 @@ void at_mqttData(uint8_t *str, uint16_t len, cmd_status_t *status)
 			lte_recovery_clear();
 		}
 
+		if (CurrentModeDataGet() == CURRENT_MODE_CHARGE)
+		{
+			log_debug("[CAT1][STA] M4 charge: 4G downlink dropped\r\n");
+			*status = CMD_STATUS_SUCCESS;
+			return;
+		}
+
 		//添加数据到队列，判断当前状态是否为IDLE，idle则发送并修改状态，否则则添加到队列。在回复包发送后释放状态
 //        send_data_to_comm_task(COMM_TASK_ID, TASK_COMM_DATAJSON, (uint8_t *)quote_start + 1, json_len);
 //        *status = CMD_STATUS_SUCCESS;
@@ -3133,6 +3143,8 @@ void at_mqttData(uint8_t *str, uint16_t len, cmd_status_t *status)
 void at_conn(uint8_t *str, uint16_t len, cmd_status_t *status)
 {
     *status = CMD_STATUS_SUCCESS;
+    // 标记已收到+QMTCONN信息行
+    qmtconn_info_seen = true;
 
     char *params = (char *)str;
     int client_idx, param1, param2;
@@ -5283,7 +5295,8 @@ static uint8_t process_single_line(uint8_t *ptr, uint16_t len, cmd_status_t *sta
 				set_cat1_state(LTE_TASK_RUNNING);
 				lteHighspeedModeConn();
 			}
-			return 1;
+		*status = CMD_STATUS_SUCCESS;
+		return 1;
 	}
 	
 	// 处理版本号响应
@@ -5498,6 +5511,12 @@ uint8_t at_cmd_analysis(uint8_t *ptr, uint16_t len, cmd_status_t *status)
         }
        
         res = process_single_line(ptr, first_cmd_len, status);
+
+        // 关机确认后终止本帧解析：POWERED DOWN 同帧携带的 +QIURC/+QMTSTAT 等
+        if (res && check_powered_down(ptr, first_cmd_len))
+        {
+            return res;
+        }
         
         if (res)
         {
@@ -5574,6 +5593,19 @@ ResponseResult process_response(lteCmdItem_t *currentCmd, uint8_t *recv_buf, uin
         return result;
     }
     
+	// AT+QMTCONN? 只回OK（无+QMTCONN行）：模块当前无任何MQTT会话（如模块重新开机）
+	// 不再死等第二包导致60s超时+误重启，直接判定未连接并立即发起重连
+	if (currentCmd && currentCmd->type == LTE_MQTT_ISSTATE && !qmtconn_info_seen &&
+	    strchr((char *)recv_buf, '+') == NULL && is_only_ok_response(recv_buf, recv_len))
+	{
+		log_debug("[CAT1][STA] QMTCONN? bare OK, no mqtt session, restart conn\r\n");
+		isMqttConnected = false;
+		if (!is_reconnecting) {
+			reStartModeConn();
+		}
+		return RESPONSE_COMPLETE;
+	}
+
 	// 检查是否包含URC命令
 	bool is_urc = false;
     for (int i = 0; urc_commands[i] != NULL; i++) {
@@ -6093,6 +6125,8 @@ static void vCAT1UartTask(void *argument)
 				{
 					if(!checkCat1PowerState())
 					{
+						// 开机前清队列：防止关机期间残留的指令
+						reset_cat1_state_before_poweron();
 						unblock_cat1_task();  // 解除阻塞
 						osEventFlagsSet(LteEventId, LTE_EVENT_TASK_START);
 						first_enter_M5_mode = true;
@@ -6378,8 +6412,7 @@ static void vCAT1UartTask(void *argument)
 						{
 							// 继续等待额外响应
 							expecting_extra_response = 0;
-//								log_debug("Got primary response, waiting for extra\n");
-							LastWakeTime = osKernelGetTickCount(); // 重置超时计时器xi
+							LastWakeTime = osKernelGetTickCount();
 						}
 						else
 						{
@@ -6404,7 +6437,6 @@ static void vCAT1UartTask(void *argument)
 							// 如果队列非空，触发下一条指令；否则恢复DTR准备sleep
 							if (lteCmdQueueHead != lteCmdQueueTail)
 							{
-								//									osDelay(osMS2TicksRound(currentCmd->waitTime_ms));
 								osEventFlagsClear(LteEventId, LTE_EVENT_RESP_RECEIVED);
 								osEventFlagsSet(LteEventId, LTE_EVENT_CMD_READY);
 							}
@@ -6427,14 +6459,10 @@ static void vCAT1UartTask(void *argument)
 						break;
 					case RESPONSE_ERROR:
 						currentCmd->status = CMD_STATUS_FAILED;
-//						log_debug("currentCmd->retry_max: %d, currentCmd->retry_count: %d\n", currentCmd->retry_max, currentCmd->retry_count);
 						if (currentCmd->retry_count < currentCmd->retry_max)
 						{
 							currentCmd->retry_count++;
-							LastWakeTime = osKernelGetTickCount(); // 重置超时计时器
-//							drv_uart_write(LOG_UART, (uint8_t *)"22222", (uint32_t)5, 10);
-							
-							// 如果是MQTT数据发布命令，设置重发标志
+							LastWakeTime = osKernelGetTickCount();
 							if (currentCmd->type == LTE_MQTT_PUBMESSAGEDATA) {
 								is_retransmitting = true;
 							}
@@ -6448,7 +6476,6 @@ static void vCAT1UartTask(void *argument)
 							reset_cat1_state_before_poweron();
 							lteCloseTimer();
 							lteReboot(); // QIYOU 目前ERROR重启4G模块
-//                                osEventFlagsSet(LteEventId, LTE_EVENT_ERROR);
 						}
 						break;
 					default:

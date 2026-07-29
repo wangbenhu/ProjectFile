@@ -62,7 +62,7 @@
 #if(1)
 
 #define STACK_MONITOR_TASK_PRIORITY    (osPriorityNormal)
-#define STACK_MONITOR_TASK_STACK_SIZE  (2048)   /* 原来1024太小，91%危险，改为2048 */
+#define STACK_MONITOR_TASK_STACK_SIZE  (1024*30)   /* 原来1024太小，91%危险，改为2048 */
 
 #define MAX_TASK_NUM                   24       /* 系统允许的最大任务数 */
 #define STACK_MONITOR_INTERVAL_MS      10 *60 * 1000    /* 打印间隔：10min */

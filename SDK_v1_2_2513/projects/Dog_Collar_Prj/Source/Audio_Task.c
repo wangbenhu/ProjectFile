@@ -41,7 +41,7 @@
 #define EVENT_SYSTEM_RESERVE_MASK   0x00FF
 
 #define AUDIO_TASK_PRIORITY (osPriorityNormal1)
-#define AUDIO_TASK_STACK_SIZE (8*1024)
+#define AUDIO_TASK_STACK_SIZE (4*1024)
 
 /*********************************************************************
  * TYPEDEFS

@@ -124,7 +124,7 @@ M5	    正常模式	          1.电量>20%          1.寻宠
 #define MAX_TASK_NUM   20   // 系统允许的最大任务数目
 
 #define ENTRY_TASK_PRIORITY (osPriorityNormal)//(osPriorityNormal) osPriorityAboveNormal
-#define ENTRY_TASK_STACK_SIZE (10*1024)
+#define ENTRY_TASK_STACK_SIZE (4*1024)
 
 #define PM_UPDATE_INTERVAL (1)//UNIT/SEC
 /* 事件标志定义 - 每个任务占用1位 */
@@ -225,6 +225,7 @@ extern osThreadId_t vStartAssistTask(void);
 extern osThreadId_t vStartSensorTask(void);
 extern osThreadId_t vStartTestTask(void);
 extern osThreadId_t vStartMotorTask(void);
+extern osThreadId_t vStartStackMonitorTask(void);
 
 extern uint8_t PM_GetBatteryCapacity(void);
 extern void lom_power_mode_disable(void);
@@ -1544,6 +1545,8 @@ void Entry_Input_Task_Init(void)
     TaskInfo_InitTask(task_info,LED_TASK_ID,QUEUE_LENGTH,MESSAGE_SIZE,vStartLedTask); 
     //初始化MOTOR_TASK_ID任务
     TaskInfo_InitTask(task_info,MOTOR_TASK_ID,QUEUE_LENGTH,MESSAGE_SIZE,vStartMotorTask);
+	
+	TaskInfo_InitTask(task_info,STACK_TASK_ID,QUEUE_LENGTH,MESSAGE_SIZE,vStartStackMonitorTask);
   
 	 //获取当前初始化的全部task信息
 	get_task_state();
@@ -1598,8 +1601,6 @@ static osStatus_t EntryTask_HandleMessageQueue(TaskInfo_t* pEntryTaskInfo, Messa
         {
             if(received_msg->command == TASK_STOP_REPLY)
             {
-				
-				
 				if(FORE_MODE_STATUS == MODE_M4)
 				{
 					log_debug("received_msg->command == TASK_STOP_REPLY\r\n");
@@ -1607,17 +1608,13 @@ static osStatus_t EntryTask_HandleMessageQueue(TaskInfo_t* pEntryTaskInfo, Messa
 					unblock_cat1_task();
 					 Message_Cmd_Put(ENTRY_TASK_ID,CAT1_UART_TASK_ID,TASK_CMD_START,NULL,0);
 				}
-//				else
-//				{
-//					
-//				}
 				//处理回复
-					if(device_reset_flag)
-					{
-						osEventFlagsSet(g_sleepEntryReadyFlags, SLEEP_GNSS_READY_FLAG);
-					}
-					/* 设置就绪标志 */
-					osEventFlagsSet(g_sleepEntryReadyFlags, SLEEP_CAT1_READY_FLAG);
+				if(device_reset_flag)
+				{
+					osEventFlagsSet(g_sleepEntryReadyFlags, SLEEP_GNSS_READY_FLAG);
+				}
+				/* 设置就绪标志 */
+				osEventFlagsSet(g_sleepEntryReadyFlags, SLEEP_CAT1_READY_FLAG);
             }
             if(received_msg->command == TASK_FACTORY_RESET_REPLY)
             {

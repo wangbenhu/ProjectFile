@@ -39,9 +39,9 @@
 #define EVENT_SYSTEM_RESERVE_MASK   0x00FF
 
 #define UART_DATARECV_TASK_PRIORITY (osPriorityNormal)
-#define UART_DATARECV_TASK_STACK_SIZE (12288)
+#define UART_DATARECV_TASK_STACK_SIZE (8192)
 
-#define UART_RECV_DATA_SIZE (8192)
+#define UART_RECV_DATA_SIZE (6*1024)
 
 // 超时检测配置
 #define UART_TIMEOUT_CHECK_INTERVAL  10    // 10ms检测一次
@@ -75,6 +75,7 @@ osSemaphoreId_t UartDataReadySem = NULL;
 volatile bool uart_data_pending = false;  // 数据待处理标志
 volatile uint8_t uart_timeout_counter = 0; // 超时计数器
 volatile bool uart_data_processing = false; // 数据正在处理标志
+volatile uint16_t uart_cut_len = 0;         // 50ms静默时刻冻结的整包边界
 
 // 串口任务事件组
 static osEventFlagsId_t UartEventId = NULL;
@@ -286,6 +287,8 @@ static void vUartDataRecvTask(void *argument)
             uart_timeout_counter++;
             
             if (uart_timeout_counter >= UART_TIMEOUT_THRESHOLD) {
+                uart_cut_len = om_fifo_len(&lte_uartFifo_env.fifo);
+                log_debug("[C-UART][WTR] fifo watermark %u/4096\r\n", uart_cut_len); // 压测水位
                 uart_data_pending = false;
                 uart_data_processing = true;
                 uart_timeout_counter = 0;
@@ -298,8 +301,11 @@ static void vUartDataRecvTask(void *argument)
             uart_data_processing = true;
             
             // 数据包接收完成，循环处理FIFO中的所有数据
-            while (!om_fifo_is_empty(&lte_uartFifo_env.fifo)) {
+            while (uart_cut_len > 0 && !om_fifo_is_empty(&lte_uartFifo_env.fifo)) {
                 uint16_t available_data = om_fifo_len(&lte_uartFifo_env.fifo);
+                if (available_data > uart_cut_len) {
+                    available_data = uart_cut_len;
+                }
                 if (available_data > 0) {
                     // 申请内存来存储FIFO数据
                     uint8_t *lteRecvSubpackage = DEMO_BT_Malloc(available_data + 1);
@@ -321,6 +327,8 @@ static void vUartDataRecvTask(void *argument)
                             remaining -= rx_len;
                         }
                         
+                        uart_cut_len -= lteFifoLength;
+
                         // 处理完整数据包
                         if (lteFifoLength > 0) {
                             lteRecvSubpackage[lteFifoLength] = '\0';

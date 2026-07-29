@@ -42,7 +42,7 @@
 #define EVENT_SYSTEM_RESERVE_MASK   0x00FF
 
 #define GNSS_UART_TASK_PRIORITY (osPriorityNormal)
-#define GNSS_UART_TASK_STACK_SIZE (9216)
+#define GNSS_UART_TASK_STACK_SIZE (8192)
 
 /*********************************************************************
  * TYPEDEFS

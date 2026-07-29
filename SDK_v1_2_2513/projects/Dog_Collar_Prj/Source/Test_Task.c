@@ -51,7 +51,7 @@
 #define EVENT_SYSTEM_RESERVE_MASK   0x00FF
 
 #define TEST_TASK_PRIORITY (osPriorityNormal)
-#define TEST_TASK_STACK_SIZE (10240)
+#define TEST_TASK_STACK_SIZE (6*1024)
 
 #define TEST_LED_TIME 2000//unit 
 #define TEST_MOTOR_TIME 5

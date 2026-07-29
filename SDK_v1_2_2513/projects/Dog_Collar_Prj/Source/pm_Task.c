@@ -41,7 +41,7 @@
 #define EVENT_SYSTEM_RESERVE_MASK   0x00FF
 
 #define PM_TASK_PRIORITY (osPriorityNormal)
-#define PM_TASK_STACK_SIZE (1024)
+#define PM_TASK_STACK_SIZE (2048)
 
 //电池分压计算公式
 #define BATTERY_DIVIDER_R1 			2	//2M
