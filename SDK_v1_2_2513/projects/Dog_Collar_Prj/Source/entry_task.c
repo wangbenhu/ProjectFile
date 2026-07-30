@@ -613,9 +613,94 @@ void CurrentModeDataSet(CURRENT_MODE_T mode)
 * @param: void
 * @return: void
 */
-void ModeM1Handler(void) {
-    // 模式1的处理逻辑
+typedef enum {
+    MODE_OP_END = 0,
+    MODE_OP_MODE_REPORT,
+    MODE_OP_BLE_ADV_STOP,
+    MODE_OP_BLE_NORMAL_ADV_START,
+    MODE_OP_BLE_HIGH_SPEED_ADV_START,
+    MODE_OP_PM_STOP_MESSAGE,
+    MODE_OP_PM_SET_INTERVAL,
+    MODE_OP_SENSOR_SAFE_START,
+    MODE_OP_SENSOR_SAFE_STOP,
+    MODE_OP_SENSOR_RAW_STOP_MESSAGE,
+    MODE_OP_LED_STOP_MESSAGE,
+    MODE_OP_CAT1_START_MESSAGE,
+    MODE_OP_CAT1_STOP_MESSAGE,
+    MODE_OP_GNSS_POWER_ON,
+    MODE_OP_GNSS_POWER_OFF,
+    MODE_OP_GNSS_ENTER_BACKUP,
+    MODE_OP_MONITOR_START,
+    MODE_OP_MONITOR_STOP,
+    MODE_OP_SLEEP_PREVENT,
+    MODE_OP_BOARD_DEINIT_TEST,
+    MODE_OP_LFS_UNMOUNT,
+    MODE_OP_M2_POWER_BRANCH,
+} ModeOperation_t;
+
+typedef struct {
+    ModeOperation_t operation;
+    uint32_t argument;
+} ModeStep_t;
+
+static const ModeStep_t mode_m1_steps[] = {
+    { MODE_OP_END, 0 },
+};
+
+static const ModeStep_t mode_m2_steps[] = {
+    { MODE_OP_MODE_REPORT,      MODE_M2 },
+    { MODE_OP_BLE_ADV_STOP,     0 },
+    { MODE_OP_PM_STOP_MESSAGE,  0 },
+    { MODE_OP_SENSOR_SAFE_STOP, 0 },
+    { MODE_OP_LED_STOP_MESSAGE, 0 },
+    { MODE_OP_M2_POWER_BRANCH,  0 },
+    { MODE_OP_MONITOR_STOP,     0 },
+    { MODE_OP_END,              0 },
+};
+
+static const ModeStep_t mode_m3_steps[] = {
+    { MODE_OP_MODE_REPORT,          MODE_M3 },
+    { MODE_OP_CAT1_STOP_MESSAGE,    0 },
+    { MODE_OP_GNSS_POWER_OFF,       0 },
+    { MODE_OP_BLE_NORMAL_ADV_START, 0 },
+    { MODE_OP_PM_SET_INTERVAL,      10 },
+    { MODE_OP_SENSOR_SAFE_STOP,     0 },
+    { MODE_OP_BOARD_DEINIT_TEST,    0 },
+    { MODE_OP_LFS_UNMOUNT,          0 },
+    { MODE_OP_MONITOR_STOP,         0 },
+    { MODE_OP_END,                  0 },
+};
+
+static const ModeStep_t mode_m4_steps[] = {
+    { MODE_OP_MODE_REPORT,              MODE_M4 },
+    { MODE_OP_CAT1_STOP_MESSAGE,        0 },
+    { MODE_OP_GNSS_ENTER_BACKUP,        0 },
+    { MODE_OP_BLE_HIGH_SPEED_ADV_START, 0 },
+    { MODE_OP_PM_SET_INTERVAL,          10 },
+    { MODE_OP_SENSOR_RAW_STOP_MESSAGE,  0 },
+    { MODE_OP_MONITOR_START,            0 },
+    { MODE_OP_END,                      0 },
+};
+
+static const ModeStep_t mode_m5_steps[] = {
+    { MODE_OP_SLEEP_PREVENT,        0 },
+    { MODE_OP_MODE_REPORT,          MODE_M5 },
+    { MODE_OP_CAT1_START_MESSAGE,   0 },
+    { MODE_OP_GNSS_POWER_ON,        0 },
+    { MODE_OP_BLE_NORMAL_ADV_START, 0 },
+    { MODE_OP_SENSOR_SAFE_START,    0 },
+    { MODE_OP_PM_SET_INTERVAL,      10 },
+    { MODE_OP_MONITOR_START,        0 },
+    { MODE_OP_END,                  0 },
+};
+
+static void ModeManager_ExecuteOperation(const ModeStep_t *step);
+static void ModeManager_ExecuteSteps(const ModeStep_t *steps);
+
+void ModeM1Handler(void)
+{
     log_debug("...Mode M1 running...\r\n");
+    ModeManager_ExecuteSteps(mode_m1_steps);
 }
 extern void AudioHal_Drive_DeInit(void);
 extern void board_deinit(void);
@@ -715,38 +800,10 @@ void user_initiative_test_reboot_fun(void)
 * @param: void
 * @return: void
 */extern void evt_app_adv_stop(void);
-void ModeM2Handler(void) {
-    log_debug("...Mode M2 running...:%d\r\n",low_power_off);
-
-	COMM_MODE_REPORT(MODE_M2);
-
-	//关闭BLE_SCHEDULE_TASK_ID任务
-    evt_app_adv_stop();
-	
-	 //关闭PM
-     Message_Cmd_Put(ENTRY_TASK_ID,PM_TASK_ID,TASK_CMD_STOP,NULL,0);
-	
-    //关闭SENSOR_TASK_ID任务
-    sensor_task_stop();
-    //关闭LED任务
-	Message_Cmd_Put(ENTRY_TASK_ID,LED_TASK_ID,TASK_CMD_STOP,NULL,0);
-	
-	if(low_power_off!=1)
-	{
-		//关闭CAT1_UART_TASK_ID任务
-		Message_Cmd_Put(ENTRY_TASK_ID,CAT1_UART_TASK_ID,TASK_CMD_STOP,NULL,0);
-		//关闭GNSS_UART_TASK_ID任务
-		Entry_Control_GPS_Stop_Power();
-	}
-	else
-	{
-		PowerOffSystem();
-	}
-	
-
-	//V1.6: 通知COMM状态监控 STOP
-	Message_Cmd_Put(ENTRY_TASK_ID,COMM_TASK_ID,TASK_STATE_MONITOR_STOP,NULL,0);
-
+void ModeM2Handler(void)
+{
+    log_debug("...Mode M2 running...:%d\r\n", low_power_off);
+    ModeManager_ExecuteSteps(mode_m2_steps);
 }
 /*
 * @brief: 模式M3处理函数
@@ -778,30 +835,106 @@ void board_deinit_test(void)
 	drv_pin_init(pin_config_deinit_test, sizeof(pin_config_deinit_test) / sizeof(pin_config_deinit_test[0]));
 	drv_gpio_init(gpio_config_deinit_test, sizeof(gpio_config_deinit_test) / sizeof(gpio_config_deinit_test[0]));
 }
-void ModeM3Handler(void) {
-    log_debug("...Mode M3 running...:%d\r\n",PM_GetBatteryCapacity());
+static void ModeManager_ExecuteOperation(const ModeStep_t *step)
+{
+    switch (step->operation)
+    {
+        case MODE_OP_MODE_REPORT:
+            COMM_MODE_REPORT((SystemMode_t)step->argument);
+            break;
+        case MODE_OP_BLE_ADV_STOP:
+            evt_app_adv_stop();
+            break;
+        case MODE_OP_BLE_NORMAL_ADV_START:
+            evt_app_adv_start();
+            break;
+        case MODE_OP_BLE_HIGH_SPEED_ADV_START:
+            evt_app_high_speed_adv_start();
+            break;
+        case MODE_OP_PM_STOP_MESSAGE:
+            Message_Cmd_Put(ENTRY_TASK_ID, PM_TASK_ID, TASK_CMD_STOP, NULL, 0);
+            break;
+        case MODE_OP_PM_SET_INTERVAL:
+            PM_SetTaskTimer((uint8_t)step->argument);
+            break;
+        case MODE_OP_SENSOR_SAFE_START:
+            sensor_task_start();
+            break;
+        case MODE_OP_SENSOR_SAFE_STOP:
+            sensor_task_stop();
+            break;
+        case MODE_OP_SENSOR_RAW_STOP_MESSAGE:
+            Message_Cmd_Put(ENTRY_TASK_ID, SENSOR_TASK_ID, TASK_CMD_STOP, NULL, 0);
+            break;
+        case MODE_OP_LED_STOP_MESSAGE:
+            Message_Cmd_Put(ENTRY_TASK_ID, LED_TASK_ID, TASK_CMD_STOP, NULL, 0);
+            break;
+        case MODE_OP_CAT1_START_MESSAGE:
+            Message_Cmd_Put(ENTRY_TASK_ID, CAT1_UART_TASK_ID, TASK_CMD_START, NULL, 0);
+            break;
+        case MODE_OP_CAT1_STOP_MESSAGE:
+            Message_Cmd_Put(ENTRY_TASK_ID, CAT1_UART_TASK_ID, TASK_CMD_STOP, NULL, 0);
+            break;
+        case MODE_OP_GNSS_POWER_ON:
+            Entry_Control_GPS_Start_Power();
+            break;
+        case MODE_OP_GNSS_POWER_OFF:
+            Entry_Control_GPS_Stop_Power();
+            break;
+        case MODE_OP_GNSS_ENTER_BACKUP:
+            ENTRY_Control_GPS_Start();
+            break;
+        case MODE_OP_MONITOR_START:
+            Message_Cmd_Put(ENTRY_TASK_ID, COMM_TASK_ID, TASK_STATE_MONITOR_START, NULL, 0);
+            break;
+        case MODE_OP_MONITOR_STOP:
+            Message_Cmd_Put(ENTRY_TASK_ID, COMM_TASK_ID, TASK_STATE_MONITOR_STOP, NULL, 0);
+            break;
+        case MODE_OP_SLEEP_PREVENT:
+            pm_sleep_prevent(PM_ID_ENTRY_SLEEP);
+            break;
+        case MODE_OP_BOARD_DEINIT_TEST:
+            board_deinit_test();
+            break;
+        case MODE_OP_LFS_UNMOUNT:
+            lfs_unmount_safe();
+            break;
+        case MODE_OP_M2_POWER_BRANCH:
+            if (low_power_off != 1)
+            {
+                Message_Cmd_Put(ENTRY_TASK_ID,
+                                CAT1_UART_TASK_ID,
+                                TASK_CMD_STOP,
+                                NULL,
+                                0);
+                Entry_Control_GPS_Stop_Power();
+            }
+            else
+            {
+                PowerOffSystem();
+            }
+            break;
+        case MODE_OP_END:
+        default:
+            break;
+    }
+}
 
-    COMM_MODE_REPORT(MODE_M3);
-    	//关闭CAT1_UART_TASK_ID任务
-    Message_Cmd_Put(ENTRY_TASK_ID,CAT1_UART_TASK_ID,TASK_CMD_STOP,NULL,0);
-//	//关闭GNSS_UART_TASK_ID任务
-    Entry_Control_GPS_Stop_Power();
-    //开启BLE_SCHEDULE_TASK_ID任务
-	evt_app_adv_start();
-       //开启PMtask
-	PM_SetTaskTimer(10);
-    //关闭SENSOR_TASK_ID任务
-    sensor_task_stop();
-	board_deinit_test();
-	
-	//卸载文件系统
-	lfs_unmount_safe();
-	
-//	pm_sleep_allow(PM_ID_ENTRY_SLEEP);	
-	//m_wdt_stop();
-	//V1.6: 通知COMM状态监控 STOP
-	Message_Cmd_Put(ENTRY_TASK_ID,COMM_TASK_ID,TASK_STATE_MONITOR_STOP,NULL,0);
+static void ModeManager_ExecuteSteps(const ModeStep_t *steps)
+{
+    uint32_t index = 0;
 
+    while (steps[index].operation != MODE_OP_END)
+    {
+        ModeManager_ExecuteOperation(&steps[index]);
+        index++;
+    }
+}
+
+void ModeM3Handler(void)
+{
+    log_debug("...Mode M3 running...:%d\r\n", PM_GetBatteryCapacity());
+    ModeManager_ExecuteSteps(mode_m3_steps);
 }
 /*
 * @brief: 获取FreeRTOS随机数
@@ -874,28 +1007,11 @@ void m4_to_production_config(void)
 * @param: void
 * @return: void
 */
-void ModeM4Handler(void) {
-    log_debug("...Mode M4 running...:%d\r\n",littlefs_create_flag_get());
-	
-	drv_pmu_retention_reg2_set(0);//清空不掉点ram寄存器值
-	
-    COMM_MODE_REPORT(MODE_M4);//存储当前的电量和模式
-	//关闭CAT1_UART_TASK_ID任务
-	Message_Cmd_Put(ENTRY_TASK_ID,CAT1_UART_TASK_ID,TASK_CMD_STOP,NULL,0);
-	//开启GNSS_UART_TASK_ID任务
-    ENTRY_Control_GPS_Start();
-	
-    //开启BLE_SCHEDULE_TASK_ID任务
-	evt_app_high_speed_adv_start();
-	//开启LED任务
-  //  Message_Cmd_Put(ENTRY_TASK_ID,LED_TASK_ID,TASK_CMD_START,NULL,0);
-  		    //开启PMtask
-	PM_SetTaskTimer(10);
-
-	Message_Cmd_Put(ENTRY_TASK_ID,SENSOR_TASK_ID,TASK_CMD_STOP,NULL,0);
-	//V1.6: 通知COMM状态监控 START
-	Message_Cmd_Put(ENTRY_TASK_ID,COMM_TASK_ID,TASK_STATE_MONITOR_START,NULL,0);
-
+void ModeM4Handler(void)
+{
+    log_debug("...Mode M4 running...:%d\r\n", littlefs_create_flag_get());
+    drv_pmu_retention_reg2_set(0);
+    ModeManager_ExecuteSteps(mode_m4_steps);
 }
 
 /*
@@ -903,28 +1019,10 @@ void ModeM4Handler(void) {
 * @param: void
 * @return: void
 */
-void ModeM5Handler(void) {
+void ModeM5Handler(void)
+{
     log_debug("...Mode M5 running...\r\n");
-	    // 防止进入低功耗模式
-	pm_sleep_prevent(PM_ID_ENTRY_SLEEP);
-	
-    COMM_MODE_REPORT(MODE_M5);
-//     //开启CAT1_UART_TASK_ID任务
-    Message_Cmd_Put(ENTRY_TASK_ID,CAT1_UART_TASK_ID,TASK_CMD_START,NULL,0);
-//// 	//开启GNSS_UART_TASK_ID任务
-    Entry_Control_GPS_Start_Power();
-	//开启BLE_SCHEDULE_TASK_ID任务
-	evt_app_adv_start();
-	
-	//开启LED任务
-  //  Message_Cmd_Put(ENTRY_TASK_ID,LED_TASK_ID,TASK_CMD_START,NULL,0);
-    //开启SENSOR_TASK_ID任务
-    sensor_task_start();
-       //开启PMtask
-	PM_SetTaskTimer(10);
-	//V1.6: 通知COMM状态监控 START
-	Message_Cmd_Put(ENTRY_TASK_ID,COMM_TASK_ID,TASK_STATE_MONITOR_START,NULL,0);
-
+    ModeManager_ExecuteSteps(mode_m5_steps);
 }
 
 
