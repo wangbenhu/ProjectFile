@@ -608,11 +608,6 @@ void CurrentModeDataSet(CURRENT_MODE_T mode)
    commCurrModeStatus.currentMode = mode;
 }
 
-/*
-* @brief: 模式M1处理函数 默认不会进入该模式
-* @param: void
-* @return: void
-*/
 typedef enum {
     MODE_OP_END = 0,
     MODE_OP_MODE_REPORT,
@@ -697,6 +692,11 @@ static const ModeStep_t mode_m5_steps[] = {
 static void ModeManager_ExecuteOperation(const ModeStep_t *step);
 static void ModeManager_ExecuteSteps(const ModeStep_t *steps);
 
+/*
+* @brief: 模式M1处理函数 默认不会进入该模式
+* @param: void
+* @return: void
+*/
 void ModeM1Handler(void)
 {
     log_debug("...Mode M1 running...\r\n");
