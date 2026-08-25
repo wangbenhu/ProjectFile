@@ -1,0 +1,11 @@
+config FAULT_HANDLE
+    bool "fault handle enable"
+    default y
+
+config MANU_CALIB
+    bool "enable calibration via proprietary 2.4GHqz​"
+    default n
+
+config MANU_CALIB_BLE_V2
+    bool "enable calibration via ble v2"
+    default n

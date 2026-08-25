@@ -1,0 +1,9 @@
+COMPONENTS_DIR = $(SDK_DIR)/components
+
+COMPONENTS_SRCS =
+COMPONENTS_DEFS =
+COMPONENTS_INCS =
+COMPONENTS_LIBS =
+
+# components mk
+-include $(COMPONENTS_DIR)/*/*.mk

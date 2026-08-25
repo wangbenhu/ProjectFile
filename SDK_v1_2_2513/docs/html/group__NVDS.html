@@ -1,0 +1,518 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>User Guide: NVDS</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+-->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">User Guide
+   </div>
+   <div id="projectbrief">Bluetooth Low Energy 5.4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__NVDS.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">NVDS<div class="ingroups"><a class="el" href="group__COMPONENTS.html">Components</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>NVDS system.  
+<a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:gab1de8a47ddf58d41aa5550f95e9364ed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__NVDS.html#gab1de8a47ddf58d41aa5550f95e9364ed">NVDS_MAX_NUM_OF_TAGS</a>&#160;&#160;&#160;255</td></tr>
+<tr class="memdesc:gab1de8a47ddf58d41aa5550f95e9364ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of tags.  <br /></td></tr>
+<tr class="separator:gab1de8a47ddf58d41aa5550f95e9364ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ga9920d88a34d4c1d7ec48e04970cde354"><td class="memItemLeft" align="right" valign="top">typedef uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__NVDS.html#ga9920d88a34d4c1d7ec48e04970cde354">nvds_tag_len_t</a></td></tr>
+<tr class="memdesc:ga9920d88a34d4c1d7ec48e04970cde354"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVDS tag length type.  <br /></td></tr>
+<tr class="separator:ga9920d88a34d4c1d7ec48e04970cde354"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga89a6e96c8e2091fe1da17ba7bef4b53b"><td class="memItemLeft" align="right" valign="top">typedef uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__NVDS.html#ga89a6e96c8e2091fe1da17ba7bef4b53b">nvds_addr_len_t</a></td></tr>
+<tr class="memdesc:ga89a6e96c8e2091fe1da17ba7bef4b53b"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVDS address type.  <br /></td></tr>
+<tr class="separator:ga89a6e96c8e2091fe1da17ba7bef4b53b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9a53f599eddb8779a0feea464389009d"><td class="memItemLeft" align="right" valign="top">typedef enum NVDS_TAGS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__NVDS.html#ga9a53f599eddb8779a0feea464389009d">nvds_tag_id_t</a></td></tr>
+<tr class="memdesc:ga9a53f599eddb8779a0feea464389009d"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVDS tag ID type.  <br /></td></tr>
+<tr class="separator:ga9a53f599eddb8779a0feea464389009d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:gafc8d8f80b9f08ec9858d3441beb9456b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__NVDS.html#gafc8d8f80b9f08ec9858d3441beb9456b">NVDS_STATUS</a> { <br />
+&#160;&#160;<a class="el" href="group__NVDS.html#ggafc8d8f80b9f08ec9858d3441beb9456ba2f449f07084acef80ee933339199e6fc">NVDS_OK</a>
+, <a class="el" href="group__NVDS.html#ggafc8d8f80b9f08ec9858d3441beb9456bab909239a3119fad2aa9849cbb0590a23">NVDS_FAIL</a>
+, <a class="el" href="group__NVDS.html#ggafc8d8f80b9f08ec9858d3441beb9456ba1d10d8aa2b90f3d0e6f1e3991e3d814b">NVDS_TAG_NOT_DEFINED</a>
+, <a class="el" href="group__NVDS.html#ggafc8d8f80b9f08ec9858d3441beb9456ba3278c39fef7ef1c1238a1d8094597ed5">NVDS_NO_SPACE_AVAILABLE</a>
+, <br />
+&#160;&#160;<a class="el" href="group__NVDS.html#ggafc8d8f80b9f08ec9858d3441beb9456ba9b06d89c77dde829f1e01bbc1c62406f">NVDS_LENGTH_OUT_OF_RANGE</a>
+, <a class="el" href="group__NVDS.html#ggafc8d8f80b9f08ec9858d3441beb9456ba003661449b2dddfae07905d0e7a1d185">NVDS_CORRUPT</a>
+, <a class="el" href="group__NVDS.html#ggafc8d8f80b9f08ec9858d3441beb9456ba87f7f438f6e4715b01c1204daa04e05e">NVDS_SETUP_ERROR</a>
+, <a class="el" href="group__NVDS.html#ggafc8d8f80b9f08ec9858d3441beb9456baad4a35e988d7b26bafb5afb26a4afd92">NVDS_CRC_ERROR</a>
+, <br />
+&#160;&#160;<a class="el" href="group__NVDS.html#ggafc8d8f80b9f08ec9858d3441beb9456bac6b11a4eb1dd08096c308b79d293f8d9">NVDS_NOINIT_ERROR</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:gafc8d8f80b9f08ec9858d3441beb9456b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Possible Returned Status.  <a href="group__NVDS.html#gafc8d8f80b9f08ec9858d3441beb9456b">More...</a><br /></td></tr>
+<tr class="separator:gafc8d8f80b9f08ec9858d3441beb9456b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga8ae9da97104a3ed658ed4d43622d7efb"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__NVDS.html#ga8ae9da97104a3ed658ed4d43622d7efb">nvds_init</a> (<a class="el" href="group__NVDS.html#ga89a6e96c8e2091fe1da17ba7bef4b53b">nvds_addr_len_t</a> flash_base)</td></tr>
+<tr class="memdesc:ga8ae9da97104a3ed658ed4d43622d7efb"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVDS initialize.  <br /></td></tr>
+<tr class="separator:ga8ae9da97104a3ed658ed4d43622d7efb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga323e9988ffb9e864b0e104d8e64e3738"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__NVDS.html#ga323e9988ffb9e864b0e104d8e64e3738">nvds_get</a> (<a class="el" href="group__NVDS.html#ga9a53f599eddb8779a0feea464389009d">nvds_tag_id_t</a> tag, <a class="el" href="group__NVDS.html#ga9920d88a34d4c1d7ec48e04970cde354">nvds_tag_len_t</a> *length, void *buf)</td></tr>
+<tr class="memdesc:ga323e9988ffb9e864b0e104d8e64e3738"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the newest tag from NVDS.  <br /></td></tr>
+<tr class="separator:ga323e9988ffb9e864b0e104d8e64e3738"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4d071c5c7e475d6f22d589c14d04f8ce"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__NVDS.html#ga4d071c5c7e475d6f22d589c14d04f8ce">nvds_del</a> (<a class="el" href="group__NVDS.html#ga9a53f599eddb8779a0feea464389009d">nvds_tag_id_t</a> tag)</td></tr>
+<tr class="memdesc:ga4d071c5c7e475d6f22d589c14d04f8ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete the specific tag from NVDS.  <br /></td></tr>
+<tr class="separator:ga4d071c5c7e475d6f22d589c14d04f8ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga05f6cc21fb536e75cf26e1e8d6b465c9"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__NVDS.html#ga05f6cc21fb536e75cf26e1e8d6b465c9">nvds_put</a> (<a class="el" href="group__NVDS.html#ga9a53f599eddb8779a0feea464389009d">nvds_tag_id_t</a> tag, <a class="el" href="group__NVDS.html#ga9920d88a34d4c1d7ec48e04970cde354">nvds_tag_len_t</a> length, const void *buf)</td></tr>
+<tr class="memdesc:ga05f6cc21fb536e75cf26e1e8d6b465c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Put tag to NVDS.  <br /></td></tr>
+<tr class="separator:ga05f6cc21fb536e75cf26e1e8d6b465c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5d633015e043c3107e68178eee5ce493"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__NVDS.html#ga5d633015e043c3107e68178eee5ce493">nvds_dump</a> (void *printf_dump_func)</td></tr>
+<tr class="memdesc:ga5d633015e043c3107e68178eee5ce493"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print debug information.  <br /></td></tr>
+<tr class="separator:ga5d633015e043c3107e68178eee5ce493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3f14483fc2ea381289bdb8d022d5c003"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__NVDS.html#ga3f14483fc2ea381289bdb8d022d5c003">nvds_reset</a> (void)</td></tr>
+<tr class="memdesc:ga3f14483fc2ea381289bdb8d022d5c003"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset all sectors.  <br /></td></tr>
+<tr class="separator:ga3f14483fc2ea381289bdb8d022d5c003"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>NVDS system. </p>
+<p>The NVDS system is used for storing information which should be saved when chip loses power.</p>
+<pre>
+Features:
+  • Two Sectors: one is NVDS sector, the othor one is BKUP sector
+
+</pre> <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="gab1de8a47ddf58d41aa5550f95e9364ed" name="gab1de8a47ddf58d41aa5550f95e9364ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab1de8a47ddf58d41aa5550f95e9364ed">&#9670;&#160;</a></span>NVDS_MAX_NUM_OF_TAGS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NVDS_MAX_NUM_OF_TAGS&#160;&#160;&#160;255</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maximum number of tags. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="ga89a6e96c8e2091fe1da17ba7bef4b53b" name="ga89a6e96c8e2091fe1da17ba7bef4b53b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga89a6e96c8e2091fe1da17ba7bef4b53b">&#9670;&#160;</a></span>nvds_addr_len_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint32_t <a class="el" href="group__NVDS.html#ga89a6e96c8e2091fe1da17ba7bef4b53b">nvds_addr_len_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>NVDS address type. </p>
+
+</div>
+</div>
+<a id="ga9a53f599eddb8779a0feea464389009d" name="ga9a53f599eddb8779a0feea464389009d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9a53f599eddb8779a0feea464389009d">&#9670;&#160;</a></span>nvds_tag_id_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum NVDS_TAGS <a class="el" href="group__NVDS.html#ga9a53f599eddb8779a0feea464389009d">nvds_tag_id_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>NVDS tag ID type. </p>
+
+</div>
+</div>
+<a id="ga9920d88a34d4c1d7ec48e04970cde354" name="ga9920d88a34d4c1d7ec48e04970cde354"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9920d88a34d4c1d7ec48e04970cde354">&#9670;&#160;</a></span>nvds_tag_len_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint16_t <a class="el" href="group__NVDS.html#ga9920d88a34d4c1d7ec48e04970cde354">nvds_tag_len_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>NVDS tag length type. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="gafc8d8f80b9f08ec9858d3441beb9456b" name="gafc8d8f80b9f08ec9858d3441beb9456b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafc8d8f80b9f08ec9858d3441beb9456b">&#9670;&#160;</a></span>NVDS_STATUS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__NVDS.html#gafc8d8f80b9f08ec9858d3441beb9456b">NVDS_STATUS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Possible Returned Status. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggafc8d8f80b9f08ec9858d3441beb9456ba2f449f07084acef80ee933339199e6fc" name="ggafc8d8f80b9f08ec9858d3441beb9456ba2f449f07084acef80ee933339199e6fc"></a>NVDS_OK&#160;</td><td class="fielddoc"><p>NVDS status OK. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggafc8d8f80b9f08ec9858d3441beb9456bab909239a3119fad2aa9849cbb0590a23" name="ggafc8d8f80b9f08ec9858d3441beb9456bab909239a3119fad2aa9849cbb0590a23"></a>NVDS_FAIL&#160;</td><td class="fielddoc"><p>Generic NVDS status KO. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggafc8d8f80b9f08ec9858d3441beb9456ba1d10d8aa2b90f3d0e6f1e3991e3d814b" name="ggafc8d8f80b9f08ec9858d3441beb9456ba1d10d8aa2b90f3d0e6f1e3991e3d814b"></a>NVDS_TAG_NOT_DEFINED&#160;</td><td class="fielddoc"><p>NVDS TAG unrecognized. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggafc8d8f80b9f08ec9858d3441beb9456ba3278c39fef7ef1c1238a1d8094597ed5" name="ggafc8d8f80b9f08ec9858d3441beb9456ba3278c39fef7ef1c1238a1d8094597ed5"></a>NVDS_NO_SPACE_AVAILABLE&#160;</td><td class="fielddoc"><p>No space for NVDS. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggafc8d8f80b9f08ec9858d3441beb9456ba9b06d89c77dde829f1e01bbc1c62406f" name="ggafc8d8f80b9f08ec9858d3441beb9456ba9b06d89c77dde829f1e01bbc1c62406f"></a>NVDS_LENGTH_OUT_OF_RANGE&#160;</td><td class="fielddoc"><p>Length violation. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggafc8d8f80b9f08ec9858d3441beb9456ba003661449b2dddfae07905d0e7a1d185" name="ggafc8d8f80b9f08ec9858d3441beb9456ba003661449b2dddfae07905d0e7a1d185"></a>NVDS_CORRUPT&#160;</td><td class="fielddoc"><p>NVDS corrupted. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggafc8d8f80b9f08ec9858d3441beb9456ba87f7f438f6e4715b01c1204daa04e05e" name="ggafc8d8f80b9f08ec9858d3441beb9456ba87f7f438f6e4715b01c1204daa04e05e"></a>NVDS_SETUP_ERROR&#160;</td><td class="fielddoc"><p>NVDS setup error. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggafc8d8f80b9f08ec9858d3441beb9456baad4a35e988d7b26bafb5afb26a4afd92" name="ggafc8d8f80b9f08ec9858d3441beb9456baad4a35e988d7b26bafb5afb26a4afd92"></a>NVDS_CRC_ERROR&#160;</td><td class="fielddoc"><p>NVDS crc error. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggafc8d8f80b9f08ec9858d3441beb9456bac6b11a4eb1dd08096c308b79d293f8d9" name="ggafc8d8f80b9f08ec9858d3441beb9456bac6b11a4eb1dd08096c308b79d293f8d9"></a>NVDS_NOINIT_ERROR&#160;</td><td class="fielddoc"><p>Not init. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga4d071c5c7e475d6f22d589c14d04f8ce" name="ga4d071c5c7e475d6f22d589c14d04f8ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4d071c5c7e475d6f22d589c14d04f8ce">&#9670;&#160;</a></span>nvds_del()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t nvds_del </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__NVDS.html#ga9a53f599eddb8779a0feea464389009d">nvds_tag_id_t</a>&#160;</td>
+          <td class="paramname"><em>tag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Delete the specific tag from NVDS. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tag</td><td>tag index</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_nvds_8c-example.html#a7">example_nvds.c</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="ga5d633015e043c3107e68178eee5ce493" name="ga5d633015e043c3107e68178eee5ce493"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5d633015e043c3107e68178eee5ce493">&#9670;&#160;</a></span>nvds_dump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nvds_dump </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>printf_dump_func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Print debug information. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">printf_dump_func</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_nvds_8c-example.html#a5">example_nvds.c</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="ga323e9988ffb9e864b0e104d8e64e3738" name="ga323e9988ffb9e864b0e104d8e64e3738"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga323e9988ffb9e864b0e104d8e64e3738">&#9670;&#160;</a></span>nvds_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t nvds_get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__NVDS.html#ga9a53f599eddb8779a0feea464389009d">nvds_tag_id_t</a>&#160;</td>
+          <td class="paramname"><em>tag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__NVDS.html#ga9920d88a34d4c1d7ec48e04970cde354">nvds_tag_len_t</a> *&#160;</td>
+          <td class="paramname"><em>length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the newest tag from NVDS. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tag</td><td>tag index </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">length</td><td>[in]: pdata buffer length, if it is null, ignore it. [out]: real readed length, if length(in) &gt; length(real), </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">buf</td><td>A pointer to the buffer allocated by the caller to be filled with the DATA part of the TAG</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_nvds_8c-example.html#a4">example_nvds.c</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="ga8ae9da97104a3ed658ed4d43622d7efb" name="ga8ae9da97104a3ed658ed4d43622d7efb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8ae9da97104a3ed658ed4d43622d7efb">&#9670;&#160;</a></span>nvds_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t nvds_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__NVDS.html#ga89a6e96c8e2091fe1da17ba7bef4b53b">nvds_addr_len_t</a>&#160;</td>
+          <td class="paramname"><em>flash_base</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>NVDS initialize. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">flash_base</td><td>The NVDS's base address in flash</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_nvds_8c-example.html#a2">example_nvds.c</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="ga05f6cc21fb536e75cf26e1e8d6b465c9" name="ga05f6cc21fb536e75cf26e1e8d6b465c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga05f6cc21fb536e75cf26e1e8d6b465c9">&#9670;&#160;</a></span>nvds_put()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t nvds_put </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__NVDS.html#ga9a53f599eddb8779a0feea464389009d">nvds_tag_id_t</a>&#160;</td>
+          <td class="paramname"><em>tag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__NVDS.html#ga9920d88a34d4c1d7ec48e04970cde354">nvds_tag_len_t</a>&#160;</td>
+          <td class="paramname"><em>length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Put tag to NVDS. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tag</td><td>tag index </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>data length, excluding tag node size, range in [1, 504]. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buf</td><td>Pointer to the buffer containing the DATA part of the TAG to add to the NVDS</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_nvds_8c-example.html#a3">example_nvds.c</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="ga3f14483fc2ea381289bdb8d022d5c003" name="ga3f14483fc2ea381289bdb8d022d5c003"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3f14483fc2ea381289bdb8d022d5c003">&#9670;&#160;</a></span>nvds_reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t nvds_reset </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reset all sectors. </p>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+</div>
+</body>
+</html>

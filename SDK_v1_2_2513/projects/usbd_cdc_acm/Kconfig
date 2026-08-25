@@ -1,0 +1,12 @@
+
+# source SDK Kconfig
+source "$(SDK_DIR)/Kconfig"
+
+menu "Project"
+
+config OM_ASSERT
+    bool "Enable assert check"
+    default y
+
+orsource "*/Kconfig"
+endmenu

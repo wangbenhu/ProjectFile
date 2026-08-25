@@ -1,0 +1,33 @@
+{
+  "package_version": "2.0.1",
+  "model_version": "2.0.0",
+  "api_version": "2.0.0",
+  "sample_hz": 50,
+  "target_device": "OmniMicro OM6629X",
+  "target_cpu": "Cortex-M4F",
+  "fpu": "FPv4-SP-D16",
+  "float_abi": "hard",
+  "wchar_bits": 16,
+  "endianness": "little",
+  "runtime_library": "MicroLIB",
+  "keil_arm_compiler": "6.19",
+  "archive_toolchain": "GNU Arm Embedded GCC 13.2.1",
+  "class_ids": {
+    "static": 1,
+    "lying": 2,
+    "running": 3,
+    "sitting": 4,
+    "sniffing": 5,
+    "walking": 6,
+    "other": 9
+  },
+  "reserved_class_ids": [
+    0,
+    7,
+    8
+  ],
+  "context_bytes": 6016,
+  "max_stack_bytes": 324,
+  "library_bytes": 3452,
+  "library_sha256": "dd02edc5055458d9d269f56ebd163549619d56e77fc06bb298b017951eeb5a82"
+}

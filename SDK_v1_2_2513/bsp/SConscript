@@ -1,0 +1,24 @@
+from build.building import *
+
+
+BSP_INCS = ['include']
+BSP_DEFS = []
+
+if GetDepend('CONFIG_BOARD_EVB'):
+    BSP_SRCS = ['board_evb/board_evb.c']
+else:
+    BSP_SRCS = None
+
+if GetDepend('CONFIG_GLCD_GC9C01'):
+    BSP_SRCS += ['source/glcd_gc9c01.c']
+
+if GetDepend('CONFIG_GLCD_ST7789'):
+    BSP_SRCS += ['source/glcd_st7789.c']
+
+if GetDepend('CONFIG_GLCD_ST7796'):
+    BSP_SRCS += ['source/glcd_st7796.c']
+
+
+group = DefineGroup(name='bsp', srcs=BSP_SRCS, incs=BSP_INCS, CPPDEFINES=BSP_DEFS)
+
+Return('group')

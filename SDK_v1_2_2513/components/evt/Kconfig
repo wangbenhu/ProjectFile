@@ -1,0 +1,3 @@
+config EVT
+    bool "Simple event scheduler"
+    default n

@@ -1,0 +1,737 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>User Guide: TIME</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+-->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">User Guide
+   </div>
+   <div id="projectbrief">Bluetooth Low Energy 5.4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__TIME.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">TIME<div class="ingroups"><a class="el" href="group__COMMON.html">Common</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Time.  
+<a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga10b4b023866bca297dff3572e89a338a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIME.html#ga10b4b023866bca297dff3572e89a338a">OM_TIMER_MAX_TICK</a>&#160;&#160;&#160;0xFFFFFFFFU</td></tr>
+<tr class="memdesc:ga10b4b023866bca297dff3572e89a338a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max timer tick.  <br /></td></tr>
+<tr class="separator:ga10b4b023866bca297dff3572e89a338a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabbcee2fbe6ef06a069d807625e637e83"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIME.html#gabbcee2fbe6ef06a069d807625e637e83">OM_TIMER_MAX_DELAY</a>&#160;&#160;&#160;(<a class="el" href="group__TIME.html#ga10b4b023866bca297dff3572e89a338a">OM_TIMER_MAX_TICK</a>/2 - 1)</td></tr>
+<tr class="memdesc:gabbcee2fbe6ef06a069d807625e637e83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max timer delay.  <br /></td></tr>
+<tr class="separator:gabbcee2fbe6ef06a069d807625e637e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadade01cf2caded42d6e4eab2c064823e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIME.html#gadade01cf2caded42d6e4eab2c064823e">OM_TIME_INVALID</a>&#160;&#160;&#160;0xFFFFFFFFU</td></tr>
+<tr class="memdesc:gadade01cf2caded42d6e4eab2c064823e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalid time.  <br /></td></tr>
+<tr class="separator:gadade01cf2caded42d6e4eab2c064823e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga21386be046288357156afd93c467082a"><td class="memItemLeft" align="right" valign="top">__STATIC_FORCEINLINE uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIME.html#ga21386be046288357156afd93c467082a">om_time</a> (void)</td></tr>
+<tr class="memdesc:ga21386be046288357156afd93c467082a"><td class="mdescLeft">&#160;</td><td class="mdescRight">get current stack time(tick)  <br /></td></tr>
+<tr class="separator:ga21386be046288357156afd93c467082a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga077ff03f62eec211de5436e1fe98c406"><td class="memItemLeft" align="right" valign="top">__STATIC_FORCEINLINE uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIME.html#ga077ff03f62eec211de5436e1fe98c406">om_time_to_safe</a> (uint32_t time)</td></tr>
+<tr class="memdesc:ga077ff03f62eec211de5436e1fe98c406"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert time to safe  <br /></td></tr>
+<tr class="separator:ga077ff03f62eec211de5436e1fe98c406"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa1dfca138d0dcd960cb63cdd4e601cc2"><td class="memItemLeft" align="right" valign="top">__STATIC_FORCEINLINE uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIME.html#gaa1dfca138d0dcd960cb63cdd4e601cc2">om_time_increase</a> (uint32_t time, uint32_t increase)</td></tr>
+<tr class="memdesc:gaa1dfca138d0dcd960cb63cdd4e601cc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">time increase +  <br /></td></tr>
+<tr class="separator:gaa1dfca138d0dcd960cb63cdd4e601cc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa882bb9d08ead2f2a73cc951efd60efa"><td class="memItemLeft" align="right" valign="top">__STATIC_FORCEINLINE uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIME.html#gaa882bb9d08ead2f2a73cc951efd60efa">om_time_decrease</a> (uint32_t time, uint32_t decrease)</td></tr>
+<tr class="memdesc:gaa882bb9d08ead2f2a73cc951efd60efa"><td class="mdescLeft">&#160;</td><td class="mdescRight">time decrease -  <br /></td></tr>
+<tr class="separator:gaa882bb9d08ead2f2a73cc951efd60efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga13454960b07c1346a341974a8bd779d8"><td class="memItemLeft" align="right" valign="top">__STATIC_FORCEINLINE uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIME.html#ga13454960b07c1346a341974a8bd779d8">om_time_diff</a> (uint32_t me, uint32_t he)</td></tr>
+<tr class="memdesc:ga13454960b07c1346a341974a8bd779d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">different between with two time  <br /></td></tr>
+<tr class="separator:ga13454960b07c1346a341974a8bd779d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga959c107bb04b58490fd95227eaf9ccbe"><td class="memItemLeft" align="right" valign="top">__STATIC_FORCEINLINE bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIME.html#ga959c107bb04b58490fd95227eaf9ccbe">om_time_compare_equal_lesser</a> (uint32_t me, uint32_t he)</td></tr>
+<tr class="memdesc:ga959c107bb04b58490fd95227eaf9ccbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">compare between with two time  <br /></td></tr>
+<tr class="separator:ga959c107bb04b58490fd95227eaf9ccbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae965d626134ace21095a2ea6368ab59a"><td class="memItemLeft" align="right" valign="top">__STATIC_FORCEINLINE bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIME.html#gae965d626134ace21095a2ea6368ab59a">om_time_compare_lesser</a> (uint32_t me, uint32_t he)</td></tr>
+<tr class="memdesc:gae965d626134ace21095a2ea6368ab59a"><td class="mdescLeft">&#160;</td><td class="mdescRight">compare between with two time  <br /></td></tr>
+<tr class="separator:gae965d626134ace21095a2ea6368ab59a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8a640e1b9c12e66e952483c9e088630b"><td class="memItemLeft" align="right" valign="top">__STATIC_FORCEINLINE bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIME.html#ga8a640e1b9c12e66e952483c9e088630b">om_time_compare_equal_greater</a> (uint32_t me, uint32_t he)</td></tr>
+<tr class="memdesc:ga8a640e1b9c12e66e952483c9e088630b"><td class="mdescLeft">&#160;</td><td class="mdescRight">compare between with two time  <br /></td></tr>
+<tr class="separator:ga8a640e1b9c12e66e952483c9e088630b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac9d413ca06cb42205b05cadca62b136a"><td class="memItemLeft" align="right" valign="top">__STATIC_FORCEINLINE bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIME.html#gac9d413ca06cb42205b05cadca62b136a">om_time_compare_greater</a> (uint32_t me, uint32_t he)</td></tr>
+<tr class="memdesc:gac9d413ca06cb42205b05cadca62b136a"><td class="mdescLeft">&#160;</td><td class="mdescRight">compare between with two time  <br /></td></tr>
+<tr class="separator:gac9d413ca06cb42205b05cadca62b136a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf488b905f571e2c81774a032c38797a3"><td class="memItemLeft" align="right" valign="top">__STATIC_FORCEINLINE bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIME.html#gaf488b905f571e2c81774a032c38797a3">om_time_past</a> (uint32_t time, uint32_t cur_time)</td></tr>
+<tr class="memdesc:gaf488b905f571e2c81774a032c38797a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">whether time is pasted  <br /></td></tr>
+<tr class="separator:gaf488b905f571e2c81774a032c38797a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga31c0a535b3147c605dff84cf08cd7389"><td class="memItemLeft" align="right" valign="top">__STATIC_FORCEINLINE uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIME.html#ga31c0a535b3147c605dff84cf08cd7389">om_time_pasting_time</a> (uint32_t time, uint32_t cur_time)</td></tr>
+<tr class="memdesc:ga31c0a535b3147c605dff84cf08cd7389"><td class="mdescLeft">&#160;</td><td class="mdescRight">time pasting time  <br /></td></tr>
+<tr class="separator:ga31c0a535b3147c605dff84cf08cd7389"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5f7ef4c1a3a382b7b3bd85db17723aef"><td class="memItemLeft" align="right" valign="top">__STATIC_FORCEINLINE bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIME.html#ga5f7ef4c1a3a382b7b3bd85db17723aef">om_time_delay_past</a> (uint32_t delay, uint32_t *prev_past_time)</td></tr>
+<tr class="memdesc:ga5f7ef4c1a3a382b7b3bd85db17723aef"><td class="mdescLeft">&#160;</td><td class="mdescRight">time delay tick is pasted  <br /></td></tr>
+<tr class="separator:ga5f7ef4c1a3a382b7b3bd85db17723aef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6ffba7158a92cdf2363d99053e84a882"><td class="memItemLeft" align="right" valign="top">__STATIC_FORCEINLINE bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIME.html#ga6ffba7158a92cdf2363d99053e84a882">om_time_intersection</a> (uint32_t time1, uint32_t time1_duration, uint32_t time2, uint32_t time2_duration)</td></tr>
+<tr class="memdesc:ga6ffba7158a92cdf2363d99053e84a882"><td class="mdescLeft">&#160;</td><td class="mdescRight">time intersection  <br /></td></tr>
+<tr class="separator:ga6ffba7158a92cdf2363d99053e84a882"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>Time. </p>
+<p>Time</p>
+<dl class="section version"><dt>Version</dt><dd>Version 1.0<ul>
+<li>Initial release </li>
+</ul>
+</dd></dl>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="gadade01cf2caded42d6e4eab2c064823e" name="gadade01cf2caded42d6e4eab2c064823e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadade01cf2caded42d6e4eab2c064823e">&#9670;&#160;</a></span>OM_TIME_INVALID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OM_TIME_INVALID&#160;&#160;&#160;0xFFFFFFFFU</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Invalid time. </p>
+
+</div>
+</div>
+<a id="gabbcee2fbe6ef06a069d807625e637e83" name="gabbcee2fbe6ef06a069d807625e637e83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabbcee2fbe6ef06a069d807625e637e83">&#9670;&#160;</a></span>OM_TIMER_MAX_DELAY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OM_TIMER_MAX_DELAY&#160;&#160;&#160;(<a class="el" href="group__TIME.html#ga10b4b023866bca297dff3572e89a338a">OM_TIMER_MAX_TICK</a>/2 - 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Max timer delay. </p>
+
+</div>
+</div>
+<a id="ga10b4b023866bca297dff3572e89a338a" name="ga10b4b023866bca297dff3572e89a338a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga10b4b023866bca297dff3572e89a338a">&#9670;&#160;</a></span>OM_TIMER_MAX_TICK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OM_TIMER_MAX_TICK&#160;&#160;&#160;0xFFFFFFFFU</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Max timer tick. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga21386be046288357156afd93c467082a" name="ga21386be046288357156afd93c467082a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga21386be046288357156afd93c467082a">&#9670;&#160;</a></span>om_time()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_FORCEINLINE uint32_t om_time </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get current stack time(tick) </p>
+<dl class="section return"><dt>Returns</dt><dd>current time, uint is 30.5us </dd></dl>
+
+</div>
+</div>
+<a id="ga8a640e1b9c12e66e952483c9e088630b" name="ga8a640e1b9c12e66e952483c9e088630b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8a640e1b9c12e66e952483c9e088630b">&#9670;&#160;</a></span>om_time_compare_equal_greater()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_FORCEINLINE bool om_time_compare_equal_greater </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>me</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>he</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>compare between with two time </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">me</td><td>one time </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">he</td><td>another time</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>if me is greater or equeal, return true, otherwise return false. </dd></dl>
+
+</div>
+</div>
+<a id="ga959c107bb04b58490fd95227eaf9ccbe" name="ga959c107bb04b58490fd95227eaf9ccbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga959c107bb04b58490fd95227eaf9ccbe">&#9670;&#160;</a></span>om_time_compare_equal_lesser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_FORCEINLINE bool om_time_compare_equal_lesser </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>me</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>he</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>compare between with two time </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">me</td><td>one time </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">he</td><td>another time</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>if me is smaller or equeal, return true, otherwise return false. </dd></dl>
+
+</div>
+</div>
+<a id="gac9d413ca06cb42205b05cadca62b136a" name="gac9d413ca06cb42205b05cadca62b136a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac9d413ca06cb42205b05cadca62b136a">&#9670;&#160;</a></span>om_time_compare_greater()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_FORCEINLINE bool om_time_compare_greater </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>me</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>he</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>compare between with two time </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">me</td><td>one time </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">he</td><td>another time</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>if me is greater, return true, otherwise return false. </dd></dl>
+
+</div>
+</div>
+<a id="gae965d626134ace21095a2ea6368ab59a" name="gae965d626134ace21095a2ea6368ab59a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae965d626134ace21095a2ea6368ab59a">&#9670;&#160;</a></span>om_time_compare_lesser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_FORCEINLINE bool om_time_compare_lesser </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>me</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>he</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>compare between with two time </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">me</td><td>one time </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">he</td><td>another time</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>if me is smaller, return true, otherwise return false. </dd></dl>
+
+</div>
+</div>
+<a id="gaa882bb9d08ead2f2a73cc951efd60efa" name="gaa882bb9d08ead2f2a73cc951efd60efa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa882bb9d08ead2f2a73cc951efd60efa">&#9670;&#160;</a></span>om_time_decrease()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_FORCEINLINE uint32_t om_time_decrease </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>decrease</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>time decrease - </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>time value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">decrease</td><td>-value</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>decrease result </dd></dl>
+
+</div>
+</div>
+<a id="ga5f7ef4c1a3a382b7b3bd85db17723aef" name="ga5f7ef4c1a3a382b7b3bd85db17723aef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5f7ef4c1a3a382b7b3bd85db17723aef">&#9670;&#160;</a></span>om_time_delay_past()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_FORCEINLINE bool om_time_delay_past </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>delay</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t *&#160;</td>
+          <td class="paramname"><em>prev_past_time</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>time delay tick is pasted </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">delay</td><td>delay with tick </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">prev_past_time</td><td>prev delay time, if delay pasted, the value will be modify to current time</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>pasted </dd></dl>
+
+</div>
+</div>
+<a id="ga13454960b07c1346a341974a8bd779d8" name="ga13454960b07c1346a341974a8bd779d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga13454960b07c1346a341974a8bd779d8">&#9670;&#160;</a></span>om_time_diff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_FORCEINLINE uint32_t om_time_diff </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>me</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>he</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>different between with two time </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">me</td><td>one time </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">he</td><td>another time</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>different </dd></dl>
+
+</div>
+</div>
+<a id="gaa1dfca138d0dcd960cb63cdd4e601cc2" name="gaa1dfca138d0dcd960cb63cdd4e601cc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa1dfca138d0dcd960cb63cdd4e601cc2">&#9670;&#160;</a></span>om_time_increase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_FORCEINLINE uint32_t om_time_increase </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>increase</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>time increase + </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>time </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">increase</td><td>+value</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>increase result </dd></dl>
+
+</div>
+</div>
+<a id="ga6ffba7158a92cdf2363d99053e84a882" name="ga6ffba7158a92cdf2363d99053e84a882"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6ffba7158a92cdf2363d99053e84a882">&#9670;&#160;</a></span>om_time_intersection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_FORCEINLINE bool om_time_intersection </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>time1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>time1_duration</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>time2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>time2_duration</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>time intersection </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">time1</td><td>time1 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">time1_duration</td><td>time1_duration </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">time2</td><td>time2 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">time2_duration</td><td>time2_duration</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>whether is intersection </dd></dl>
+
+</div>
+</div>
+<a id="gaf488b905f571e2c81774a032c38797a3" name="gaf488b905f571e2c81774a032c38797a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf488b905f571e2c81774a032c38797a3">&#9670;&#160;</a></span>om_time_past()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_FORCEINLINE bool om_time_past </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>cur_time</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>whether time is pasted </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>time </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cur_time</td><td>current time</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>whether pasted </dd></dl>
+
+</div>
+</div>
+<a id="ga31c0a535b3147c605dff84cf08cd7389" name="ga31c0a535b3147c605dff84cf08cd7389"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga31c0a535b3147c605dff84cf08cd7389">&#9670;&#160;</a></span>om_time_pasting_time()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_FORCEINLINE uint32_t om_time_pasting_time </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>cur_time</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>time pasting time </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>time </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cur_time</td><td>current time</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0:pasted, &gt;0:will past time </dd></dl>
+
+</div>
+</div>
+<a id="ga077ff03f62eec211de5436e1fe98c406" name="ga077ff03f62eec211de5436e1fe98c406"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga077ff03f62eec211de5436e1fe98c406">&#9670;&#160;</a></span>om_time_to_safe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_FORCEINLINE uint32_t om_time_to_safe </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>convert time to safe </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>time</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>safe time </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+</div>
+</body>
+</html>

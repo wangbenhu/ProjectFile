@@ -1,0 +1,24 @@
+from build.building import *
+
+# device
+DEV_INCS = ['include']
+group = DefineGroup(name='device', srcs=None, incs=DEV_INCS)
+
+# startup
+DEV_SRCS = ['system_cm4f.c']
+DEV_LIBS = []
+if GetDepend('CONFIG_TOOL_CHAIN_GCC'):
+    DEV_SRCS += ['GCC/startup_cm4f.S']
+    DEV_LIBS += ['GCC/libcpft.a']
+elif GetDepend('CONFIG_TOOL_CHAIN_ARMCLANG'):
+    DEV_SRCS += ['GCC/startup_cm4f.S']
+    DEV_LIBS += ['ARM/libcpft.lib']
+elif GetDepend('CONFIG_TOOL_CHAIN_ICCARM'):
+    DEV_SRCS += ['IAR/startup_cm4f.S']
+    DEV_LIBS += ['IAR/libcpft.a']
+else:
+    raise Exception('Toolchain is not configured or SDK donot support the compiler')
+
+group += DefineGroup(name='startup', srcs=DEV_SRCS, incs=None, libs=DEV_LIBS)
+
+Return('group')

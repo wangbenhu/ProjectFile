@@ -1,0 +1,460 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>User Guide: lptim_multimode_config_t Struct Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+-->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">User Guide
+   </div>
+   <div id="projectbrief">Bluetooth Low Energy 5.4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('structlptim__multimode__config__t.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Data Fields</a>  </div>
+  <div class="headertitle"><div class="title">lptim_multimode_config_t Struct Reference<div class="ingroups"><a class="el" href="group__DRIVER.html">Driver</a> &raquo; <a class="el" href="group__LPTIMER.html">LPTIMER</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>LP Timer multimode Configuration.  
+ <a href="structlptim__multimode__config__t.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="drv__lptim_8h_source.html">drv_lptim.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:acd3cccef2d3cca75828c610562554506"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__LPTIMER.html#gaf3a91184525773d4d25c9476698c8bea">lptim_presc_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlptim__multimode__config__t.html#acd3cccef2d3cca75828c610562554506">presclar</a></td></tr>
+<tr class="memdesc:acd3cccef2d3cca75828c610562554506"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frequency Division.  <br /></td></tr>
+<tr class="separator:acd3cccef2d3cca75828c610562554506"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab61ccb49fd325afb559589b97f256184"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlptim__multimode__config__t.html#ab61ccb49fd325afb559589b97f256184">rep01_mode</a></td></tr>
+<tr class="memdesc:ab61ccb49fd325afb559589b97f256184"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reption mode01.  <br /></td></tr>
+<tr class="separator:ab61ccb49fd325afb559589b97f256184"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23d12e2ff449b415f71a415f78eb0624"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlptim__multimode__config__t.html#a23d12e2ff449b415f71a415f78eb0624">rep23_mode</a></td></tr>
+<tr class="memdesc:a23d12e2ff449b415f71a415f78eb0624"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reption mode23.  <br /></td></tr>
+<tr class="separator:a23d12e2ff449b415f71a415f78eb0624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05a55d33d637c84791f8a36d30526bd5"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlptim__multimode__config__t.html#a05a55d33d637c84791f8a36d30526bd5">rep0_val</a></td></tr>
+<tr class="memdesc:a05a55d33d637c84791f8a36d30526bd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reption value0.  <br /></td></tr>
+<tr class="separator:a05a55d33d637c84791f8a36d30526bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac555d8733befbdcc42604035b15251a"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlptim__multimode__config__t.html#aac555d8733befbdcc42604035b15251a">rep1_val</a></td></tr>
+<tr class="memdesc:aac555d8733befbdcc42604035b15251a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reption value1.  <br /></td></tr>
+<tr class="separator:aac555d8733befbdcc42604035b15251a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52f829e15399d7d86a5dc501beb08658"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlptim__multimode__config__t.html#a52f829e15399d7d86a5dc501beb08658">rep2_val</a></td></tr>
+<tr class="memdesc:a52f829e15399d7d86a5dc501beb08658"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reption value2.  <br /></td></tr>
+<tr class="separator:a52f829e15399d7d86a5dc501beb08658"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae812a1f25d13af1d5bb10d8e1a5e44a2"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlptim__multimode__config__t.html#ae812a1f25d13af1d5bb10d8e1a5e44a2">rep3_val</a></td></tr>
+<tr class="memdesc:ae812a1f25d13af1d5bb10d8e1a5e44a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reption value3.  <br /></td></tr>
+<tr class="separator:ae812a1f25d13af1d5bb10d8e1a5e44a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab02ef6ab0ea5672555980739552dfdfb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__LPTIMER.html#ga815d23ce9d9ef7b893332957ef7e50ae">lptim_top_en_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlptim__multimode__config__t.html#ab02ef6ab0ea5672555980739552dfdfb">top_en</a></td></tr>
+<tr class="memdesc:ab02ef6ab0ea5672555980739552dfdfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use TOP val or not.  <br /></td></tr>
+<tr class="separator:ab02ef6ab0ea5672555980739552dfdfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab56e1c3ff1ab5948001e6f4ed5118977"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlptim__multimode__config__t.html#ab56e1c3ff1ab5948001e6f4ed5118977">top_val</a></td></tr>
+<tr class="memdesc:ab56e1c3ff1ab5948001e6f4ed5118977"><td class="mdescLeft">&#160;</td><td class="mdescRight">TOP val.  <br /></td></tr>
+<tr class="separator:ab56e1c3ff1ab5948001e6f4ed5118977"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a184c5071932aa5113627c3b4249bb7fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__LPTIMER.html#gadcb3409606e5cc9a39206a18d830e100">lptim_buftop_en_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlptim__multimode__config__t.html#a184c5071932aa5113627c3b4249bb7fc">buftop_en</a></td></tr>
+<tr class="memdesc:a184c5071932aa5113627c3b4249bb7fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use BUFTOP val or not.  <br /></td></tr>
+<tr class="separator:a184c5071932aa5113627c3b4249bb7fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af744e7d9994445bb5044b71498db807d"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlptim__multimode__config__t.html#af744e7d9994445bb5044b71498db807d">buftop_val</a></td></tr>
+<tr class="memdesc:af744e7d9994445bb5044b71498db807d"><td class="mdescLeft">&#160;</td><td class="mdescRight">BUFTOP val.  <br /></td></tr>
+<tr class="separator:af744e7d9994445bb5044b71498db807d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf6593cf6d33f9c8e4f391bcc8933f58"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlptim__multimode__config__t.html#acf6593cf6d33f9c8e4f391bcc8933f58">compare_val0</a></td></tr>
+<tr class="memdesc:acf6593cf6d33f9c8e4f391bcc8933f58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output Compare value0.  <br /></td></tr>
+<tr class="separator:acf6593cf6d33f9c8e4f391bcc8933f58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a10cd9d66f59926e820b92ef734cac2"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlptim__multimode__config__t.html#a0a10cd9d66f59926e820b92ef734cac2">compare_val1</a></td></tr>
+<tr class="memdesc:a0a10cd9d66f59926e820b92ef734cac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output Compare value1.  <br /></td></tr>
+<tr class="separator:a0a10cd9d66f59926e820b92ef734cac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa06d6ba4995fecc9e9178ef1a0535b7c"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlptim__multimode__config__t.html#aa06d6ba4995fecc9e9178ef1a0535b7c">compare_val2</a></td></tr>
+<tr class="memdesc:aa06d6ba4995fecc9e9178ef1a0535b7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output Compare value2.  <br /></td></tr>
+<tr class="separator:aa06d6ba4995fecc9e9178ef1a0535b7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8956c16b7465764fc96b1c202376f4be"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlptim__multimode__config__t.html#a8956c16b7465764fc96b1c202376f4be">compare_val3</a></td></tr>
+<tr class="memdesc:a8956c16b7465764fc96b1c202376f4be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output Compare value3.  <br /></td></tr>
+<tr class="separator:a8956c16b7465764fc96b1c202376f4be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa8ff278855409b9436600a4659adedc"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlptim__multimode__config__t.html#afa8ff278855409b9436600a4659adedc">stop_mode</a></td></tr>
+<tr class="memdesc:afa8ff278855409b9436600a4659adedc"><td class="mdescLeft">&#160;</td><td class="mdescRight">stop mode  <br /></td></tr>
+<tr class="separator:afa8ff278855409b9436600a4659adedc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>LP Timer multimode Configuration. </p>
+</div><h2 class="groupheader">Field Documentation</h2>
+<a id="a184c5071932aa5113627c3b4249bb7fc" name="a184c5071932aa5113627c3b4249bb7fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a184c5071932aa5113627c3b4249bb7fc">&#9670;&#160;</a></span>buftop_en</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__LPTIMER.html#gadcb3409606e5cc9a39206a18d830e100">lptim_buftop_en_t</a> lptim_multimode_config_t::buftop_en</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Use BUFTOP val or not. </p>
+
+</div>
+</div>
+<a id="af744e7d9994445bb5044b71498db807d" name="af744e7d9994445bb5044b71498db807d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af744e7d9994445bb5044b71498db807d">&#9670;&#160;</a></span>buftop_val</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t lptim_multimode_config_t::buftop_val</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BUFTOP val. </p>
+
+</div>
+</div>
+<a id="acf6593cf6d33f9c8e4f391bcc8933f58" name="acf6593cf6d33f9c8e4f391bcc8933f58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf6593cf6d33f9c8e4f391bcc8933f58">&#9670;&#160;</a></span>compare_val0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t lptim_multimode_config_t::compare_val0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Output Compare value0. </p>
+
+</div>
+</div>
+<a id="a0a10cd9d66f59926e820b92ef734cac2" name="a0a10cd9d66f59926e820b92ef734cac2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a10cd9d66f59926e820b92ef734cac2">&#9670;&#160;</a></span>compare_val1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t lptim_multimode_config_t::compare_val1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Output Compare value1. </p>
+
+</div>
+</div>
+<a id="aa06d6ba4995fecc9e9178ef1a0535b7c" name="aa06d6ba4995fecc9e9178ef1a0535b7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa06d6ba4995fecc9e9178ef1a0535b7c">&#9670;&#160;</a></span>compare_val2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t lptim_multimode_config_t::compare_val2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Output Compare value2. </p>
+
+</div>
+</div>
+<a id="a8956c16b7465764fc96b1c202376f4be" name="a8956c16b7465764fc96b1c202376f4be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8956c16b7465764fc96b1c202376f4be">&#9670;&#160;</a></span>compare_val3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t lptim_multimode_config_t::compare_val3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Output Compare value3. </p>
+
+</div>
+</div>
+<a id="acd3cccef2d3cca75828c610562554506" name="acd3cccef2d3cca75828c610562554506"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd3cccef2d3cca75828c610562554506">&#9670;&#160;</a></span>presclar</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__LPTIMER.html#gaf3a91184525773d4d25c9476698c8bea">lptim_presc_t</a> lptim_multimode_config_t::presclar</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Frequency Division. </p>
+
+</div>
+</div>
+<a id="ab61ccb49fd325afb559589b97f256184" name="ab61ccb49fd325afb559589b97f256184"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab61ccb49fd325afb559589b97f256184">&#9670;&#160;</a></span>rep01_mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t lptim_multimode_config_t::rep01_mode</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reption mode01. </p>
+
+</div>
+</div>
+<a id="a05a55d33d637c84791f8a36d30526bd5" name="a05a55d33d637c84791f8a36d30526bd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05a55d33d637c84791f8a36d30526bd5">&#9670;&#160;</a></span>rep0_val</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t lptim_multimode_config_t::rep0_val</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reption value0. </p>
+
+</div>
+</div>
+<a id="aac555d8733befbdcc42604035b15251a" name="aac555d8733befbdcc42604035b15251a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac555d8733befbdcc42604035b15251a">&#9670;&#160;</a></span>rep1_val</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t lptim_multimode_config_t::rep1_val</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reption value1. </p>
+
+</div>
+</div>
+<a id="a23d12e2ff449b415f71a415f78eb0624" name="a23d12e2ff449b415f71a415f78eb0624"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23d12e2ff449b415f71a415f78eb0624">&#9670;&#160;</a></span>rep23_mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t lptim_multimode_config_t::rep23_mode</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reption mode23. </p>
+
+</div>
+</div>
+<a id="a52f829e15399d7d86a5dc501beb08658" name="a52f829e15399d7d86a5dc501beb08658"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52f829e15399d7d86a5dc501beb08658">&#9670;&#160;</a></span>rep2_val</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t lptim_multimode_config_t::rep2_val</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reption value2. </p>
+
+</div>
+</div>
+<a id="ae812a1f25d13af1d5bb10d8e1a5e44a2" name="ae812a1f25d13af1d5bb10d8e1a5e44a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae812a1f25d13af1d5bb10d8e1a5e44a2">&#9670;&#160;</a></span>rep3_val</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t lptim_multimode_config_t::rep3_val</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reption value3. </p>
+
+</div>
+</div>
+<a id="afa8ff278855409b9436600a4659adedc" name="afa8ff278855409b9436600a4659adedc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa8ff278855409b9436600a4659adedc">&#9670;&#160;</a></span>stop_mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t lptim_multimode_config_t::stop_mode</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>stop mode </p>
+
+</div>
+</div>
+<a id="ab02ef6ab0ea5672555980739552dfdfb" name="ab02ef6ab0ea5672555980739552dfdfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab02ef6ab0ea5672555980739552dfdfb">&#9670;&#160;</a></span>top_en</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__LPTIMER.html#ga815d23ce9d9ef7b893332957ef7e50ae">lptim_top_en_t</a> lptim_multimode_config_t::top_en</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Use TOP val or not. </p>
+
+</div>
+</div>
+<a id="ab56e1c3ff1ab5948001e6f4ed5118977" name="ab56e1c3ff1ab5948001e6f4ed5118977"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab56e1c3ff1ab5948001e6f4ed5118977">&#9670;&#160;</a></span>top_val</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t lptim_multimode_config_t::top_val</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TOP val. </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>/mnt/data/yaoyufeng/work.svnrepo/om6627x/om6627/trunk/SDK/hal/driver/source/<a class="el" href="drv__lptim_8h_source.html">drv_lptim.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+</div>
+</body>
+</html>

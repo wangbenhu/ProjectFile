@@ -1,0 +1,648 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>User Guide: LCD</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+-->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">User Guide
+   </div>
+   <div id="projectbrief">Bluetooth Low Energy 5.4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__LCD.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">LCD<div class="ingroups"><a class="el" href="group__DRIVER.html">Driver</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>LCD driver.  
+<a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__config__t.html">lcd_config_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure of LCD configuration.  <a href="structlcd__config__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__cs__config__t.html">lcd_cs_config_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure of LCD CS configuration.  <a href="structlcd__cs__config__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ga28f0c9567c8066862b8e1da356f9ce7a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LCD.html#ga28f0c9567c8066862b8e1da356f9ce7a">lcd_control_t</a> { <br />
+&#160;&#160;<a class="el" href="group__LCD.html#gga28f0c9567c8066862b8e1da356f9ce7aabf648b55c262d277e51d4de707195e94">LCD_CONTROL_SET_DATA_WIDTH</a> = 0U
+, <a class="el" href="group__LCD.html#gga28f0c9567c8066862b8e1da356f9ce7aa9448774d546e9a4614814d0f50139f97">LCD_CONTROL_TX_DATA_MODE</a>
+, <a class="el" href="group__LCD.html#gga28f0c9567c8066862b8e1da356f9ce7aa1dbfa4135fd839ce7bd5aad5af140bef">LCD_CONTROL_SET_CMD_BIT</a>
+, <a class="el" href="group__LCD.html#gga28f0c9567c8066862b8e1da356f9ce7aa97d0f74d043c34fad0f9a6bf96e8e39f">LCD_CONTROL_SET_DATA_BIT</a>
+, <br />
+&#160;&#160;<a class="el" href="group__LCD.html#gga28f0c9567c8066862b8e1da356f9ce7aa5b089354fca3e929eb2c7ae610f66596">LCD_CONTROL_SET_BUF_MODE_666_888</a>
+, <a class="el" href="group__LCD.html#gga28f0c9567c8066862b8e1da356f9ce7aaab19b66024053f9ba972a130ec6e3bfc">LCD_CONTROL_SET_BUF_MODE_COMMON</a>
+, <a class="el" href="group__LCD.html#gga28f0c9567c8066862b8e1da356f9ce7aa368fb985b27445f1d57f7c9b2479bb25">LCD_CONTROL_KEEP_CS</a>
+, <a class="el" href="group__LCD.html#gga28f0c9567c8066862b8e1da356f9ce7aa97323b4059bee64146d35a4b0c9f89ff">LCD_CONTROL_RELEASE_CS</a>
+, <br />
+&#160;&#160;<a class="el" href="group__LCD.html#gga28f0c9567c8066862b8e1da356f9ce7aa8c76dd499e08d5f202a4c9db26cdf5a6">LCD_CONTROL_SET_DUMMY_CYCLES</a>
+, <a class="el" href="group__LCD.html#gga28f0c9567c8066862b8e1da356f9ce7aa3fb6a3fd50194b2674c240a8987978b8">LCD_CONTROL_SET_CS_CONFIG</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga28f0c9567c8066862b8e1da356f9ce7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Typedef of LCD control enumerate.  <a href="group__LCD.html#ga28f0c9567c8066862b8e1da356f9ce7a">More...</a><br /></td></tr>
+<tr class="separator:ga28f0c9567c8066862b8e1da356f9ce7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga50ee26a5a5507a5c5c6c259ec4ed59f3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LCD.html#ga50ee26a5a5507a5c5c6c259ec4ed59f3">lcd_rgb_mode_t</a> { <a class="el" href="group__LCD.html#gga50ee26a5a5507a5c5c6c259ec4ed59f3a75a9f70079f4580bfb687718a7aaa2b2">LCD_RGB_MODE_565</a> = 1U
+, <a class="el" href="group__LCD.html#gga50ee26a5a5507a5c5c6c259ec4ed59f3a07ce1f0e4577d579f42207268761d908">LCD_RGB_MODE_666</a> = 2U
+, <a class="el" href="group__LCD.html#gga50ee26a5a5507a5c5c6c259ec4ed59f3a9e0b82eeac10e55bed2f539ab43600ad">LCD_RGB_MODE_888</a> = 3U
+ }</td></tr>
+<tr class="memdesc:ga50ee26a5a5507a5c5c6c259ec4ed59f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Typedef of LCD rgb mode enumerate.  <a href="group__LCD.html#ga50ee26a5a5507a5c5c6c259ec4ed59f3">More...</a><br /></td></tr>
+<tr class="separator:ga50ee26a5a5507a5c5c6c259ec4ed59f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaf21d5fadd7105e6ac7436d9a8f9d958"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LCD.html#gaaf21d5fadd7105e6ac7436d9a8f9d958">lcd_data_mode_t</a> { <br />
+&#160;&#160;<a class="el" href="group__LCD.html#ggaaf21d5fadd7105e6ac7436d9a8f9d958ac6ed63a7e40c8e21c43c31c0be5dc4f6">LCD_FLASH_LIKE</a> = 0U
+, <a class="el" href="group__LCD.html#ggaaf21d5fadd7105e6ac7436d9a8f9d958a1ac9225a4fe2d076019301de06d9d5b7">LCD_3WM1</a> = 1U
+, <a class="el" href="group__LCD.html#ggaaf21d5fadd7105e6ac7436d9a8f9d958a2ee41c45786f3695bba0aa9f952be1b8">LCD_3WM2</a> = 2U
+, <a class="el" href="group__LCD.html#ggaaf21d5fadd7105e6ac7436d9a8f9d958ab845df2540d6f33abf82ad6fe985f335">LCD_4WM1</a> = 3U
+, <br />
+&#160;&#160;<a class="el" href="group__LCD.html#ggaaf21d5fadd7105e6ac7436d9a8f9d958abc76671b16c21cc1bd52d4719777b280">LCD_4WM2</a> = 4U
+<br />
+ }</td></tr>
+<tr class="memdesc:gaaf21d5fadd7105e6ac7436d9a8f9d958"><td class="mdescLeft">&#160;</td><td class="mdescRight">Typedef of LCD data mode enumerate.  <a href="group__LCD.html#gaaf21d5fadd7105e6ac7436d9a8f9d958">More...</a><br /></td></tr>
+<tr class="separator:gaaf21d5fadd7105e6ac7436d9a8f9d958"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga627c70c10763b6193ffa1ce56f9d095b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LCD.html#ga627c70c10763b6193ffa1ce56f9d095b">lcd_spi_mode_t</a> { <a class="el" href="group__LCD.html#gga627c70c10763b6193ffa1ce56f9d095babab16cb378ad95552fa3c88eda2e3fbe">LCD_SPI_MODE_0</a> = 0U
+, <a class="el" href="group__LCD.html#gga627c70c10763b6193ffa1ce56f9d095ba7992f87934dbb1e37be8d63a3e3ddad9">LCD_SPI_MODE_1</a> = 1U
+, <a class="el" href="group__LCD.html#gga627c70c10763b6193ffa1ce56f9d095baebc366ec0fc83d6d6795d6da1a8134e0">LCD_SPI_MODE_2</a> = 2U
+, <a class="el" href="group__LCD.html#gga627c70c10763b6193ffa1ce56f9d095ba6c0ed9e14b8e1d3695f695b1cb1151c0">LCD_SPI_MODE_3</a> = 3U
+ }</td></tr>
+<tr class="memdesc:ga627c70c10763b6193ffa1ce56f9d095b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Typedef of LCD spi mode enumerate.  <a href="group__LCD.html#ga627c70c10763b6193ffa1ce56f9d095b">More...</a><br /></td></tr>
+<tr class="separator:ga627c70c10763b6193ffa1ce56f9d095b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:gacc366c0250f91d263be726277d74bc6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LCD.html#gacc366c0250f91d263be726277d74bc6c">drv_lcd_init</a> (const <a class="el" href="structlcd__config__t.html">lcd_config_t</a> *config)</td></tr>
+<tr class="memdesc:gacc366c0250f91d263be726277d74bc6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">lcd init  <br /></td></tr>
+<tr class="separator:gacc366c0250f91d263be726277d74bc6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga782572d27a61da2ae70449d2016a4f71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LCD.html#ga782572d27a61da2ae70449d2016a4f71">drv_lcd_isr_callback</a> (void)</td></tr>
+<tr class="memdesc:ga782572d27a61da2ae70449d2016a4f71"><td class="mdescLeft">&#160;</td><td class="mdescRight">The interrupt callback for LCD driver. It is a weak function. User should define their own callback in user file, other than modify it in the LCD driver.  <br /></td></tr>
+<tr class="separator:ga782572d27a61da2ae70449d2016a4f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8299c48a780fc62847aae430d5bc57e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LCD.html#ga8299c48a780fc62847aae430d5bc57e2">drv_lcd_write</a> (uint8_t *cmd, uint8_t cmd_bits, const uint8_t *data, uint16_t data_len)</td></tr>
+<tr class="memdesc:ga8299c48a780fc62847aae430d5bc57e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">lcd write  <br /></td></tr>
+<tr class="separator:ga8299c48a780fc62847aae430d5bc57e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga68b4453d00a9b070e530e49c34b498e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LCD.html#ga68b4453d00a9b070e530e49c34b498e7">drv_lcd_write_int</a> (uint8_t *cmd, uint8_t cmd_bits, uint8_t *data, uint16_t data_len)</td></tr>
+<tr class="memdesc:ga68b4453d00a9b070e530e49c34b498e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">lcd write int  <br /></td></tr>
+<tr class="separator:ga68b4453d00a9b070e530e49c34b498e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe129f73e729ffe64b580aac7a81bfde"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LCD.html#gabe129f73e729ffe64b580aac7a81bfde">drv_lcd_read</a> (uint8_t *cmd, uint8_t cmd_bits, uint8_t *data, uint16_t data_len)</td></tr>
+<tr class="memdesc:gabe129f73e729ffe64b580aac7a81bfde"><td class="mdescLeft">&#160;</td><td class="mdescRight">lcd read  <br /></td></tr>
+<tr class="separator:gabe129f73e729ffe64b580aac7a81bfde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf285eda41980c2f8e733aa0968173421"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LCD.html#gaf285eda41980c2f8e733aa0968173421">drv_lcd_read_int</a> (uint8_t *cmd, uint8_t cmd_bits, uint8_t *data, uint16_t data_len)</td></tr>
+<tr class="memdesc:gaf285eda41980c2f8e733aa0968173421"><td class="mdescLeft">&#160;</td><td class="mdescRight">lcd read int  <br /></td></tr>
+<tr class="separator:gaf285eda41980c2f8e733aa0968173421"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga08a62770f1e8ab712fec5e0e9e9b427d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LCD.html#ga08a62770f1e8ab712fec5e0e9e9b427d">drv_lcd_control</a> (<a class="el" href="group__LCD.html#ga28f0c9567c8066862b8e1da356f9ce7a">lcd_control_t</a> control, void *argu)</td></tr>
+<tr class="memdesc:ga08a62770f1e8ab712fec5e0e9e9b427d"><td class="mdescLeft">&#160;</td><td class="mdescRight">control of lcd  <br /></td></tr>
+<tr class="separator:ga08a62770f1e8ab712fec5e0e9e9b427d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5e54a5e2c98b182af4e2ea9ccb63d956"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LCD.html#ga5e54a5e2c98b182af4e2ea9ccb63d956">drv_lcd_isr</a> (void)</td></tr>
+<tr class="memdesc:ga5e54a5e2c98b182af4e2ea9ccb63d956"><td class="mdescLeft">&#160;</td><td class="mdescRight">lcd interrupt service routine  <br /></td></tr>
+<tr class="separator:ga5e54a5e2c98b182af4e2ea9ccb63d956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>LCD driver. </p>
+<p>LCD driver apis and typedefs header file</p>
+<dl class="section version"><dt>Version</dt><dd>Version 1.0<ul>
+<li>Initial release </li>
+</ul>
+</dd></dl>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ga28f0c9567c8066862b8e1da356f9ce7a" name="ga28f0c9567c8066862b8e1da356f9ce7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga28f0c9567c8066862b8e1da356f9ce7a">&#9670;&#160;</a></span>lcd_control_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__LCD.html#ga28f0c9567c8066862b8e1da356f9ce7a">lcd_control_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Typedef of LCD control enumerate. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga28f0c9567c8066862b8e1da356f9ce7aabf648b55c262d277e51d4de707195e94" name="gga28f0c9567c8066862b8e1da356f9ce7aabf648b55c262d277e51d4de707195e94"></a>LCD_CONTROL_SET_DATA_WIDTH&#160;</td><td class="fielddoc"><p>With 1 argument range in 8/16/32 8: common command and data, 16: for rgb565 32: for rgb666 or rgb888 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga28f0c9567c8066862b8e1da356f9ce7aa9448774d546e9a4614814d0f50139f97" name="gga28f0c9567c8066862b8e1da356f9ce7aa9448774d546e9a4614814d0f50139f97"></a>LCD_CONTROL_TX_DATA_MODE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga28f0c9567c8066862b8e1da356f9ce7aa1dbfa4135fd839ce7bd5aad5af140bef" name="gga28f0c9567c8066862b8e1da356f9ce7aa1dbfa4135fd839ce7bd5aad5af140bef"></a>LCD_CONTROL_SET_CMD_BIT&#160;</td><td class="fielddoc"><p>with 1 argument, range in 1/2/4, x lines to send command </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga28f0c9567c8066862b8e1da356f9ce7aa97d0f74d043c34fad0f9a6bf96e8e39f" name="gga28f0c9567c8066862b8e1da356f9ce7aa97d0f74d043c34fad0f9a6bf96e8e39f"></a>LCD_CONTROL_SET_DATA_BIT&#160;</td><td class="fielddoc"><p>with 1 argument, range in 1/2/4, x lines to data bits </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga28f0c9567c8066862b8e1da356f9ce7aa5b089354fca3e929eb2c7ae610f66596" name="gga28f0c9567c8066862b8e1da356f9ce7aa5b089354fca3e929eb2c7ae610f66596"></a>LCD_CONTROL_SET_BUF_MODE_666_888&#160;</td><td class="fielddoc"><p>No argument, for rgb666 or rgb888, trule value is 3 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga28f0c9567c8066862b8e1da356f9ce7aaab19b66024053f9ba972a130ec6e3bfc" name="gga28f0c9567c8066862b8e1da356f9ce7aaab19b66024053f9ba972a130ec6e3bfc"></a>LCD_CONTROL_SET_BUF_MODE_COMMON&#160;</td><td class="fielddoc"><p>No argument, value is 4 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga28f0c9567c8066862b8e1da356f9ce7aa368fb985b27445f1d57f7c9b2479bb25" name="gga28f0c9567c8066862b8e1da356f9ce7aa368fb985b27445f1d57f7c9b2479bb25"></a>LCD_CONTROL_KEEP_CS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga28f0c9567c8066862b8e1da356f9ce7aa97323b4059bee64146d35a4b0c9f89ff" name="gga28f0c9567c8066862b8e1da356f9ce7aa97323b4059bee64146d35a4b0c9f89ff"></a>LCD_CONTROL_RELEASE_CS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga28f0c9567c8066862b8e1da356f9ce7aa8c76dd499e08d5f202a4c9db26cdf5a6" name="gga28f0c9567c8066862b8e1da356f9ce7aa8c76dd499e08d5f202a4c9db26cdf5a6"></a>LCD_CONTROL_SET_DUMMY_CYCLES&#160;</td><td class="fielddoc"><p>With 1 argument, dummy cycles. range in[0, 0x7F] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga28f0c9567c8066862b8e1da356f9ce7aa3fb6a3fd50194b2674c240a8987978b8" name="gga28f0c9567c8066862b8e1da356f9ce7aa3fb6a3fd50194b2674c240a8987978b8"></a>LCD_CONTROL_SET_CS_CONFIG&#160;</td><td class="fielddoc"><p>With 1 argument, pointer to <a class="el" href="structlcd__cs__config__t.html" title="Structure of LCD CS configuration.">lcd_cs_config_t</a> </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gaaf21d5fadd7105e6ac7436d9a8f9d958" name="gaaf21d5fadd7105e6ac7436d9a8f9d958"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaf21d5fadd7105e6ac7436d9a8f9d958">&#9670;&#160;</a></span>lcd_data_mode_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__LCD.html#gaaf21d5fadd7105e6ac7436d9a8f9d958">lcd_data_mode_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Typedef of LCD data mode enumerate. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggaaf21d5fadd7105e6ac7436d9a8f9d958ac6ed63a7e40c8e21c43c31c0be5dc4f6" name="ggaaf21d5fadd7105e6ac7436d9a8f9d958ac6ed63a7e40c8e21c43c31c0be5dc4f6"></a>LCD_FLASH_LIKE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaaf21d5fadd7105e6ac7436d9a8f9d958a1ac9225a4fe2d076019301de06d9d5b7" name="ggaaf21d5fadd7105e6ac7436d9a8f9d958a1ac9225a4fe2d076019301de06d9d5b7"></a>LCD_3WM1&#160;</td><td class="fielddoc"><p>target lcd like flash </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaaf21d5fadd7105e6ac7436d9a8f9d958a2ee41c45786f3695bba0aa9f952be1b8" name="ggaaf21d5fadd7105e6ac7436d9a8f9d958a2ee41c45786f3695bba0aa9f952be1b8"></a>LCD_3WM2&#160;</td><td class="fielddoc"><p>target lcd using one more bit in cmd/data to differentiate whether it is cmd or data </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaaf21d5fadd7105e6ac7436d9a8f9d958ab845df2540d6f33abf82ad6fe985f335" name="ggaaf21d5fadd7105e6ac7436d9a8f9d958ab845df2540d6f33abf82ad6fe985f335"></a>LCD_4WM1&#160;</td><td class="fielddoc"><p>target lcd 3WM1 can enable data_2_lan to send data in 2 lines, 3WM2 can not. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaaf21d5fadd7105e6ac7436d9a8f9d958abc76671b16c21cc1bd52d4719777b280" name="ggaaf21d5fadd7105e6ac7436d9a8f9d958abc76671b16c21cc1bd52d4719777b280"></a>LCD_4WM2&#160;</td><td class="fielddoc"><p>target lcd using io2 to differentiate whether it is cmd or data </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga50ee26a5a5507a5c5c6c259ec4ed59f3" name="ga50ee26a5a5507a5c5c6c259ec4ed59f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga50ee26a5a5507a5c5c6c259ec4ed59f3">&#9670;&#160;</a></span>lcd_rgb_mode_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__LCD.html#ga50ee26a5a5507a5c5c6c259ec4ed59f3">lcd_rgb_mode_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Typedef of LCD rgb mode enumerate. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga50ee26a5a5507a5c5c6c259ec4ed59f3a75a9f70079f4580bfb687718a7aaa2b2" name="gga50ee26a5a5507a5c5c6c259ec4ed59f3a75a9f70079f4580bfb687718a7aaa2b2"></a>LCD_RGB_MODE_565&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga50ee26a5a5507a5c5c6c259ec4ed59f3a07ce1f0e4577d579f42207268761d908" name="gga50ee26a5a5507a5c5c6c259ec4ed59f3a07ce1f0e4577d579f42207268761d908"></a>LCD_RGB_MODE_666&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga50ee26a5a5507a5c5c6c259ec4ed59f3a9e0b82eeac10e55bed2f539ab43600ad" name="gga50ee26a5a5507a5c5c6c259ec4ed59f3a9e0b82eeac10e55bed2f539ab43600ad"></a>LCD_RGB_MODE_888&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga627c70c10763b6193ffa1ce56f9d095b" name="ga627c70c10763b6193ffa1ce56f9d095b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga627c70c10763b6193ffa1ce56f9d095b">&#9670;&#160;</a></span>lcd_spi_mode_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__LCD.html#ga627c70c10763b6193ffa1ce56f9d095b">lcd_spi_mode_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Typedef of LCD spi mode enumerate. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga627c70c10763b6193ffa1ce56f9d095babab16cb378ad95552fa3c88eda2e3fbe" name="gga627c70c10763b6193ffa1ce56f9d095babab16cb378ad95552fa3c88eda2e3fbe"></a>LCD_SPI_MODE_0&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga627c70c10763b6193ffa1ce56f9d095ba7992f87934dbb1e37be8d63a3e3ddad9" name="gga627c70c10763b6193ffa1ce56f9d095ba7992f87934dbb1e37be8d63a3e3ddad9"></a>LCD_SPI_MODE_1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga627c70c10763b6193ffa1ce56f9d095baebc366ec0fc83d6d6795d6da1a8134e0" name="gga627c70c10763b6193ffa1ce56f9d095baebc366ec0fc83d6d6795d6da1a8134e0"></a>LCD_SPI_MODE_2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga627c70c10763b6193ffa1ce56f9d095ba6c0ed9e14b8e1d3695f695b1cb1151c0" name="gga627c70c10763b6193ffa1ce56f9d095ba6c0ed9e14b8e1d3695f695b1cb1151c0"></a>LCD_SPI_MODE_3&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga08a62770f1e8ab712fec5e0e9e9b427d" name="ga08a62770f1e8ab712fec5e0e9e9b427d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga08a62770f1e8ab712fec5e0e9e9b427d">&#9670;&#160;</a></span>drv_lcd_control()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_lcd_control </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__LCD.html#ga28f0c9567c8066862b8e1da356f9ce7a">lcd_control_t</a>&#160;</td>
+          <td class="paramname"><em>control</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>argu</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>control of lcd </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">control</td><td>control of lcd </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">argu</td><td>config param </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gacc366c0250f91d263be726277d74bc6c" name="gacc366c0250f91d263be726277d74bc6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacc366c0250f91d263be726277d74bc6c">&#9670;&#160;</a></span>drv_lcd_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_lcd_init </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structlcd__config__t.html">lcd_config_t</a> *&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>lcd init </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td>config lcd </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga5e54a5e2c98b182af4e2ea9ccb63d956" name="ga5e54a5e2c98b182af4e2ea9ccb63d956"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5e54a5e2c98b182af4e2ea9ccb63d956">&#9670;&#160;</a></span>drv_lcd_isr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_lcd_isr </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>lcd interrupt service routine </p>
+
+</div>
+</div>
+<a id="ga782572d27a61da2ae70449d2016a4f71" name="ga782572d27a61da2ae70449d2016a4f71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga782572d27a61da2ae70449d2016a4f71">&#9670;&#160;</a></span>drv_lcd_isr_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_lcd_isr_callback </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The interrupt callback for LCD driver. It is a weak function. User should define their own callback in user file, other than modify it in the LCD driver. </p>
+
+</div>
+</div>
+<a id="gabe129f73e729ffe64b580aac7a81bfde" name="gabe129f73e729ffe64b580aac7a81bfde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabe129f73e729ffe64b580aac7a81bfde">&#9670;&#160;</a></span>drv_lcd_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_lcd_read </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>cmd_bits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>data_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>lcd read </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd</td><td>command to be send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd_bits</td><td>how many command bit to be send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>data to be read </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_len</td><td>how many data to be read </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaf285eda41980c2f8e733aa0968173421" name="gaf285eda41980c2f8e733aa0968173421"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf285eda41980c2f8e733aa0968173421">&#9670;&#160;</a></span>drv_lcd_read_int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_lcd_read_int </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>cmd_bits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>data_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>lcd read int </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd</td><td>command to be send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd_bits</td><td>how many command bit to be send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>data to be read </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_len</td><td>how many data to be read </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga8299c48a780fc62847aae430d5bc57e2" name="ga8299c48a780fc62847aae430d5bc57e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8299c48a780fc62847aae430d5bc57e2">&#9670;&#160;</a></span>drv_lcd_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_lcd_write </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>cmd_bits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>data_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>lcd write </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd</td><td>command to be send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd_bits</td><td>how many command bit to be send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>data to be send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_len</td><td>how many data to be send </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga68b4453d00a9b070e530e49c34b498e7" name="ga68b4453d00a9b070e530e49c34b498e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga68b4453d00a9b070e530e49c34b498e7">&#9670;&#160;</a></span>drv_lcd_write_int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_lcd_write_int </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>cmd_bits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>data_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>lcd write int </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd</td><td>command to be send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd_bits</td><td>how many command bit to be send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>data to be send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_len</td><td>how many data to be send </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+</div>
+</body>
+</html>

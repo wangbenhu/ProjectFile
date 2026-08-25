@@ -1,0 +1,486 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>User Guide: BLE API Usage</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+-->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">User Guide
+   </div>
+   <div id="projectbrief">Bluetooth Low Energy 5.4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('BLE_API_USAGE.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">BLE API Usage </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>Table of Contents</h3>
+<ul><li class="level1"><a href="#autotoc_md98">BLE interface example</a><ul><li class="level2"><a href="#autotoc_md99">BLE callback registration and response</a><ul><ul><li class="level4"><a href="#autotoc_md100">related interface</a></li>
+</ul>
+</ul>
+</li>
+</ul>
+</li>
+<li class="level1"><a href="#autotoc_md101">GAP interface example</a><ul><li class="level2"><a href="#autotoc_md102">GAP settings accept list</a><ul><ul><li class="level4"><a href="#autotoc_md103">Interfaces used</a></li>
+</ul>
+</ul>
+</li>
+<li class="level2"><a href="#autotoc_md104">GAP scanning process</a><ul><ul><li class="level4"><a href="#autotoc_md105">Interfaces used</a></li>
+<li class="level4"><a href="#autotoc_md106">Events used</a></li>
+</ul>
+</ul>
+</li>
+<li class="level2"><a href="#autotoc_md108">GAP advertise process</a><ul><ul><li class="level4"><a href="#autotoc_md109">Interfaces used</a></li>
+<li class="level4"><a href="#autotoc_md110">Events used</a></li>
+</ul>
+</ul>
+</li>
+<li class="level2"><a href="#autotoc_md111">GAP connection process</a><ul><ul><li class="level4"><a href="#autotoc_md112">Interfaces used</a></li>
+<li class="level4"><a href="#autotoc_md113">Events used</a></li>
+</ul>
+</ul>
+</li>
+<li class="level2"><a href="#autotoc_md114">GAP pairing process</a><ul><ul><li class="level4"><a href="#autotoc_md115">Interfaces used</a></li>
+<li class="level4"><a href="#autotoc_md116">Events used</a></li>
+</ul>
+</ul>
+</li>
+<li class="level2"><a href="#autotoc_md117">GAP encryption process</a><ul><ul><li class="level4"><a href="#autotoc_md118">Interfaces used</a></li>
+<li class="level4"><a href="#autotoc_md119">Events used</a></li>
+</ul>
+</ul>
+</li>
+<li class="level2"><a href="#autotoc_md120">GAP connection parameter update process</a><ul><ul><li class="level4"><a href="#autotoc_md121">Interfaces used</a></li>
+<li class="level4"><a href="#autotoc_md122">Events used</a></li>
+</ul>
+</ul>
+</li>
+<li class="level2"><a href="#autotoc_md123">GAP data length update process</a><ul><ul><li class="level4"><a href="#autotoc_md124">Interfaces used</a></li>
+<li class="level4"><a href="#autotoc_md125">Events used</a></li>
+</ul>
+</ul>
+</li>
+<li class="level2"><a href="#autotoc_md126">GAP PHY update process</a><ul><ul><li class="level4"><a href="#autotoc_md127">Interfaces used</a></li>
+<li class="level4"><a href="#autotoc_md128">Events used</a></li>
+</ul>
+</ul>
+</li>
+<li class="level2"><a href="#autotoc_md129">GAP disconnection process</a><ul><ul><li class="level4"><a href="#autotoc_md130">Interfaces used</a></li>
+<li class="level4"><a href="#autotoc_md131">Events used</a></li>
+</ul>
+</ul>
+</li>
+</ul>
+</li>
+<li class="level1"><a href="#autotoc_md132">GATT interface example</a><ul><li class="level2"><a href="#autotoc_md133">GATT MTU exchange process</a><ul><ul><li class="level4"><a href="#autotoc_md134">Interfaces used</a></li>
+<li class="level4"><a href="#autotoc_md135">Events used</a></li>
+</ul>
+</ul>
+</li>
+<li class="level2"><a href="#autotoc_md136">GATT service discovery process</a><ul><ul><li class="level4"><a href="#autotoc_md137">Interfaces used</a></li>
+<li class="level4"><a href="#autotoc_md138">Events used</a></li>
+</ul>
+</ul>
+</li>
+<li class="level2"><a href="#autotoc_md139">GATT Notification/Indication process</a><ul><ul><li class="level4"><a href="#autotoc_md140">Interfaces used</a></li>
+<li class="level4"><a href="#autotoc_md141">Events used</a></li>
+</ul>
+</ul>
+</li>
+<li class="level2"><a href="#autotoc_md142">GATT Read/Write process</a><ul><ul><li class="level4"><a href="#autotoc_md143">Interfaces used</a></li>
+<li class="level4"><a href="#autotoc_md144">Events used</a></li>
+</ul>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="textblock"><p>Introduce the functions and usage of OMBLE interface.</p>
+<p>GAP interface, please refer to <a class="el" href="group__OMBLE__GAP.html">Generic Access Profile (GAP)</a></p>
+<p>GATT interface, please refer to <a class="el" href="group__OMBLE__GAP.html">Generic Access Profile (GAP)</a></p>
+<h1><a class="anchor" id="autotoc_md98"></a>
+BLE interface example</h1>
+<h2><a class="anchor" id="autotoc_md99"></a>
+BLE callback registration and response</h2>
+<h4><a class="anchor" id="autotoc_md100"></a>
+related interface</h4>
+<ul>
+<li><a class="el" href="group__OMBLE__COMMON.html#ga0cfbc0b14f7bc061e119c46cb666ffdd">ob_event_callback_reg</a></li>
+<li><a class="el" href="group__OMBLE__COMMON.html#gab6e71c21671126fc81845189eb9a244b">ob_event_callback_unreg</a></li>
+<li><a class="el" href="group__OMBLE__COMMON.html#ga5aa32dbcb5fcb6687ef7da8e2e50a03b">ob_event_abort</a></li>
+<li><a class="el" href="group__OMBLE__COMMON.html#gafa5e513755397a1d534b88857e1d8caf">ob_opt_cfg_set</a></li>
+<li><a class="el" href="group__OMBLE__COMMON.html#ga63e1ee69af295076a36014e9152dcb84">ob_opt_cfg_get</a></li>
+</ul>
+<div class="plantumlgraph">
+<img src="obapi_ble.png" />
+</div>
+<h1><a class="anchor" id="autotoc_md101"></a>
+GAP interface example</h1>
+<h2><a class="anchor" id="autotoc_md102"></a>
+GAP settings accept list</h2>
+<h4><a class="anchor" id="autotoc_md103"></a>
+Interfaces used</h4>
+<ul>
+<li><a class="el" href="group__OMBLE__GAP.html#ga86b486d3dfa2d4ebe47de276f6c32050">ob_gap_accept_list_set</a></li>
+</ul>
+<div class="plantumlgraph">
+<img src="obapi_gap_accept_filter.png" />
+</div>
+<h2><a class="anchor" id="autotoc_md104"></a>
+GAP scanning process</h2>
+<h4><a class="anchor" id="autotoc_md105"></a>
+Interfaces used</h4>
+<ul>
+<li><a class="el" href="group__OMBLE__GAP.html#ga59abb1e9c6473bc36a017dbce4ce1e4d">ob_gap_scan_start</a></li>
+</ul>
+<h4><a class="anchor" id="autotoc_md106"></a>
+Events used</h4>
+<ul>
+<li><a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca1513137e6b8df739999af0b7dba1115d">OB_GAP_EVT_ADV_REPORT</a></li>
+</ul>
+<div class="plantumlgraph">
+<img src="obapi_gap_scan.png" />
+</div>
+<hr  />
+<div class="plantumlgraph">
+<img src="obapi_gap_scan_timeout.png" />
+</div>
+<h2><a class="anchor" id="autotoc_md108"></a>
+GAP advertise process</h2>
+<h4><a class="anchor" id="autotoc_md109"></a>
+Interfaces used</h4>
+<ul>
+<li><a class="el" href="group__OMBLE__GAP.html#gad507ed3b4eda5a3157f77ac91bd875c0">ob_gap_adv_start</a></li>
+<li><a class="el" href="group__OMBLE__GAP.html#gab5947a4af794ec96ff287e7db9197c64">ob_gap_adv_stop</a></li>
+</ul>
+<h4><a class="anchor" id="autotoc_md110"></a>
+Events used</h4>
+<ul>
+<li><a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0cab25f36920a5a8020c93ce42b7e675041">OB_GAP_EVT_ADV_STATE_CHANGED</a></li>
+</ul>
+<div class="plantumlgraph">
+<img src="obapi_gap_adv.png" />
+</div>
+<h2><a class="anchor" id="autotoc_md111"></a>
+GAP connection process</h2>
+<h4><a class="anchor" id="autotoc_md112"></a>
+Interfaces used</h4>
+<ul>
+<li><a class="el" href="group__OMBLE__GAP.html#ga26ad11614c608e787bf31fb18fb45a82">ob_gap_connect</a></li>
+<li><a class="el" href="group__OMBLE__GAP.html#ga63e8d43d6b40b9c3434cace8f6f19ebd">ob_gap_connect_cancel</a></li>
+</ul>
+<h4><a class="anchor" id="autotoc_md113"></a>
+Events used</h4>
+<ul>
+<li><a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0cad4e099d93328262d7508e521baad652b">OB_GAP_EVT_CONNECTED</a></li>
+</ul>
+<div class="plantumlgraph">
+<img src="obapi_gap_connect.png" />
+</div>
+<h2><a class="anchor" id="autotoc_md114"></a>
+GAP pairing process</h2>
+<h4><a class="anchor" id="autotoc_md115"></a>
+Interfaces used</h4>
+<ul>
+<li><a class="el" href="group__OMBLE__GAP.html#ga80e29bddba0b76fb8289cad501c6633e">ob_gap_security_request</a></li>
+<li><a class="el" href="group__OMBLE__GAP.html#gacce9ca33468882750ec3442eae1834e9">ob_gap_pairing_request</a></li>
+<li><a class="el" href="group__OMBLE__GAP.html#gaaaaffa4abc24522f9a0c5aa4c72a8a59">ob_gap_pairing_response</a></li>
+<li><a class="el" href="group__OMBLE__GAP.html#gaa7fedd40f22abf123b2c933d631c34ea">ob_gap_pin_response</a></li>
+</ul>
+<h4><a class="anchor" id="autotoc_md116"></a>
+Events used</h4>
+<ul>
+<li><a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca95c3fb71d6aa106d042e807ff2c17ee0">OB_GAP_EVT_SEC_REQUEST</a></li>
+<li><a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0caef50270c348e747414355a7b2b9661b0">OB_GAP_EVT_PAIRING_REQUEST</a></li>
+<li><a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0cac00d7b7b2e7db3b9513082851284f6d0">OB_GAP_EVT_PIN_REQUEST</a></li>
+<li><a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0caf678d6be0a3549995504b5bd8cd83918">OB_GAP_EVT_BOND_INFO_REQUEST</a></li>
+<li><a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0cafc31129db6e88669345c9e23ffd0309a">OB_GAP_EVT_BOND_INFO</a></li>
+<li><a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0cafce5e84080c67b3d4f656f9b6aca622f">OB_GAP_EVT_BONDED</a></li>
+</ul>
+<div class="plantumlgraph">
+<img src="obapi_gap_bond.png" />
+</div>
+<h2><a class="anchor" id="autotoc_md117"></a>
+GAP encryption process</h2>
+<h4><a class="anchor" id="autotoc_md118"></a>
+Interfaces used</h4>
+<ul>
+<li><a class="el" href="group__OMBLE__GAP.html#gae6b708e715773d4d9556582df42654ef">ob_gap_encrypt</a></li>
+<li><a class="el" href="group__OMBLE__GAP.html#ga9f6792834ea5ebe1260851a1b84ceff1">ob_gap_ltk_response</a></li>
+</ul>
+<h4><a class="anchor" id="autotoc_md119"></a>
+Events used</h4>
+<ul>
+<li><a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca95c3fb71d6aa106d042e807ff2c17ee0">OB_GAP_EVT_SEC_REQUEST</a></li>
+<li><a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0caee58083c5f47308252cd213fcc2d1732">OB_GAP_EVT_ENCRYPT</a></li>
+</ul>
+<div class="plantumlgraph">
+<img src="obapi_gap_enc.png" />
+</div>
+<h2><a class="anchor" id="autotoc_md120"></a>
+GAP connection parameter update process</h2>
+<h4><a class="anchor" id="autotoc_md121"></a>
+Interfaces used</h4>
+<ul>
+<li><a class="el" href="group__OMBLE__GAP.html#ga1f77fa7b4e75d585f041fa6b9190665b">ob_gap_conn_param_update</a></li>
+</ul>
+<h4><a class="anchor" id="autotoc_md122"></a>
+Events used</h4>
+<ul>
+<li><a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca2bcf050ad16febc5f7c6f14c0b599aef">OB_GAP_EVT_CONN_PARAMS_REQUEST</a></li>
+<li><a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca89537197842ca59a2e9774bd0c1c51b5">OB_GAP_EVT_PHY_UPDATE</a></li>
+</ul>
+<div class="plantumlgraph">
+<img src="obapi_gap_param_update.png" />
+</div>
+<h2><a class="anchor" id="autotoc_md123"></a>
+GAP data length update process</h2>
+<h4><a class="anchor" id="autotoc_md124"></a>
+Interfaces used</h4>
+<ul>
+<li><a class="el" href="group__OMBLE__GAP.html#ga90f534508080f22ca5e0d0b1979af858">ob_gap_data_length_update</a></li>
+</ul>
+<h4><a class="anchor" id="autotoc_md125"></a>
+Events used</h4>
+<ul>
+<li><a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca99ca485fb5bcfa9b3694adaf7faf150f">OB_GAP_EVT_DATA_LEN_CHANGED</a></li>
+</ul>
+<div class="plantumlgraph">
+<img src="obapi_gap_data_length.png" />
+</div>
+<h2><a class="anchor" id="autotoc_md126"></a>
+GAP PHY update process</h2>
+<h4><a class="anchor" id="autotoc_md127"></a>
+Interfaces used</h4>
+<ul>
+<li><a class="el" href="group__OMBLE__GAP.html#gaf16d2f03770da27f9188a2dcd531214d">ob_gap_phy_update</a></li>
+</ul>
+<h4><a class="anchor" id="autotoc_md128"></a>
+Events used</h4>
+<ul>
+<li><a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0ca89537197842ca59a2e9774bd0c1c51b5">OB_GAP_EVT_PHY_UPDATE</a></li>
+</ul>
+<div class="plantumlgraph">
+<img src="obapi_gap_phy_update.png" />
+</div>
+<h2><a class="anchor" id="autotoc_md129"></a>
+GAP disconnection process</h2>
+<h4><a class="anchor" id="autotoc_md130"></a>
+Interfaces used</h4>
+<ul>
+<li><a class="el" href="group__OMBLE__GAP.html#ga0accda9ba7f542a632e2fb45176a3f28">ob_gap_disconnect</a></li>
+</ul>
+<h4><a class="anchor" id="autotoc_md131"></a>
+Events used</h4>
+<ul>
+<li><a class="el" href="group__OMBLE__GAP.html#gga60af4dcbeabe629965292ac1287a1b0caf3a95feb5dfd78128a4258f808a1778b">OB_GAP_EVT_DISCONNECTED</a></li>
+</ul>
+<div class="plantumlgraph">
+<img src="obapi_gap_disconnect.png" />
+</div>
+<h1><a class="anchor" id="autotoc_md132"></a>
+GATT interface example</h1>
+<h2><a class="anchor" id="autotoc_md133"></a>
+GATT MTU exchange process</h2>
+<h4><a class="anchor" id="autotoc_md134"></a>
+Interfaces used</h4>
+<ul>
+<li><a class="el" href="group__OMBLE__GATT.html#gaa932c8adfed9a44e4cc04e534d3bb3e7">ob_gattc_mtu_req</a></li>
+</ul>
+<h4><a class="anchor" id="autotoc_md135"></a>
+Events used</h4>
+<ul>
+<li><a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a2d2b065eeb71cdca2bdd5c4f36a546fe">OB_GATT_EVT_MTU_EXCHANGED</a></li>
+</ul>
+<div class="plantumlgraph">
+<img src="obapi_gatt_mtu.png" />
+</div>
+<h2><a class="anchor" id="autotoc_md136"></a>
+GATT service discovery process</h2>
+<h4><a class="anchor" id="autotoc_md137"></a>
+Interfaces used</h4>
+<ul>
+<li><a class="el" href="group__OMBLE__GATT.html#gaa3599aa20dc160c35f0db2c1926947ea">ob_gatts_add_service</a></li>
+<li><a class="el" href="group__OMBLE__GATT.html#ga6a4104bf3a417f1712dcd613f17ee5e3">ob_gattc_find_service_by_handle</a></li>
+<li><a class="el" href="group__OMBLE__GATT.html#gab936ed76c19a5e6df10e3a68a686307a">ob_gattc_find_service_by_uuid</a></li>
+<li><a class="el" href="group__OMBLE__GATT.html#ga548f111ca3135536e2227d2cff59cd7a">ob_gattc_find_characteristic</a></li>
+<li><a class="el" href="group__OMBLE__GATT.html#ga49ac19635602c3dfc5e88cf55506738b">ob_gattc_find_descriptor</a></li>
+</ul>
+<h4><a class="anchor" id="autotoc_md138"></a>
+Events used</h4>
+<ul>
+<li><a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357acc47670ec21ff3a9068f901f909fe072">OB_GATTC_EVT_FIND_SERV_RSP</a></li>
+<li><a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357adaf98a55962e4df2d05257ce5a65548a">OB_GATTC_EVT_FIND_SERV_BY_UUID_RSP</a></li>
+<li><a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a393a632c7a7e59ea46d3bfb2edc2d4a9">OB_GATTC_EVT_FIND_CHAR_RSP</a></li>
+<li><a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a03623737d5a807e566ddc187cb360ef2">OB_GATTC_EVT_FIND_DESC_RSP</a></li>
+</ul>
+<div class="plantumlgraph">
+<img src="obapi_gatt_find_service.png" />
+</div>
+<h2><a class="anchor" id="autotoc_md139"></a>
+GATT Notification/Indication process</h2>
+<h4><a class="anchor" id="autotoc_md140"></a>
+Interfaces used</h4>
+<ul>
+<li><a class="el" href="group__OMBLE__GATT.html#ga16ed75601dfa5e3bfb51318e41f4ab48">ob_gatts_send_hvx</a></li>
+<li><a class="el" href="group__OMBLE__GATT.html#ga43c4e9829d0739b1527bd5d00ea1afd0">ob_gattc_indicate_cfm</a></li>
+</ul>
+<h4><a class="anchor" id="autotoc_md141"></a>
+Events used</h4>
+<ul>
+<li><a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a9e5e7718bf5a3138f4bf53ceac55c4ec">OB_GATT_EVT_TX_COMPLETE</a></li>
+<li><a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a4cc20c79f1c4878fc467649f0a3ca315">OB_GATTC_EVT_HVX_IND</a></li>
+<li><a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357aefde18564d6ae0f5e6a80fc09be833a5">OB_GATTS_EVT_INDICATE_CFM</a></li>
+</ul>
+<div class="plantumlgraph">
+<img src="obapi_gatt_ntf_ind.png" />
+</div>
+<h2><a class="anchor" id="autotoc_md142"></a>
+GATT Read/Write process</h2>
+<h4><a class="anchor" id="autotoc_md143"></a>
+Interfaces used</h4>
+<ul>
+<li><a class="el" href="group__OMBLE__GATT.html#ga6ff999beb67a5ed0851edf1aac60d663">ob_gattc_read</a></li>
+<li><a class="el" href="group__OMBLE__GATT.html#ga21c74294c32d66d1f147e251b237ccaf">ob_gattc_read_by_uuid</a></li>
+<li><a class="el" href="group__OMBLE__GATT.html#ga2cf4dcce9a0994c33c7e908494ce0384">ob_gattc_write</a></li>
+<li><a class="el" href="group__OMBLE__GATT.html#gaa75581818d2ec51b0a76d0d79c02863d">ob_gatts_read_response</a></li>
+<li><a class="el" href="group__OMBLE__GATT.html#gabf56b1e1a63ca411ba3ddf65251069c2">ob_gatts_write_response</a></li>
+</ul>
+<h4><a class="anchor" id="autotoc_md144"></a>
+Events used</h4>
+<ul>
+<li><a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a9e5e7718bf5a3138f4bf53ceac55c4ec">OB_GATT_EVT_TX_COMPLETE</a></li>
+<li><a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a9dd07b5d22c012f848b395d5b4f8a9cf">OB_GATTS_EVT_READ_REQ</a></li>
+<li><a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a0b9a6c880fcee1534e9740444fc715f2">OB_GATTC_EVT_READ_RSP</a></li>
+<li><a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a8c07ec4af0d87ffc7dceeaed5589e1ba">OB_GATTC_EVT_READ_BY_UUID_RSP</a></li>
+<li><a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a0f33574c294c85e484978e566b1857cb">OB_GATTS_EVT_WRITE_REQ</a></li>
+<li><a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357aed095b4f31eac33bf44804c08ae6e19d">OB_GATTC_EVT_WRITE_RSP</a></li>
+</ul>
+<div class="plantumlgraph">
+<img src="obapi_gatt_read_write.png" />
+</div>
+ </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+</div>
+</body>
+</html>

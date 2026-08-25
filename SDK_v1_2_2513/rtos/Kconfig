@@ -1,0 +1,19 @@
+menu "RTOS"
+choice
+    prompt "RTOS selection"
+    default NON_RTOS
+
+#
+# NON_RTOS
+#
+config NON_RTOS
+    bool "non-RTOS"
+
+#
+# FreeRTOS
+#
+orsource "FreeRTOS/Kconfig"
+
+endchoice
+
+endmenu

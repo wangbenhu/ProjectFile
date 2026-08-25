@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>User Guide: /mnt/data/yaoyufeng/work.svnrepo/om6627x/om6627/trunk/SDK/components/ble/host/include/omble.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+-->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">User Guide
+   </div>
+   <div id="projectbrief">Bluetooth Low Energy 5.4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('omble_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">omble.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="omble_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* ----------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * All rights reserved.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * This software is licensed under terms that can be found in the LICENSE file</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * in the root directory of this software component.</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * If no LICENSE file comes with this software, it is provided AS-IS.</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * -------------------------------------------------------------------------- */</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"></span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * @addtogroup OMBLE_COMMON BLE_COMMON</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> * @brief OMBLE initialization interface</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * @version</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> * Version 1.0</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *  - Initial release</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> */</span><span class="comment"></span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">/// @{</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"></span><span class="preprocessor">#ifndef __OMBLE_API_H__</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#define __OMBLE_API_H__</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="omble__gap_8h.html">omble_gap.h</a>&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="omble__gatt_8h.html">omble_gatt.h</a>&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;<a class="code" href="omble__misc_8h.html">omble_misc.h</a>&quot;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;<a class="code" href="omble__error_8h.html">omble_error.h</a>&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"></span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">/// BLE Event structure</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structomble__evt__t.html">   28</a></span><span class="comment"></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">union </span>{</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structomble__evt__t.html#a4071c24cf0dc22e3584948d6a05badd4">   30</a></span>        <a class="code hl_struct" href="structomble__gap__evt__t.html">omble_gap_evt_t</a>  <a class="code hl_variable" href="structomble__evt__t.html#a4071c24cf0dc22e3584948d6a05badd4">gap</a>;  <span class="comment">///&lt; gap event，refer to @ref omble_gap_evt_t</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structomble__evt__t.html#a7bdbef922c395fda5d7ca353e9db32db">   31</a></span>        <a class="code hl_struct" href="structomble__gatt__evt__t.html">omble_gatt_evt_t</a> <a class="code hl_variable" href="structomble__evt__t.html#a7bdbef922c395fda5d7ca353e9db32db">gatt</a>; <span class="comment">///&lt; gatt event，refer to @ref omble_gatt_evt_t</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    };</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>} <a class="code hl_struct" href="structomble__evt__t.html">omble_evt_t</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"></span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">/// Protocol stack initialization parameters</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structob__stack__param.html">   36</a></span><span class="comment"></span><span class="keyword">struct </span><a class="code hl_struct" href="structob__stack__param.html">ob_stack_param</a> {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structob__stack__param.html#ab3a062d9b5da3efdcad1ece064b0bfd5">   37</a></span>    uint8_t <a class="code hl_variable" href="structob__stack__param.html#ab3a062d9b5da3efdcad1ece064b0bfd5">max_connection</a>;        <span class="comment">///&lt; Maximum number of connections</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="structob__stack__param.html#a4cb31d8aa2be0a2686f3e3dc0782bdfd">   38</a></span>    uint8_t <a class="code hl_variable" href="structob__stack__param.html#a4cb31d8aa2be0a2686f3e3dc0782bdfd">max_ext_adv_set</a>;       <span class="comment">///&lt; Maximum number of advertising</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structob__stack__param.html#aac49aa9b9df67aaf685c6b1698126571">   39</a></span>    uint16_t <a class="code hl_variable" href="structob__stack__param.html#aac49aa9b9df67aaf685c6b1698126571">max_att_mtu</a>;          <span class="comment">///&lt; MAX ATT MTU</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="structob__stack__param.html#acb7f86110cc39f20a19608738244f763">   40</a></span>    uint16_t <a class="code hl_variable" href="structob__stack__param.html#acb7f86110cc39f20a19608738244f763">max_gatt_serv_num</a>;    <span class="comment">///&lt; MAX GATT service number</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structob__stack__param.html#a5d7a718e259cb96a6fca06b557b43589">   41</a></span>    uint16_t <a class="code hl_variable" href="structob__stack__param.html#a5d7a718e259cb96a6fca06b557b43589">max_gatt_write_cache</a>; <span class="comment">///&lt; MAX GATT server prepare write cache length, Use MAX mtu if set to 0</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="structob__stack__param.html#ae66f233fe7710f3d3eaa84f63d7f67ca">   42</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structob__stack__param.html#ae66f233fe7710f3d3eaa84f63d7f67ca">smp_sc_support</a>;           <span class="comment">///&lt; Secure Connection Pairing support</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structob__stack__param.html#abb3b2a797eaf21fee387a0f788150bc4">   43</a></span>    uint8_t <a class="code hl_variable" href="structob__stack__param.html#abb3b2a797eaf21fee387a0f788150bc4">max_user_event_num</a>;    <span class="comment">///&lt; MAX user event number</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="structob__stack__param.html#ad03299d85242ffa53a1633bb7c9b234c">   44</a></span>    uint8_t <a class="code hl_variable" href="structob__stack__param.html#ad03299d85242ffa53a1633bb7c9b234c">max_gatt_buffer_num</a>;   <span class="comment">///&lt; Maximum number of data buffers per GATT connection (1~63, default 63)</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="structob__stack__param.html#a12cb40b686cfa77ce140a72316626541">   45</a></span>    uint8_t <a class="code hl_variable" href="structob__stack__param.html#a12cb40b686cfa77ce140a72316626541">max_period_adv_set</a>;    <span class="comment">///&lt; Maximum number of periodic advertising</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="structob__stack__param.html#a44c55ec1933214a7b1916840b2332a4e">   46</a></span>    uint8_t <a class="code hl_variable" href="structob__stack__param.html#a44c55ec1933214a7b1916840b2332a4e">max_period_adv_sync</a>;   <span class="comment">///&lt; Maximum number of periodic advertising synchronizations</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>};</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment"></span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">/**@brief BLE Event callback type</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment"> * @note All Bluetooth related messages are notified to the upper layer application through this structure</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment"> * @param[in] evt_id  event id，refer to @ref OB_GAP_EVENTS, @ref OB_GATT_EVENTS</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment"> * @param[in] evt  Event Structure，refer to @ref omble_evt_t</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="group__OMBLE__COMMON.html#gabcb15488e389e4963159dcee9002796f">   54</a></span><span class="keyword">typedef</span> void (*<a class="code hl_typedef" href="group__OMBLE__COMMON.html#gabcb15488e389e4963159dcee9002796f">omble_event_cb_t</a>)(uint16_t evt_id, <span class="keyword">const</span> <a class="code hl_struct" href="structomble__evt__t.html">omble_evt_t</a> *evt);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment"></span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">/**@brief Register BLE event callback function</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment"> * @note The callback can be registered multiple times, and each callback function is called in the order of registration.</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment"> * @param[in]  callback   Callback function, refer to @ref omble_event_cb_t</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment"> * @return result，refer to @ref ob_error</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="group__OMBLE__COMMON.html#ga0cfbc0b14f7bc061e119c46cb666ffdd">   61</a></span>uint32_t <a class="code hl_function" href="group__OMBLE__COMMON.html#ga0cfbc0b14f7bc061e119c46cb666ffdd">ob_event_callback_reg</a>(<a class="code hl_typedef" href="group__OMBLE__COMMON.html#gabcb15488e389e4963159dcee9002796f">omble_event_cb_t</a> callback);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment"></span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">/**@brief Unregister BLE event callback function</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment"> * @param[in]  callback   callback，refer to @ref omble_event_cb_t</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment"> * @return result，refer to @ref ob_error</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="group__OMBLE__COMMON.html#gab6e71c21671126fc81845189eb9a244b">   67</a></span>uint32_t <a class="code hl_function" href="group__OMBLE__COMMON.html#gab6e71c21671126fc81845189eb9a244b">ob_event_callback_unreg</a>(<a class="code hl_typedef" href="group__OMBLE__COMMON.html#gabcb15488e389e4963159dcee9002796f">omble_event_cb_t</a> callback);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment"></span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">/**@brief Abort BLE event processing</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment"> * After calling @ref ob_event_callback_reg multiple times to register BLE event callbacks, other registered callback functions will no longer be called after calling this function</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment"> * @return result，refer to @ref ob_error</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="group__OMBLE__COMMON.html#ga5aa32dbcb5fcb6687ef7da8e2e50a03b">   74</a></span>uint32_t <a class="code hl_function" href="group__OMBLE__COMMON.html#ga5aa32dbcb5fcb6687ef7da8e2e50a03b">ob_event_abort</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment"></span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">/**@brief optional parameter configuration</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment"> * @param[in]  type  parameter type，refer to @ref ob_opt_cfg_type</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment"> * @param[in]  cfg   parameter data，refer to @ref ob_opt_cfg_t</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment"> * @return result，refer to @ref ob_error</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="group__OMBLE__COMMON.html#gafa5e513755397a1d534b88857e1d8caf">   81</a></span>uint32_t <a class="code hl_function" href="group__OMBLE__COMMON.html#gafa5e513755397a1d534b88857e1d8caf">ob_opt_cfg_set</a>(uint8_t type, <a class="code hl_union" href="unionob__opt__cfg__t.html">ob_opt_cfg_t</a> *cfg);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment"></span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">/**@brief Get optional parameters</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment"> * @param[in]  type  parameter type，refer to @ref ob_opt_cfg_type</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment"> * @param[out] cfg   parameter data，refer to @ref ob_opt_cfg_t</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment"> * @return result，refer to @ref ob_error</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="group__OMBLE__COMMON.html#ga63e1ee69af295076a36014e9152dcb84">   88</a></span>uint32_t <a class="code hl_function" href="group__OMBLE__COMMON.html#ga63e1ee69af295076a36014e9152dcb84">ob_opt_cfg_get</a>(uint8_t type, <a class="code hl_union" href="unionob__opt__cfg__t.html">ob_opt_cfg_t</a> *cfg);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment"></span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">/**@brief Initialize the BLE protocol stack</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment"> * @param[in]  param  Protocol stack initialization parameters，refer to @ref ob_stack_param</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment"> * @note This function can only be called once and must be called before calling other Bluetooth interfaces.</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment"> * @return result，refer to @ref ob_error</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="group__OMBLE__COMMON.html#gae47c88381c4349ec3b06387a8f49dfd3">   95</a></span>uint32_t <a class="code hl_function" href="group__OMBLE__COMMON.html#gae47c88381c4349ec3b06387a8f49dfd3">omble_init</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structob__stack__param.html">ob_stack_param</a> *param);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="comment"></span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment">/**@brief Set the user event callback function</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="comment"> * @param[in]  event_id  Event ID. The id value should be less than the max_user_event_num value in @ref ob_stack_param</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment"> * @param[in]  callback  BLE Protocol stack initialization parameters, refer to @ref ob_stack_param</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment"> * @return result，refer to @ref ob_error</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="group__OMBLE__COMMON.html#gabb5ce538fef130eff5625e1a95ef6a47">  102</a></span>uint32_t <a class="code hl_function" href="group__OMBLE__COMMON.html#gabb5ce538fef130eff5625e1a95ef6a47">omble_set_user_event_callback</a>(uint8_t event_id, <span class="keywordtype">void</span>(*callback)(<span class="keywordtype">void</span>));</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment"></span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment">/**@brief Trigger user event callback function</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment"> * @param[in]  event_id  Event ID. The id value should be less than the max_user_event_num value in @ref ob_stack_param</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment"> * @return result，refer to @ref ob_error</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="group__OMBLE__COMMON.html#gaeee1ad63051c6ed9db89f4b1aa69563d">  108</a></span>uint32_t <a class="code hl_function" href="group__OMBLE__COMMON.html#gaeee1ad63051c6ed9db89f4b1aa69563d">omble_user_event_trigger</a>(uint8_t event_id);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment"></span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="comment">/**@brief Get Time Tick</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="comment"> * @return tick</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="group__OMBLE__COMMON.html#gab188be0a2d8139347f4aac137dd783d0">  113</a></span><span class="keywordtype">size_t</span> <a class="code hl_function" href="group__OMBLE__COMMON.html#gab188be0a2d8139347f4aac137dd783d0">omble_tick_get</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment"></span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment">/**@brief Calculate the time interval between tick2 and tick1. Unit in 10ms</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="comment"> * @param[in]  tick1  tick1</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="comment"> * @param[in]  tick2  tick2</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="comment"> * @return tick2 - the time interval of tick1, in 10ms</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="group__OMBLE__COMMON.html#ga1b2ea23d2d2da10fa0aa1a187fea1f41">  120</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__OMBLE__COMMON.html#ga1b2ea23d2d2da10fa0aa1a187fea1f41">omble_tick_diff_10ms</a>(<span class="keywordtype">size_t</span> tick1, <span class="keywordtype">size_t</span> tick2);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="comment"></span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="comment">/**@brief Scheduling BLE protocol stack</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="group__OMBLE__COMMON.html#ga0929085162beb74aa74d5816cffda958">  124</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__OMBLE__COMMON.html#ga0929085162beb74aa74d5816cffda958">omble_schedule</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="preprocessor">#endif </span><span class="comment">/* __OMBLE_API_H__ */</span><span class="preprocessor"></span><span class="comment"></span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="comment">/// @}</span></div>
+<div class="ttc" id="agroup__OMBLE__COMMON_html_ga0929085162beb74aa74d5816cffda958"><div class="ttname"><a href="group__OMBLE__COMMON.html#ga0929085162beb74aa74d5816cffda958">omble_schedule</a></div><div class="ttdeci">void omble_schedule(void)</div><div class="ttdoc">Scheduling BLE protocol stack.</div></div>
+<div class="ttc" id="agroup__OMBLE__COMMON_html_ga0cfbc0b14f7bc061e119c46cb666ffdd"><div class="ttname"><a href="group__OMBLE__COMMON.html#ga0cfbc0b14f7bc061e119c46cb666ffdd">ob_event_callback_reg</a></div><div class="ttdeci">uint32_t ob_event_callback_reg(omble_event_cb_t callback)</div><div class="ttdoc">Register BLE event callback function.</div></div>
+<div class="ttc" id="agroup__OMBLE__COMMON_html_ga1b2ea23d2d2da10fa0aa1a187fea1f41"><div class="ttname"><a href="group__OMBLE__COMMON.html#ga1b2ea23d2d2da10fa0aa1a187fea1f41">omble_tick_diff_10ms</a></div><div class="ttdeci">int omble_tick_diff_10ms(size_t tick1, size_t tick2)</div><div class="ttdoc">Calculate the time interval between tick2 and tick1. Unit in 10ms.</div></div>
+<div class="ttc" id="agroup__OMBLE__COMMON_html_ga5aa32dbcb5fcb6687ef7da8e2e50a03b"><div class="ttname"><a href="group__OMBLE__COMMON.html#ga5aa32dbcb5fcb6687ef7da8e2e50a03b">ob_event_abort</a></div><div class="ttdeci">uint32_t ob_event_abort(void)</div><div class="ttdoc">Abort BLE event processing.</div></div>
+<div class="ttc" id="agroup__OMBLE__COMMON_html_ga63e1ee69af295076a36014e9152dcb84"><div class="ttname"><a href="group__OMBLE__COMMON.html#ga63e1ee69af295076a36014e9152dcb84">ob_opt_cfg_get</a></div><div class="ttdeci">uint32_t ob_opt_cfg_get(uint8_t type, ob_opt_cfg_t *cfg)</div><div class="ttdoc">Get optional parameters.</div></div>
+<div class="ttc" id="agroup__OMBLE__COMMON_html_gab188be0a2d8139347f4aac137dd783d0"><div class="ttname"><a href="group__OMBLE__COMMON.html#gab188be0a2d8139347f4aac137dd783d0">omble_tick_get</a></div><div class="ttdeci">size_t omble_tick_get(void)</div><div class="ttdoc">Get Time Tick.</div></div>
+<div class="ttc" id="agroup__OMBLE__COMMON_html_gab6e71c21671126fc81845189eb9a244b"><div class="ttname"><a href="group__OMBLE__COMMON.html#gab6e71c21671126fc81845189eb9a244b">ob_event_callback_unreg</a></div><div class="ttdeci">uint32_t ob_event_callback_unreg(omble_event_cb_t callback)</div><div class="ttdoc">Unregister BLE event callback function.</div></div>
+<div class="ttc" id="agroup__OMBLE__COMMON_html_gabb5ce538fef130eff5625e1a95ef6a47"><div class="ttname"><a href="group__OMBLE__COMMON.html#gabb5ce538fef130eff5625e1a95ef6a47">omble_set_user_event_callback</a></div><div class="ttdeci">uint32_t omble_set_user_event_callback(uint8_t event_id, void(*callback)(void))</div><div class="ttdoc">Set the user event callback function.</div></div>
+<div class="ttc" id="agroup__OMBLE__COMMON_html_gabcb15488e389e4963159dcee9002796f"><div class="ttname"><a href="group__OMBLE__COMMON.html#gabcb15488e389e4963159dcee9002796f">omble_event_cb_t</a></div><div class="ttdeci">void(* omble_event_cb_t)(uint16_t evt_id, const omble_evt_t *evt)</div><div class="ttdoc">BLE Event callback type.</div><div class="ttdef"><b>Definition:</b> omble.h:54</div></div>
+<div class="ttc" id="agroup__OMBLE__COMMON_html_gae47c88381c4349ec3b06387a8f49dfd3"><div class="ttname"><a href="group__OMBLE__COMMON.html#gae47c88381c4349ec3b06387a8f49dfd3">omble_init</a></div><div class="ttdeci">uint32_t omble_init(struct ob_stack_param *param)</div><div class="ttdoc">Initialize the BLE protocol stack.</div></div>
+<div class="ttc" id="agroup__OMBLE__COMMON_html_gaeee1ad63051c6ed9db89f4b1aa69563d"><div class="ttname"><a href="group__OMBLE__COMMON.html#gaeee1ad63051c6ed9db89f4b1aa69563d">omble_user_event_trigger</a></div><div class="ttdeci">uint32_t omble_user_event_trigger(uint8_t event_id)</div><div class="ttdoc">Trigger user event callback function.</div></div>
+<div class="ttc" id="agroup__OMBLE__COMMON_html_gafa5e513755397a1d534b88857e1d8caf"><div class="ttname"><a href="group__OMBLE__COMMON.html#gafa5e513755397a1d534b88857e1d8caf">ob_opt_cfg_set</a></div><div class="ttdeci">uint32_t ob_opt_cfg_set(uint8_t type, ob_opt_cfg_t *cfg)</div><div class="ttdoc">optional parameter configuration</div></div>
+<div class="ttc" id="aomble__error_8h_html"><div class="ttname"><a href="omble__error_8h.html">omble_error.h</a></div></div>
+<div class="ttc" id="aomble__gap_8h_html"><div class="ttname"><a href="omble__gap_8h.html">omble_gap.h</a></div></div>
+<div class="ttc" id="aomble__gatt_8h_html"><div class="ttname"><a href="omble__gatt_8h.html">omble_gatt.h</a></div></div>
+<div class="ttc" id="aomble__misc_8h_html"><div class="ttname"><a href="omble__misc_8h.html">omble_misc.h</a></div></div>
+<div class="ttc" id="astructob__stack__param_html"><div class="ttname"><a href="structob__stack__param.html">ob_stack_param</a></div><div class="ttdoc">Protocol stack initialization parameters.</div><div class="ttdef"><b>Definition:</b> omble.h:36</div></div>
+<div class="ttc" id="astructob__stack__param_html_a12cb40b686cfa77ce140a72316626541"><div class="ttname"><a href="structob__stack__param.html#a12cb40b686cfa77ce140a72316626541">ob_stack_param::max_period_adv_set</a></div><div class="ttdeci">uint8_t max_period_adv_set</div><div class="ttdoc">Maximum number of periodic advertising.</div><div class="ttdef"><b>Definition:</b> omble.h:45</div></div>
+<div class="ttc" id="astructob__stack__param_html_a44c55ec1933214a7b1916840b2332a4e"><div class="ttname"><a href="structob__stack__param.html#a44c55ec1933214a7b1916840b2332a4e">ob_stack_param::max_period_adv_sync</a></div><div class="ttdeci">uint8_t max_period_adv_sync</div><div class="ttdoc">Maximum number of periodic advertising synchronizations.</div><div class="ttdef"><b>Definition:</b> omble.h:46</div></div>
+<div class="ttc" id="astructob__stack__param_html_a4cb31d8aa2be0a2686f3e3dc0782bdfd"><div class="ttname"><a href="structob__stack__param.html#a4cb31d8aa2be0a2686f3e3dc0782bdfd">ob_stack_param::max_ext_adv_set</a></div><div class="ttdeci">uint8_t max_ext_adv_set</div><div class="ttdoc">Maximum number of advertising.</div><div class="ttdef"><b>Definition:</b> omble.h:38</div></div>
+<div class="ttc" id="astructob__stack__param_html_a5d7a718e259cb96a6fca06b557b43589"><div class="ttname"><a href="structob__stack__param.html#a5d7a718e259cb96a6fca06b557b43589">ob_stack_param::max_gatt_write_cache</a></div><div class="ttdeci">uint16_t max_gatt_write_cache</div><div class="ttdoc">MAX GATT server prepare write cache length, Use MAX mtu if set to 0.</div><div class="ttdef"><b>Definition:</b> omble.h:41</div></div>
+<div class="ttc" id="astructob__stack__param_html_aac49aa9b9df67aaf685c6b1698126571"><div class="ttname"><a href="structob__stack__param.html#aac49aa9b9df67aaf685c6b1698126571">ob_stack_param::max_att_mtu</a></div><div class="ttdeci">uint16_t max_att_mtu</div><div class="ttdoc">MAX ATT MTU.</div><div class="ttdef"><b>Definition:</b> omble.h:39</div></div>
+<div class="ttc" id="astructob__stack__param_html_ab3a062d9b5da3efdcad1ece064b0bfd5"><div class="ttname"><a href="structob__stack__param.html#ab3a062d9b5da3efdcad1ece064b0bfd5">ob_stack_param::max_connection</a></div><div class="ttdeci">uint8_t max_connection</div><div class="ttdoc">Maximum number of connections.</div><div class="ttdef"><b>Definition:</b> omble.h:37</div></div>
+<div class="ttc" id="astructob__stack__param_html_abb3b2a797eaf21fee387a0f788150bc4"><div class="ttname"><a href="structob__stack__param.html#abb3b2a797eaf21fee387a0f788150bc4">ob_stack_param::max_user_event_num</a></div><div class="ttdeci">uint8_t max_user_event_num</div><div class="ttdoc">MAX user event number.</div><div class="ttdef"><b>Definition:</b> omble.h:43</div></div>
+<div class="ttc" id="astructob__stack__param_html_acb7f86110cc39f20a19608738244f763"><div class="ttname"><a href="structob__stack__param.html#acb7f86110cc39f20a19608738244f763">ob_stack_param::max_gatt_serv_num</a></div><div class="ttdeci">uint16_t max_gatt_serv_num</div><div class="ttdoc">MAX GATT service number.</div><div class="ttdef"><b>Definition:</b> omble.h:40</div></div>
+<div class="ttc" id="astructob__stack__param_html_ad03299d85242ffa53a1633bb7c9b234c"><div class="ttname"><a href="structob__stack__param.html#ad03299d85242ffa53a1633bb7c9b234c">ob_stack_param::max_gatt_buffer_num</a></div><div class="ttdeci">uint8_t max_gatt_buffer_num</div><div class="ttdoc">Maximum number of data buffers per GATT connection (1~63, default 63)</div><div class="ttdef"><b>Definition:</b> omble.h:44</div></div>
+<div class="ttc" id="astructob__stack__param_html_ae66f233fe7710f3d3eaa84f63d7f67ca"><div class="ttname"><a href="structob__stack__param.html#ae66f233fe7710f3d3eaa84f63d7f67ca">ob_stack_param::smp_sc_support</a></div><div class="ttdeci">bool smp_sc_support</div><div class="ttdoc">Secure Connection Pairing support.</div><div class="ttdef"><b>Definition:</b> omble.h:42</div></div>
+<div class="ttc" id="astructomble__evt__t_html"><div class="ttname"><a href="structomble__evt__t.html">omble_evt_t</a></div><div class="ttdoc">BLE Event structure.</div><div class="ttdef"><b>Definition:</b> omble.h:28</div></div>
+<div class="ttc" id="astructomble__evt__t_html_a4071c24cf0dc22e3584948d6a05badd4"><div class="ttname"><a href="structomble__evt__t.html#a4071c24cf0dc22e3584948d6a05badd4">omble_evt_t::gap</a></div><div class="ttdeci">omble_gap_evt_t gap</div><div class="ttdoc">gap event，refer to omble_gap_evt_t</div><div class="ttdef"><b>Definition:</b> omble.h:30</div></div>
+<div class="ttc" id="astructomble__evt__t_html_a7bdbef922c395fda5d7ca353e9db32db"><div class="ttname"><a href="structomble__evt__t.html#a7bdbef922c395fda5d7ca353e9db32db">omble_evt_t::gatt</a></div><div class="ttdeci">omble_gatt_evt_t gatt</div><div class="ttdoc">gatt event，refer to omble_gatt_evt_t</div><div class="ttdef"><b>Definition:</b> omble.h:31</div></div>
+<div class="ttc" id="astructomble__gap__evt__t_html"><div class="ttname"><a href="structomble__gap__evt__t.html">omble_gap_evt_t</a></div><div class="ttdoc">GAP event structure.</div><div class="ttdef"><b>Definition:</b> omble_gap.h:568</div></div>
+<div class="ttc" id="astructomble__gatt__evt__t_html"><div class="ttname"><a href="structomble__gatt__evt__t.html">omble_gatt_evt_t</a></div><div class="ttdoc">GATT Event structure.</div><div class="ttdef"><b>Definition:</b> omble_gatt.h:229</div></div>
+<div class="ttc" id="aunionob__opt__cfg__t_html"><div class="ttname"><a href="unionob__opt__cfg__t.html">ob_opt_cfg_t</a></div><div class="ttdoc">omble optional parameter structure</div><div class="ttdef"><b>Definition:</b> omble_misc.h:44</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+</div>
+</body>
+</html>

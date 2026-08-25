@@ -1,0 +1,26 @@
+var structospi__config__t =
+[
+    [ "clk_div", "structospi__config__t.html#a99903573c42d34d52356ce9bf8883112", null ],
+    [ "cs_config", "structospi__config__t.html#aa2376a5a5f602fa7242134f72c66384b", null ],
+    [ "decrypt_en", "structospi__config__t.html#a2d29ece090ad61fb6109d736ed2743b4", null ],
+    [ "delay_sample", "structospi__config__t.html#af24d291b12917dcc66ef423f0ae69816", null ],
+    [ "encrypt_en", "structospi__config__t.html#ab2167aef8e509348288f972e8d06d13d", null ],
+    [ "falling_sample", "structospi__config__t.html#a8539d343f203571d74f9cb3429db6838", null ],
+    [ "is_4bytes_addr", "structospi__config__t.html#afd18b137077d622e8d6443dcfc3bfacf", null ],
+    [ "is_normal_protocol", "structospi__config__t.html#a624295c64e290e6541bbdc6b09748f04", null ],
+    [ "mode", "structospi__config__t.html#aba3b99717986ea09a7538f38ca5358a4", null ],
+    [ "opcode_bypass_en", "structospi__config__t.html#a153d5834b5a4846d04a3fe70c5074b77", null ],
+    [ "page_cross_en", "structospi__config__t.html#ab00ad632a5206ce71bc40a27dbf86e3a", null ],
+    [ "page_size", "structospi__config__t.html#a4ed0f83a2840aa9a8bdcd929507f3ad4", null ],
+    [ "read_frame_cfg", "structospi__config__t.html#a85edc11970aad547064566ce4a7400a8", null ],
+    [ "read_opcode", "structospi__config__t.html#af4566480625ac17313569d3f0fda2b1b", null ],
+    [ "res", "structospi__config__t.html#a7a5b1981961152b4bc5390927169fe4e", null ],
+    [ "rw_data_width", "structospi__config__t.html#a143f21a0e01d3a6bd467293017e2cbf6", null ],
+    [ "sample_cfg", "structospi__config__t.html#a8d4a4b048b668a95058157f8a50452a5", null ],
+    [ "sdr_async", "structospi__config__t.html#a237e2e712d1191c8e22a338c188fdf77", null ],
+    [ "sdr_async_dly", "structospi__config__t.html#abc94d35ee333c46db79ae89c45127bc0", null ],
+    [ "sdr_async_en", "structospi__config__t.html#aa0e67497b43e4a1f31297a5455fa8875", null ],
+    [ "sdr_sync", "structospi__config__t.html#a244aafd4de0f7465e23d61877c2faa58", null ],
+    [ "write_frame_cfg", "structospi__config__t.html#a2ecd2f4480616dcb090df6657e226fe2", null ],
+    [ "write_opcode", "structospi__config__t.html#a15f1df84028deb1d11166caf99b1404c", null ]
+];

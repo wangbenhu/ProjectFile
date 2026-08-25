@@ -1,0 +1,126 @@
+*** Using Compiler 'V6.18', folder: 'D:\MDK537\ARM\ARMCLANG\Bin'
+Build target 'ble_app_simple'
+Note: source file '..\Source\app_adv.c' - object file renamed from '.\out\app_adv.o' to '.\out\app_adv_1.o'.Note: source file '..\Source\app_sec.c' - object file renamed from '.\out\app_sec.o' to '.\out\app_sec_1.o'.Note: source file '..\Source\system.c' - object file renamed from '.\out\system.o' to '.\out\system_1.o'.Note: source file '..\Source\evt_task.c' - object file renamed from '.\out\evt_task.o' to '.\out\evt_task_1.o'.../Source/system.c(47): error: 'app_cdc_acm.h' file not found
+#include "app_cdc_acm.h"
+         ^~~~~~~~~~~~~~~
+1 error generated.
+compiling system.c...
+../Source/Uart_GnssDataRecv_Task.c(128): error: use of undeclared identifier 'GPS_AT_UART_BAUDRATE'
+        .baudrate       = GPS_AT_UART_BAUDRATE,
+                          ^
+../Source/Uart_GnssDataRecv_Task.c(160): error: use of undeclared identifier 'GPS_AT_UART'
+    drv_uart_init(GPS_AT_UART, &uart_cfg);
+                  ^
+../Source/Uart_GnssDataRecv_Task.c(161): error: use of undeclared identifier 'GPS_AT_UART'
+    drv_uart_register_isr_callback(GPS_AT_UART, gps_uart2_cb);
+                                   ^
+../Source/Uart_GnssDataRecv_Task.c(163): error: use of undeclared identifier 'GPS_AT_UART'
+    drv_uart_read_int(GPS_AT_UART, NULL, 0);
+                      ^
+../Source/Uart_GnssDataRecv_Task.c(169): error: use of undeclared identifier 'GPS_AT_UART'
+    drv_uart_read_int(GPS_AT_UART, NULL, 0);
+                      ^
+5 errors generated.
+compiling Uart_GnssDataRecv_Task.c...
+../Source/Uart_Cat1DataRecv_Task.c(191): error: use of undeclared identifier 'CAT1_AT_UART_BAUDRATE'
+        .baudrate       = CAT1_AT_UART_BAUDRATE,
+                          ^
+../Source/Uart_Cat1DataRecv_Task.c(205): error: use of undeclared identifier 'CAT1_AT_UART'
+    drv_uart_init(CAT1_AT_UART, &uart_cfg);
+                  ^
+../Source/Uart_Cat1DataRecv_Task.c(206): error: use of undeclared identifier 'CAT1_AT_UART'
+    drv_uart_register_isr_callback(CAT1_AT_UART, cat1_uart1_cb);
+                                   ^
+../Source/Uart_Cat1DataRecv_Task.c(209): error: use of undeclared identifier 'CAT1_AT_UART'
+    drv_uart_read_int(CAT1_AT_UART, NULL, 0);
+                      ^
+../Source/Uart_Cat1DataRecv_Task.c(215): error: use of undeclared identifier 'CAT1_AT_UART'
+    drv_uart_read_int(CAT1_AT_UART, NULL, 0);
+                      ^
+../Source/Uart_Cat1DataRecv_Task.c(329): error: use of undeclared identifier 'LOG_UART'
+                                                                drv_uart_write(LOG_UART, (uint8_t *)"[C-UART][RCV]", (uint32_t)13, 10);
+                                                                               ^
+../Source/Uart_Cat1DataRecv_Task.c(330): error: use of undeclared identifier 'LOG_UART'
+                                                                drv_uart_write(LOG_UART, (uint8_t *)lteRecvSubpackage, (uint32_t)lteFifoLength, 10);
+                                                                               ^
+7 errors generated.
+compiling Uart_Cat1DataRecv_Task.c...
+../Source/entry_task.c(743): error: use of undeclared identifier 'SPI_CS'
+    {OM_GPIO1, SPI_CS,          GPIO_DIR_OUTPUT, GPIO_LEVEL_LOW, GPIO_TRIG_NONE},
+               ^
+../Source/entry_task.c(744): error: use of undeclared identifier 'SPI_SCK'
+    {OM_GPIO1, SPI_SCK,         GPIO_DIR_OUTPUT, GPIO_LEVEL_LOW, GPIO_TRIG_NONE},
+               ^
+../Source/entry_task.c(745): error: use of undeclared identifier 'SPI_MOSI'
+    {OM_GPIO1, SPI_MOSI,        GPIO_DIR_OUTPUT, GPIO_LEVEL_LOW, GPIO_TRIG_NONE},
+               ^
+../Source/entry_task.c(746): error: use of undeclared identifier 'SPI_MISO'
+    {OM_GPIO1, SPI_MISO,        GPIO_DIR_OUTPUT, GPIO_LEVEL_LOW, GPIO_TRIG_NONE},
+               ^
+../Source/entry_task.c(747): error: use of undeclared identifier 'IMU_INT1'
+    {OM_GPIO0, IMU_INT1,        GPIO_DIR_OUTPUT, GPIO_LEVEL_LOW, GPIO_TRIG_NONE},
+               ^
+../Source/entry_task.c(754): error: use of undeclared identifier 'SPI_CS'
+        {SPI_CS,                                {PINMUX_GPIO_MODE_CFG},         PMU_PIN_MODE_PP, PMU_PIN_DRIVER_CURRENT_NORMAL},
+         ^
+../Source/entry_task.c(755): error: use of undeclared identifier 'SPI_SCK'
+    {SPI_SCK,                           {PINMUX_GPIO_MODE_CFG},         PMU_PIN_MODE_PP, PMU_PIN_DRIVER_CURRENT_NORMAL},
+     ^
+../Source/entry_task.c(756): error: use of undeclared identifier 'SPI_MOSI'
+    {SPI_MOSI,                          {PINMUX_GPIO_MODE_CFG},         PMU_PIN_MODE_PP, PMU_PIN_DRIVER_CURRENT_NORMAL},
+     ^
+../Source/entry_task.c(757): error: use of undeclared identifier 'SPI_MISO'
+    {SPI_MISO,                          {PINMUX_GPIO_MODE_CFG},         PMU_PIN_MODE_PP, PMU_PIN_DRIVER_CURRENT_NORMAL},
+     ^
+../Source/entry_task.c(758): error: use of undeclared identifier 'IMU_INT1'
+        {IMU_INT1,                      {PINMUX_GPIO_MODE_CFG},         PMU_PIN_MODE_PP, PMU_PIN_DRIVER_CURRENT_NORMAL},
+         ^
+../Source/entry_task.c(762): error: invalid application of 'sizeof' to an incomplete type 'const pin_config_t[]'
+        drv_pin_init(pin_config_deinit_test, sizeof(pin_config_deinit_test) / sizeof(pin_config_deinit_test[0]));
+                                                   ^~~~~~~~~~~~~~~~~~~~~~~~
+../Source/entry_task.c(763): error: invalid application of 'sizeof' to an incomplete type 'const gpio_config_t[]'
+        drv_gpio_init(gpio_config_deinit_test, sizeof(gpio_config_deinit_test) / sizeof(gpio_config_deinit_test[0]));
+                                                     ^~~~~~~~~~~~~~~~~~~~~~~~~
+12 errors generated.
+compiling entry_task.c...
+../Source/CAT1_UART_Task.c(970): error: use of undeclared identifier 'CAT1_AT_UART'
+        drv_uart_write(CAT1_AT_UART, (uint8_t *)cmd, (uint32_t)len, 10);
+                       ^
+../Source/CAT1_UART_Task.c(1894): error: use of undeclared identifier 'PAD_CAT1_DTR'
+    drv_gpio_write(OM_GPIO0, GPIO_MASK(PAD_CAT1_DTR), GPIO_LEVEL_LOW);
+                                       ^
+../Source/CAT1_UART_Task.c(2164): error: use of undeclared identifier 'PAD_CAT1_DTR'
+        drv_gpio_write(OM_GPIO0, GPIO_MASK(PAD_CAT1_DTR), GPIO_LEVEL_LOW);
+                                           ^
+../Source/CAT1_UART_Task.c(2186): error: use of undeclared identifier 'PAD_CAT1_POWER'
+        drv_gpio_write(OM_GPIO0, GPIO_MASK(PAD_CAT1_POWER), GPIO_LEVEL_LOW);
+                                           ^
+../Source/CAT1_UART_Task.c(2188): error: use of undeclared identifier 'PAD_CAT1_POWERKEY'
+        drv_gpio_write(OM_GPIO1, GPIO_MASK(PAD_CAT1_POWERKEY - 32), GPIO_LEVEL_HIGH);   //powerkey 先拉拉高再拉低
+                                           ^
+../Source/CAT1_UART_Task.c(2190): error: use of undeclared identifier 'PAD_CAT1_POWERKEY'
+        drv_gpio_write(OM_GPIO1, GPIO_MASK(PAD_CAT1_POWERKEY-32), GPIO_LEVEL_LOW);
+                                           ^
+../Source/CAT1_UART_Task.c(2216): error: use of undeclared identifier 'PAD_CAT1_DTR'
+        drv_gpio_write(OM_GPIO0, GPIO_MASK(PAD_CAT1_DTR), GPIO_LEVEL_HIGH);
+                                           ^
+../Source/CAT1_UART_Task.c(2248): error: use of undeclared identifier 'PAD_CAT1_DTR'
+        drv_gpio_write(OM_GPIO0, GPIO_MASK(PAD_CAT1_DTR), GPIO_LEVEL_HIGH);
+                                           ^
+../Source/CAT1_UART_Task.c(2711): error: use of undeclared identifier 'PAD_CAT1_POWER'
+        drv_gpio_write(OM_GPIO0, GPIO_MASK(PAD_CAT1_POWER), GPIO_LEVEL_HIGH);
+                                           ^
+../Source/CAT1_UART_Task.c(2735): error: use of undeclared identifier 'PAD_CAT1_POWER'
+        drv_gpio_write(OM_GPIO0, GPIO_MASK(PAD_CAT1_POWER), GPIO_LEVEL_HIGH);
+                                           ^
+../Source/CAT1_UART_Task.c(2760): error: use of undeclared identifier 'PAD_CAT1_POWER'
+        drv_gpio_write(OM_GPIO0, GPIO_MASK(PAD_CAT1_POWER), GPIO_LEVEL_HIGH);
+                                           ^
+../Source/CAT1_UART_Task.c(6243): error: use of undeclared identifier 'PAD_CAT1_DTR'
+                                        drv_gpio_write(OM_GPIO0, GPIO_MASK(PAD_CAT1_DTR), GPIO_LEVEL_LOW);
+                                                                           ^
+12 errors generated.
+compiling CAT1_UART_Task.c...
+".\out\Dog_Collar_V01080020260721.axf" - 37 Error(s), 0 Warning(s).
+Target not created.
+Build Time Elapsed:  00:00:02

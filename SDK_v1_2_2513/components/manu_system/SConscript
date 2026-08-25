@@ -1,0 +1,16 @@
+from build.building import *
+
+group = []
+if GetDepend('CONFIG_FAULT_HANDLE'):
+    MANU_SYSTEM_INCS = ['fault_handle']
+    MANU_SYSTEM_SRCS = ['fault_handle/fault_handle.c']
+
+    group = DefineGroup(name='manu_system', srcs=MANU_SYSTEM_SRCS, incs=MANU_SYSTEM_INCS)
+
+if GetDepend('CONFIG_MANU_CALIB'):
+    group += SConscript('manu_calib/SConscript')
+
+if GetDepend('CONFIG_MANU_CALIB_BLE_V2'):
+    group += SConscript('manu_calib_ble_v2/SConscript')
+
+Return('group')

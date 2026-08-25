@@ -1,0 +1,5 @@
+ifeq ($(CONFIG_TRACE), y)
+TRACE_DIR = $(COMPONENTS_DIR)/trace
+COMPONENTS_INCS += $(TRACE_DIR)
+COMPONENTS_SRCS += $(TRACE_DIR)/trc_io.c
+endif

@@ -1,0 +1,9 @@
+from build.building import *
+
+group = []
+if GetDepend('CONFIG_NVDS'):
+    NVDS_INCS = ['.']
+    NVDS_SRCS = ['nvds.c']
+    group = DefineGroup(name='nvds', srcs=NVDS_SRCS, incs=NVDS_INCS)
+
+Return('group')
