@@ -1,9 +1,0 @@
-*** Using Compiler 'V6.18', folder: 'D:\MDK537\ARM\ARMCLANG\Bin'
-Build target 'ble_app_simple'
-compiling ble_op_queue.c...
-linking...
-Program Size: Code=263622 RO-data=32402 RW-data=3172 ZI-data=200412  
-After Build - User command #1: fromelf.exe --bin --output "c:\Users\Administrator\Desktop\test\SDK_v1_2_2513\projects\Dog_Collar_Prj\keil5\out\Dog_Collar_V02010120260722.bin" "c:\Users\Administrator\Desktop\test\SDK_v1_2_2513\projects\Dog_Collar_Prj\keil5\out\Dog_Collar_V02010120260722.axf"
-After Build - User command #2: fromelf.exe -c --output "c:\Users\Administrator\Desktop\test\SDK_v1_2_2513\projects\Dog_Collar_Prj\keil5\out\Dog_Collar_V02010120260722.dis" "c:\Users\Administrator\Desktop\test\SDK_v1_2_2513\projects\Dog_Collar_Prj\keil5\out\Dog_Collar_V02010120260722.axf"
-".\out\Dog_Collar_V02010120260722.axf" - 0 Error(s), 0 Warning(s).
-Build Time Elapsed:  00:00:03

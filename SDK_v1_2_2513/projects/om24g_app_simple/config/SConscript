@@ -1,9 +1,0 @@
-from build.building import *
-
-
-# project config
-PROJECT_CONFIG_INCS = ['.']
-
-group = DefineGroup(name='config', srcs=None, incs=PROJECT_CONFIG_INCS)
-
-Return('group')

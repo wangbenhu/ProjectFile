@@ -1,8 +1,0 @@
-from build.building import *
-SDK_DIR = '../..'
-group = SConscript(['config/SConscript',
-                    'linker_script/SConscript',
-                    'main/SConscript'])
-
-
-Return('group')

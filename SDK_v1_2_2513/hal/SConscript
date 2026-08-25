@@ -1,5 +1,0 @@
-group = SConscript('CMSIS/SConscript')
-group += SConscript('driver/SConscript')
-group += SConscript('device/SConscript')
-
-Return('group')

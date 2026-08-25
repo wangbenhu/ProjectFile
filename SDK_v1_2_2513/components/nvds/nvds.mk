@@ -1,5 +1,0 @@
-ifeq ($(CONFIG_NVDS), y)
-NVDS_DIR = $(COMPONENTS_DIR)/nvds
-COMPONENTS_INCS += $(NVDS_DIR)
-COMPONENTS_SRCS += $(NVDS_DIR)/nvds.c
-endif

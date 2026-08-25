@@ -1,5 +1,0 @@
-from build.building import *
-
-group = DefineGroupByDir()
-
-Return('group')
