@@ -339,8 +339,9 @@ static void vUartDataRecvTask(void *argument)
 								log_debug("\r\n");
 							}
                             // 检查是否正在电源检测且收到"OK"
-                            if (is_power_checking && strstr((char *)lteRecvSubpackage, "OK") != NULL) {
-                                log_debug("[C-UART][STA] Power check OK\r\n");
+                            if (is_power_checking && (strstr((char *)lteRecvSubpackage, "OK") != NULL ||
+                                                      strstr((char *)lteRecvSubpackage, "ERROR") != NULL)) {
+                                log_debug("[C-UART][STA] Power check response (OK/ERROR)\r\n");
                                 osSemaphoreRelease(Cat1PowerCheckSem);
                                 DEMO_BT_Free(lteRecvSubpackage);
                                 continue;

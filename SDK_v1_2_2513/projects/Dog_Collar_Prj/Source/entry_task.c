@@ -156,6 +156,13 @@ typedef enum {
                                         // 需要外部触发才能重新启动
 } SystemPowerState_t;
 
+//low_power_off 低功耗状态枚举
+typedef enum LowPowerOffEnum
+{
+	LOW_POWER_OFF = 0,//低功耗关闭
+	LOW_POWER_ON = 1,//低功耗开启
+}LowPowerOffEnum_t;
+
 /*********************************************************************
  * CONSTANTS
  */
@@ -209,13 +216,14 @@ static uint8_t pm_task_timer = PM_UPDATE_INTERVAL;
 static uint32_t aging_time_count = 0;
 static osSemaphoreId_t xSemAgingTest = NULL;
 static uint8_t gps_status =0;
-static uint8_t low_power_off = 0;
+static LowPowerOffEnum_t low_power_off = LOW_POWER_OFF;//低功耗关机标志0/1 关/开
 static bool s_Charge_Stop_Flag = false;
 static uint8_t entry_low_sleep_flag = SYSTEM_POWER_STATE_DEFAULT;
 static uint8_t wdt_start_flag = 0;
-static uint8_t device_reset_flag = 0;
+static bool device_reset_flag = false;
 static uint8_t product_entry_flag = 0; //产测进入标志
-static uint8_t cat1_del_device_flag = 0;//删除设备的标志
+static bool cat1_del_device_flag = false;//删除设备的标志
+static bool cat1_restart_flag = false;//M4模式下判断LTE是否重启条件的标志
 static struct 
 {
 	uint8_t user_define_light_start_flag;
@@ -231,7 +239,6 @@ static struct
  */
 
 bool is_flash_mac_valid(void);
-void ENTRY_Control_GPS_Start(void);
 void PowerOffSystem(void);
 int TaskInfo_InitTask(TaskInfo_t *task_info,
                       uint8_t task_id,
@@ -280,6 +287,7 @@ extern void board_deinit(void);
 extern void PM_Charge_Battery_Init(void);
 extern void Sensor_Init(void);
 extern void stack_monitor_run_flag_set(void);
+extern uint8_t gnss_task_restart(TASK_ID_T source_id);
 /*******************************************************************************
  * LOCAL FUNCTIONS
  */
@@ -720,7 +728,7 @@ void PowerOffSystem(void)
 		//osSemaphoreAcquire(xSemAgingTest, osWaitForever);
     }
     else{
-        low_power_off = 1;
+        low_power_off = LOW_POWER_ON;
     }
 }
 /*
@@ -770,7 +778,7 @@ void ModeM2Handler(void) {
     //关闭LED任务
 	Message_Cmd_Put(ENTRY_TASK_ID,LED_TASK_ID,TASK_CMD_STOP,NULL,0);
 	
-	if(low_power_off!=1)
+	if(low_power_off != LOW_POWER_ON)
 	{
 		//关闭CAT1_UART_TASK_ID任务
 		Message_Cmd_Put(ENTRY_TASK_ID,CAT1_UART_TASK_ID,TASK_CMD_STOP,NULL,0);
@@ -905,8 +913,15 @@ void ModeM4Handler(void) {
 	//关闭CAT1_UART_TASK_ID任务
 	Message_Cmd_Put(ENTRY_TASK_ID,CAT1_UART_TASK_ID,TASK_CMD_STOP,NULL,0);
 	//开启GNSS_UART_TASK_ID任务
-    ENTRY_Control_GPS_Start();
-	
+	if(SetModePare.UserStatus == LFS_USER_INFO_GET_SUCCEED)
+	{
+  		Entry_Control_GPS_Start_Power();//需求变更
+	}
+	else
+	{
+		//关闭GPS任务 需求变更版本02010520260901
+		Entry_Control_GPS_Stop_Power();
+	}
     //开启BLE_SCHEDULE_TASK_ID任务
 	evt_app_high_speed_adv_start();
 	//开启LED任务
@@ -1245,12 +1260,7 @@ void peripheral_other_init(void)
 
 }
 
-//进入backup模式
-void ENTRY_Control_GPS_Start(void)
-{
-//	 log_debug("ENTRY_Control_GPS_Start\r\n");
-	Message_Cmd_Put(ENTRY_TASK_ID,GNSS_UART_TASK_ID,TASK_GPS_STOP,NULL,0);
-}
+
 //GNSS开机
 void Entry_Control_GPS_Start_Power(void)
 {
@@ -1355,7 +1365,7 @@ void Factory_Data_Reset(void)
 	}
 	else
 	{
-		device_reset_flag=1;
+		device_reset_flag = true;
 		//延时5s
 		osDelay(osMS2TicksRound(5000));
 			//关闭CAT1_UART_TASK_ID任务
@@ -1537,7 +1547,7 @@ void Entry_Init(void)
 	SetModePare_SetBattery(PM_GetBatteryCapacity());//设置电量
 	SetModePare_SetCharge(Get_ChargeIO_Status()); //设置充电状态
 	/* 测试 实际需要获取充电状态和读取电量*/
-	cat1_del_device_flag = 0;
+	cat1_del_device_flag = false;
 	
 }
 
@@ -1628,17 +1638,23 @@ static osStatus_t EntryTask_HandleMessageQueue(TaskInfo_t* pEntryTaskInfo, Messa
                 //处理回复
                 /* 设置就绪标志 */
                 osEventFlagsSet(g_sleepEntryReadyFlags, SLEEP_GNSS_READY_FLAG);
+
             }
         }
         
         if(received_msg->source_id == CAT1_UART_TASK_ID)
         {
-            if(received_msg->command == TASK_STOP_REPLY)
+            if(received_msg->command == TASK_STOP_REPLY)//CAT1进入backup和关机时候进入
             {
-				if(FORE_MODE_STATUS == MODE_M4)
+				//M4模式下，CAT1进入backup和关机时候进入，需要重启CAT1任务
+				if(FORE_MODE_STATUS == MODE_M4 && SetModePare.UserStatus == LFS_USER_INFO_GET_SUCCEED)//用户绑定 且处于M4模式
 				{
 //					log_debug("received_msg->command == TASK_STOP_REPLY\r\n");
 					cat1_task_restart(ENTRY_TASK_ID);
+				}
+				else
+				{
+					cat1_restart_flag = true;
 				}
 				//处理回复
 				if(device_reset_flag)
@@ -1648,14 +1664,14 @@ static osStatus_t EntryTask_HandleMessageQueue(TaskInfo_t* pEntryTaskInfo, Messa
 				/* 设置就绪标志 */
 				osEventFlagsSet(g_sleepEntryReadyFlags, SLEEP_CAT1_READY_FLAG);
             }
-            if(received_msg->command == TASK_FACTORY_RESET_REPLY)
+            if(received_msg->command == TASK_FACTORY_RESET_REPLY)//工厂重置回复
             {
-                device_reset_flag=0;
+                device_reset_flag = false;
                 Factory_Data_Reset();
             }
-			if(received_msg->command == TASK_CAT1_DELETE_DEVICE)
+			if(received_msg->command == TASK_CAT1_DELETE_DEVICE)//删除设备回复
 			{
-				cat1_del_device_flag=1;
+				cat1_del_device_flag = true;
 			}
         }
     }
@@ -1698,15 +1714,22 @@ static void vEntryTask(void *argument)
 		SetModePare_SetBattery(PM_GetBatteryCapacity());
 //更新用户状态
 		SetModePare_SetUser(user_flag_tmp);
-		
-		//
+		//判断是否需要保持当前模式
 		hold_current_mode = ((FORE_MODE_STATUS == MODE_M3 || FORE_MODE_STATUS == MODE_M5) && \
-			(user_flag_tmp == LFS_USER_INFO_GET_FAILED) && (cat1_del_device_flag != 1));
+			(user_flag_tmp == LFS_USER_INFO_GET_FAILED) && (cat1_del_device_flag != true));
 		if(!hold_current_mode)
 		{
 			TaskManager_SetMode(SetModePare);
 		}
-        
+		if(cat1_restart_flag)//用户绑定 且处于M4模式用户从没绑定到绑定状态，控制LTE和GPS开启
+		{
+			if( FORE_MODE_STATUS == MODE_M4 && SetModePare.UserStatus == LFS_USER_INFO_GET_SUCCEED)
+			{
+				cat1_restart_flag = false;
+				cat1_task_restart(ENTRY_TASK_ID);
+				gnss_task_restart(ENTRY_TASK_ID);
+			}
+		}
 		//释放低功耗阻塞信号量
 		osSemaphoreRelease(xSemAgingTest);
 		
@@ -1739,13 +1762,13 @@ static void vEntryTask(void *argument)
 				{
 					if(device_reset_flag)
 					{
-						device_reset_flag=0;
+						device_reset_flag = false;
 						user_initiative_reboot_fun();	
 					}
 					else
 					{
 						m4_to_production_config();
-						device_reset_flag = 1;
+						device_reset_flag = true;
 					}
 				}
 				else
@@ -1754,7 +1777,7 @@ static void vEntryTask(void *argument)
 					PowerOffSystem();
 						
 					//如果先进入M2模式关闭外设后再进入的LTE和GNSS关闭完成这里，则可以直接阻塞，
-					//否则需要往下走到if(low_power_off ==1 && FORE_MODE_STATUS == MODE_M2)进行阻塞
+					//否则需要往下走到if(low_power_off == LOW_POWER_ON && FORE_MODE_STATUS == MODE_M2)进行阻塞
 					if(FORE_MODE_STATUS == MODE_M2)
 					{
 						osSemaphoreAcquire(xSemAgingTest, osWaitForever); 
@@ -1763,7 +1786,7 @@ static void vEntryTask(void *argument)
 			}
 		}
 		//
-		if(((low_power_off == 1) && (FORE_MODE_STATUS == MODE_M2)) ||
+		if(((low_power_off == LOW_POWER_ON) && (FORE_MODE_STATUS == MODE_M2)) ||
 			(get_entry_low_sleep_flag() == SYSTEM_POWER_STATE_SHUTDOWN))//M3->M2模式切换关机阻塞
 		{
 			osSemaphoreAcquire(xSemAgingTest, osWaitForever); 

@@ -2,7 +2,7 @@
 
 :: Create update firmware without signature
 ..\..\tools\imgutils\win\CreateFwTool.exe pack ^
-    .\keil5\out\Dog_Collar_V02010420260824.bin APP 0  .\mbr.bin MBR_USR1 @0x108
+    .\keil5\out\Dog_Collar_V02010620260902.bin APP 0  .\mbr.bin MBR_USR1 @0x108
 
 :: Create update firmware with signature
 :: ..\..\tools\imgutils\win\CreateFwTool.exe pack ^

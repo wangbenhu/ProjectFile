@@ -132,7 +132,7 @@ I (..\..\..\rtos\FreeRTOS\Source\Include\task.h)(0x674684D2)
 I (..\..\..\rtos\FreeRTOS\Source\Include\list.h)(0x674684D4)
 I (..\..\..\rtos\FreeRTOS\Source\Include\queue.h)(0x674684D2)
 I (..\..\..\rtos\include\cmsis_os2.h)(0x674684D4)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
@@ -438,7 +438,7 @@ I (..\..\..\rtos\FreeRTOS\Source\Include\list.h)(0x674684D4)
 I (..\..\..\rtos\FreeRTOS\Source\Include\queue.h)(0x674684D2)
 I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
 I (..\..\..\rtos\include\cmsis_os2.h)(0x674684D4)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
@@ -582,7 +582,7 @@ I (..\..\..\rtos\FreeRTOS\Source\Include\list.h)(0x674684D4)
 I (..\..\..\rtos\FreeRTOS\Source\Include\queue.h)(0x674684D2)
 I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
 I (..\..\..\rtos\include\cmsis_os2.h)(0x674684D4)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
@@ -592,7 +592,7 @@ I (..\..\..\components\ble\controller\include\obc_hci_h4.h)(0x674684D0)
 I (..\..\..\components\ble\controller\include\obc_pta.h)(0x674684D0)
 I (..\JSON\include\cJSON.h)(0x6A6301EA)
 I (..\..\..\rtos\FreeRTOS\Source\Include\timers.h)(0x674684D2)
-F (..\Source\Uart_Cat1DataRecv_Task.c)(0x6A6F5962)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../config -I ../../../common/include -I ../../../common/source -I ../../../components/manu_system/fault_handle -I ../../../components/om_log -I ../../../components/nvds -I ../../../components/evt -I ../../../components/ble/include -I ../../../components/ble/controller/include -I ../../../components/ble/host/include -I ../../../components/ble/profile/om_ancs -I ../../../components/ble/profile/om_bms -I ../../../components/ble/profile/om_cgms -I ../../../components/ble/profile/om_dfu -I ../../../components/ble/profile/om_gap_dis_batt -I ../../../components/ble/profile/om_hid_media -I ../../../components/ble/profile/om_tspp -I ../../../components/ble/profile/om_wechat_lite -I ../../../components/pm -I ../../../hal/CMSIS/Core/Include -I ../../../hal/driver/include -I ../../../hal/device/include -I ../../../rtos/include -I ../../../rtos/FreeRTOS/Source/Include -I ../../../rtos/FreeRTOS/CMSIS/Include -I ../../../rtos/FreeRTOS/CMSIS/Include1 -I ../../../rtos/FreeRTOS/CMSIS/Config/ARMCM -I ../../../rtos/FreeRTOS/Source/Portable/GCC -I ../Source -I ../Source/HW -I ../JSON/include -I ../m_drive/LittleFs/littlefs-2.2.1 -I ../m_drive/LittleFs/RTC -I ../m_drive/m_motor -I ../m_drive/m_audio/speaker_audio -I ../m_drive/sensor_task/imu -I ../m_drive/battery -I ../m_drive/m_led -I ../m_drive/sensor_task -I ../../../components/shell -I ../m_drive/m_geofence -I ../m_drive/m_wifihome -I ../pet_behavior_lib_keil_ac6_v2.0.1/include -I ../pet_behavior_lib_keil_ac6_v2.0.1/lib/keil/ac6/cortex-m4f-hardfp -I ../m_drive/m_audio/mic_audio-D__UVISION_VERSION="537" -DCONFIG_BLE_HOST -DCONFIG_LE_BROADCASTER="1" -DCONFIG_LE_PERIPHERAL="1" -DCONFIG_LE_ACTIVITY_NB="2" -DCONFIG_LE_CONNECTION_NB="1" -DCONFIG_LE_WHITELIST_NB="6" -DCONFIG_LE_LL_HCI_CMD_PKTS_NB="2" -DCONFIG_LE_LL_RX_DATA_BUF_NB="3" -DCONFIG_LE_LL_RX_DATA_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ACL_BUF_NB="3" -DCONFIG_LE_LL_TX_ACL_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ADV_BUF_NB="2" -DCONFIG_LE_LL_TX_ADV_FRAG_NB="1" -DCONFIG_LE_LL_TX_ADV_FRAG_BUF_SIZE="37" -DCONFIG_LE_LL_TX_LLCP_BUF_NB="3" -DOM6627X="0"-o ./out/uart_cat1datarecv_task.o -MD)
+F (..\Source\Uart_Cat1DataRecv_Task.c)(0x6A969C16)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../config -I ../../../common/include -I ../../../common/source -I ../../../components/manu_system/fault_handle -I ../../../components/om_log -I ../../../components/nvds -I ../../../components/evt -I ../../../components/ble/include -I ../../../components/ble/controller/include -I ../../../components/ble/host/include -I ../../../components/ble/profile/om_ancs -I ../../../components/ble/profile/om_bms -I ../../../components/ble/profile/om_cgms -I ../../../components/ble/profile/om_dfu -I ../../../components/ble/profile/om_gap_dis_batt -I ../../../components/ble/profile/om_hid_media -I ../../../components/ble/profile/om_tspp -I ../../../components/ble/profile/om_wechat_lite -I ../../../components/pm -I ../../../hal/CMSIS/Core/Include -I ../../../hal/driver/include -I ../../../hal/device/include -I ../../../rtos/include -I ../../../rtos/FreeRTOS/Source/Include -I ../../../rtos/FreeRTOS/CMSIS/Include -I ../../../rtos/FreeRTOS/CMSIS/Include1 -I ../../../rtos/FreeRTOS/CMSIS/Config/ARMCM -I ../../../rtos/FreeRTOS/Source/Portable/GCC -I ../Source -I ../Source/HW -I ../JSON/include -I ../m_drive/LittleFs/littlefs-2.2.1 -I ../m_drive/LittleFs/RTC -I ../m_drive/m_motor -I ../m_drive/m_audio/speaker_audio -I ../m_drive/sensor_task/imu -I ../m_drive/battery -I ../m_drive/m_led -I ../m_drive/sensor_task -I ../../../components/shell -I ../m_drive/m_geofence -I ../m_drive/m_wifihome -I ../pet_behavior_lib_keil_ac6_v2.0.1/include -I ../pet_behavior_lib_keil_ac6_v2.0.1/lib/keil/ac6/cortex-m4f-hardfp -I ../m_drive/m_audio/mic_audio-D__UVISION_VERSION="537" -DCONFIG_BLE_HOST -DCONFIG_LE_BROADCASTER="1" -DCONFIG_LE_PERIPHERAL="1" -DCONFIG_LE_ACTIVITY_NB="2" -DCONFIG_LE_CONNECTION_NB="1" -DCONFIG_LE_WHITELIST_NB="6" -DCONFIG_LE_LL_HCI_CMD_PKTS_NB="2" -DCONFIG_LE_LL_RX_DATA_BUF_NB="3" -DCONFIG_LE_LL_RX_DATA_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ACL_BUF_NB="3" -DCONFIG_LE_LL_TX_ACL_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ADV_BUF_NB="2" -DCONFIG_LE_LL_TX_ADV_FRAG_NB="1" -DCONFIG_LE_LL_TX_ADV_FRAG_BUF_SIZE="37" -DCONFIG_LE_LL_TX_LLCP_BUF_NB="3" -DOM6627X="0"-o ./out/uart_cat1datarecv_task.o -MD)
 I (..\..\..\hal\driver\include\om_driver.h)(0x67F4CB20)
 I (..\..\..\hal\driver\include\RTE_driver.h)(0x67F4CB20)
 I (..\config\RTE_om662x.h)(0x6A8BED2A)
@@ -725,7 +725,7 @@ I (..\..\..\rtos\FreeRTOS\Source\Include\list.h)(0x674684D4)
 I (..\..\..\rtos\FreeRTOS\Source\Include\queue.h)(0x674684D2)
 I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
 I (..\..\..\rtos\include\cmsis_os2.h)(0x674684D4)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
@@ -736,7 +736,7 @@ I (..\..\..\components\ble\controller\include\obc_pta.h)(0x674684D0)
 I (..\..\..\rtos\FreeRTOS\Source\Include\semphr.h)(0x674684D2)
 I (..\JSON\include\cJSON.h)(0x6A6301EA)
 I (..\..\..\rtos\FreeRTOS\Source\Include\timers.h)(0x674684D2)
-F (..\Source\Test_Task.c)(0x6A8C568B)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../config -I ../../../common/include -I ../../../common/source -I ../../../components/manu_system/fault_handle -I ../../../components/om_log -I ../../../components/nvds -I ../../../components/evt -I ../../../components/ble/include -I ../../../components/ble/controller/include -I ../../../components/ble/host/include -I ../../../components/ble/profile/om_ancs -I ../../../components/ble/profile/om_bms -I ../../../components/ble/profile/om_cgms -I ../../../components/ble/profile/om_dfu -I ../../../components/ble/profile/om_gap_dis_batt -I ../../../components/ble/profile/om_hid_media -I ../../../components/ble/profile/om_tspp -I ../../../components/ble/profile/om_wechat_lite -I ../../../components/pm -I ../../../hal/CMSIS/Core/Include -I ../../../hal/driver/include -I ../../../hal/device/include -I ../../../rtos/include -I ../../../rtos/FreeRTOS/Source/Include -I ../../../rtos/FreeRTOS/CMSIS/Include -I ../../../rtos/FreeRTOS/CMSIS/Include1 -I ../../../rtos/FreeRTOS/CMSIS/Config/ARMCM -I ../../../rtos/FreeRTOS/Source/Portable/GCC -I ../Source -I ../Source/HW -I ../JSON/include -I ../m_drive/LittleFs/littlefs-2.2.1 -I ../m_drive/LittleFs/RTC -I ../m_drive/m_motor -I ../m_drive/m_audio/speaker_audio -I ../m_drive/sensor_task/imu -I ../m_drive/battery -I ../m_drive/m_led -I ../m_drive/sensor_task -I ../../../components/shell -I ../m_drive/m_geofence -I ../m_drive/m_wifihome -I ../pet_behavior_lib_keil_ac6_v2.0.1/include -I ../pet_behavior_lib_keil_ac6_v2.0.1/lib/keil/ac6/cortex-m4f-hardfp -I ../m_drive/m_audio/mic_audio-D__UVISION_VERSION="537" -DCONFIG_BLE_HOST -DCONFIG_LE_BROADCASTER="1" -DCONFIG_LE_PERIPHERAL="1" -DCONFIG_LE_ACTIVITY_NB="2" -DCONFIG_LE_CONNECTION_NB="1" -DCONFIG_LE_WHITELIST_NB="6" -DCONFIG_LE_LL_HCI_CMD_PKTS_NB="2" -DCONFIG_LE_LL_RX_DATA_BUF_NB="3" -DCONFIG_LE_LL_RX_DATA_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ACL_BUF_NB="3" -DCONFIG_LE_LL_TX_ACL_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ADV_BUF_NB="2" -DCONFIG_LE_LL_TX_ADV_FRAG_NB="1" -DCONFIG_LE_LL_TX_ADV_FRAG_BUF_SIZE="37" -DCONFIG_LE_LL_TX_LLCP_BUF_NB="3" -DOM6627X="0"-o ./out/test_task.o -MD)
+F (..\Source\Test_Task.c)(0x6A8D481F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../config -I ../../../common/include -I ../../../common/source -I ../../../components/manu_system/fault_handle -I ../../../components/om_log -I ../../../components/nvds -I ../../../components/evt -I ../../../components/ble/include -I ../../../components/ble/controller/include -I ../../../components/ble/host/include -I ../../../components/ble/profile/om_ancs -I ../../../components/ble/profile/om_bms -I ../../../components/ble/profile/om_cgms -I ../../../components/ble/profile/om_dfu -I ../../../components/ble/profile/om_gap_dis_batt -I ../../../components/ble/profile/om_hid_media -I ../../../components/ble/profile/om_tspp -I ../../../components/ble/profile/om_wechat_lite -I ../../../components/pm -I ../../../hal/CMSIS/Core/Include -I ../../../hal/driver/include -I ../../../hal/device/include -I ../../../rtos/include -I ../../../rtos/FreeRTOS/Source/Include -I ../../../rtos/FreeRTOS/CMSIS/Include -I ../../../rtos/FreeRTOS/CMSIS/Include1 -I ../../../rtos/FreeRTOS/CMSIS/Config/ARMCM -I ../../../rtos/FreeRTOS/Source/Portable/GCC -I ../Source -I ../Source/HW -I ../JSON/include -I ../m_drive/LittleFs/littlefs-2.2.1 -I ../m_drive/LittleFs/RTC -I ../m_drive/m_motor -I ../m_drive/m_audio/speaker_audio -I ../m_drive/sensor_task/imu -I ../m_drive/battery -I ../m_drive/m_led -I ../m_drive/sensor_task -I ../../../components/shell -I ../m_drive/m_geofence -I ../m_drive/m_wifihome -I ../pet_behavior_lib_keil_ac6_v2.0.1/include -I ../pet_behavior_lib_keil_ac6_v2.0.1/lib/keil/ac6/cortex-m4f-hardfp -I ../m_drive/m_audio/mic_audio-D__UVISION_VERSION="537" -DCONFIG_BLE_HOST -DCONFIG_LE_BROADCASTER="1" -DCONFIG_LE_PERIPHERAL="1" -DCONFIG_LE_ACTIVITY_NB="2" -DCONFIG_LE_CONNECTION_NB="1" -DCONFIG_LE_WHITELIST_NB="6" -DCONFIG_LE_LL_HCI_CMD_PKTS_NB="2" -DCONFIG_LE_LL_RX_DATA_BUF_NB="3" -DCONFIG_LE_LL_RX_DATA_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ACL_BUF_NB="3" -DCONFIG_LE_LL_TX_ACL_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ADV_BUF_NB="2" -DCONFIG_LE_LL_TX_ADV_FRAG_NB="1" -DCONFIG_LE_LL_TX_ADV_FRAG_BUF_SIZE="37" -DCONFIG_LE_LL_TX_LLCP_BUF_NB="3" -DOM6627X="0"-o ./out/test_task.o -MD)
 I (..\..\..\hal\driver\include\om_driver.h)(0x67F4CB20)
 I (..\..\..\hal\driver\include\RTE_driver.h)(0x67F4CB20)
 I (..\config\RTE_om662x.h)(0x6A8BED2A)
@@ -870,7 +870,7 @@ I (..\..\..\rtos\FreeRTOS\Source\Include\list.h)(0x674684D4)
 I (..\..\..\rtos\FreeRTOS\Source\Include\queue.h)(0x674684D2)
 I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
 I (..\..\..\rtos\include\cmsis_os2.h)(0x674684D4)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
@@ -1015,7 +1015,7 @@ I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
 I (..\..\..\components\nvds\nvds_tags.h)(0x6A6060D4)
 I (..\..\..\components\pm\pm.h)(0x69DEDE2A)
 I (..\..\..\components\manu_system\fault_handle\fault_handle.h)(0x68342D90)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
@@ -1176,7 +1176,7 @@ I (..\..\..\rtos\FreeRTOS\Source\Include\list.h)(0x674684D4)
 I (..\..\..\rtos\FreeRTOS\Source\Include\queue.h)(0x674684D2)
 I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
 I (..\..\..\rtos\include\cmsis_os2.h)(0x674684D4)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
@@ -1185,7 +1185,7 @@ I (..\..\..\components\ble\controller\include\obc.h)(0x69DEDE20)
 I (..\..\..\components\ble\controller\include\obc_hci_h4.h)(0x674684D0)
 I (..\..\..\components\ble\controller\include\obc_pta.h)(0x674684D0)
 I (..\..\..\rtos\FreeRTOS\Source\Include\timers.h)(0x674684D2)
-F (..\Source\service_tspp_define.c)(0x6A8C25F1)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../config -I ../../../common/include -I ../../../common/source -I ../../../components/manu_system/fault_handle -I ../../../components/om_log -I ../../../components/nvds -I ../../../components/evt -I ../../../components/ble/include -I ../../../components/ble/controller/include -I ../../../components/ble/host/include -I ../../../components/ble/profile/om_ancs -I ../../../components/ble/profile/om_bms -I ../../../components/ble/profile/om_cgms -I ../../../components/ble/profile/om_dfu -I ../../../components/ble/profile/om_gap_dis_batt -I ../../../components/ble/profile/om_hid_media -I ../../../components/ble/profile/om_tspp -I ../../../components/ble/profile/om_wechat_lite -I ../../../components/pm -I ../../../hal/CMSIS/Core/Include -I ../../../hal/driver/include -I ../../../hal/device/include -I ../../../rtos/include -I ../../../rtos/FreeRTOS/Source/Include -I ../../../rtos/FreeRTOS/CMSIS/Include -I ../../../rtos/FreeRTOS/CMSIS/Include1 -I ../../../rtos/FreeRTOS/CMSIS/Config/ARMCM -I ../../../rtos/FreeRTOS/Source/Portable/GCC -I ../Source -I ../Source/HW -I ../JSON/include -I ../m_drive/LittleFs/littlefs-2.2.1 -I ../m_drive/LittleFs/RTC -I ../m_drive/m_motor -I ../m_drive/m_audio/speaker_audio -I ../m_drive/sensor_task/imu -I ../m_drive/battery -I ../m_drive/m_led -I ../m_drive/sensor_task -I ../../../components/shell -I ../m_drive/m_geofence -I ../m_drive/m_wifihome -I ../pet_behavior_lib_keil_ac6_v2.0.1/include -I ../pet_behavior_lib_keil_ac6_v2.0.1/lib/keil/ac6/cortex-m4f-hardfp -I ../m_drive/m_audio/mic_audio-D__UVISION_VERSION="537" -DCONFIG_BLE_HOST -DCONFIG_LE_BROADCASTER="1" -DCONFIG_LE_PERIPHERAL="1" -DCONFIG_LE_ACTIVITY_NB="2" -DCONFIG_LE_CONNECTION_NB="1" -DCONFIG_LE_WHITELIST_NB="6" -DCONFIG_LE_LL_HCI_CMD_PKTS_NB="2" -DCONFIG_LE_LL_RX_DATA_BUF_NB="3" -DCONFIG_LE_LL_RX_DATA_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ACL_BUF_NB="3" -DCONFIG_LE_LL_TX_ACL_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ADV_BUF_NB="2" -DCONFIG_LE_LL_TX_ADV_FRAG_NB="1" -DCONFIG_LE_LL_TX_ADV_FRAG_BUF_SIZE="37" -DCONFIG_LE_LL_TX_LLCP_BUF_NB="3" -DOM6627X="0"-o ./out/service_tspp_define.o -MD)
+F (..\Source\service_tspp_define.c)(0x6A978934)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../config -I ../../../common/include -I ../../../common/source -I ../../../components/manu_system/fault_handle -I ../../../components/om_log -I ../../../components/nvds -I ../../../components/evt -I ../../../components/ble/include -I ../../../components/ble/controller/include -I ../../../components/ble/host/include -I ../../../components/ble/profile/om_ancs -I ../../../components/ble/profile/om_bms -I ../../../components/ble/profile/om_cgms -I ../../../components/ble/profile/om_dfu -I ../../../components/ble/profile/om_gap_dis_batt -I ../../../components/ble/profile/om_hid_media -I ../../../components/ble/profile/om_tspp -I ../../../components/ble/profile/om_wechat_lite -I ../../../components/pm -I ../../../hal/CMSIS/Core/Include -I ../../../hal/driver/include -I ../../../hal/device/include -I ../../../rtos/include -I ../../../rtos/FreeRTOS/Source/Include -I ../../../rtos/FreeRTOS/CMSIS/Include -I ../../../rtos/FreeRTOS/CMSIS/Include1 -I ../../../rtos/FreeRTOS/CMSIS/Config/ARMCM -I ../../../rtos/FreeRTOS/Source/Portable/GCC -I ../Source -I ../Source/HW -I ../JSON/include -I ../m_drive/LittleFs/littlefs-2.2.1 -I ../m_drive/LittleFs/RTC -I ../m_drive/m_motor -I ../m_drive/m_audio/speaker_audio -I ../m_drive/sensor_task/imu -I ../m_drive/battery -I ../m_drive/m_led -I ../m_drive/sensor_task -I ../../../components/shell -I ../m_drive/m_geofence -I ../m_drive/m_wifihome -I ../pet_behavior_lib_keil_ac6_v2.0.1/include -I ../pet_behavior_lib_keil_ac6_v2.0.1/lib/keil/ac6/cortex-m4f-hardfp -I ../m_drive/m_audio/mic_audio-D__UVISION_VERSION="537" -DCONFIG_BLE_HOST -DCONFIG_LE_BROADCASTER="1" -DCONFIG_LE_PERIPHERAL="1" -DCONFIG_LE_ACTIVITY_NB="2" -DCONFIG_LE_CONNECTION_NB="1" -DCONFIG_LE_WHITELIST_NB="6" -DCONFIG_LE_LL_HCI_CMD_PKTS_NB="2" -DCONFIG_LE_LL_RX_DATA_BUF_NB="3" -DCONFIG_LE_LL_RX_DATA_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ACL_BUF_NB="3" -DCONFIG_LE_LL_TX_ACL_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ADV_BUF_NB="2" -DCONFIG_LE_LL_TX_ADV_FRAG_NB="1" -DCONFIG_LE_LL_TX_ADV_FRAG_BUF_SIZE="37" -DCONFIG_LE_LL_TX_LLCP_BUF_NB="3" -DOM6627X="0"-o ./out/service_tspp_define.o -MD)
 I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
 I (D:\MDK537\ARM\ARMCLANG\include\string.h)(0x625260D6)
 I (..\..\..\components\ble\host\include\omble.h)(0x6A630255)
@@ -1319,7 +1319,7 @@ I (..\..\..\rtos\FreeRTOS\Source\Include\mpu_wrappers.h)(0x674684D2)
 I (..\..\..\rtos\FreeRTOS\Source\Include\task.h)(0x674684D2)
 I (..\..\..\rtos\FreeRTOS\Source\Include\list.h)(0x674684D4)
 I (..\..\..\rtos\FreeRTOS\Source\Include\queue.h)(0x674684D2)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
@@ -1455,7 +1455,7 @@ I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
 I (..\..\..\components\om_log\om_log.h)(0x67F4CB0E)
 I (..\..\..\components\om_log\om_log_config.h)(0x67F4CB0E)
 I (..\..\..\rtos\include\cmsis_os2.h)(0x674684D4)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
@@ -1594,7 +1594,7 @@ I (..\..\..\rtos\FreeRTOS\Source\Include\list.h)(0x674684D4)
 I (..\..\..\rtos\FreeRTOS\Source\Include\queue.h)(0x674684D2)
 I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
 I (..\..\..\rtos\include\cmsis_os2.h)(0x674684D4)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
@@ -1611,7 +1611,7 @@ I (..\m_drive\sensor_task\imu\inv_imu_regmap_rev_a.h)(0x6A82CAE5)
 I (..\m_drive\sensor_task\imu\inv_imu_transport.h)(0x69410F30)
 I (..\m_drive\sensor_task\imu\InvError.h)(0x69410F30)
 I (..\Source\atomic_embedded.h)(0x694116BC)
-F (..\Source\CAT1_UART_Task.c)(0x6A87C580)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../config -I ../../../common/include -I ../../../common/source -I ../../../components/manu_system/fault_handle -I ../../../components/om_log -I ../../../components/nvds -I ../../../components/evt -I ../../../components/ble/include -I ../../../components/ble/controller/include -I ../../../components/ble/host/include -I ../../../components/ble/profile/om_ancs -I ../../../components/ble/profile/om_bms -I ../../../components/ble/profile/om_cgms -I ../../../components/ble/profile/om_dfu -I ../../../components/ble/profile/om_gap_dis_batt -I ../../../components/ble/profile/om_hid_media -I ../../../components/ble/profile/om_tspp -I ../../../components/ble/profile/om_wechat_lite -I ../../../components/pm -I ../../../hal/CMSIS/Core/Include -I ../../../hal/driver/include -I ../../../hal/device/include -I ../../../rtos/include -I ../../../rtos/FreeRTOS/Source/Include -I ../../../rtos/FreeRTOS/CMSIS/Include -I ../../../rtos/FreeRTOS/CMSIS/Include1 -I ../../../rtos/FreeRTOS/CMSIS/Config/ARMCM -I ../../../rtos/FreeRTOS/Source/Portable/GCC -I ../Source -I ../Source/HW -I ../JSON/include -I ../m_drive/LittleFs/littlefs-2.2.1 -I ../m_drive/LittleFs/RTC -I ../m_drive/m_motor -I ../m_drive/m_audio/speaker_audio -I ../m_drive/sensor_task/imu -I ../m_drive/battery -I ../m_drive/m_led -I ../m_drive/sensor_task -I ../../../components/shell -I ../m_drive/m_geofence -I ../m_drive/m_wifihome -I ../pet_behavior_lib_keil_ac6_v2.0.1/include -I ../pet_behavior_lib_keil_ac6_v2.0.1/lib/keil/ac6/cortex-m4f-hardfp -I ../m_drive/m_audio/mic_audio-D__UVISION_VERSION="537" -DCONFIG_BLE_HOST -DCONFIG_LE_BROADCASTER="1" -DCONFIG_LE_PERIPHERAL="1" -DCONFIG_LE_ACTIVITY_NB="2" -DCONFIG_LE_CONNECTION_NB="1" -DCONFIG_LE_WHITELIST_NB="6" -DCONFIG_LE_LL_HCI_CMD_PKTS_NB="2" -DCONFIG_LE_LL_RX_DATA_BUF_NB="3" -DCONFIG_LE_LL_RX_DATA_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ACL_BUF_NB="3" -DCONFIG_LE_LL_TX_ACL_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ADV_BUF_NB="2" -DCONFIG_LE_LL_TX_ADV_FRAG_NB="1" -DCONFIG_LE_LL_TX_ADV_FRAG_BUF_SIZE="37" -DCONFIG_LE_LL_TX_LLCP_BUF_NB="3" -DOM6627X="0"-o ./out/cat1_uart_task.o -MD)
+F (..\Source\CAT1_UART_Task.c)(0x6A9788C2)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../config -I ../../../common/include -I ../../../common/source -I ../../../components/manu_system/fault_handle -I ../../../components/om_log -I ../../../components/nvds -I ../../../components/evt -I ../../../components/ble/include -I ../../../components/ble/controller/include -I ../../../components/ble/host/include -I ../../../components/ble/profile/om_ancs -I ../../../components/ble/profile/om_bms -I ../../../components/ble/profile/om_cgms -I ../../../components/ble/profile/om_dfu -I ../../../components/ble/profile/om_gap_dis_batt -I ../../../components/ble/profile/om_hid_media -I ../../../components/ble/profile/om_tspp -I ../../../components/ble/profile/om_wechat_lite -I ../../../components/pm -I ../../../hal/CMSIS/Core/Include -I ../../../hal/driver/include -I ../../../hal/device/include -I ../../../rtos/include -I ../../../rtos/FreeRTOS/Source/Include -I ../../../rtos/FreeRTOS/CMSIS/Include -I ../../../rtos/FreeRTOS/CMSIS/Include1 -I ../../../rtos/FreeRTOS/CMSIS/Config/ARMCM -I ../../../rtos/FreeRTOS/Source/Portable/GCC -I ../Source -I ../Source/HW -I ../JSON/include -I ../m_drive/LittleFs/littlefs-2.2.1 -I ../m_drive/LittleFs/RTC -I ../m_drive/m_motor -I ../m_drive/m_audio/speaker_audio -I ../m_drive/sensor_task/imu -I ../m_drive/battery -I ../m_drive/m_led -I ../m_drive/sensor_task -I ../../../components/shell -I ../m_drive/m_geofence -I ../m_drive/m_wifihome -I ../pet_behavior_lib_keil_ac6_v2.0.1/include -I ../pet_behavior_lib_keil_ac6_v2.0.1/lib/keil/ac6/cortex-m4f-hardfp -I ../m_drive/m_audio/mic_audio-D__UVISION_VERSION="537" -DCONFIG_BLE_HOST -DCONFIG_LE_BROADCASTER="1" -DCONFIG_LE_PERIPHERAL="1" -DCONFIG_LE_ACTIVITY_NB="2" -DCONFIG_LE_CONNECTION_NB="1" -DCONFIG_LE_WHITELIST_NB="6" -DCONFIG_LE_LL_HCI_CMD_PKTS_NB="2" -DCONFIG_LE_LL_RX_DATA_BUF_NB="3" -DCONFIG_LE_LL_RX_DATA_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ACL_BUF_NB="3" -DCONFIG_LE_LL_TX_ACL_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ADV_BUF_NB="2" -DCONFIG_LE_LL_TX_ADV_FRAG_NB="1" -DCONFIG_LE_LL_TX_ADV_FRAG_BUF_SIZE="37" -DCONFIG_LE_LL_TX_LLCP_BUF_NB="3" -DOM6627X="0"-o ./out/cat1_uart_task.o -MD)
 I (..\..\..\hal\driver\include\om_driver.h)(0x67F4CB20)
 I (..\..\..\hal\driver\include\RTE_driver.h)(0x67F4CB20)
 I (..\config\RTE_om662x.h)(0x6A8BED2A)
@@ -1745,7 +1745,7 @@ I (..\..\..\rtos\FreeRTOS\Source\Include\list.h)(0x674684D4)
 I (..\..\..\rtos\FreeRTOS\Source\Include\queue.h)(0x674684D2)
 I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
 I (..\..\..\rtos\include\cmsis_os2.h)(0x674684D4)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
@@ -1760,7 +1760,7 @@ I (..\JSON\include\cJSON.h)(0x6A6301EA)
 I (..\..\..\components\nvds\nvds.h)(0x694B5112)
 I (..\..\..\components\nvds\nvds_tags.h)(0x6A6060D4)
 I (..\Source\Comm_Task.h)(0x6A82BF5D)
-F (..\Source\Comm_Task.c)(0x6A84305B)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../config -I ../../../common/include -I ../../../common/source -I ../../../components/manu_system/fault_handle -I ../../../components/om_log -I ../../../components/nvds -I ../../../components/evt -I ../../../components/ble/include -I ../../../components/ble/controller/include -I ../../../components/ble/host/include -I ../../../components/ble/profile/om_ancs -I ../../../components/ble/profile/om_bms -I ../../../components/ble/profile/om_cgms -I ../../../components/ble/profile/om_dfu -I ../../../components/ble/profile/om_gap_dis_batt -I ../../../components/ble/profile/om_hid_media -I ../../../components/ble/profile/om_tspp -I ../../../components/ble/profile/om_wechat_lite -I ../../../components/pm -I ../../../hal/CMSIS/Core/Include -I ../../../hal/driver/include -I ../../../hal/device/include -I ../../../rtos/include -I ../../../rtos/FreeRTOS/Source/Include -I ../../../rtos/FreeRTOS/CMSIS/Include -I ../../../rtos/FreeRTOS/CMSIS/Include1 -I ../../../rtos/FreeRTOS/CMSIS/Config/ARMCM -I ../../../rtos/FreeRTOS/Source/Portable/GCC -I ../Source -I ../Source/HW -I ../JSON/include -I ../m_drive/LittleFs/littlefs-2.2.1 -I ../m_drive/LittleFs/RTC -I ../m_drive/m_motor -I ../m_drive/m_audio/speaker_audio -I ../m_drive/sensor_task/imu -I ../m_drive/battery -I ../m_drive/m_led -I ../m_drive/sensor_task -I ../../../components/shell -I ../m_drive/m_geofence -I ../m_drive/m_wifihome -I ../pet_behavior_lib_keil_ac6_v2.0.1/include -I ../pet_behavior_lib_keil_ac6_v2.0.1/lib/keil/ac6/cortex-m4f-hardfp -I ../m_drive/m_audio/mic_audio-D__UVISION_VERSION="537" -DCONFIG_BLE_HOST -DCONFIG_LE_BROADCASTER="1" -DCONFIG_LE_PERIPHERAL="1" -DCONFIG_LE_ACTIVITY_NB="2" -DCONFIG_LE_CONNECTION_NB="1" -DCONFIG_LE_WHITELIST_NB="6" -DCONFIG_LE_LL_HCI_CMD_PKTS_NB="2" -DCONFIG_LE_LL_RX_DATA_BUF_NB="3" -DCONFIG_LE_LL_RX_DATA_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ACL_BUF_NB="3" -DCONFIG_LE_LL_TX_ACL_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ADV_BUF_NB="2" -DCONFIG_LE_LL_TX_ADV_FRAG_NB="1" -DCONFIG_LE_LL_TX_ADV_FRAG_BUF_SIZE="37" -DCONFIG_LE_LL_TX_LLCP_BUF_NB="3" -DOM6627X="0"-o ./out/comm_task.o -MD)
+F (..\Source\Comm_Task.c)(0x6A9788D5)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../config -I ../../../common/include -I ../../../common/source -I ../../../components/manu_system/fault_handle -I ../../../components/om_log -I ../../../components/nvds -I ../../../components/evt -I ../../../components/ble/include -I ../../../components/ble/controller/include -I ../../../components/ble/host/include -I ../../../components/ble/profile/om_ancs -I ../../../components/ble/profile/om_bms -I ../../../components/ble/profile/om_cgms -I ../../../components/ble/profile/om_dfu -I ../../../components/ble/profile/om_gap_dis_batt -I ../../../components/ble/profile/om_hid_media -I ../../../components/ble/profile/om_tspp -I ../../../components/ble/profile/om_wechat_lite -I ../../../components/pm -I ../../../hal/CMSIS/Core/Include -I ../../../hal/driver/include -I ../../../hal/device/include -I ../../../rtos/include -I ../../../rtos/FreeRTOS/Source/Include -I ../../../rtos/FreeRTOS/CMSIS/Include -I ../../../rtos/FreeRTOS/CMSIS/Include1 -I ../../../rtos/FreeRTOS/CMSIS/Config/ARMCM -I ../../../rtos/FreeRTOS/Source/Portable/GCC -I ../Source -I ../Source/HW -I ../JSON/include -I ../m_drive/LittleFs/littlefs-2.2.1 -I ../m_drive/LittleFs/RTC -I ../m_drive/m_motor -I ../m_drive/m_audio/speaker_audio -I ../m_drive/sensor_task/imu -I ../m_drive/battery -I ../m_drive/m_led -I ../m_drive/sensor_task -I ../../../components/shell -I ../m_drive/m_geofence -I ../m_drive/m_wifihome -I ../pet_behavior_lib_keil_ac6_v2.0.1/include -I ../pet_behavior_lib_keil_ac6_v2.0.1/lib/keil/ac6/cortex-m4f-hardfp -I ../m_drive/m_audio/mic_audio-D__UVISION_VERSION="537" -DCONFIG_BLE_HOST -DCONFIG_LE_BROADCASTER="1" -DCONFIG_LE_PERIPHERAL="1" -DCONFIG_LE_ACTIVITY_NB="2" -DCONFIG_LE_CONNECTION_NB="1" -DCONFIG_LE_WHITELIST_NB="6" -DCONFIG_LE_LL_HCI_CMD_PKTS_NB="2" -DCONFIG_LE_LL_RX_DATA_BUF_NB="3" -DCONFIG_LE_LL_RX_DATA_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ACL_BUF_NB="3" -DCONFIG_LE_LL_TX_ACL_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ADV_BUF_NB="2" -DCONFIG_LE_LL_TX_ADV_FRAG_NB="1" -DCONFIG_LE_LL_TX_ADV_FRAG_BUF_SIZE="37" -DCONFIG_LE_LL_TX_LLCP_BUF_NB="3" -DOM6627X="0"-o ./out/comm_task.o -MD)
 I (D:\MDK537\ARM\ARMCLANG\include\stdlib.h)(0x625260D6)
 I (D:\MDK537\ARM\ARMCLANG\include\stdint.h)(0x625260D8)
 I (D:\MDK537\ARM\ARMCLANG\include\ctype.h)(0x625260D6)
@@ -1881,7 +1881,7 @@ I (..\..\..\components\ble\host\include\omble_misc.h)(0x689B01BA)
 I (..\..\..\components\ble\host\include\omble_error.h)(0x68342D8E)
 I (..\..\..\components\om_log\om_log.h)(0x67F4CB0E)
 I (..\..\..\components\om_log\om_log_config.h)(0x67F4CB0E)
-I (..\..\..\components\ble\profile\om_gap_dis_batt\service_common.h)(0x6A8BF5DA)
+I (..\..\..\components\ble\profile\om_gap_dis_batt\service_common.h)(0x6A97886B)
 I (..\JSON\include\cJSON.h)(0x6A6301EA)
 I (..\Source\Comm_Task.h)(0x6A82BF5D)
 I (..\..\..\rtos\FreeRTOS\Source\Include\FreeRTOS.h)(0x674684D2)
@@ -1898,7 +1898,7 @@ I (..\..\..\rtos\FreeRTOS\Source\Include\queue.h)(0x674684D2)
 I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
 I (..\..\..\rtos\include\cmsis_os2.h)(0x674684D4)
 I (..\Source\common_def.h)(0x6A8C225A)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
@@ -2047,12 +2047,12 @@ I (..\..\..\components\om_log\om_log.h)(0x67F4CB0E)
 I (..\..\..\components\om_log\om_log_config.h)(0x67F4CB0E)
 I (..\Source\common_def.h)(0x6A8C225A)
 I (..\..\..\rtos\include\cmsis_os2.h)(0x674684D4)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
 I (..\Source\ble_state_machine.h)(0x6A62C148)
-F (..\Source\entry_task.c)(0x6A8BF124)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../config -I ../../../common/include -I ../../../common/source -I ../../../components/manu_system/fault_handle -I ../../../components/om_log -I ../../../components/nvds -I ../../../components/evt -I ../../../components/ble/include -I ../../../components/ble/controller/include -I ../../../components/ble/host/include -I ../../../components/ble/profile/om_ancs -I ../../../components/ble/profile/om_bms -I ../../../components/ble/profile/om_cgms -I ../../../components/ble/profile/om_dfu -I ../../../components/ble/profile/om_gap_dis_batt -I ../../../components/ble/profile/om_hid_media -I ../../../components/ble/profile/om_tspp -I ../../../components/ble/profile/om_wechat_lite -I ../../../components/pm -I ../../../hal/CMSIS/Core/Include -I ../../../hal/driver/include -I ../../../hal/device/include -I ../../../rtos/include -I ../../../rtos/FreeRTOS/Source/Include -I ../../../rtos/FreeRTOS/CMSIS/Include -I ../../../rtos/FreeRTOS/CMSIS/Include1 -I ../../../rtos/FreeRTOS/CMSIS/Config/ARMCM -I ../../../rtos/FreeRTOS/Source/Portable/GCC -I ../Source -I ../Source/HW -I ../JSON/include -I ../m_drive/LittleFs/littlefs-2.2.1 -I ../m_drive/LittleFs/RTC -I ../m_drive/m_motor -I ../m_drive/m_audio/speaker_audio -I ../m_drive/sensor_task/imu -I ../m_drive/battery -I ../m_drive/m_led -I ../m_drive/sensor_task -I ../../../components/shell -I ../m_drive/m_geofence -I ../m_drive/m_wifihome -I ../pet_behavior_lib_keil_ac6_v2.0.1/include -I ../pet_behavior_lib_keil_ac6_v2.0.1/lib/keil/ac6/cortex-m4f-hardfp -I ../m_drive/m_audio/mic_audio-D__UVISION_VERSION="537" -DCONFIG_BLE_HOST -DCONFIG_LE_BROADCASTER="1" -DCONFIG_LE_PERIPHERAL="1" -DCONFIG_LE_ACTIVITY_NB="2" -DCONFIG_LE_CONNECTION_NB="1" -DCONFIG_LE_WHITELIST_NB="6" -DCONFIG_LE_LL_HCI_CMD_PKTS_NB="2" -DCONFIG_LE_LL_RX_DATA_BUF_NB="3" -DCONFIG_LE_LL_RX_DATA_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ACL_BUF_NB="3" -DCONFIG_LE_LL_TX_ACL_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ADV_BUF_NB="2" -DCONFIG_LE_LL_TX_ADV_FRAG_NB="1" -DCONFIG_LE_LL_TX_ADV_FRAG_BUF_SIZE="37" -DCONFIG_LE_LL_TX_LLCP_BUF_NB="3" -DOM6627X="0"-o ./out/entry_task.o -MD)
+F (..\Source\entry_task.c)(0x6A978904)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../config -I ../../../common/include -I ../../../common/source -I ../../../components/manu_system/fault_handle -I ../../../components/om_log -I ../../../components/nvds -I ../../../components/evt -I ../../../components/ble/include -I ../../../components/ble/controller/include -I ../../../components/ble/host/include -I ../../../components/ble/profile/om_ancs -I ../../../components/ble/profile/om_bms -I ../../../components/ble/profile/om_cgms -I ../../../components/ble/profile/om_dfu -I ../../../components/ble/profile/om_gap_dis_batt -I ../../../components/ble/profile/om_hid_media -I ../../../components/ble/profile/om_tspp -I ../../../components/ble/profile/om_wechat_lite -I ../../../components/pm -I ../../../hal/CMSIS/Core/Include -I ../../../hal/driver/include -I ../../../hal/device/include -I ../../../rtos/include -I ../../../rtos/FreeRTOS/Source/Include -I ../../../rtos/FreeRTOS/CMSIS/Include -I ../../../rtos/FreeRTOS/CMSIS/Include1 -I ../../../rtos/FreeRTOS/CMSIS/Config/ARMCM -I ../../../rtos/FreeRTOS/Source/Portable/GCC -I ../Source -I ../Source/HW -I ../JSON/include -I ../m_drive/LittleFs/littlefs-2.2.1 -I ../m_drive/LittleFs/RTC -I ../m_drive/m_motor -I ../m_drive/m_audio/speaker_audio -I ../m_drive/sensor_task/imu -I ../m_drive/battery -I ../m_drive/m_led -I ../m_drive/sensor_task -I ../../../components/shell -I ../m_drive/m_geofence -I ../m_drive/m_wifihome -I ../pet_behavior_lib_keil_ac6_v2.0.1/include -I ../pet_behavior_lib_keil_ac6_v2.0.1/lib/keil/ac6/cortex-m4f-hardfp -I ../m_drive/m_audio/mic_audio-D__UVISION_VERSION="537" -DCONFIG_BLE_HOST -DCONFIG_LE_BROADCASTER="1" -DCONFIG_LE_PERIPHERAL="1" -DCONFIG_LE_ACTIVITY_NB="2" -DCONFIG_LE_CONNECTION_NB="1" -DCONFIG_LE_WHITELIST_NB="6" -DCONFIG_LE_LL_HCI_CMD_PKTS_NB="2" -DCONFIG_LE_LL_RX_DATA_BUF_NB="3" -DCONFIG_LE_LL_RX_DATA_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ACL_BUF_NB="3" -DCONFIG_LE_LL_TX_ACL_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ADV_BUF_NB="2" -DCONFIG_LE_LL_TX_ADV_FRAG_NB="1" -DCONFIG_LE_LL_TX_ADV_FRAG_BUF_SIZE="37" -DCONFIG_LE_LL_TX_LLCP_BUF_NB="3" -DOM6627X="0"-o ./out/entry_task.o -MD)
 I (..\..\..\hal\driver\include\om_driver.h)(0x67F4CB20)
 I (..\..\..\hal\driver\include\RTE_driver.h)(0x67F4CB20)
 I (..\config\RTE_om662x.h)(0x6A8BED2A)
@@ -2190,7 +2190,7 @@ I (..\..\..\rtos\FreeRTOS\Source\Include\task.h)(0x674684D2)
 I (..\..\..\rtos\FreeRTOS\Source\Include\list.h)(0x674684D4)
 I (..\..\..\rtos\FreeRTOS\Source\Include\queue.h)(0x674684D2)
 I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
@@ -2344,7 +2344,7 @@ I (..\..\..\rtos\FreeRTOS\Source\Include\task.h)(0x674684D2)
 I (..\..\..\rtos\FreeRTOS\Source\Include\list.h)(0x674684D4)
 I (..\..\..\rtos\FreeRTOS\Source\Include\queue.h)(0x674684D2)
 I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
@@ -2487,7 +2487,7 @@ I (..\..\..\rtos\FreeRTOS\Source\Include\list.h)(0x674684D4)
 I (..\..\..\rtos\FreeRTOS\Source\Include\queue.h)(0x674684D2)
 I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
 I (..\..\..\rtos\include\cmsis_os2.h)(0x674684D4)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
@@ -2638,7 +2638,7 @@ I (..\..\..\rtos\FreeRTOS\Source\Include\list.h)(0x674684D4)
 I (..\..\..\rtos\FreeRTOS\Source\Include\queue.h)(0x674684D2)
 I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
 I (..\..\..\rtos\include\cmsis_os2.h)(0x674684D4)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
@@ -2776,12 +2776,12 @@ I (..\..\..\rtos\FreeRTOS\Source\Include\queue.h)(0x674684D2)
 I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
 I (..\..\..\components\om_log\om_log.h)(0x67F4CB0E)
 I (..\..\..\components\om_log\om_log_config.h)(0x67F4CB0E)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
 I (..\Source\ble_state_machine.h)(0x6A62C148)
-F (..\Source\GNSS_UART_Task.c)(0x6A82BEBF)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../config -I ../../../common/include -I ../../../common/source -I ../../../components/manu_system/fault_handle -I ../../../components/om_log -I ../../../components/nvds -I ../../../components/evt -I ../../../components/ble/include -I ../../../components/ble/controller/include -I ../../../components/ble/host/include -I ../../../components/ble/profile/om_ancs -I ../../../components/ble/profile/om_bms -I ../../../components/ble/profile/om_cgms -I ../../../components/ble/profile/om_dfu -I ../../../components/ble/profile/om_gap_dis_batt -I ../../../components/ble/profile/om_hid_media -I ../../../components/ble/profile/om_tspp -I ../../../components/ble/profile/om_wechat_lite -I ../../../components/pm -I ../../../hal/CMSIS/Core/Include -I ../../../hal/driver/include -I ../../../hal/device/include -I ../../../rtos/include -I ../../../rtos/FreeRTOS/Source/Include -I ../../../rtos/FreeRTOS/CMSIS/Include -I ../../../rtos/FreeRTOS/CMSIS/Include1 -I ../../../rtos/FreeRTOS/CMSIS/Config/ARMCM -I ../../../rtos/FreeRTOS/Source/Portable/GCC -I ../Source -I ../Source/HW -I ../JSON/include -I ../m_drive/LittleFs/littlefs-2.2.1 -I ../m_drive/LittleFs/RTC -I ../m_drive/m_motor -I ../m_drive/m_audio/speaker_audio -I ../m_drive/sensor_task/imu -I ../m_drive/battery -I ../m_drive/m_led -I ../m_drive/sensor_task -I ../../../components/shell -I ../m_drive/m_geofence -I ../m_drive/m_wifihome -I ../pet_behavior_lib_keil_ac6_v2.0.1/include -I ../pet_behavior_lib_keil_ac6_v2.0.1/lib/keil/ac6/cortex-m4f-hardfp -I ../m_drive/m_audio/mic_audio-D__UVISION_VERSION="537" -DCONFIG_BLE_HOST -DCONFIG_LE_BROADCASTER="1" -DCONFIG_LE_PERIPHERAL="1" -DCONFIG_LE_ACTIVITY_NB="2" -DCONFIG_LE_CONNECTION_NB="1" -DCONFIG_LE_WHITELIST_NB="6" -DCONFIG_LE_LL_HCI_CMD_PKTS_NB="2" -DCONFIG_LE_LL_RX_DATA_BUF_NB="3" -DCONFIG_LE_LL_RX_DATA_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ACL_BUF_NB="3" -DCONFIG_LE_LL_TX_ACL_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ADV_BUF_NB="2" -DCONFIG_LE_LL_TX_ADV_FRAG_NB="1" -DCONFIG_LE_LL_TX_ADV_FRAG_BUF_SIZE="37" -DCONFIG_LE_LL_TX_LLCP_BUF_NB="3" -DOM6627X="0"-o ./out/gnss_uart_task.o -MD)
+F (..\Source\GNSS_UART_Task.c)(0x6A97890F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../config -I ../../../common/include -I ../../../common/source -I ../../../components/manu_system/fault_handle -I ../../../components/om_log -I ../../../components/nvds -I ../../../components/evt -I ../../../components/ble/include -I ../../../components/ble/controller/include -I ../../../components/ble/host/include -I ../../../components/ble/profile/om_ancs -I ../../../components/ble/profile/om_bms -I ../../../components/ble/profile/om_cgms -I ../../../components/ble/profile/om_dfu -I ../../../components/ble/profile/om_gap_dis_batt -I ../../../components/ble/profile/om_hid_media -I ../../../components/ble/profile/om_tspp -I ../../../components/ble/profile/om_wechat_lite -I ../../../components/pm -I ../../../hal/CMSIS/Core/Include -I ../../../hal/driver/include -I ../../../hal/device/include -I ../../../rtos/include -I ../../../rtos/FreeRTOS/Source/Include -I ../../../rtos/FreeRTOS/CMSIS/Include -I ../../../rtos/FreeRTOS/CMSIS/Include1 -I ../../../rtos/FreeRTOS/CMSIS/Config/ARMCM -I ../../../rtos/FreeRTOS/Source/Portable/GCC -I ../Source -I ../Source/HW -I ../JSON/include -I ../m_drive/LittleFs/littlefs-2.2.1 -I ../m_drive/LittleFs/RTC -I ../m_drive/m_motor -I ../m_drive/m_audio/speaker_audio -I ../m_drive/sensor_task/imu -I ../m_drive/battery -I ../m_drive/m_led -I ../m_drive/sensor_task -I ../../../components/shell -I ../m_drive/m_geofence -I ../m_drive/m_wifihome -I ../pet_behavior_lib_keil_ac6_v2.0.1/include -I ../pet_behavior_lib_keil_ac6_v2.0.1/lib/keil/ac6/cortex-m4f-hardfp -I ../m_drive/m_audio/mic_audio-D__UVISION_VERSION="537" -DCONFIG_BLE_HOST -DCONFIG_LE_BROADCASTER="1" -DCONFIG_LE_PERIPHERAL="1" -DCONFIG_LE_ACTIVITY_NB="2" -DCONFIG_LE_CONNECTION_NB="1" -DCONFIG_LE_WHITELIST_NB="6" -DCONFIG_LE_LL_HCI_CMD_PKTS_NB="2" -DCONFIG_LE_LL_RX_DATA_BUF_NB="3" -DCONFIG_LE_LL_RX_DATA_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ACL_BUF_NB="3" -DCONFIG_LE_LL_TX_ACL_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ADV_BUF_NB="2" -DCONFIG_LE_LL_TX_ADV_FRAG_NB="1" -DCONFIG_LE_LL_TX_ADV_FRAG_BUF_SIZE="37" -DCONFIG_LE_LL_TX_LLCP_BUF_NB="3" -DOM6627X="0"-o ./out/gnss_uart_task.o -MD)
 I (..\..\..\hal\driver\include\om_driver.h)(0x67F4CB20)
 I (..\..\..\hal\driver\include\RTE_driver.h)(0x67F4CB20)
 I (..\config\RTE_om662x.h)(0x6A8BED2A)
@@ -2915,12 +2915,12 @@ I (..\..\..\rtos\FreeRTOS\Source\Include\list.h)(0x674684D4)
 I (..\..\..\rtos\FreeRTOS\Source\Include\queue.h)(0x674684D2)
 I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
 I (..\..\..\rtos\include\cmsis_os2.h)(0x674684D4)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
 I (..\Source\ble_state_machine.h)(0x6A62C148)
-I (..\Source\GNSS_UART_Task.h)(0x6A82BEAE)
+I (..\Source\GNSS_UART_Task.h)(0x6A97892F)
 I (..\..\..\components\ble\controller\include\obc.h)(0x69DEDE20)
 I (..\..\..\components\ble\controller\include\obc_hci_h4.h)(0x674684D0)
 I (..\..\..\components\ble\controller\include\obc_pta.h)(0x674684D0)
@@ -3189,14 +3189,14 @@ I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
 I (..\..\..\components\om_log\om_log.h)(0x67F4CB0E)
 I (..\..\..\components\om_log\om_log_config.h)(0x67F4CB0E)
 I (..\..\..\rtos\include\cmsis_os2.h)(0x674684D4)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
 I (..\Source\ble_state_machine.h)(0x6A62C148)
 I (..\m_drive\m_audio\mic_audio\app_audio.h)(0x6A8BEE7E)
 I (D:\MDK537\ARM\ARMCLANG\include\math.h)(0x625260D6)
-F (..\m_drive\battery\m_battery.c)(0x6A87EFF5)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../config -I ../../../common/include -I ../../../common/source -I ../../../components/manu_system/fault_handle -I ../../../components/om_log -I ../../../components/nvds -I ../../../components/evt -I ../../../components/ble/include -I ../../../components/ble/controller/include -I ../../../components/ble/host/include -I ../../../components/ble/profile/om_ancs -I ../../../components/ble/profile/om_bms -I ../../../components/ble/profile/om_cgms -I ../../../components/ble/profile/om_dfu -I ../../../components/ble/profile/om_gap_dis_batt -I ../../../components/ble/profile/om_hid_media -I ../../../components/ble/profile/om_tspp -I ../../../components/ble/profile/om_wechat_lite -I ../../../components/pm -I ../../../hal/CMSIS/Core/Include -I ../../../hal/driver/include -I ../../../hal/device/include -I ../../../rtos/include -I ../../../rtos/FreeRTOS/Source/Include -I ../../../rtos/FreeRTOS/CMSIS/Include -I ../../../rtos/FreeRTOS/CMSIS/Include1 -I ../../../rtos/FreeRTOS/CMSIS/Config/ARMCM -I ../../../rtos/FreeRTOS/Source/Portable/GCC -I ../Source -I ../Source/HW -I ../JSON/include -I ../m_drive/LittleFs/littlefs-2.2.1 -I ../m_drive/LittleFs/RTC -I ../m_drive/m_motor -I ../m_drive/m_audio/speaker_audio -I ../m_drive/sensor_task/imu -I ../m_drive/battery -I ../m_drive/m_led -I ../m_drive/sensor_task -I ../../../components/shell -I ../m_drive/m_geofence -I ../m_drive/m_wifihome -I ../pet_behavior_lib_keil_ac6_v2.0.1/include -I ../pet_behavior_lib_keil_ac6_v2.0.1/lib/keil/ac6/cortex-m4f-hardfp -I ../m_drive/m_audio/mic_audio-D__UVISION_VERSION="537" -DCONFIG_BLE_HOST -DCONFIG_LE_BROADCASTER="1" -DCONFIG_LE_PERIPHERAL="1" -DCONFIG_LE_ACTIVITY_NB="2" -DCONFIG_LE_CONNECTION_NB="1" -DCONFIG_LE_WHITELIST_NB="6" -DCONFIG_LE_LL_HCI_CMD_PKTS_NB="2" -DCONFIG_LE_LL_RX_DATA_BUF_NB="3" -DCONFIG_LE_LL_RX_DATA_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ACL_BUF_NB="3" -DCONFIG_LE_LL_TX_ACL_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ADV_BUF_NB="2" -DCONFIG_LE_LL_TX_ADV_FRAG_NB="1" -DCONFIG_LE_LL_TX_ADV_FRAG_BUF_SIZE="37" -DCONFIG_LE_LL_TX_LLCP_BUF_NB="3" -DOM6627X="0"-o ./out/m_battery.o -MD)
+F (..\m_drive\battery\m_battery.c)(0x6A969B77)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../config -I ../../../common/include -I ../../../common/source -I ../../../components/manu_system/fault_handle -I ../../../components/om_log -I ../../../components/nvds -I ../../../components/evt -I ../../../components/ble/include -I ../../../components/ble/controller/include -I ../../../components/ble/host/include -I ../../../components/ble/profile/om_ancs -I ../../../components/ble/profile/om_bms -I ../../../components/ble/profile/om_cgms -I ../../../components/ble/profile/om_dfu -I ../../../components/ble/profile/om_gap_dis_batt -I ../../../components/ble/profile/om_hid_media -I ../../../components/ble/profile/om_tspp -I ../../../components/ble/profile/om_wechat_lite -I ../../../components/pm -I ../../../hal/CMSIS/Core/Include -I ../../../hal/driver/include -I ../../../hal/device/include -I ../../../rtos/include -I ../../../rtos/FreeRTOS/Source/Include -I ../../../rtos/FreeRTOS/CMSIS/Include -I ../../../rtos/FreeRTOS/CMSIS/Include1 -I ../../../rtos/FreeRTOS/CMSIS/Config/ARMCM -I ../../../rtos/FreeRTOS/Source/Portable/GCC -I ../Source -I ../Source/HW -I ../JSON/include -I ../m_drive/LittleFs/littlefs-2.2.1 -I ../m_drive/LittleFs/RTC -I ../m_drive/m_motor -I ../m_drive/m_audio/speaker_audio -I ../m_drive/sensor_task/imu -I ../m_drive/battery -I ../m_drive/m_led -I ../m_drive/sensor_task -I ../../../components/shell -I ../m_drive/m_geofence -I ../m_drive/m_wifihome -I ../pet_behavior_lib_keil_ac6_v2.0.1/include -I ../pet_behavior_lib_keil_ac6_v2.0.1/lib/keil/ac6/cortex-m4f-hardfp -I ../m_drive/m_audio/mic_audio-D__UVISION_VERSION="537" -DCONFIG_BLE_HOST -DCONFIG_LE_BROADCASTER="1" -DCONFIG_LE_PERIPHERAL="1" -DCONFIG_LE_ACTIVITY_NB="2" -DCONFIG_LE_CONNECTION_NB="1" -DCONFIG_LE_WHITELIST_NB="6" -DCONFIG_LE_LL_HCI_CMD_PKTS_NB="2" -DCONFIG_LE_LL_RX_DATA_BUF_NB="3" -DCONFIG_LE_LL_RX_DATA_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ACL_BUF_NB="3" -DCONFIG_LE_LL_TX_ACL_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ADV_BUF_NB="2" -DCONFIG_LE_LL_TX_ADV_FRAG_NB="1" -DCONFIG_LE_LL_TX_ADV_FRAG_BUF_SIZE="37" -DCONFIG_LE_LL_TX_LLCP_BUF_NB="3" -DOM6627X="0"-o ./out/m_battery.o -MD)
 I (..\m_drive\battery\m_battery.h)(0x6A6301EB)
 I (..\..\..\rtos\FreeRTOS\Source\Include\FreeRTOS.h)(0x674684D2)
 I (D:\MDK537\ARM\ARMCLANG\include\stddef.h)(0x625260D6)
@@ -3321,7 +3321,7 @@ I (..\..\..\components\om_log\om_log.h)(0x67F4CB0E)
 I (..\..\..\components\om_log\om_log_config.h)(0x67F4CB0E)
 I (..\..\..\rtos\include\cmsis_os2.h)(0x674684D4)
 I (..\Source\common_def.h)(0x6A8C225A)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
@@ -3455,12 +3455,12 @@ I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
 I (..\..\..\components\om_log\om_log.h)(0x67F4CB0E)
 I (..\..\..\components\om_log\om_log_config.h)(0x67F4CB0E)
 I (..\..\..\rtos\include\cmsis_os2.h)(0x674684D4)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
 I (..\Source\ble_state_machine.h)(0x6A62C148)
-F (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.c)(0x6A8432D4)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../config -I ../../../common/include -I ../../../common/source -I ../../../components/manu_system/fault_handle -I ../../../components/om_log -I ../../../components/nvds -I ../../../components/evt -I ../../../components/ble/include -I ../../../components/ble/controller/include -I ../../../components/ble/host/include -I ../../../components/ble/profile/om_ancs -I ../../../components/ble/profile/om_bms -I ../../../components/ble/profile/om_cgms -I ../../../components/ble/profile/om_dfu -I ../../../components/ble/profile/om_gap_dis_batt -I ../../../components/ble/profile/om_hid_media -I ../../../components/ble/profile/om_tspp -I ../../../components/ble/profile/om_wechat_lite -I ../../../components/pm -I ../../../hal/CMSIS/Core/Include -I ../../../hal/driver/include -I ../../../hal/device/include -I ../../../rtos/include -I ../../../rtos/FreeRTOS/Source/Include -I ../../../rtos/FreeRTOS/CMSIS/Include -I ../../../rtos/FreeRTOS/CMSIS/Include1 -I ../../../rtos/FreeRTOS/CMSIS/Config/ARMCM -I ../../../rtos/FreeRTOS/Source/Portable/GCC -I ../Source -I ../Source/HW -I ../JSON/include -I ../m_drive/LittleFs/littlefs-2.2.1 -I ../m_drive/LittleFs/RTC -I ../m_drive/m_motor -I ../m_drive/m_audio/speaker_audio -I ../m_drive/sensor_task/imu -I ../m_drive/battery -I ../m_drive/m_led -I ../m_drive/sensor_task -I ../../../components/shell -I ../m_drive/m_geofence -I ../m_drive/m_wifihome -I ../pet_behavior_lib_keil_ac6_v2.0.1/include -I ../pet_behavior_lib_keil_ac6_v2.0.1/lib/keil/ac6/cortex-m4f-hardfp -I ../m_drive/m_audio/mic_audio-D__UVISION_VERSION="537" -DCONFIG_BLE_HOST -DCONFIG_LE_BROADCASTER="1" -DCONFIG_LE_PERIPHERAL="1" -DCONFIG_LE_ACTIVITY_NB="2" -DCONFIG_LE_CONNECTION_NB="1" -DCONFIG_LE_WHITELIST_NB="6" -DCONFIG_LE_LL_HCI_CMD_PKTS_NB="2" -DCONFIG_LE_LL_RX_DATA_BUF_NB="3" -DCONFIG_LE_LL_RX_DATA_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ACL_BUF_NB="3" -DCONFIG_LE_LL_TX_ACL_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ADV_BUF_NB="2" -DCONFIG_LE_LL_TX_ADV_FRAG_NB="1" -DCONFIG_LE_LL_TX_ADV_FRAG_BUF_SIZE="37" -DCONFIG_LE_LL_TX_LLCP_BUF_NB="3" -DOM6627X="0"-o ./out/lfs_port.o -MD)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+F (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.c)(0x6A915A13)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../config -I ../../../common/include -I ../../../common/source -I ../../../components/manu_system/fault_handle -I ../../../components/om_log -I ../../../components/nvds -I ../../../components/evt -I ../../../components/ble/include -I ../../../components/ble/controller/include -I ../../../components/ble/host/include -I ../../../components/ble/profile/om_ancs -I ../../../components/ble/profile/om_bms -I ../../../components/ble/profile/om_cgms -I ../../../components/ble/profile/om_dfu -I ../../../components/ble/profile/om_gap_dis_batt -I ../../../components/ble/profile/om_hid_media -I ../../../components/ble/profile/om_tspp -I ../../../components/ble/profile/om_wechat_lite -I ../../../components/pm -I ../../../hal/CMSIS/Core/Include -I ../../../hal/driver/include -I ../../../hal/device/include -I ../../../rtos/include -I ../../../rtos/FreeRTOS/Source/Include -I ../../../rtos/FreeRTOS/CMSIS/Include -I ../../../rtos/FreeRTOS/CMSIS/Include1 -I ../../../rtos/FreeRTOS/CMSIS/Config/ARMCM -I ../../../rtos/FreeRTOS/Source/Portable/GCC -I ../Source -I ../Source/HW -I ../JSON/include -I ../m_drive/LittleFs/littlefs-2.2.1 -I ../m_drive/LittleFs/RTC -I ../m_drive/m_motor -I ../m_drive/m_audio/speaker_audio -I ../m_drive/sensor_task/imu -I ../m_drive/battery -I ../m_drive/m_led -I ../m_drive/sensor_task -I ../../../components/shell -I ../m_drive/m_geofence -I ../m_drive/m_wifihome -I ../pet_behavior_lib_keil_ac6_v2.0.1/include -I ../pet_behavior_lib_keil_ac6_v2.0.1/lib/keil/ac6/cortex-m4f-hardfp -I ../m_drive/m_audio/mic_audio-D__UVISION_VERSION="537" -DCONFIG_BLE_HOST -DCONFIG_LE_BROADCASTER="1" -DCONFIG_LE_PERIPHERAL="1" -DCONFIG_LE_ACTIVITY_NB="2" -DCONFIG_LE_CONNECTION_NB="1" -DCONFIG_LE_WHITELIST_NB="6" -DCONFIG_LE_LL_HCI_CMD_PKTS_NB="2" -DCONFIG_LE_LL_RX_DATA_BUF_NB="3" -DCONFIG_LE_LL_RX_DATA_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ACL_BUF_NB="3" -DCONFIG_LE_LL_TX_ACL_BUF_SIZE="256" -DCONFIG_LE_LL_TX_ADV_BUF_NB="2" -DCONFIG_LE_LL_TX_ADV_FRAG_NB="1" -DCONFIG_LE_LL_TX_ADV_FRAG_BUF_SIZE="37" -DCONFIG_LE_LL_TX_LLCP_BUF_NB="3" -DOM6627X="0"-o ./out/lfs_port.o -MD)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (D:\MDK537\ARM\ARMCLANG\include\string.h)(0x625260D6)
 I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
@@ -3720,7 +3720,7 @@ I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
 I (..\..\..\components\om_log\om_log.h)(0x67F4CB0E)
 I (..\..\..\components\om_log\om_log_config.h)(0x67F4CB0E)
 I (..\..\..\rtos\include\cmsis_os2.h)(0x674684D4)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
@@ -3858,7 +3858,7 @@ I (..\..\..\rtos\FreeRTOS\Source\Include\list.h)(0x674684D4)
 I (..\..\..\rtos\FreeRTOS\Source\Include\queue.h)(0x674684D2)
 I (..\..\..\components\om_log\om_log.h)(0x67F4CB0E)
 I (..\..\..\components\om_log\om_log_config.h)(0x67F4CB0E)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
@@ -4097,7 +4097,7 @@ I (..\m_drive\m_audio\speaker_audio\my_audio.h)(0x6A7D31D6)
 I (..\m_drive\m_audio\speaker_audio\test_audio.h)(0x6A6301EC)
 I (..\..\..\rtos\include\cmsis_os2.h)(0x674684D4)
 I (..\Source\HW\board_define.h)(0x6A7C1EE1)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
@@ -4363,7 +4363,7 @@ I (..\..\..\rtos\FreeRTOS\Source\Include\queue.h)(0x674684D2)
 I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
 I (..\..\..\components\om_log\om_log.h)(0x67F4CB0E)
 I (..\..\..\components\om_log\om_log_config.h)(0x67F4CB0E)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
@@ -4501,7 +4501,7 @@ I (..\..\..\rtos\FreeRTOS\Source\Include\list.h)(0x674684D4)
 I (..\..\..\rtos\FreeRTOS\Source\Include\queue.h)(0x674684D2)
 I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
 I (..\..\..\rtos\include\cmsis_os2.h)(0x674684D4)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
@@ -4655,7 +4655,7 @@ I (..\..\..\rtos\FreeRTOS\Source\Include\task.h)(0x674684D2)
 I (..\..\..\rtos\FreeRTOS\Source\Include\list.h)(0x674684D4)
 I (..\..\..\rtos\FreeRTOS\Source\Include\queue.h)(0x674684D2)
 I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
@@ -4798,7 +4798,7 @@ I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
 I (..\..\..\components\om_log\om_log.h)(0x67F4CB0E)
 I (..\..\..\components\om_log\om_log_config.h)(0x67F4CB0E)
 I (..\..\..\rtos\include\cmsis_os2.h)(0x674684D4)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
@@ -4935,7 +4935,7 @@ I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
 I (..\..\..\components\om_log\om_log.h)(0x67F4CB0E)
 I (..\..\..\components\om_log\om_log_config.h)(0x67F4CB0E)
 I (..\..\..\rtos\include\cmsis_os2.h)(0x674684D4)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
@@ -5096,7 +5096,7 @@ I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
 I (..\..\..\components\om_log\om_log.h)(0x67F4CB0E)
 I (..\..\..\components\om_log\om_log_config.h)(0x67F4CB0E)
 I (..\..\..\rtos\include\cmsis_os2.h)(0x674684D4)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
@@ -5227,7 +5227,7 @@ I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
 I (..\..\..\components\om_log\om_log.h)(0x67F4CB0E)
 I (..\..\..\components\om_log\om_log_config.h)(0x67F4CB0E)
 I (..\..\..\rtos\include\cmsis_os2.h)(0x674684D4)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
@@ -5364,7 +5364,7 @@ I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
 I (..\..\..\components\om_log\om_log.h)(0x67F4CB0E)
 I (..\..\..\components\om_log\om_log_config.h)(0x67F4CB0E)
 I (..\..\..\rtos\include\cmsis_os2.h)(0x674684D4)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
@@ -5607,7 +5607,7 @@ I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
 I (..\..\..\components\om_log\om_log.h)(0x67F4CB0E)
 I (..\..\..\components\om_log\om_log_config.h)(0x67F4CB0E)
 I (..\..\..\rtos\include\cmsis_os2.h)(0x674684D4)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
@@ -7007,7 +7007,7 @@ I (..\..\..\components\ble\host\include\omble_range.h)(0x68214990)
 I (..\..\..\components\ble\host\include\omble_gatt.h)(0x68342D8E)
 I (..\..\..\components\ble\host\include\omble_misc.h)(0x689B01BA)
 I (..\..\..\components\ble\host\include\omble_error.h)(0x68342D8E)
-I (..\..\..\components\ble\profile\om_gap_dis_batt\service_common.h)(0x6A8BF5DA)
+I (..\..\..\components\ble\profile\om_gap_dis_batt\service_common.h)(0x6A97886B)
 I (..\Source\common_def.h)(0x6A8C225A)
 I (..\..\..\rtos\FreeRTOS\Source\Include\FreeRTOS.h)(0x674684D2)
 I (D:\MDK537\ARM\ARMCLANG\include\stddef.h)(0x625260D6)
@@ -7127,7 +7127,7 @@ I (D:\MDK537\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
 I (..\..\..\components\om_log\om_log.h)(0x67F4CB0E)
 I (..\..\..\components\om_log\om_log_config.h)(0x67F4CB0E)
 I (..\..\..\rtos\include\cmsis_os2.h)(0x674684D4)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)
@@ -12568,7 +12568,7 @@ I (..\..\..\rtos\FreeRTOS\Source\Include\queue.h)(0x674684D2)
 I (..\..\..\components\om_log\om_log.h)(0x67F4CB0E)
 I (..\..\..\components\om_log\om_log_config.h)(0x67F4CB0E)
 I (..\..\..\rtos\include\cmsis_os2.h)(0x674684D4)
-I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A73F746)
+I (..\m_drive\LittleFs\littlefs-2.2.1\lfs_port.h)(0x6A915A12)
 I (..\m_drive\LittleFs\littlefs-2.2.1\lfs.h)(0x69410C9B)
 I (..\m_drive\LittleFs\littlefs-2.2.1\audio_filename.h)(0x6A6C4300)
 I (..\m_drive\LittleFs\littlefs-2.2.1\wifi_config_types.h)(0x6A7306FF)

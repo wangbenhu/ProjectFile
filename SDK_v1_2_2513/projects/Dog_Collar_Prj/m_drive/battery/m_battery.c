@@ -120,7 +120,7 @@ static const SOC_POINT_T soc_table[] =
     { 3500,  12 },
     { 3450,   7 },
     { 3400,   4 },
-    { 3300,   0 },
+    { 3320,   0 },
 };
 
 #define ARRAY_SIZE(arr)   (sizeof(arr) / sizeof((arr)[0]))

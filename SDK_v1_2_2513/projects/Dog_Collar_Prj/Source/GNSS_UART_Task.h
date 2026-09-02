@@ -128,7 +128,6 @@ void gpsCmd_parse_task(void *pvParameters);
 void gps_data_parsing(uint8_t *beltRecvSubpackage, uint16_t parsing_fifo_length);
 void initGps(void);
 
-
 void handle_home_mode(void);
 void handle_outdoor_mode(void);
 void handle_pet_find_mode(void);

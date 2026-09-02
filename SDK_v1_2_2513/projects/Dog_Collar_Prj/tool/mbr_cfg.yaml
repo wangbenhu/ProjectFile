@@ -16,4 +16,4 @@ manifest_config:
   img_ver: 0x00000001                 # 固件版本号(当不使能安全功能时，值不产生影响)
   img_vma: 0x00404000                 # APP程序的存放地址
   img_lma: 0x00477000                 # 如果需要升级时，这一项需要填写为备份区地址并将生成的MBR烧录到MBR1，如果是正常启动，这一项参数需要为0xDEADBEEF,且将生成的MBR烧录到MBR0
-  img_path: './keil5/out/Dog_Collar_V02010420260824.bin'    # APP程序路径
+  img_path: './keil5/out/Dog_Collar_V02010620260902.bin'    # APP程序路径

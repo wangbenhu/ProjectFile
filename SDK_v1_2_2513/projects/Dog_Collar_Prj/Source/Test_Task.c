@@ -964,7 +964,8 @@ static void vTestTask(void *argument)
 				Production_Result_Report(error_code_tmp);
 				if(GetAsingStopBleFlag() == ASING_STOP_BLE_FLAG_START)
 				{
-					evt_app_adv_stop();//关闭蓝牙
+					//evt_app_adv_stop();//关闭蓝牙
+					StopBleRestartTimer();//关闭蓝牙
 					SetAsingStopBleFlag(ASING_STOP_BLE_FLAG_NONE);
 					
 				}

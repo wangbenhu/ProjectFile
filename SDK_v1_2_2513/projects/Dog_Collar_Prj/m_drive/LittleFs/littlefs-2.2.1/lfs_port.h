@@ -61,6 +61,7 @@ typedef enum {
     UBI_AUTH_CODE_ID = 0,		// 鉴权码
 	UBI_GPS_ADDRESS_ID,		// GPS 地址信息
     UBI_MQTT_CLIENT_ID_ID,		// MQTT client id 
+	UBI_TIMESTAMP_ID,		// 时间戳
 	UBI_ALL_DATA,
 } UserBindInfoID;
 

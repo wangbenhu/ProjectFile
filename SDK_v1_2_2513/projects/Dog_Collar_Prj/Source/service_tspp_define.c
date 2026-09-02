@@ -26,7 +26,7 @@
 #include "ble_op_queue.h"
 #include "common_def.h"
 
-#define log_debug(...) om_log(OM_LOG_INFO, ##__VA_ARGS__)
+//#define log_debug(...) om_log(OM_LOG_INFO, ##__VA_ARGS__)
 /*********************************************************************
  * LOCAL VARIABLES
  */

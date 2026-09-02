@@ -238,6 +238,7 @@ static const field_header_map_t field_header_map[] = {
     { UBI_AUTH_CODE_ID,     "[AUTH_CODE]"     },//鉴权信息
     { UBI_GPS_ADDRESS_ID,   "[GPS_ADDRESS]"   },//GPS地址
     { UBI_MQTT_CLIENT_ID_ID,"[MQTT_CLIENT_ID]"},//MQTT客户端ID
+	{ UBI_TIMESTAMP_ID,     "[TIMESTAMP]"     },//时间戳
 };
 
 /* 系统信息字段头映射表 */

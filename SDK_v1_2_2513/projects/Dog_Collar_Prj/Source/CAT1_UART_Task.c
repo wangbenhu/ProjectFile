@@ -801,6 +801,63 @@ void clearPacketList(void)
 	return device_sub_sn;
  }
 
+/* ===== eSIM ICCID 前缀 → APN 匹配表 =====
+ * ICCID 前6位为厂商/运营商固定字段, 生产时经AT+QCCID写入文件系统(SYS_DEVICE_SN_ID),
+ * 配置APN前根据卡号前缀决定写入哪个APN, 支持后续新增厂商只改本表 */
+typedef struct {
+    const char *iccid_prefix;   /* ICCID 前6位前缀 */
+    const char *apn;            /* 对应 APN */
+} ApnMatchEntry_t;
+
+static const ApnMatchEntry_t s_apn_match_table[] = {
+    { "894301", "linksnet" },   /* 领科 */
+    { "893204", "bicsapn" },    /* 广和通 */
+    { "898604", "cmiot" },      /* 中国移动 */
+    { NULL, NULL }              /* 表尾 */
+};
+
+/* 从eSIM SN中提取前6位数字作为匹配前缀 */
+static void get_iccid_prefix(const char *sn, char *prefix_out, uint8_t prefix_len)
+{
+    uint8_t idx = 0;
+    for (const char *p = sn; *p != '\0' && idx < prefix_len; p++) {
+        if (*p >= '0' && *p <= '9') {
+            prefix_out[idx++] = *p;
+        }
+    }
+    prefix_out[idx] = '\0';
+}
+
+/* 根据eSIM ICCID前缀匹配APN; 无匹配返回默认APN */
+static const char *get_apn_by_esim_sn(void)
+{
+    char prefix[7] = {0};
+    get_iccid_prefix(get_device_sn(), prefix, sizeof(prefix) - 1);
+
+    if (strlen(prefix) == 6) {
+        for (int i = 0; s_apn_match_table[i].iccid_prefix != NULL; i++) {
+            if (strncmp(prefix, s_apn_match_table[i].iccid_prefix, 6) == 0) {
+                return s_apn_match_table[i].apn;
+            }
+        }
+    }
+    return "linksnet";  /* 默认APN */
+}
+
+/* 查询到的APN是否在匹配表内(用于AT+CGDCONT?回读校验) */
+static bool is_apn_valid(const char *apn)
+{
+    if (apn == NULL || apn[0] == '\0') {
+        return false;
+    }
+    for (int i = 0; s_apn_match_table[i].iccid_prefix != NULL; i++) {
+        if (strcmp(apn, s_apn_match_table[i].apn) == 0) {
+            return true;
+        }
+    }
+    return false;
+}
+
  /**
  * @brief 检查CAT1固件版本类型（从文件系统读取）
  * @return CAT1_CONFIG_OLD 旧版本配置
@@ -1050,8 +1107,8 @@ static void func_lte_type(lte_at_type_t type)
 			sprintf(mqtt_payload_str, "AT+QMTCFG=\"recv/mode\",%d,0,1\r\n", mqtt_client_idx);
 			mqtt_payload_len = strlen(mqtt_payload_str);
 			break;
-		case LTE_SET_APN: // 设置APN
-			sprintf(mqtt_payload_str, "AT+CGDCONT=%d,%s,%s\r\n", 1, "IP", "linksnet");
+		case LTE_SET_APN: // 设置APN(根据eSIM ICCID前缀匹配, 见s_apn_match_table)
+			sprintf(mqtt_payload_str, "AT+CGDCONT=%d,%s,%s\r\n", 1, "IP", get_apn_by_esim_sn());
 			mqtt_payload_len = strlen(mqtt_payload_str);
 			break;
 		case LTE_GET_APN: // 查询APN
@@ -3846,7 +3903,7 @@ void at_cgdcont(uint8_t *str, uint16_t len, cmd_status_t *status)
 		log_debug("[CAT1][DAT] cid: %d\r\n", cid);
         if (cid == 1)
         {
-            if (strcmp(apn, "linksnet") == 0)
+            if (is_apn_valid(apn))
             {
                 *status = CMD_STATUS_SUCCESS;  // CID=1 且 APN 正确
             }
@@ -6077,7 +6134,7 @@ static void DeleteResponseTimerCallback(void *argument)
 void TimerCallback_checkMqttState(void *argument)
 {
 	log_debug("[CAT1][STA] TimerCallback checkMqtt\r\n");
-	if(g_mqtt_sending == 0)
+	if(g_mqtt_sending == 0 || !isMqttConnected)
 	{
 		lteMqttConnState();
 	}
@@ -6158,17 +6215,27 @@ bool checkCat1PowerState(void)
 	is_power_checking = true;
 	set_cat1_state(LTE_TASK_INIT);
 	
-	// 发送AT指令检测硬件状态
+	// 清残留数据(重启/模式切换后模组可能有旧的OK/+QMTPUBEX在FIFO里) + 发送AT
+	clearPacketList();
 	lteAt();
-	
+
 	// 死等1秒，等待OK响应
 	osStatus_t sem_status = osSemaphoreAcquire(Cat1PowerCheckSem, osMS2TicksRound(CAT1_POWER_CHECK_TIMEOUT));
-	
+
 	// 电源检测完成
 	is_power_checking = false;
 	
 	if (sem_status == osOK) {
 		log_debug("[CAT1][STA] hardware is Power on\r\n");
+		// 检活成功: 清除残留的命令状态和UART数据, 确保后续命令从干净状态开始
+		if (currentCmd) {
+			osMutexAcquire(LteMutex, osWaitForever);
+			currentCmd = NULL;
+			osMutexRelease(LteMutex);
+		}
+		g_mqtt_sending = 0;
+		mqtt_send_start_tick = 0;
+		clearPacketList();  // 丢弃UART残留数据, 避免干扰下一条命令的响应解析
 		return true;
 	} else {
 		// 超时未收到OK
@@ -6602,7 +6669,9 @@ static void vCAT1UartTask(void *argument)
 					switch (result)
 					{
 					case RESPONSE_SUCCESS:
+					case RESPONSE_COMPLETE:
 						LastWakeTime = osKernelGetTickCount(); // 重置超时计时器
+						expecting_extra_response = 0;  // 清残留, 防止后续命令误等第二包
 						osEventFlagsClear(LteEventId, LTE_EVENT_RESP_RECEIVED);
 						osEventFlagsSet(LteEventId, LTE_EVENT_CMD_READY);
 						break;

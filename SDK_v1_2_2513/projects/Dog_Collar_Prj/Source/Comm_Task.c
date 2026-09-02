@@ -85,7 +85,7 @@
 
 // V1.6 健康定频上报: 固定10s采样一次姿态, 60次(10分钟)组包上报, 不随模式切换变频
 #define COMM_HEALTH_TICK_INTERVAL_MS           (10 * 1000UL)       // 姿态采样周期10秒
-#define COMM_HEALTH_REPORT_TICKS               (60)                // 60次采样=10分钟上报一次
+#define COMM_HEALTH_REPORT_TICKS               (120)                // 120次采样=20分钟上报一次
 
 /* 消息优先级说明: 本移植层osMessageQueuePut的msg_prio被忽略(纯FIFO), 真实优先级机制:
  *   ① 即时上报(设备状态变化): xQueueSendToFront插队首, 最先处理, 且不丢(未消费时100ms节拍自动补发)
@@ -228,6 +228,20 @@ static void CommStopHealthTimer(void)
 {
     if (commHealthTimer_ID && osTimerIsRunning(commHealthTimer_ID)) {
         osTimerStop(commHealthTimer_ID);
+    }
+}
+
+/* V1.6.1: 健康定频(运动状态定时20min上报)跟随充电/电量状态启停:
+ * 充电中(M4)/低电量(M3)关闭; 其余情况(正常电M5等)开启.
+ * M2空电走ENTRY的STOP分支, 不经过本函数, 不受影响.
+ * 与下行指令白名单(dataDownStream_handler)同一数据源CurrentChargeStatusDataGet */
+static void CommHealthTimerSyncWithMode(void)
+{
+    CURRENT_CHARGE_STATUS_T charge_status = CurrentChargeStatusDataGet();
+    if (charge_status == CURRENT_CHARGE_STATUS_CHARGING || charge_status == CURRENT_CHARGE_STATUS_LOW_BATTERY) {
+        CommStopHealthTimer();
+    } else {
+        CommStartHealthTimer();
     }
 }
 
@@ -2798,10 +2812,10 @@ int productDataDownStream_handler(PRODUCT_CONTROL_Type productControlType,uint16
 			productControlType = PRODUCT_NO_TASK;
 			test_start_flag =0;
 		
-			CommStartAutoReportTimer(COMM_AUTO_REPORT_INTERVAL_STANDARD_MS);
-			state_monitor_start();
-			CommStartHealthTimer();
-			break;
+		CommStartAutoReportTimer(COMM_AUTO_REPORT_INTERVAL_STANDARD_MS);
+		state_monitor_start();
+		CommHealthTimerSyncWithMode();   /* V1.6.1: 仅M5正常模式开启健康定频(充电M4/低电M3关闭) */
+		break;
 		
 		case PRODUCT_AGING_TEST:		//老化测试
 			COMM_LOG_DEBUG("[COMM][STA] *******PRODUCT_AGING_TEST*******\r\n");
@@ -4350,7 +4364,7 @@ static void vCommTask(void *argument)
     comm_boot_start_tick = osKernelGetTickCount();
     CommStartAutoReportTimer(COMM_BOOT_HIGH_FREQ_INTERVAL_MS);
     state_monitor_init();  /* V1.6: 启动100ms状态监控+防抖 */
-    CommStartHealthTimer();  /* V1.6: 启动健康定频采样(10s一次, 满10分钟上报healthInfo) */
+    CommHealthTimerSyncWithMode();  /* V1.6.1: 健康定频采样(10s一次, 满20分钟上报healthInfo), 仅M5正常模式启动 */
     
     for(;;) 
     {
@@ -4507,7 +4521,7 @@ static void vCommTask(void *argument)
 						COMM_LOG_DEBUG("[COMM][STA] M3 low battery: report %d ms, GPS -> STANDARD\r\n", comm_report_interval_ms);
 					}
 					state_monitor_start();
-					CommStartHealthTimer();   /* V1.6: 健康定频与状态监控同步启停 */
+					CommHealthTimerSyncWithMode();   /* V1.6.1: 健康定频与状态监控同步启停, 但仅M5正常模式开启(充电M4/低电M3关闭) */
 					CommStartAutoReportTimer(comm_report_interval_ms);  /* 休眠唤醒后恢复主动上报 */
 				} else if(received_comm_msg.command == TASK_STATE_MONITOR_STOP) {
 					state_monitor_stop();

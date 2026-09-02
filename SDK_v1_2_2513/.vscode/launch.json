@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "t:/GIT仓库/dog/DogCollar_phase_two/motiondogcollarrelease/SDK_v1_2_2513/projects/Dog_Collar_Prj/Source/HW",
-      "program": "t:/GIT仓库/dog/DogCollar_phase_two/motiondogcollarrelease/SDK_v1_2_2513/projects/Dog_Collar_Prj/Source/HW/build/Debug/outDebug",
+      "cwd": "c:/Users/Administrator/Desktop/test/DogCollar_Develop_Git/ProjectFile/SDK_v1_2_2513/projects/Dog_Collar_Prj/Source",
+      "program": "c:/Users/Administrator/Desktop/test/DogCollar_Develop_Git/ProjectFile/SDK_v1_2_2513/projects/Dog_Collar_Prj/Source/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

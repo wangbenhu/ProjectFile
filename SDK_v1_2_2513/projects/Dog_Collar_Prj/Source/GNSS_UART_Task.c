@@ -197,8 +197,12 @@ void backup_exit(void);
 /*********************************************************************
  * EXTERN FUNCTIONS
  */
-
-
+extern bool safe_unblock_gnss_uart_task(void);	
+extern uint8_t Message_Cmd_Put(TASK_ID_T source_id,
+                                       TASK_ID_T dest_id,
+                                       TASK_CMD_T command,
+                                       void *data,
+                                       uint16_t data_length);
 /*********************************************************************
  * LOCAL FUNCTIONS
  */
@@ -281,6 +285,8 @@ bool safe_block_gps_task(void)
     return true;
 }
 
+
+
 /**
  * @brief 安全解除阻塞GPS任务
  * @return bool true-成功解除 false-解除失败（未在阻塞状态）
@@ -330,7 +336,17 @@ void gps_uart_send_block(const char *cmd, uint16_t len)
 //	drv_uart_write(LOG_UART, (uint8_t *)cmd, (uint32_t)len, 10);
 	drv_uart_write(GPS_AT_UART, (uint8_t *)cmd, (uint32_t)len, 10);
 }
-
+/**
+ * @brief 解除阻塞并重启 GNSS 接收任务
+ * @param source_id 发起重启的源任务 ID (如 ENTRY_TASK_ID)
+ * @return uint8_t 0-成功，1-消息发送失败
+ */
+uint8_t gnss_task_restart(TASK_ID_T source_id)
+{
+    safe_unblock_gps_task();
+    safe_unblock_gnss_uart_task();
+    return Message_Cmd_Put(source_id, GNSS_UART_TASK_ID, TASK_CMD_START, NULL, 0);
+}
 //GPS指令发送函数
 void func_gps_type(gps_at_type_t type)
 {
