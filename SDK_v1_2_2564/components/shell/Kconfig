@@ -1,0 +1,19 @@
+menuconfig SHELL
+    bool "Shell terminal"
+    default y
+
+if SHELL
+    config SHELL_STACK_SIZE
+        depends on !NON_RTOS
+        int "shell stack size (unit: Bytes)"
+        default 4096
+
+    config SHELL_UART_IDX
+        int "shell retarget UART index"
+        range 0 3
+        default 1
+
+    config SHELL_BAUDRATE
+        int "UART baudrate"
+        default 115200
+endif

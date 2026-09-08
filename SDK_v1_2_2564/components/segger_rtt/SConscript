@@ -1,0 +1,11 @@
+from build.building import *
+
+group = []
+if GetDepend('CONFIG_SEGGER_RTT'):
+    SEGGER_RTT_INCS = ['.']
+    SEGGER_RTT_SRCS = ['SEGGER_RTT.c']
+    SEGGER_RTT_SRCS += ['SEGGER_RTT_printf.c']
+
+    group = DefineGroup(name='segger_rtt', srcs=SEGGER_RTT_SRCS, incs=SEGGER_RTT_INCS)
+
+Return('group')

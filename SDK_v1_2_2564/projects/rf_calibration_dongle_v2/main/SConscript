@@ -1,0 +1,14 @@
+from build.building import *
+
+PROJECT_MAIN_INCS = [
+    '.',
+]
+PROJECT_MAIN_SRCS = [
+                    'main.c',
+                    'app_calib_dongle.c',
+                    'freq_calib_ble.c'
+                    ]
+
+group = DefineGroup(name='main', srcs=PROJECT_MAIN_SRCS, incs=PROJECT_MAIN_INCS)
+
+Return('group')

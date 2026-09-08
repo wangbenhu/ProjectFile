@@ -1,0 +1,12 @@
+from build.building import *
+
+
+PROJECT_MAIN_SRCS = [
+                    'main.c',
+                    'app_adv.c',
+                    'app_sec.c',
+                    ]
+
+group = DefineGroup(name='main', srcs=PROJECT_MAIN_SRCS, incs=None)
+
+Return('group')

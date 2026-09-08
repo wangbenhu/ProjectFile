@@ -1,0 +1,16 @@
+from build.building import *
+
+if GetDepend('CONFIG_NON_RTOS'):
+    group = []
+else:
+    RTOS_INCS = ['include']
+    group = DefineGroup(name='rtos', srcs=None, incs=RTOS_INCS)
+
+    if GetDepend('CONFIG_RTX5_RTOS'):
+        group += SConscript('RTX5/SConscript')
+    elif GetDepend('CONFIG_FREE_RTOS'):
+        group += SConscript('FreeRTOS/SConscript')
+    elif GetDepend('CONFIG_LITE_RTOS'):
+        group += SConscript('Liteos_m/SConscript')
+
+Return('group')

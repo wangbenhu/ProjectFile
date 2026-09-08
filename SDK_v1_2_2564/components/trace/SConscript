@@ -1,0 +1,10 @@
+from build.building import *
+
+group=[]
+if GetDepend('CONFIG_TRACE'):
+    TRACE_SRCS = ['trc_io.c']
+    TRACE_INCS = ['.']
+
+    group = DefineGroup(name='trace', srcs=TRACE_SRCS, incs=TRACE_INCS)
+
+Return('group')

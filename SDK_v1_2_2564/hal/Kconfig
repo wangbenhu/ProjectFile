@@ -1,0 +1,11 @@
+menu 'Hal'
+
+config CMSIS_DSP
+    bool "CMSIS DSP"
+    default n
+
+config CMSIS_NN
+    bool "CMSIS NN"
+    default n
+
+endmenu

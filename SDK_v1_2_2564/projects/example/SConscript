@@ -1,0 +1,9 @@
+from build.building import *
+
+
+group = SConscript(['config/SConscript',
+                    'main/SConscript',
+                    'linker_script/SConscript',
+                    'drv_example/SConscript'])
+
+Return('group')

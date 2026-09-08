@@ -1,0 +1,6 @@
+BLE_MESH_DIR = $(BLE_DIR)/mesh
+
+BLE_MESH_SRCS =
+BLE_MESH_INCS = $(BLE_MESH_DIR)/include
+BLE_MESH_DEFS =
+BLE_MESH_LIBS = $(BLE_MESH_DIR)/lib/GCC/libblemesh.a

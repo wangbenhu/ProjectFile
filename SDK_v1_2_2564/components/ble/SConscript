@@ -1,0 +1,26 @@
+from build.building import *
+
+group = []
+
+if GetDepend('CONFIG_BLE'):
+    # common
+    BLE_COMON_SRCS = ['common/ob_mem_heap.c']
+    BLE_COMON_INCS = ['include']
+    group += DefineGroup(name='ble_stack_common', srcs=BLE_COMON_SRCS, incs=BLE_COMON_INCS)
+    # controller
+    if GetDepend('CONFIG_BLE_CONTROLLER'):
+        group += SConscript('controller/SConscript')
+
+    # host
+    if GetDepend('CONFIG_BLE_HOST'):
+        group += SConscript('host/SConscript')
+
+    # profile
+    if GetDepend('CONFIG_BLE_PROFILE'):
+        group += SConscript('profile/SConscript')
+
+    # mesh
+    if GetDepend('CONFIG_BLE_MESH'):
+        group += SConscript('mesh/SConscript')
+
+Return('group')

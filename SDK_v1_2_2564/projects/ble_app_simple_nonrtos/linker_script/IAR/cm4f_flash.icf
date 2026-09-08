@@ -1,0 +1,79 @@
+/* ----------------------------------------------------------------------------
+ * All rights reserved.
+ *
+ * This software is licensed under terms that can be found in the LICENSE file
+ * in the root directory of this software component.
+ * If no LICENSE file comes with this software, it is provided AS-IS.
+ * -------------------------------------------------------------------------- */
+
+/**
+ * @defgroup DOC DOC
+ * @ingroup  DOCUMENT
+ * @brief    templete
+ * @details  device description
+ *
+ * @version
+ * Version 1.0
+ *  - Initial release
+ *
+ * @{
+ */
+
+/*###ICF### Section handled by ICF editor, don't touch! ****/
+/*-Editor annotation file-*/
+/* IcfEditorFile="$TOOLKIT_DIR$\config\ide\IcfEditor\cortex_v1_0.xml" */
+/*-Specials-*/
+define symbol __ICFEDIT_FLASH_base__  = 0x404000;
+define symbol __ICFEDIT_FLASH_size__  = 2*1024*1024 - (__ICFEDIT_FLASH_base__ - 0x400000);
+define symbol __ICFEDIT_ram_base__    = 0x20000000;
+define symbol __ICFEDIT_ram_size__    = 256*1024;
+define symbol __ICFEDIT_roram_size    = 0x5000;   /* reserved space for RORAM_region */
+define symbol __ICFEDIT_size_cstack__ = 0x800;
+define symbol __ICFEDIT_size_heap__   = 0xc00;
+/**** End of ICF editor section. ###ICF###*/
+
+/*-Memory Regions-*/
+define symbol __ICFEDIT_intvec_start__       = __ICFEDIT_FLASH_base__;
+define symbol __ICFEDIT_region_ROM_start__   = __ICFEDIT_FLASH_base__;
+define symbol __ICFEDIT_region_ROM_end__     = __ICFEDIT_FLASH_base__ + __ICFEDIT_FLASH_size__;
+define symbol __ICFEDIT_region_RORAM_start__ = 0x200000 + __ICFEDIT_ram_base__ - 0x20000000;
+define symbol __ICFEDIT_region_RORAM_end__   = __ICFEDIT_region_RORAM_start__ + __ICFEDIT_roram_size;
+define symbol __ICFEDIT_region_RAM_start__   = __ICFEDIT_ram_base__ + __ICFEDIT_roram_size;
+define symbol __ICFEDIT_region_RAM_end__     = __ICFEDIT_ram_base__ + __ICFEDIT_ram_size__;
+
+define memory mem with size = 4G;
+define region ROM_region    = mem:[from __ICFEDIT_region_ROM_start__    to __ICFEDIT_region_ROM_end__   ];
+define region RORAM_region  = mem:[from __ICFEDIT_region_RORAM_start__  to __ICFEDIT_region_RORAM_end__ ];
+define region RAM_region    = mem:[from __ICFEDIT_region_RAM_start__    to __ICFEDIT_region_RAM_end__   ];
+
+
+define block VECTOR          with alignment = 128  { section .intvec };
+define block RAM_CODE        with alignment = 32  { section .textrw, section .ram_rodata };
+define block CODE            with alignment = 32  { section CODE, section .text, section .rodata };
+define block RW_RAM          with alignment = 32  { first section .ram_ble_em, section .data, section .bss };
+define block HEAP            with alignment = 8,  size = __ICFEDIT_size_heap__          { };
+define block CSTACK          with alignment = 8,  size = __ICFEDIT_size_cstack__        { };
+
+define block TEXTRW_COPY     with alignment = 32  { section .textrw_init };
+define block DATA_COPY       with alignment = 32  { section .data_init };
+
+initialize by copy { readwrite, section .textrw};
+do not initialize { section .noinit };
+
+place at address mem:__ICFEDIT_intvec_start__ { block VECTOR };
+place in ROM_region         { readonly,
+                              block BLOCK_ROM with fixed order {
+                              block CODE, block TEXTRW_COPY, block DATA_COPY }};
+
+place in RORAM_region         {
+                               block BLOCK_RORAM with fixed order {
+                               block RAM_CODE}};
+
+place in RAM_region          { readwrite,
+                               block BLOCK_RAM with fixed order {
+                               block RW_RAM, block HEAP, block CSTACK}};
+
+check that size(block BLOCK_RORAM) < __ICFEDIT_roram_size;
+
+
+/** @} */

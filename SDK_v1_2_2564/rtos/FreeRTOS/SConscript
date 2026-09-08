@@ -1,0 +1,38 @@
+from build.building import *
+
+FREE_RTOS_SRCS = [
+    'Source/croutine.c',
+    'Source/event_groups.c',
+    'Source/list.c',
+    'Source/queue.c',
+    'Source/stream_buffer.c',
+    'Source/tasks.c',
+    'Source/timers.c',
+    'Source/Portable/MemMang/heap_5.c',
+    'Source/Portable/Common/mpu_wrappers.c',
+    'CMSIS/Source/cmsis_os2.c',
+    'CMSIS/Source/cmsis_os1.c',
+    'CMSIS/Source/freertos_evr.c',
+    'CMSIS/Source/os_systick.c',
+]
+
+FREE_RTOS_INCS = [
+    'Source/Include',
+    'CMSIS/Include',
+    'CMSIS/Include1',
+    'CMSIS/Config/ARMCM',
+]
+
+if GetDepend('CONFIG_TOOL_CHAIN_GCC') or GetDepend('CONFIG_TOOL_CHAIN_ARMCLANG'):
+    FREE_RTOS_SRCS += ['Source/Portable/GCC/port.c']
+    FREE_RTOS_INCS += ['Source/Portable/GCC']
+elif GetDepend('CONFIG_TOOL_CHAIN_ICCARM'):
+    FREE_RTOS_SRCS += ['Source/Portable/IAR/port.c']
+    FREE_RTOS_SRCS += ['Source/Portable/IAR/portasm.s']
+    FREE_RTOS_INCS += ['Source/Portable/IAR']
+else:
+    raise Exception('Toolchain is not configured or SDK donot support the compiler')
+
+group = DefineGroup(name='FreeRTOS', srcs=FREE_RTOS_SRCS, incs=FREE_RTOS_INCS, CPPDEFINES=None)
+
+Return('group')

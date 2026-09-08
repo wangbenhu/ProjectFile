@@ -1,0 +1,24 @@
+// 调试器与CPU已建立连接但未下载应用程序前
+execUserPreload()
+{
+  __message "Disable core0/core1 WDT\n";
+  __writeMemory32(0x6666,0x40050000,"Memory");
+  __writeMemory32(0x6666,0x402C0000,"Memory");
+  //__message "reset \n";
+  //__gdbserver_exec_command("reset");
+
+}
+
+
+//调试器将应用程序下载完成后
+//execUserSetup()
+//{
+//  __message "set pc/sp\n";
+//  #SP = __readMemory32(0x08003000, "Memory");
+//  #PC = __readMemory32(0x08003004, "Memory");
+//  __gdbserver_exec_command("set $sp=*0x8003000");
+//  __gdbserver_exec_command("set $pc=*0x8003004");
+//}
+
+
+

@@ -1,0 +1,9 @@
+from build.building import *
+
+OM_LOG_INCS = ['.']
+OM_LOG_SRCS = ['om_log.c']
+OM_LOG_SRCS += ['om_log_port.c']
+
+group = DefineGroup(name='om_log', srcs=OM_LOG_SRCS, incs=OM_LOG_INCS)
+
+Return('group')

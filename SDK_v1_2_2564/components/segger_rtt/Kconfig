@@ -1,0 +1,3 @@
+config SEGGER_RTT
+    bool "SEGGER RTT enable"
+    default n

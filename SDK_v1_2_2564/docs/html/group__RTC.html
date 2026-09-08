@@ -1,0 +1,629 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>User Guide: RTC</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+-->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">User Guide
+   </div>
+   <div id="projectbrief">Bluetooth Low Energy 5.4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__RTC.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">RTC<div class="ingroups"><a class="el" href="group__DRIVER.html">Driver</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>RTC driver.  
+<a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrtc__tm__t.html">rtc_tm_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RTC time.  <a href="structrtc__tm__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga46bba71e8e2dd091789f69492f228be9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__RTC.html#ga46bba71e8e2dd091789f69492f228be9">RTC_YEAR</a>(year)&#160;&#160;&#160;((year) - 1900U)</td></tr>
+<tr class="separator:ga46bba71e8e2dd091789f69492f228be9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ga74cca9acf656b089f10823debff0714e"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__RTC.html#ga74cca9acf656b089f10823debff0714e">rtc_isr_callback_t</a>) (drv_event_t event)</td></tr>
+<tr class="memdesc:ga74cca9acf656b089f10823debff0714e"><td class="mdescLeft">&#160;</td><td class="mdescRight">RTC second &amp; alarm interrupt callback.  <br /></td></tr>
+<tr class="separator:ga74cca9acf656b089f10823debff0714e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ga1fc7d126e387ed6ebae7377a8be2a1a2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__RTC.html#ga1fc7d126e387ed6ebae7377a8be2a1a2">rtc_alarm_event_t</a> { <a class="el" href="group__RTC.html#gga1fc7d126e387ed6ebae7377a8be2a1a2ae7e434e35ad9d22585207393349e186c">RTC_ALARM_EVENT0</a> = 0U
+, <a class="el" href="group__RTC.html#gga1fc7d126e387ed6ebae7377a8be2a1a2a28782e41beea2c276986aa2c93f75d68">RTC_ALARM_EVENT1</a> = 1U
+, <a class="el" href="group__RTC.html#gga1fc7d126e387ed6ebae7377a8be2a1a2a472bc0bef26569bf0ea54801368d6edb">RTC_ALARM_EVENT2</a> = 2U
+, <a class="el" href="group__RTC.html#gga1fc7d126e387ed6ebae7377a8be2a1a2ae0a64ef41ba4412baee07061915134d1">RTC_ALARM_EVENT_MAX</a>
+ }</td></tr>
+<tr class="memdesc:ga1fc7d126e387ed6ebae7377a8be2a1a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">RTC Alarm Event Type.  <a href="group__RTC.html#ga1fc7d126e387ed6ebae7377a8be2a1a2">More...</a><br /></td></tr>
+<tr class="separator:ga1fc7d126e387ed6ebae7377a8be2a1a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac84de2c8c97682e0d9a9a47946dfbc1a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__RTC.html#gac84de2c8c97682e0d9a9a47946dfbc1a">rtc_control_t</a> { <a class="el" href="group__RTC.html#ggac84de2c8c97682e0d9a9a47946dfbc1aa26fd69b4383d120eab13086d175c1009">RTC_CONTROL_ACCU_SET</a>
+, <a class="el" href="group__RTC.html#ggac84de2c8c97682e0d9a9a47946dfbc1aad1764949502a11bc3a0146eba66a04eb">RTC_CONTROL_GET_RTC_SECOND_CNT</a>
+, <a class="el" href="group__RTC.html#ggac84de2c8c97682e0d9a9a47946dfbc1aa9191dce64f4e077d0c734b3f963a8a34">RTC_CONTROL_SET_RTC_SECOND_CNT</a>
+ }</td></tr>
+<tr class="memdesc:gac84de2c8c97682e0d9a9a47946dfbc1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">RTC Control.  <a href="group__RTC.html#gac84de2c8c97682e0d9a9a47946dfbc1a">More...</a><br /></td></tr>
+<tr class="separator:gac84de2c8c97682e0d9a9a47946dfbc1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga2393b5c750ec6660ff2e4fab125fa424"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__RTC.html#ga2393b5c750ec6660ff2e4fab125fa424">drv_rtc_init</a> (const <a class="el" href="structrtc__tm__t.html">rtc_tm_t</a> *tm)</td></tr>
+<tr class="memdesc:ga2393b5c750ec6660ff2e4fab125fa424"><td class="mdescLeft">&#160;</td><td class="mdescRight">RTC initialize.  <br /></td></tr>
+<tr class="separator:ga2393b5c750ec6660ff2e4fab125fa424"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1bcb0f2713289523480f20945a336f82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__RTC.html#ga1bcb0f2713289523480f20945a336f82">drv_rtc_uninit</a> (void)</td></tr>
+<tr class="memdesc:ga1bcb0f2713289523480f20945a336f82"><td class="mdescLeft">&#160;</td><td class="mdescRight">RTC deinitialization.  <br /></td></tr>
+<tr class="separator:ga1bcb0f2713289523480f20945a336f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga05b63016eef7c4259f65b7a6d623e527"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__RTC.html#ga05b63016eef7c4259f65b7a6d623e527">drv_rtc_timer_set</a> (const <a class="el" href="structrtc__tm__t.html">rtc_tm_t</a> *tm)</td></tr>
+<tr class="memdesc:ga05b63016eef7c4259f65b7a6d623e527"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set current time.  <br /></td></tr>
+<tr class="separator:ga05b63016eef7c4259f65b7a6d623e527"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa9f6133bbc1d7491f3afc9098f2b535e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__RTC.html#gaa9f6133bbc1d7491f3afc9098f2b535e">drv_rtc_timer_get</a> (<a class="el" href="structrtc__tm__t.html">rtc_tm_t</a> *tm)</td></tr>
+<tr class="memdesc:gaa9f6133bbc1d7491f3afc9098f2b535e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current time.  <br /></td></tr>
+<tr class="separator:gaa9f6133bbc1d7491f3afc9098f2b535e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac488eda4c902c91dcd1684ceb194f08b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__RTC.html#gac488eda4c902c91dcd1684ceb194f08b">drv_rtc_alarm_set</a> (<a class="el" href="group__RTC.html#ga1fc7d126e387ed6ebae7377a8be2a1a2">rtc_alarm_event_t</a> event, <a class="el" href="structrtc__tm__t.html">rtc_tm_t</a> *tm)</td></tr>
+<tr class="memdesc:gac488eda4c902c91dcd1684ceb194f08b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set alarm time.  <br /></td></tr>
+<tr class="separator:gac488eda4c902c91dcd1684ceb194f08b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga405e524e18676da5eec178a381302dac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__RTC.html#ga405e524e18676da5eec178a381302dac">drv_rtc_alarm_get</a> (<a class="el" href="group__RTC.html#ga1fc7d126e387ed6ebae7377a8be2a1a2">rtc_alarm_event_t</a> event, <a class="el" href="structrtc__tm__t.html">rtc_tm_t</a> *tm)</td></tr>
+<tr class="memdesc:ga405e524e18676da5eec178a381302dac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get alarm time.  <br /></td></tr>
+<tr class="separator:ga405e524e18676da5eec178a381302dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7ccbe86965e31f5a105eb17c9cf78b53"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__RTC.html#ga7ccbe86965e31f5a105eb17c9cf78b53">drv_rtc_control</a> (<a class="el" href="group__RTC.html#gac84de2c8c97682e0d9a9a47946dfbc1a">rtc_control_t</a> control, void *argu)</td></tr>
+<tr class="memdesc:ga7ccbe86965e31f5a105eb17c9cf78b53"><td class="mdescLeft">&#160;</td><td class="mdescRight">RTC control.  <br /></td></tr>
+<tr class="separator:ga7ccbe86965e31f5a105eb17c9cf78b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga567b3bd31b92addf8bfacdede35a4779"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__RTC.html#ga567b3bd31b92addf8bfacdede35a4779">drv_rtc_second_isr_callback</a> (drv_event_t event)</td></tr>
+<tr class="memdesc:ga567b3bd31b92addf8bfacdede35a4779"><td class="mdescLeft">&#160;</td><td class="mdescRight">The interrupt callback for RTC second event. It is a weak function. User should define own callback in user file, other than modify it in the RTC driver.  <br /></td></tr>
+<tr class="separator:ga567b3bd31b92addf8bfacdede35a4779"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5b94ed28f4016548d0a22596138c539b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__RTC.html#ga5b94ed28f4016548d0a22596138c539b">drv_rtc_alarm_isr_callback</a> (drv_event_t event)</td></tr>
+<tr class="memdesc:ga5b94ed28f4016548d0a22596138c539b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The interrupt callback for RTC alarm event. It is a weak function. User should define own callback in user file, other than modify it in the RTC driver.  <br /></td></tr>
+<tr class="separator:ga5b94ed28f4016548d0a22596138c539b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0dd843fe084cb9602af02f1196811539"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__RTC.html#ga0dd843fe084cb9602af02f1196811539">drv_rtc_second_isr</a> (void)</td></tr>
+<tr class="memdesc:ga0dd843fe084cb9602af02f1196811539"><td class="mdescLeft">&#160;</td><td class="mdescRight">RTC second interrupt service routine.  <br /></td></tr>
+<tr class="separator:ga0dd843fe084cb9602af02f1196811539"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gada3a4fe268926d56760181d157721b0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__RTC.html#gada3a4fe268926d56760181d157721b0e">drv_rtc_alarm_isr</a> (void)</td></tr>
+<tr class="memdesc:gada3a4fe268926d56760181d157721b0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">RTC alarm interrupt service routine.  <br /></td></tr>
+<tr class="separator:gada3a4fe268926d56760181d157721b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>RTC driver. </p>
+<p>RTC driver apis and typedefs header file</p>
+<dl class="section version"><dt>Version</dt><dd>Version 1.0<ul>
+<li>Initial release </li>
+</ul>
+</dd></dl>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga46bba71e8e2dd091789f69492f228be9" name="ga46bba71e8e2dd091789f69492f228be9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga46bba71e8e2dd091789f69492f228be9">&#9670;&#160;</a></span>RTC_YEAR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RTC_YEAR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">year</td><td>)</td>
+          <td>&#160;&#160;&#160;((year) - 1900U)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="ga74cca9acf656b089f10823debff0714e" name="ga74cca9acf656b089f10823debff0714e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga74cca9acf656b089f10823debff0714e">&#9670;&#160;</a></span>rtc_isr_callback_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* rtc_isr_callback_t) (drv_event_t event)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>RTC second &amp; alarm interrupt callback. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ga1fc7d126e387ed6ebae7377a8be2a1a2" name="ga1fc7d126e387ed6ebae7377a8be2a1a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1fc7d126e387ed6ebae7377a8be2a1a2">&#9670;&#160;</a></span>rtc_alarm_event_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__RTC.html#ga1fc7d126e387ed6ebae7377a8be2a1a2">rtc_alarm_event_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>RTC Alarm Event Type. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga1fc7d126e387ed6ebae7377a8be2a1a2ae7e434e35ad9d22585207393349e186c" name="gga1fc7d126e387ed6ebae7377a8be2a1a2ae7e434e35ad9d22585207393349e186c"></a>RTC_ALARM_EVENT0&#160;</td><td class="fielddoc"><p>alarm for event0 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga1fc7d126e387ed6ebae7377a8be2a1a2a28782e41beea2c276986aa2c93f75d68" name="gga1fc7d126e387ed6ebae7377a8be2a1a2a28782e41beea2c276986aa2c93f75d68"></a>RTC_ALARM_EVENT1&#160;</td><td class="fielddoc"><p>alarm for event1 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga1fc7d126e387ed6ebae7377a8be2a1a2a472bc0bef26569bf0ea54801368d6edb" name="gga1fc7d126e387ed6ebae7377a8be2a1a2a472bc0bef26569bf0ea54801368d6edb"></a>RTC_ALARM_EVENT2&#160;</td><td class="fielddoc"><p>alarm for event2 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga1fc7d126e387ed6ebae7377a8be2a1a2ae0a64ef41ba4412baee07061915134d1" name="gga1fc7d126e387ed6ebae7377a8be2a1a2ae0a64ef41ba4412baee07061915134d1"></a>RTC_ALARM_EVENT_MAX&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="gac84de2c8c97682e0d9a9a47946dfbc1a" name="gac84de2c8c97682e0d9a9a47946dfbc1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac84de2c8c97682e0d9a9a47946dfbc1a">&#9670;&#160;</a></span>rtc_control_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__RTC.html#gac84de2c8c97682e0d9a9a47946dfbc1a">rtc_control_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>RTC Control. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggac84de2c8c97682e0d9a9a47946dfbc1aa26fd69b4383d120eab13086d175c1009" name="ggac84de2c8c97682e0d9a9a47946dfbc1aa26fd69b4383d120eab13086d175c1009"></a>RTC_CONTROL_ACCU_SET&#160;</td><td class="fielddoc"><p>set accu reg, argu is value </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggac84de2c8c97682e0d9a9a47946dfbc1aad1764949502a11bc3a0146eba66a04eb" name="ggac84de2c8c97682e0d9a9a47946dfbc1aad1764949502a11bc3a0146eba66a04eb"></a>RTC_CONTROL_GET_RTC_SECOND_CNT&#160;</td><td class="fielddoc"><p>read RTC second count register </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggac84de2c8c97682e0d9a9a47946dfbc1aa9191dce64f4e077d0c734b3f963a8a34" name="ggac84de2c8c97682e0d9a9a47946dfbc1aa9191dce64f4e077d0c734b3f963a8a34"></a>RTC_CONTROL_SET_RTC_SECOND_CNT&#160;</td><td class="fielddoc"><p>write RTC second count register </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga405e524e18676da5eec178a381302dac" name="ga405e524e18676da5eec178a381302dac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga405e524e18676da5eec178a381302dac">&#9670;&#160;</a></span>drv_rtc_alarm_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_rtc_alarm_get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__RTC.html#ga1fc7d126e387ed6ebae7377a8be2a1a2">rtc_alarm_event_t</a>&#160;</td>
+          <td class="paramname"><em>event</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structrtc__tm__t.html">rtc_tm_t</a> *&#160;</td>
+          <td class="paramname"><em>tm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get alarm time. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">event</td><td>alarm event </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tm</td><td>pointer to time configuration </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gada3a4fe268926d56760181d157721b0e" name="gada3a4fe268926d56760181d157721b0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gada3a4fe268926d56760181d157721b0e">&#9670;&#160;</a></span>drv_rtc_alarm_isr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_rtc_alarm_isr </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>RTC alarm interrupt service routine. </p>
+
+</div>
+</div>
+<a id="ga5b94ed28f4016548d0a22596138c539b" name="ga5b94ed28f4016548d0a22596138c539b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5b94ed28f4016548d0a22596138c539b">&#9670;&#160;</a></span>drv_rtc_alarm_isr_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_rtc_alarm_isr_callback </td>
+          <td>(</td>
+          <td class="paramtype">drv_event_t&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The interrupt callback for RTC alarm event. It is a weak function. User should define own callback in user file, other than modify it in the RTC driver. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>rtc driver event<ul>
+<li>DRV_EVENT_RTC_ALARM0</li>
+<li>DRV_EVENT_RTC_ALARM1</li>
+<li>DRV_EVENT_RTC_ALARM2</li>
+<li>DRV_EVENT_RTC_SECOND </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gac488eda4c902c91dcd1684ceb194f08b" name="gac488eda4c902c91dcd1684ceb194f08b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac488eda4c902c91dcd1684ceb194f08b">&#9670;&#160;</a></span>drv_rtc_alarm_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_rtc_alarm_set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__RTC.html#ga1fc7d126e387ed6ebae7377a8be2a1a2">rtc_alarm_event_t</a>&#160;</td>
+          <td class="paramname"><em>event</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structrtc__tm__t.html">rtc_tm_t</a> *&#160;</td>
+          <td class="paramname"><em>tm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set alarm time. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">event</td><td>alarm event </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tm</td><td>pointer to time configuration </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga7ccbe86965e31f5a105eb17c9cf78b53" name="ga7ccbe86965e31f5a105eb17c9cf78b53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7ccbe86965e31f5a105eb17c9cf78b53">&#9670;&#160;</a></span>drv_rtc_control()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * drv_rtc_control </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__RTC.html#gac84de2c8c97682e0d9a9a47946dfbc1a">rtc_control_t</a>&#160;</td>
+          <td class="paramname"><em>control</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>argu</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>RTC control. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">control</td><td>control command </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">argu</td><td>argument</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>control status </dd></dl>
+
+</div>
+</div>
+<a id="ga2393b5c750ec6660ff2e4fab125fa424" name="ga2393b5c750ec6660ff2e4fab125fa424"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2393b5c750ec6660ff2e4fab125fa424">&#9670;&#160;</a></span>drv_rtc_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_rtc_init </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structrtc__tm__t.html">rtc_tm_t</a> *&#160;</td>
+          <td class="paramname"><em>tm</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>RTC initialize. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tm</td><td>Pointer to time configuration</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="ga0dd843fe084cb9602af02f1196811539" name="ga0dd843fe084cb9602af02f1196811539"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0dd843fe084cb9602af02f1196811539">&#9670;&#160;</a></span>drv_rtc_second_isr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_rtc_second_isr </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>RTC second interrupt service routine. </p>
+
+</div>
+</div>
+<a id="ga567b3bd31b92addf8bfacdede35a4779" name="ga567b3bd31b92addf8bfacdede35a4779"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga567b3bd31b92addf8bfacdede35a4779">&#9670;&#160;</a></span>drv_rtc_second_isr_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_rtc_second_isr_callback </td>
+          <td>(</td>
+          <td class="paramtype">drv_event_t&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The interrupt callback for RTC second event. It is a weak function. User should define own callback in user file, other than modify it in the RTC driver. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>The RTC driver event<ul>
+<li>DRV_EVENT_RTC_ALARM0</li>
+<li>DRV_EVENT_RTC_ALARM1</li>
+<li>DRV_EVENT_RTC_ALARM2</li>
+<li>DRV_EVENT_RTC_SECOND </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaa9f6133bbc1d7491f3afc9098f2b535e" name="gaa9f6133bbc1d7491f3afc9098f2b535e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa9f6133bbc1d7491f3afc9098f2b535e">&#9670;&#160;</a></span>drv_rtc_timer_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t drv_rtc_timer_get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structrtc__tm__t.html">rtc_tm_t</a> *&#160;</td>
+          <td class="paramname"><em>tm</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get current time. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">tm</td><td>pointer to time configuration </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>second counter </dd></dl>
+
+</div>
+</div>
+<a id="ga05b63016eef7c4259f65b7a6d623e527" name="ga05b63016eef7c4259f65b7a6d623e527"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga05b63016eef7c4259f65b7a6d623e527">&#9670;&#160;</a></span>drv_rtc_timer_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_rtc_timer_set </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structrtc__tm__t.html">rtc_tm_t</a> *&#160;</td>
+          <td class="paramname"><em>tm</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set current time. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tm</td><td>pointer to time configuration </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga1bcb0f2713289523480f20945a336f82" name="ga1bcb0f2713289523480f20945a336f82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1bcb0f2713289523480f20945a336f82">&#9670;&#160;</a></span>drv_rtc_uninit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_rtc_uninit </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>RTC deinitialization. </p>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+</div>
+</body>
+</html>

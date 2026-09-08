@@ -1,0 +1,25 @@
+[FILEFORMAT]
+rev=1.6
+
+[CHIP]
+name=OM6627X
+endiansupport=le
+thumbsupport=true
+armsupport=false
+fpu=VFPv4
+
+JTAG=false
+SWD=true
+CJTAG=false
+
+[EMUPARAMS]
+
+[CORE]
+name=Cortex-M4
+
+[DDF FILE]
+name=Onmicro\OM6627X.ddf
+
+[LINKER FILE]
+
+[FLASH LOADER]

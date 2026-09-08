@@ -1,0 +1,16 @@
+from build.building import *
+
+PM_INCS = ['.']
+PM_SRCS = ['pm.c']
+
+if GetDepend('CONFIG_PM'):
+    if GetDepend('CONFIG_TOOL_CHAIN_GCC') or GetDepend('CONFIG_TOOL_CHAIN_ARMCLANG'):
+        PM_SRCS += ['pm_cpu_gnu.S']
+    elif GetDepend('CONFIG_TOOL_CHAIN_ICCARM'):
+        PM_SRCS += ['pm_cpu_iar.S']
+    else:
+        raise Exception('Toolchain is not configured or SDK donot support the compiler')
+
+group = DefineGroup(name='pm', srcs=PM_SRCS, incs=PM_INCS)
+
+Return('group')

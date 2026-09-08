@@ -1,0 +1,40 @@
+from build.building import *
+
+HAL_CMSIS_DEFS = []
+HAL_CMSIS_INCS = ['Core/Include']
+HAL_CMSIS_SRCS = []
+
+if GetDepend('CONFIG_CMSIS_DSP'):
+    HAL_CMSIS_DEFS += ['ARM_MATH_LOOPUNROLL=1']
+
+    HAL_CMSIS_INCS += ['DSP/Include']
+    HAL_CMSIS_INCS += ['DSP/Include/dsp']
+    HAL_CMSIS_INCS += ['DSP/Privateinclude']
+
+    HAL_CMSIS_SRCS += ['DSP/Source/BasicMathFunctions/BasicMathFunctions.c']
+    HAL_CMSIS_SRCS += ['DSP/Source/BayesFunctions/BayesFunctions.c']
+    HAL_CMSIS_SRCS += ['DSP/Source/CommonTables/CommonTables.c']
+    HAL_CMSIS_SRCS += ['DSP/Source/ComplexMathFunctions/ComplexMathFunctions.c']
+    HAL_CMSIS_SRCS += ['DSP/Source/ControllerFunctions/ControllerFunctions.c']
+    HAL_CMSIS_SRCS += ['DSP/Source/DistanceFunctions/DistanceFunctions.c']
+    HAL_CMSIS_SRCS += ['DSP/Source/FastMathFunctions/FastMathFunctions.c']
+    HAL_CMSIS_SRCS += ['DSP/Source/FilteringFunctions/FilteringFunctions.c']
+    HAL_CMSIS_SRCS += ['DSP/Source/InterpolationFunctions/InterpolationFunctions.c']
+    HAL_CMSIS_SRCS += ['DSP/Source/MatrixFunctions/MatrixFunctions.c']
+    HAL_CMSIS_SRCS += ['DSP/Source/QuaternionMathFunctions/QuaternionMathFunctions.c']
+    HAL_CMSIS_SRCS += ['DSP/Source/StatisticsFunctions/StatisticsFunctions.c']
+    HAL_CMSIS_SRCS += ['DSP/Source/SupportFunctions/SupportFunctions.c']
+    HAL_CMSIS_SRCS += ['DSP/Source/SVMFunctions/SVMFunctions.c']
+    HAL_CMSIS_SRCS += ['DSP/Source/TransformFunctions/TransformFunctions.c']
+    HAL_CMSIS_SRCS += ['DSP/Source/WindowFunctions/WindowFunctions.c']
+
+
+if GetDepend('CONFIG_CMSIS_NN'):
+    HAL_CMSIS_INCS += ['NN/Include']
+    HAL_CMSIS_INCS += ['NN/Include/Internal']
+
+    HAL_CMSIS_SRCS += glob.glob('NN/Source/*/*.c', recursive=True)
+
+group = DefineGroup(name='cmsis', srcs=HAL_CMSIS_SRCS, incs=HAL_CMSIS_INCS, CPPDEFINES=HAL_CMSIS_DEFS)
+
+Return('group')

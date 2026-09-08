@@ -1,0 +1,6 @@
+
+menu 'Components'
+
+orsource "*/Kconfig"
+
+endmenu

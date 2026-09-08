@@ -1,0 +1,6 @@
+ifeq ($(CONFIG_EVT), y)
+EVT_DIR = $(COMPONENTS_DIR)/evt
+COMPONENTS_INCS += $(EVT_DIR)
+COMPONENTS_SRCS += $(EVT_DIR)/evt.c
+COMPONENTS_SRCS += $(EVT_DIR)/evt_timer.c
+endif

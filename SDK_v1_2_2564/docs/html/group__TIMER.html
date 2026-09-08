@@ -1,0 +1,989 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>User Guide: TIMER</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+-->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">User Guide
+   </div>
+   <div id="projectbrief">Bluetooth Low Energy 5.4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__TIMER.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">TIMER<div class="ingroups"><a class="el" href="group__DRIVER.html">Driver</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>TIMER driver.  
+<a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtim__gp__config__t.html">tim_gp_config_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TIM General Purpose Configuration.  <a href="structtim__gp__config__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtim__pwm__chan__config__t.html">tim_pwm_chan_config_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TIM PWM Channel Configuration.  <a href="structtim__pwm__chan__config__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtim__pwm__gpdma__config__t.html">tim_pwm_gpdma_config_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TIM PWM DMA Configuration.  <a href="structtim__pwm__gpdma__config__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtim__cap__gpdma__config__t.html">tim_cap_gpdma_config_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TIM Capture DMA Configuration.  <a href="structtim__cap__gpdma__config__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtim__pwm__output__config__t.html">tim_pwm_output_config_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TIM PWM Output Configuration.  <a href="structtim__pwm__output__config__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtim__capture__config__t.html">tim_capture_config_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TIM Capture Configuration.  <a href="structtim__capture__config__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtim__pwm__input__config__t.html">tim_pwm_input_config_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TIM PWM Input Configuration.  <a href="structtim__pwm__input__config__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtim__pwm__complementary__chan__config__t.html">tim_pwm_complementary_chan_config_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TIM PWM Channel Configuration.  <a href="structtim__pwm__complementary__chan__config__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtim__pwm__complementary__output__config__t.html">tim_pwm_complementary_output_config_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TIM PWM Output Configuration.  <a href="structtim__pwm__complementary__output__config__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ga1ac652a74c855d4ffc9efc85534fd386"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIMER.html#ga1ac652a74c855d4ffc9efc85534fd386">tim_chan_t</a> { <br />
+&#160;&#160;<a class="el" href="group__TIMER.html#gga1ac652a74c855d4ffc9efc85534fd386a1a6f49b3910a97f82c4f1e0fad0f6569">TIM_CHAN_1</a> = 0U
+, <a class="el" href="group__TIMER.html#gga1ac652a74c855d4ffc9efc85534fd386a579c3ccc23677052e7703c3b1ebb18c0">TIM_CHAN_2</a> = 1U
+, <a class="el" href="group__TIMER.html#gga1ac652a74c855d4ffc9efc85534fd386ac0249258f46568c044de41df9cf48cd8">TIM_CHAN_3</a> = 2U
+, <a class="el" href="group__TIMER.html#gga1ac652a74c855d4ffc9efc85534fd386aadb85460faf810900118765550f624aa">TIM_CHAN_4</a> = 3U
+, <br />
+&#160;&#160;<a class="el" href="group__TIMER.html#gga1ac652a74c855d4ffc9efc85534fd386a8a9625aed13a21ef234afab1b16d526c">TIM_CHAN_ALL</a> = 4U
+<br />
+ }</td></tr>
+<tr class="memdesc:ga1ac652a74c855d4ffc9efc85534fd386"><td class="mdescLeft">&#160;</td><td class="mdescRight">TIM Channel.  <a href="group__TIMER.html#ga1ac652a74c855d4ffc9efc85534fd386">More...</a><br /></td></tr>
+<tr class="separator:ga1ac652a74c855d4ffc9efc85534fd386"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga656ed7800d8a80d20a0efdfaefe7f78b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIMER.html#ga656ed7800d8a80d20a0efdfaefe7f78b">tim_pwm_pol_t</a> { <a class="el" href="group__TIMER.html#gga656ed7800d8a80d20a0efdfaefe7f78bae115c678f34fda8b5a0b6c6afa1d63f9">TIM_PWM_POL_ACTIVE_HIGH</a> = 0U
+, <a class="el" href="group__TIMER.html#gga656ed7800d8a80d20a0efdfaefe7f78baab3c61e9c2c2d10827fd7ac659e8cd2b">TIM_PWM_POL_ACTIVE_LOW</a> = 1U
+ }</td></tr>
+<tr class="memdesc:ga656ed7800d8a80d20a0efdfaefe7f78b"><td class="mdescLeft">&#160;</td><td class="mdescRight">TIM Active Level.  <a href="group__TIMER.html#ga656ed7800d8a80d20a0efdfaefe7f78b">More...</a><br /></td></tr>
+<tr class="separator:ga656ed7800d8a80d20a0efdfaefe7f78b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga85809beac238a45b527fecbf7296b7be"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIMER.html#ga85809beac238a45b527fecbf7296b7be">tim_force_level_t</a> { <a class="el" href="group__TIMER.html#gga85809beac238a45b527fecbf7296b7beaab112f484f07345ebbc56989a204b571">TIM_FORCE_LEVEL_INACTIVE</a> = 4U
+, <a class="el" href="group__TIMER.html#gga85809beac238a45b527fecbf7296b7bea89fc3aebef7dc4c9da3ceb6333eea4d8">TIM_FORCE_LEVEL_ACTIVE</a> = 5U
+ }</td></tr>
+<tr class="memdesc:ga85809beac238a45b527fecbf7296b7be"><td class="mdescLeft">&#160;</td><td class="mdescRight">TIM Force Level.  <a href="group__TIMER.html#ga85809beac238a45b527fecbf7296b7be">More...</a><br /></td></tr>
+<tr class="separator:ga85809beac238a45b527fecbf7296b7be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac3f1205da48796eb41452049119686f0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIMER.html#gac3f1205da48796eb41452049119686f0">tim_capture_polarity_t</a> { <a class="el" href="group__TIMER.html#ggac3f1205da48796eb41452049119686f0a3fb4ca2c63d6ac1e4d34ad3fd77d35da">TIM_CAPTURE_POLARITY_RISING_EDGE</a> = 0U
+, <a class="el" href="group__TIMER.html#ggac3f1205da48796eb41452049119686f0a2519a3ec8660a5962d96cb1c9d1f098b">TIM_CAPTURE_POLARITY_FALLING_EDGE</a> = 1U
+ }</td></tr>
+<tr class="memdesc:gac3f1205da48796eb41452049119686f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">TIM Capture Polarity.  <a href="group__TIMER.html#gac3f1205da48796eb41452049119686f0">More...</a><br /></td></tr>
+<tr class="separator:gac3f1205da48796eb41452049119686f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7936795adf5a5955da71f14041ec80cd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIMER.html#ga7936795adf5a5955da71f14041ec80cd">tim_mode_t</a> { <a class="el" href="group__TIMER.html#gga7936795adf5a5955da71f14041ec80cdacf74772f4cddb0e473c26c1945de604e">TIM_TIMER_MODE</a>
+, <a class="el" href="group__TIMER.html#gga7936795adf5a5955da71f14041ec80cda34a8e23c53c4d930ff05464d557930d7">TIM_PWM_MODE</a>
+, <a class="el" href="group__TIMER.html#gga7936795adf5a5955da71f14041ec80cda417a61bb4b214c245be8100d4d705ba4">TIM_CAP_MODE</a>
+ }</td></tr>
+<tr class="memdesc:ga7936795adf5a5955da71f14041ec80cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">TIM mode.  <a href="group__TIMER.html#ga7936795adf5a5955da71f14041ec80cd">More...</a><br /></td></tr>
+<tr class="separator:ga7936795adf5a5955da71f14041ec80cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4c50e37ae0087236df85d8babce8b387"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIMER.html#ga4c50e37ae0087236df85d8babce8b387">tim_cnt_mode_t</a> { <a class="el" href="group__TIMER.html#gga4c50e37ae0087236df85d8babce8b387a3c4d3e8459a32cb65624b41408580673">UP_COUNT</a> = 0
+, <a class="el" href="group__TIMER.html#gga4c50e37ae0087236df85d8babce8b387ac22794b2f0bea94969e07c94cc21bee6">DOWN_COUNT</a> = 1
+ }</td></tr>
+<tr class="separator:ga4c50e37ae0087236df85d8babce8b387"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga8ecbcd9a77cbe7a25538d11d3e94248e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIMER.html#ga8ecbcd9a77cbe7a25538d11d3e94248e">drv_tim_init</a> (OM_TIM_Type *om_tim)</td></tr>
+<tr class="memdesc:ga8ecbcd9a77cbe7a25538d11d3e94248e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tim initialization.  <br /></td></tr>
+<tr class="separator:ga8ecbcd9a77cbe7a25538d11d3e94248e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabb681fe3bc46655f9484f195e7bece2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIMER.html#gabb681fe3bc46655f9484f195e7bece2d">drv_tim_uninit</a> (OM_TIM_Type *om_tim)</td></tr>
+<tr class="memdesc:gabb681fe3bc46655f9484f195e7bece2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tim uninitialization.  <br /></td></tr>
+<tr class="separator:gabb681fe3bc46655f9484f195e7bece2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab7930fbda9d2fe9fe896f3a5468f5afc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIMER.html#gab7930fbda9d2fe9fe896f3a5468f5afc">drv_tim_gpdma_channel_allocate</a> (OM_TIM_Type *om_tim)</td></tr>
+<tr class="memdesc:gab7930fbda9d2fe9fe896f3a5468f5afc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate timer dma channel.  <br /></td></tr>
+<tr class="separator:gab7930fbda9d2fe9fe896f3a5468f5afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa18142ed3f54e64decddfa6c524430d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIMER.html#gaa18142ed3f54e64decddfa6c524430d8">drv_tim_gpdma_channel_release</a> (OM_TIM_Type *om_tim)</td></tr>
+<tr class="memdesc:gaa18142ed3f54e64decddfa6c524430d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release timer dma channel.  <br /></td></tr>
+<tr class="separator:gaa18142ed3f54e64decddfa6c524430d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaf26cb79ac407cc3ff2d44721ed23113"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIMER.html#gaaf26cb79ac407cc3ff2d44721ed23113">drv_tim_gp_start</a> (OM_TIM_Type *om_tim, const <a class="el" href="structtim__gp__config__t.html">tim_gp_config_t</a> *cfg)</td></tr>
+<tr class="memdesc:gaaf26cb79ac407cc3ff2d44721ed23113"><td class="mdescLeft">&#160;</td><td class="mdescRight">General Purpose Timer Start.  <br /></td></tr>
+<tr class="separator:gaaf26cb79ac407cc3ff2d44721ed23113"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab3ceed5a20a3e7af3b7156895589a3c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIMER.html#gab3ceed5a20a3e7af3b7156895589a3c8">drv_tim_gp_stop</a> (OM_TIM_Type *om_tim)</td></tr>
+<tr class="memdesc:gab3ceed5a20a3e7af3b7156895589a3c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">General Purpose Timer stop.  <br /></td></tr>
+<tr class="separator:gab3ceed5a20a3e7af3b7156895589a3c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7661f7f924037c0b054d1f0ad34ff1fe"><td class="memItemLeft" align="right" valign="top">__STATIC_FORCEINLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIMER.html#ga7661f7f924037c0b054d1f0ad34ff1fe">drv_tim_pwm_change_period_cnt</a> (OM_TIM_Type *om_tim, uint32_t period_cnt)</td></tr>
+<tr class="memdesc:ga7661f7f924037c0b054d1f0ad34ff1fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change PWM period.  <br /></td></tr>
+<tr class="separator:ga7661f7f924037c0b054d1f0ad34ff1fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga24c7e87188290e9dc37d80494f350003"><td class="memItemLeft" align="right" valign="top">__STATIC_FORCEINLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIMER.html#ga24c7e87188290e9dc37d80494f350003">drv_tim_pwm_change_oc_val</a> (OM_TIM_Type *om_tim, <a class="el" href="group__TIMER.html#ga1ac652a74c855d4ffc9efc85534fd386">tim_chan_t</a> channel, uint32_t oc_val)</td></tr>
+<tr class="memdesc:ga24c7e87188290e9dc37d80494f350003"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change PWM channel output compare val.  <br /></td></tr>
+<tr class="separator:ga24c7e87188290e9dc37d80494f350003"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2349b2f2ab72e896bf5aec9a9307808f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIMER.html#ga2349b2f2ab72e896bf5aec9a9307808f">drv_tim_pwm_output_start</a> (OM_TIM_Type *om_tim, const <a class="el" href="structtim__pwm__output__config__t.html">tim_pwm_output_config_t</a> *cfg)</td></tr>
+<tr class="memdesc:ga2349b2f2ab72e896bf5aec9a9307808f"><td class="mdescLeft">&#160;</td><td class="mdescRight">TIM PWM output start, use pwm mode1 by default, channel is active as long as TIMx_CNT &lt; TIMx_CCR else inactive.  <br /></td></tr>
+<tr class="separator:ga2349b2f2ab72e896bf5aec9a9307808f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad7d15ed36af02220ac73b514f6fb194b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIMER.html#gad7d15ed36af02220ac73b514f6fb194b">drv_tim_pwm_output_stop</a> (OM_TIM_Type *om_tim, <a class="el" href="group__TIMER.html#ga1ac652a74c855d4ffc9efc85534fd386">tim_chan_t</a> channel)</td></tr>
+<tr class="memdesc:gad7d15ed36af02220ac73b514f6fb194b"><td class="mdescLeft">&#160;</td><td class="mdescRight">TIM PWM output stop.  <br /></td></tr>
+<tr class="separator:gad7d15ed36af02220ac73b514f6fb194b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga92ef19c3755763782c45de52c5ccd148"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIMER.html#ga92ef19c3755763782c45de52c5ccd148">drv_tim_pwm_force_output</a> (OM_TIM_Type *om_tim, <a class="el" href="group__TIMER.html#ga1ac652a74c855d4ffc9efc85534fd386">tim_chan_t</a> channel, <a class="el" href="group__TIMER.html#ga85809beac238a45b527fecbf7296b7be">tim_force_level_t</a> level)</td></tr>
+<tr class="memdesc:ga92ef19c3755763782c45de52c5ccd148"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force PWM channel output.  <br /></td></tr>
+<tr class="separator:ga92ef19c3755763782c45de52c5ccd148"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga084cb381284965c848bb455579d6b5a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIMER.html#ga084cb381284965c848bb455579d6b5a4">drv_tim_capture_start</a> (OM_TIM_Type *om_tim, const <a class="el" href="structtim__capture__config__t.html">tim_capture_config_t</a> *cfg)</td></tr>
+<tr class="memdesc:ga084cb381284965c848bb455579d6b5a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer capture start.  <br /></td></tr>
+<tr class="separator:ga084cb381284965c848bb455579d6b5a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2942cbf55a050e4b198b2d9887243a8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIMER.html#ga2942cbf55a050e4b198b2d9887243a8e">drv_tim_capture_stop</a> (OM_TIM_Type *om_tim, <a class="el" href="group__TIMER.html#ga1ac652a74c855d4ffc9efc85534fd386">tim_chan_t</a> channel)</td></tr>
+<tr class="memdesc:ga2942cbf55a050e4b198b2d9887243a8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer capture stop.  <br /></td></tr>
+<tr class="separator:ga2942cbf55a050e4b198b2d9887243a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga599a64a49e55ad9632d95e9e9c32949a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIMER.html#ga599a64a49e55ad9632d95e9e9c32949a">drv_tim_pwm_input_start</a> (OM_TIM_Type *om_tim, const <a class="el" href="structtim__pwm__input__config__t.html">tim_pwm_input_config_t</a> *cfg)</td></tr>
+<tr class="memdesc:ga599a64a49e55ad9632d95e9e9c32949a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer PWM input mode start.  <br /></td></tr>
+<tr class="separator:ga599a64a49e55ad9632d95e9e9c32949a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5bab5c472d5e8fc2be9adf583e266217"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIMER.html#ga5bab5c472d5e8fc2be9adf583e266217">drv_tim_pwm_input_stop</a> (OM_TIM_Type *om_tim)</td></tr>
+<tr class="memdesc:ga5bab5c472d5e8fc2be9adf583e266217"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer PWM input mode stop.  <br /></td></tr>
+<tr class="separator:ga5bab5c472d5e8fc2be9adf583e266217"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gace6155583f263d98d64500b26b1111e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIMER.html#gace6155583f263d98d64500b26b1111e8">drv_tim_isr</a> (OM_TIM_Type *om_tim)</td></tr>
+<tr class="memdesc:gace6155583f263d98d64500b26b1111e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer interrupt service routine.  <br /></td></tr>
+<tr class="separator:gace6155583f263d98d64500b26b1111e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga35fc6555faae2b391b97703a720673e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIMER.html#ga35fc6555faae2b391b97703a720673e6">drv_tim_pwm_complementary_output_start</a> (OM_TIM_Type *om_tim, <a class="el" href="structtim__pwm__complementary__output__config__t.html">tim_pwm_complementary_output_config_t</a> *cfg)</td></tr>
+<tr class="memdesc:ga35fc6555faae2b391b97703a720673e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">TIM PWM complementary output start, use pwm mode1 by default, channel is active as long as TIMx_CNT &lt; TIMx_CCR else inactive.  <br /></td></tr>
+<tr class="separator:ga35fc6555faae2b391b97703a720673e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>TIMER driver. </p>
+<p>TIMER driver apis and typedefs header file</p>
+<dl class="section version"><dt>Version</dt><dd>Version 1.0<ul>
+<li>Initial release </li>
+</ul>
+</dd></dl>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="gac3f1205da48796eb41452049119686f0" name="gac3f1205da48796eb41452049119686f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac3f1205da48796eb41452049119686f0">&#9670;&#160;</a></span>tim_capture_polarity_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__TIMER.html#gac3f1205da48796eb41452049119686f0">tim_capture_polarity_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TIM Capture Polarity. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggac3f1205da48796eb41452049119686f0a3fb4ca2c63d6ac1e4d34ad3fd77d35da" name="ggac3f1205da48796eb41452049119686f0a3fb4ca2c63d6ac1e4d34ad3fd77d35da"></a>TIM_CAPTURE_POLARITY_RISING_EDGE&#160;</td><td class="fielddoc"><p>Capture at rising edge. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggac3f1205da48796eb41452049119686f0a2519a3ec8660a5962d96cb1c9d1f098b" name="ggac3f1205da48796eb41452049119686f0a2519a3ec8660a5962d96cb1c9d1f098b"></a>TIM_CAPTURE_POLARITY_FALLING_EDGE&#160;</td><td class="fielddoc"><p>Capture at falling edge. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga1ac652a74c855d4ffc9efc85534fd386" name="ga1ac652a74c855d4ffc9efc85534fd386"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1ac652a74c855d4ffc9efc85534fd386">&#9670;&#160;</a></span>tim_chan_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__TIMER.html#ga1ac652a74c855d4ffc9efc85534fd386">tim_chan_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TIM Channel. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga1ac652a74c855d4ffc9efc85534fd386a1a6f49b3910a97f82c4f1e0fad0f6569" name="gga1ac652a74c855d4ffc9efc85534fd386a1a6f49b3910a97f82c4f1e0fad0f6569"></a>TIM_CHAN_1&#160;</td><td class="fielddoc"><p>TIM Channel1. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga1ac652a74c855d4ffc9efc85534fd386a579c3ccc23677052e7703c3b1ebb18c0" name="gga1ac652a74c855d4ffc9efc85534fd386a579c3ccc23677052e7703c3b1ebb18c0"></a>TIM_CHAN_2&#160;</td><td class="fielddoc"><p>TIM Channel2. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga1ac652a74c855d4ffc9efc85534fd386ac0249258f46568c044de41df9cf48cd8" name="gga1ac652a74c855d4ffc9efc85534fd386ac0249258f46568c044de41df9cf48cd8"></a>TIM_CHAN_3&#160;</td><td class="fielddoc"><p>TIM Channel3. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga1ac652a74c855d4ffc9efc85534fd386aadb85460faf810900118765550f624aa" name="gga1ac652a74c855d4ffc9efc85534fd386aadb85460faf810900118765550f624aa"></a>TIM_CHAN_4&#160;</td><td class="fielddoc"><p>TIM Channel4. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga1ac652a74c855d4ffc9efc85534fd386a8a9625aed13a21ef234afab1b16d526c" name="gga1ac652a74c855d4ffc9efc85534fd386a8a9625aed13a21ef234afab1b16d526c"></a>TIM_CHAN_ALL&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga4c50e37ae0087236df85d8babce8b387" name="ga4c50e37ae0087236df85d8babce8b387"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4c50e37ae0087236df85d8babce8b387">&#9670;&#160;</a></span>tim_cnt_mode_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__TIMER.html#ga4c50e37ae0087236df85d8babce8b387">tim_cnt_mode_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga4c50e37ae0087236df85d8babce8b387a3c4d3e8459a32cb65624b41408580673" name="gga4c50e37ae0087236df85d8babce8b387a3c4d3e8459a32cb65624b41408580673"></a>UP_COUNT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga4c50e37ae0087236df85d8babce8b387ac22794b2f0bea94969e07c94cc21bee6" name="gga4c50e37ae0087236df85d8babce8b387ac22794b2f0bea94969e07c94cc21bee6"></a>DOWN_COUNT&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga85809beac238a45b527fecbf7296b7be" name="ga85809beac238a45b527fecbf7296b7be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga85809beac238a45b527fecbf7296b7be">&#9670;&#160;</a></span>tim_force_level_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__TIMER.html#ga85809beac238a45b527fecbf7296b7be">tim_force_level_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TIM Force Level. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga85809beac238a45b527fecbf7296b7beaab112f484f07345ebbc56989a204b571" name="gga85809beac238a45b527fecbf7296b7beaab112f484f07345ebbc56989a204b571"></a>TIM_FORCE_LEVEL_INACTIVE&#160;</td><td class="fielddoc"><p>Specifies force level is inactive. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga85809beac238a45b527fecbf7296b7bea89fc3aebef7dc4c9da3ceb6333eea4d8" name="gga85809beac238a45b527fecbf7296b7bea89fc3aebef7dc4c9da3ceb6333eea4d8"></a>TIM_FORCE_LEVEL_ACTIVE&#160;</td><td class="fielddoc"><p>Specifies force level is active. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga7936795adf5a5955da71f14041ec80cd" name="ga7936795adf5a5955da71f14041ec80cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7936795adf5a5955da71f14041ec80cd">&#9670;&#160;</a></span>tim_mode_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__TIMER.html#ga7936795adf5a5955da71f14041ec80cd">tim_mode_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TIM mode. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga7936795adf5a5955da71f14041ec80cdacf74772f4cddb0e473c26c1945de604e" name="gga7936795adf5a5955da71f14041ec80cdacf74772f4cddb0e473c26c1945de604e"></a>TIM_TIMER_MODE&#160;</td><td class="fielddoc"><p>Work as timer mode. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga7936795adf5a5955da71f14041ec80cda34a8e23c53c4d930ff05464d557930d7" name="gga7936795adf5a5955da71f14041ec80cda34a8e23c53c4d930ff05464d557930d7"></a>TIM_PWM_MODE&#160;</td><td class="fielddoc"><p>Work as PWM mode. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga7936795adf5a5955da71f14041ec80cda417a61bb4b214c245be8100d4d705ba4" name="gga7936795adf5a5955da71f14041ec80cda417a61bb4b214c245be8100d4d705ba4"></a>TIM_CAP_MODE&#160;</td><td class="fielddoc"><p>Work as CAP mode. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga656ed7800d8a80d20a0efdfaefe7f78b" name="ga656ed7800d8a80d20a0efdfaefe7f78b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga656ed7800d8a80d20a0efdfaefe7f78b">&#9670;&#160;</a></span>tim_pwm_pol_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__TIMER.html#ga656ed7800d8a80d20a0efdfaefe7f78b">tim_pwm_pol_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TIM Active Level. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga656ed7800d8a80d20a0efdfaefe7f78bae115c678f34fda8b5a0b6c6afa1d63f9" name="gga656ed7800d8a80d20a0efdfaefe7f78bae115c678f34fda8b5a0b6c6afa1d63f9"></a>TIM_PWM_POL_ACTIVE_HIGH&#160;</td><td class="fielddoc"><p>Specifies active level is high. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga656ed7800d8a80d20a0efdfaefe7f78baab3c61e9c2c2d10827fd7ac659e8cd2b" name="gga656ed7800d8a80d20a0efdfaefe7f78baab3c61e9c2c2d10827fd7ac659e8cd2b"></a>TIM_PWM_POL_ACTIVE_LOW&#160;</td><td class="fielddoc"><p>Specifies active level is low. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga084cb381284965c848bb455579d6b5a4" name="ga084cb381284965c848bb455579d6b5a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga084cb381284965c848bb455579d6b5a4">&#9670;&#160;</a></span>drv_tim_capture_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_tim_capture_start </td>
+          <td>(</td>
+          <td class="paramtype">OM_TIM_Type *&#160;</td>
+          <td class="paramname"><em>om_tim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structtim__capture__config__t.html">tim_capture_config_t</a> *&#160;</td>
+          <td class="paramname"><em>cfg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Timer capture start. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_tim</td><td>Pointer to TIM, NOTE:only TIM0 support capature in OM6626 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cfg</td><td>TIM Capture Configuration</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="ga2942cbf55a050e4b198b2d9887243a8e" name="ga2942cbf55a050e4b198b2d9887243a8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2942cbf55a050e4b198b2d9887243a8e">&#9670;&#160;</a></span>drv_tim_capture_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_tim_capture_stop </td>
+          <td>(</td>
+          <td class="paramtype">OM_TIM_Type *&#160;</td>
+          <td class="paramname"><em>om_tim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__TIMER.html#ga1ac652a74c855d4ffc9efc85534fd386">tim_chan_t</a>&#160;</td>
+          <td class="paramname"><em>channel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Timer capture stop. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_tim</td><td>Pointer to TIM </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">channel</td><td>The tiemr channel, if TIMER_CHANNEL_ALL, stop the TIMx. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaaf26cb79ac407cc3ff2d44721ed23113" name="gaaf26cb79ac407cc3ff2d44721ed23113"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaf26cb79ac407cc3ff2d44721ed23113">&#9670;&#160;</a></span>drv_tim_gp_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_tim_gp_start </td>
+          <td>(</td>
+          <td class="paramtype">OM_TIM_Type *&#160;</td>
+          <td class="paramname"><em>om_tim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structtim__gp__config__t.html">tim_gp_config_t</a> *&#160;</td>
+          <td class="paramname"><em>cfg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>General Purpose Timer Start. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_tim</td><td>Pointer to TIM </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cfg</td><td>general purpose timer config</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="gab3ceed5a20a3e7af3b7156895589a3c8" name="gab3ceed5a20a3e7af3b7156895589a3c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab3ceed5a20a3e7af3b7156895589a3c8">&#9670;&#160;</a></span>drv_tim_gp_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_tim_gp_stop </td>
+          <td>(</td>
+          <td class="paramtype">OM_TIM_Type *&#160;</td>
+          <td class="paramname"><em>om_tim</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>General Purpose Timer stop. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_tim</td><td>Pointer to TIM </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gab7930fbda9d2fe9fe896f3a5468f5afc" name="gab7930fbda9d2fe9fe896f3a5468f5afc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab7930fbda9d2fe9fe896f3a5468f5afc">&#9670;&#160;</a></span>drv_tim_gpdma_channel_allocate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_tim_gpdma_channel_allocate </td>
+          <td>(</td>
+          <td class="paramtype">OM_TIM_Type *&#160;</td>
+          <td class="paramname"><em>om_tim</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allocate timer dma channel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_tim</td><td>Pointer to timer</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="gaa18142ed3f54e64decddfa6c524430d8" name="gaa18142ed3f54e64decddfa6c524430d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa18142ed3f54e64decddfa6c524430d8">&#9670;&#160;</a></span>drv_tim_gpdma_channel_release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_tim_gpdma_channel_release </td>
+          <td>(</td>
+          <td class="paramtype">OM_TIM_Type *&#160;</td>
+          <td class="paramname"><em>om_tim</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Release timer dma channel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_tim</td><td>Pointer to timer</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="ga8ecbcd9a77cbe7a25538d11d3e94248e" name="ga8ecbcd9a77cbe7a25538d11d3e94248e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8ecbcd9a77cbe7a25538d11d3e94248e">&#9670;&#160;</a></span>drv_tim_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_tim_init </td>
+          <td>(</td>
+          <td class="paramtype">OM_TIM_Type *&#160;</td>
+          <td class="paramname"><em>om_tim</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tim initialization. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_tim</td><td>Pointer to TIM</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="gace6155583f263d98d64500b26b1111e8" name="gace6155583f263d98d64500b26b1111e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gace6155583f263d98d64500b26b1111e8">&#9670;&#160;</a></span>drv_tim_isr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_tim_isr </td>
+          <td>(</td>
+          <td class="paramtype">OM_TIM_Type *&#160;</td>
+          <td class="paramname"><em>om_tim</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Timer interrupt service routine. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_tim</td><td>Pointer to TIM </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga24c7e87188290e9dc37d80494f350003" name="ga24c7e87188290e9dc37d80494f350003"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga24c7e87188290e9dc37d80494f350003">&#9670;&#160;</a></span>drv_tim_pwm_change_oc_val()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_FORCEINLINE void drv_tim_pwm_change_oc_val </td>
+          <td>(</td>
+          <td class="paramtype">OM_TIM_Type *&#160;</td>
+          <td class="paramname"><em>om_tim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__TIMER.html#ga1ac652a74c855d4ffc9efc85534fd386">tim_chan_t</a>&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>oc_val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Change PWM channel output compare val. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_tim</td><td>Pointer to TIM </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">channel</td><td>PWM channel index </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">oc_val</td><td>The timer new output compare val, timer0 MAX:0xFFFFFFFF timer1and2 MAX:0xFFFF, should be less than period_count </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga7661f7f924037c0b054d1f0ad34ff1fe" name="ga7661f7f924037c0b054d1f0ad34ff1fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7661f7f924037c0b054d1f0ad34ff1fe">&#9670;&#160;</a></span>drv_tim_pwm_change_period_cnt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__STATIC_FORCEINLINE void drv_tim_pwm_change_period_cnt </td>
+          <td>(</td>
+          <td class="paramtype">OM_TIM_Type *&#160;</td>
+          <td class="paramname"><em>om_tim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>period_cnt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Change PWM period. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_tim</td><td>Pointer to TIM </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">period_cnt</td><td>The timer automatic reloading value, timer0 MAX:0xFFFFFFFF timer1and2 MAX:0xFFFF </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga35fc6555faae2b391b97703a720673e6" name="ga35fc6555faae2b391b97703a720673e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga35fc6555faae2b391b97703a720673e6">&#9670;&#160;</a></span>drv_tim_pwm_complementary_output_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_tim_pwm_complementary_output_start </td>
+          <td>(</td>
+          <td class="paramtype">OM_TIM_Type *&#160;</td>
+          <td class="paramname"><em>om_tim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structtim__pwm__complementary__output__config__t.html">tim_pwm_complementary_output_config_t</a> *&#160;</td>
+          <td class="paramname"><em>cfg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TIM PWM complementary output start, use pwm mode1 by default, channel is active as long as TIMx_CNT &lt; TIMx_CCR else inactive. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_tim</td><td>Pointer to TIM </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cfg</td><td>TIM PWM Output Configuration</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="ga92ef19c3755763782c45de52c5ccd148" name="ga92ef19c3755763782c45de52c5ccd148"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga92ef19c3755763782c45de52c5ccd148">&#9670;&#160;</a></span>drv_tim_pwm_force_output()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_tim_pwm_force_output </td>
+          <td>(</td>
+          <td class="paramtype">OM_TIM_Type *&#160;</td>
+          <td class="paramname"><em>om_tim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__TIMER.html#ga1ac652a74c855d4ffc9efc85534fd386">tim_chan_t</a>&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__TIMER.html#ga85809beac238a45b527fecbf7296b7be">tim_force_level_t</a>&#160;</td>
+          <td class="paramname"><em>level</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Force PWM channel output. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_tim</td><td>Pointer to TIM </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">channel</td><td>Channel index </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>Force output level </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga599a64a49e55ad9632d95e9e9c32949a" name="ga599a64a49e55ad9632d95e9e9c32949a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga599a64a49e55ad9632d95e9e9c32949a">&#9670;&#160;</a></span>drv_tim_pwm_input_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_tim_pwm_input_start </td>
+          <td>(</td>
+          <td class="paramtype">OM_TIM_Type *&#160;</td>
+          <td class="paramname"><em>om_tim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structtim__pwm__input__config__t.html">tim_pwm_input_config_t</a> *&#160;</td>
+          <td class="paramname"><em>cfg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Timer PWM input mode start. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_tim</td><td>Pointer to TIM </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cfg</td><td>TIM PWM Input Configuration</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="ga5bab5c472d5e8fc2be9adf583e266217" name="ga5bab5c472d5e8fc2be9adf583e266217"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5bab5c472d5e8fc2be9adf583e266217">&#9670;&#160;</a></span>drv_tim_pwm_input_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_tim_pwm_input_stop </td>
+          <td>(</td>
+          <td class="paramtype">OM_TIM_Type *&#160;</td>
+          <td class="paramname"><em>om_tim</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Timer PWM input mode stop. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_tim</td><td>Pointer to TIM </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga2349b2f2ab72e896bf5aec9a9307808f" name="ga2349b2f2ab72e896bf5aec9a9307808f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2349b2f2ab72e896bf5aec9a9307808f">&#9670;&#160;</a></span>drv_tim_pwm_output_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_tim_pwm_output_start </td>
+          <td>(</td>
+          <td class="paramtype">OM_TIM_Type *&#160;</td>
+          <td class="paramname"><em>om_tim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structtim__pwm__output__config__t.html">tim_pwm_output_config_t</a> *&#160;</td>
+          <td class="paramname"><em>cfg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TIM PWM output start, use pwm mode1 by default, channel is active as long as TIMx_CNT &lt; TIMx_CCR else inactive. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_tim</td><td>Pointer to TIM </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cfg</td><td>TIM PWM Output Configuration</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="gad7d15ed36af02220ac73b514f6fb194b" name="gad7d15ed36af02220ac73b514f6fb194b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad7d15ed36af02220ac73b514f6fb194b">&#9670;&#160;</a></span>drv_tim_pwm_output_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_tim_pwm_output_stop </td>
+          <td>(</td>
+          <td class="paramtype">OM_TIM_Type *&#160;</td>
+          <td class="paramname"><em>om_tim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__TIMER.html#ga1ac652a74c855d4ffc9efc85534fd386">tim_chan_t</a>&#160;</td>
+          <td class="paramname"><em>channel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TIM PWM output stop. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_tim</td><td>Pointer to TIM </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">channel</td><td>The timer channel, if TIMER_CHANNEL_ALL, stop the TIMx. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gabb681fe3bc46655f9484f195e7bece2d" name="gabb681fe3bc46655f9484f195e7bece2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabb681fe3bc46655f9484f195e7bece2d">&#9670;&#160;</a></span>drv_tim_uninit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_tim_uninit </td>
+          <td>(</td>
+          <td class="paramtype">OM_TIM_Type *&#160;</td>
+          <td class="paramname"><em>om_tim</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tim uninitialization. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">om_tim</td><td>Pointer to TIM</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+</div>
+</body>
+</html>

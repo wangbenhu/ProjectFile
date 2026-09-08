@@ -1,0 +1,23 @@
+from build.building import *
+
+BLE_HOST_SRCS = []
+
+BLE_HOST_INCS = ['include']
+
+BLE_HOST_DEFS = ['CONFIG_BLE_HOST']
+
+BLE_HOST_LIBS = []
+
+# Append library
+if GetDepend('CONFIG_TOOL_CHAIN_GCC'):
+        BLE_HOST_LIBS += ['lib/GCC/libblehost_full.a']
+elif GetDepend('CONFIG_TOOL_CHAIN_ARMCLANG'):
+        BLE_HOST_LIBS += ['lib/ARM/libblehost_full.lib']
+elif GetDepend('CONFIG_TOOL_CHAIN_ICCARM'):
+        BLE_HOST_LIBS += ['lib/IAR/libblehost_full.a']
+else:
+    raise Exception('Toolchain is not configured or SDK donot support the compiler')
+
+group = DefineGroup(name='host', srcs=BLE_HOST_SRCS, incs=BLE_HOST_INCS, libs=BLE_HOST_LIBS, CPPDEFINES=BLE_HOST_DEFS)
+
+Return('group')

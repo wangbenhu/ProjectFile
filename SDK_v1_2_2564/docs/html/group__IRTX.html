@@ -1,0 +1,442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>User Guide: IRTX</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+-->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">User Guide
+   </div>
+   <div id="projectbrief">Bluetooth Low Energy 5.4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__IRTX.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">IRTX<div class="ingroups"><a class="el" href="group__DRIVER.html">Driver</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>IRTX driver.  
+<a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structirtx__config__t.html">irtx_config_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">irtx config  <a href="structirtx__config__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:gaf8a1f4ffc5ca79a1d6bfafad447e7a2b"><td class="memItemLeft" align="right" valign="top">typedef uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__IRTX.html#gaf8a1f4ffc5ca79a1d6bfafad447e7a2b">irtx_code_t</a></td></tr>
+<tr class="memdesc:gaf8a1f4ffc5ca79a1d6bfafad447e7a2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">irtx code data type  <br /></td></tr>
+<tr class="separator:gaf8a1f4ffc5ca79a1d6bfafad447e7a2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:gaa034ad43aa09a1ffa44a5f2ba7c57a4a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__IRTX.html#gaa034ad43aa09a1ffa44a5f2ba7c57a4a">irtx_carrier_polarity_t</a> { <a class="el" href="group__IRTX.html#ggaa034ad43aa09a1ffa44a5f2ba7c57a4aa314d316eaf2cb6e5bce18ea2a3f44bc5">IRTX_CARRIER_POLARITY_HIGH</a> = 0x0
+, <a class="el" href="group__IRTX.html#ggaa034ad43aa09a1ffa44a5f2ba7c57a4aae163cced4ccc5329ccb04a5168c2b54b">IRTX_CARRIER_POLARITY_LOW</a> = 0x1
+ }</td></tr>
+<tr class="memdesc:gaa034ad43aa09a1ffa44a5f2ba7c57a4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">irtx carrier polarity  <a href="group__IRTX.html#gaa034ad43aa09a1ffa44a5f2ba7c57a4a">More...</a><br /></td></tr>
+<tr class="separator:gaa034ad43aa09a1ffa44a5f2ba7c57a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga702afc28a8aa1adab101f5c0b352d215"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__IRTX.html#ga702afc28a8aa1adab101f5c0b352d215">irtx_output_invert_t</a> { <a class="el" href="group__IRTX.html#gga702afc28a8aa1adab101f5c0b352d215a6ab60484654770d17fa5ddf16318a83d">IRTX_OUTPUT_INVERT_DISABLE</a> = 0x0
+, <a class="el" href="group__IRTX.html#gga702afc28a8aa1adab101f5c0b352d215a26bca239243ed5b42e46c814936ad846">IRTX_OUTPUT_INVERT_ENABLE</a> = 0x1
+ }</td></tr>
+<tr class="memdesc:ga702afc28a8aa1adab101f5c0b352d215"><td class="mdescLeft">&#160;</td><td class="mdescRight">irtx output invert enable  <a href="group__IRTX.html#ga702afc28a8aa1adab101f5c0b352d215">More...</a><br /></td></tr>
+<tr class="separator:ga702afc28a8aa1adab101f5c0b352d215"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab415c28fd6a1a7bf41eadd56f4efc8aa"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__IRTX.html#gab415c28fd6a1a7bf41eadd56f4efc8aa">irtx_wave_level_t</a> { <a class="el" href="group__IRTX.html#ggab415c28fd6a1a7bf41eadd56f4efc8aaa963248de273037ca284e6df8ec3bd6bc">IRTX_WAVE_LEVEL_LOW</a>
+, <a class="el" href="group__IRTX.html#ggab415c28fd6a1a7bf41eadd56f4efc8aaa4e86960c35f257a416b31d13e6a8b139">IRTX_WAVE_LEVEL_HIGH</a>
+ }</td></tr>
+<tr class="memdesc:gab415c28fd6a1a7bf41eadd56f4efc8aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">irtx get wave code for high level or low level  <a href="group__IRTX.html#gab415c28fd6a1a7bf41eadd56f4efc8aa">More...</a><br /></td></tr>
+<tr class="separator:gab415c28fd6a1a7bf41eadd56f4efc8aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga32bab24a833915232200bead01bc3583"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__IRTX.html#ga32bab24a833915232200bead01bc3583">drv_irtx_init</a> (const <a class="el" href="structirtx__config__t.html">irtx_config_t</a> *irtx_config)</td></tr>
+<tr class="memdesc:ga32bab24a833915232200bead01bc3583"><td class="mdescLeft">&#160;</td><td class="mdescRight">init irtx  <br /></td></tr>
+<tr class="separator:ga32bab24a833915232200bead01bc3583"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9c217194211adf9b22950763ea9302bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__IRTX.html#gaf8a1f4ffc5ca79a1d6bfafad447e7a2b">irtx_code_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__IRTX.html#ga9c217194211adf9b22950763ea9302bd">drv_irtx_get_wave_code</a> (const uint32_t wave_len_us, const <a class="el" href="group__IRTX.html#gab415c28fd6a1a7bf41eadd56f4efc8aa">irtx_wave_level_t</a> wave_level)</td></tr>
+<tr class="memdesc:ga9c217194211adf9b22950763ea9302bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">set wave code according to high and low level length  <br /></td></tr>
+<tr class="separator:ga9c217194211adf9b22950763ea9302bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaee9a2c3971d2bd8cd674e089b0b3cff3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__IRTX.html#gaee9a2c3971d2bd8cd674e089b0b3cff3">drv_irtx_write_int</a> (const <a class="el" href="group__IRTX.html#gaf8a1f4ffc5ca79a1d6bfafad447e7a2b">irtx_code_t</a> *buff, const uint32_t buff_num)</td></tr>
+<tr class="memdesc:gaee9a2c3971d2bd8cd674e089b0b3cff3"><td class="mdescLeft">&#160;</td><td class="mdescRight">write coded data by dma and will enter dma interrupt when write done. it can work only in dma mode  <br /></td></tr>
+<tr class="separator:gaee9a2c3971d2bd8cd674e089b0b3cff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa92c9c99f6fb53b2b270ed010b1627b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__IRTX.html#gaa92c9c99f6fb53b2b270ed010b1627b7">drv_irtx_isr</a> (void)</td></tr>
+<tr class="memdesc:gaa92c9c99f6fb53b2b270ed010b1627b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">it will be called by irtx interrupt serve  <br /></td></tr>
+<tr class="separator:gaa92c9c99f6fb53b2b270ed010b1627b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6f6b34921f3bf60b0d730d7e5cd77add"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__IRTX.html#ga6f6b34921f3bf60b0d730d7e5cd77add">drv_irtx_isr_callback</a> (drv_event_t event)</td></tr>
+<tr class="memdesc:ga6f6b34921f3bf60b0d730d7e5cd77add"><td class="mdescLeft">&#160;</td><td class="mdescRight">The interrupt callback for IRTX driver. It is a weak function. User should define their own callback in user file, other than modify it in the IRTX driver.  <br /></td></tr>
+<tr class="separator:ga6f6b34921f3bf60b0d730d7e5cd77add"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>IRTX driver. </p>
+<p>IRTX driver apis and typedefs header file</p>
+<dl class="section version"><dt>Version</dt><dd>Version 1.0<ul>
+<li>Initial release </li>
+</ul>
+</dd></dl>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="gaf8a1f4ffc5ca79a1d6bfafad447e7a2b" name="gaf8a1f4ffc5ca79a1d6bfafad447e7a2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf8a1f4ffc5ca79a1d6bfafad447e7a2b">&#9670;&#160;</a></span>irtx_code_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint16_t <a class="el" href="group__IRTX.html#gaf8a1f4ffc5ca79a1d6bfafad447e7a2b">irtx_code_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>irtx code data type </p>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="gaa034ad43aa09a1ffa44a5f2ba7c57a4a" name="gaa034ad43aa09a1ffa44a5f2ba7c57a4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa034ad43aa09a1ffa44a5f2ba7c57a4a">&#9670;&#160;</a></span>irtx_carrier_polarity_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__IRTX.html#gaa034ad43aa09a1ffa44a5f2ba7c57a4a">irtx_carrier_polarity_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>irtx carrier polarity </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggaa034ad43aa09a1ffa44a5f2ba7c57a4aa314d316eaf2cb6e5bce18ea2a3f44bc5" name="ggaa034ad43aa09a1ffa44a5f2ba7c57a4aa314d316eaf2cb6e5bce18ea2a3f44bc5"></a>IRTX_CARRIER_POLARITY_HIGH&#160;</td><td class="fielddoc"><p>carrier begin with high level </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaa034ad43aa09a1ffa44a5f2ba7c57a4aae163cced4ccc5329ccb04a5168c2b54b" name="ggaa034ad43aa09a1ffa44a5f2ba7c57a4aae163cced4ccc5329ccb04a5168c2b54b"></a>IRTX_CARRIER_POLARITY_LOW&#160;</td><td class="fielddoc"><p>carrier begin with low level, duty cycle will change if config polarity low </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga702afc28a8aa1adab101f5c0b352d215" name="ga702afc28a8aa1adab101f5c0b352d215"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga702afc28a8aa1adab101f5c0b352d215">&#9670;&#160;</a></span>irtx_output_invert_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__IRTX.html#ga702afc28a8aa1adab101f5c0b352d215">irtx_output_invert_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>irtx output invert enable </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga702afc28a8aa1adab101f5c0b352d215a6ab60484654770d17fa5ddf16318a83d" name="gga702afc28a8aa1adab101f5c0b352d215a6ab60484654770d17fa5ddf16318a83d"></a>IRTX_OUTPUT_INVERT_DISABLE&#160;</td><td class="fielddoc"><p>do not invert output wave </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga702afc28a8aa1adab101f5c0b352d215a26bca239243ed5b42e46c814936ad846" name="gga702afc28a8aa1adab101f5c0b352d215a26bca239243ed5b42e46c814936ad846"></a>IRTX_OUTPUT_INVERT_ENABLE&#160;</td><td class="fielddoc"><p>invert output wave, duty cycle will change if config invert enable </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gab415c28fd6a1a7bf41eadd56f4efc8aa" name="gab415c28fd6a1a7bf41eadd56f4efc8aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab415c28fd6a1a7bf41eadd56f4efc8aa">&#9670;&#160;</a></span>irtx_wave_level_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__IRTX.html#gab415c28fd6a1a7bf41eadd56f4efc8aa">irtx_wave_level_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>irtx get wave code for high level or low level </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggab415c28fd6a1a7bf41eadd56f4efc8aaa963248de273037ca284e6df8ec3bd6bc" name="ggab415c28fd6a1a7bf41eadd56f4efc8aaa963248de273037ca284e6df8ec3bd6bc"></a>IRTX_WAVE_LEVEL_LOW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggab415c28fd6a1a7bf41eadd56f4efc8aaa4e86960c35f257a416b31d13e6a8b139" name="ggab415c28fd6a1a7bf41eadd56f4efc8aaa4e86960c35f257a416b31d13e6a8b139"></a>IRTX_WAVE_LEVEL_HIGH&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga9c217194211adf9b22950763ea9302bd" name="ga9c217194211adf9b22950763ea9302bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9c217194211adf9b22950763ea9302bd">&#9670;&#160;</a></span>drv_irtx_get_wave_code()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__IRTX.html#gaf8a1f4ffc5ca79a1d6bfafad447e7a2b">irtx_code_t</a> drv_irtx_get_wave_code </td>
+          <td>(</td>
+          <td class="paramtype">const uint32_t&#160;</td>
+          <td class="paramname"><em>wave_len_us</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__IRTX.html#gab415c28fd6a1a7bf41eadd56f4efc8aa">irtx_wave_level_t</a>&#160;</td>
+          <td class="paramname"><em>wave_level</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>set wave code according to high and low level length </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">wave_len_us</td><td>wave level length in us </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">wave_level</td><td>wave level is high or low</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>return wave code, <a class="el" href="group__IRTX.html#gaf8a1f4ffc5ca79a1d6bfafad447e7a2b">irtx_code_t</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga32bab24a833915232200bead01bc3583" name="ga32bab24a833915232200bead01bc3583"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga32bab24a833915232200bead01bc3583">&#9670;&#160;</a></span>drv_irtx_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_irtx_init </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structirtx__config__t.html">irtx_config_t</a> *&#160;</td>
+          <td class="paramname"><em>irtx_config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>init irtx </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">irtx_config</td><td>Configuration for irtx</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+<a id="gaa92c9c99f6fb53b2b270ed010b1627b7" name="gaa92c9c99f6fb53b2b270ed010b1627b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa92c9c99f6fb53b2b270ed010b1627b7">&#9670;&#160;</a></span>drv_irtx_isr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_irtx_isr </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>it will be called by irtx interrupt serve </p>
+
+</div>
+</div>
+<a id="ga6f6b34921f3bf60b0d730d7e5cd77add" name="ga6f6b34921f3bf60b0d730d7e5cd77add"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6f6b34921f3bf60b0d730d7e5cd77add">&#9670;&#160;</a></span>drv_irtx_isr_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drv_irtx_isr_callback </td>
+          <td>(</td>
+          <td class="paramtype">drv_event_t&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The interrupt callback for IRTX driver. It is a weak function. User should define their own callback in user file, other than modify it in the IRTX driver. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">event</td><td>The driver irtx event<ul>
+<li>DRV_EVENT_IRTX_PWM_INT_PNUM_INT</li>
+<li>DRV_EVENT_IRTX_PWM_INT_DMA_INT</li>
+<li>DRV_EVENT_IRTX_PWM_INT_CYCLE_DONE_INT</li>
+<li>DRV_EVENT_IRTX_FIFO_CNT</li>
+<li>DRV_EVENT_IRTX_FIFO_EMPTY_INT </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaee9a2c3971d2bd8cd674e089b0b3cff3" name="gaee9a2c3971d2bd8cd674e089b0b3cff3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaee9a2c3971d2bd8cd674e089b0b3cff3">&#9670;&#160;</a></span>drv_irtx_write_int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ERROR.html#gade1010dbf6169f89f4025b1187fea6cd">om_error_t</a> drv_irtx_write_int </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__IRTX.html#gaf8a1f4ffc5ca79a1d6bfafad447e7a2b">irtx_code_t</a> *&#160;</td>
+          <td class="paramname"><em>buff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint32_t&#160;</td>
+          <td class="paramname"><em>buff_num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>write coded data by dma and will enter dma interrupt when write done. it can work only in dma mode </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">buff</td><td>coded data buff to be written in irtx_code_t data type </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buff_num</td><td>buff number of irtx_code_t type to be written</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>errno </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+</div>
+</body>
+</html>

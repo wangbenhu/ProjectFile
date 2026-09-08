@@ -1,0 +1,1338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>User Guide: Generic Attribute Profile (GATT)</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+-->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">User Guide
+   </div>
+   <div id="projectbrief">Bluetooth Low Energy 5.4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__OMBLE__GATT.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Generic Attribute Profile (GATT)<div class="ingroups"><a class="el" href="group__OMBLE.html">BLE</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>GATT.  
+<a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gatt__item__t.html">ob_gatt_item_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">att attribute structure  <a href="structob__gatt__item__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gatt__serv__t.html">ob_gatt_serv_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">gatt service structure  <a href="structob__gatt__serv__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gatts__hvx__t.html">ob_gatts_hvx_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">GATT handle value notify/indicate structure.  <a href="structob__gatts__hvx__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gatt__evt__tx__complete__t.html">ob_gatt_evt_tx_complete_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a9e5e7718bf5a3138f4bf53ceac55c4ec">OB_GATT_EVT_TX_COMPLETE</a>.  <a href="structob__gatt__evt__tx__complete__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gatt__evt__mtu__exchanged__t.html">ob_gatt_evt_mtu_exchanged_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a2d2b065eeb71cdca2bdd5c4f36a546fe">OB_GATT_EVT_MTU_EXCHANGED</a>.  <a href="structob__gatt__evt__mtu__exchanged__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gatt__evt__timeout__t.html">ob_gatt_evt_timeout_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a56dd9d8a814d3d475b06f040d31b4085">OB_GATT_EVT_TIMEOUT</a>.  <a href="structob__gatt__evt__timeout__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gatts__evt__indicate__cfm__t.html">ob_gatts_evt_indicate_cfm_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357aefde18564d6ae0f5e6a80fc09be833a5">OB_GATTS_EVT_INDICATE_CFM</a>.  <a href="structob__gatts__evt__indicate__cfm__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gatts__evt__read__req__t.html">ob_gatts_evt_read_req_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a9dd07b5d22c012f848b395d5b4f8a9cf">OB_GATTS_EVT_READ_REQ</a>.  <a href="structob__gatts__evt__read__req__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gatts__evt__write__req__t.html">ob_gatts_evt_write_req_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a0f33574c294c85e484978e566b1857cb">OB_GATTS_EVT_WRITE_REQ</a>.  <a href="structob__gatts__evt__write__req__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gatt__service__t.html">ob_gatt_service_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">GATT Service Structure.  <a href="structob__gatt__service__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gattc__evt__find__serv__rsp__t.html">ob_gattc_evt_find_serv_rsp_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357acc47670ec21ff3a9068f901f909fe072">OB_GATTC_EVT_FIND_SERV_RSP</a>.  <a href="structob__gattc__evt__find__serv__rsp__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gattc__evt__find__serv__by__uuid__rsp__t.html">ob_gattc_evt_find_serv_by_uuid_rsp_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357adaf98a55962e4df2d05257ce5a65548a">OB_GATTC_EVT_FIND_SERV_BY_UUID_RSP</a>.  <a href="structob__gattc__evt__find__serv__by__uuid__rsp__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gatt__characteristic__t.html">ob_gatt_characteristic_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">GATT Characteristic Structure.  <a href="structob__gatt__characteristic__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gattc__evt__find__char__rsp__t.html">ob_gattc_evt_find_char_rsp_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a393a632c7a7e59ea46d3bfb2edc2d4a9">OB_GATTC_EVT_FIND_CHAR_RSP</a>.  <a href="structob__gattc__evt__find__char__rsp__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gatt__descriptor__t.html">ob_gatt_descriptor_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gatt Descriptor Structure.  <a href="structob__gatt__descriptor__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gattc__evt__find__desc__rsp__t.html">ob_gattc_evt_find_desc_rsp_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a03623737d5a807e566ddc187cb360ef2">OB_GATTC_EVT_FIND_DESC_RSP</a>.  <a href="structob__gattc__evt__find__desc__rsp__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gattc__evt__read__rsp__t.html">ob_gattc_evt_read_rsp_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a0b9a6c880fcee1534e9740444fc715f2">OB_GATTC_EVT_READ_RSP</a>.  <a href="structob__gattc__evt__read__rsp__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gattc__evt__read__by__uuid__rsp__t.html">ob_gattc_evt_read_by_uuid_rsp_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a8c07ec4af0d87ffc7dceeaed5589e1ba">OB_GATTC_EVT_READ_BY_UUID_RSP</a>.  <a href="structob__gattc__evt__read__by__uuid__rsp__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gattc__evt__write__rsp__t.html">ob_gattc_evt_write_rsp_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357aed095b4f31eac33bf44804c08ae6e19d">OB_GATTC_EVT_WRITE_RSP</a>.  <a href="structob__gattc__evt__write__rsp__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structob__gattc__evt__hvx__ind__t.html">ob_gattc_evt_hvx_ind_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event structure for <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a4cc20c79f1c4878fc467649f0a3ca315">OB_GATTC_EVT_HVX_IND</a>.  <a href="structob__gattc__evt__hvx__ind__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structomble__gatt__evt__t.html">omble_gatt_evt_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">GATT Event structure.  <a href="structomble__gatt__evt__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:gacfa5558a9adafa67a5d2a4bcb94f611d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GATT.html#gacfa5558a9adafa67a5d2a4bcb94f611d">OB_UUID_16BIT</a>&#160;&#160;&#160;2</td></tr>
+<tr class="memdesc:gacfa5558a9adafa67a5d2a4bcb94f611d"><td class="mdescLeft">&#160;</td><td class="mdescRight">UUID 16bit Length value.  <br /></td></tr>
+<tr class="separator:gacfa5558a9adafa67a5d2a4bcb94f611d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga148a05df5b4c05799272851b2e0bb679"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GATT.html#ga148a05df5b4c05799272851b2e0bb679">OB_UUID_128BIT</a>&#160;&#160;&#160;16</td></tr>
+<tr class="memdesc:ga148a05df5b4c05799272851b2e0bb679"><td class="mdescLeft">&#160;</td><td class="mdescRight">UUID 128bit Length value.  <br /></td></tr>
+<tr class="separator:ga148a05df5b4c05799272851b2e0bb679"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ga96e589443308d3d34346e94a17e29357"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GATT.html#ga96e589443308d3d34346e94a17e29357">OB_GATT_EVENTS</a> { <br />
+&#160;&#160;<a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a9e5e7718bf5a3138f4bf53ceac55c4ec">OB_GATT_EVT_TX_COMPLETE</a> = OB_GATT_EVTS_BASE + 0
+, <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a2d2b065eeb71cdca2bdd5c4f36a546fe">OB_GATT_EVT_MTU_EXCHANGED</a> = OB_GATT_EVTS_BASE + 1
+, <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a56dd9d8a814d3d475b06f040d31b4085">OB_GATT_EVT_TIMEOUT</a> = OB_GATT_EVTS_BASE + 2
+, <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357aefde18564d6ae0f5e6a80fc09be833a5">OB_GATTS_EVT_INDICATE_CFM</a> = OB_GATT_EVTS_BASE + 3
+, <br />
+&#160;&#160;<a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a9dd07b5d22c012f848b395d5b4f8a9cf">OB_GATTS_EVT_READ_REQ</a> = OB_GATT_EVTS_BASE + 4
+, <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a0f33574c294c85e484978e566b1857cb">OB_GATTS_EVT_WRITE_REQ</a> = OB_GATT_EVTS_BASE + 5
+, <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357acc47670ec21ff3a9068f901f909fe072">OB_GATTC_EVT_FIND_SERV_RSP</a> = OB_GATT_EVTS_BASE + 6
+, <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357adaf98a55962e4df2d05257ce5a65548a">OB_GATTC_EVT_FIND_SERV_BY_UUID_RSP</a> = OB_GATT_EVTS_BASE + 7
+, <br />
+&#160;&#160;<a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a393a632c7a7e59ea46d3bfb2edc2d4a9">OB_GATTC_EVT_FIND_CHAR_RSP</a> = OB_GATT_EVTS_BASE + 8
+, <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a03623737d5a807e566ddc187cb360ef2">OB_GATTC_EVT_FIND_DESC_RSP</a> = OB_GATT_EVTS_BASE + 9
+, <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a0b9a6c880fcee1534e9740444fc715f2">OB_GATTC_EVT_READ_RSP</a> = OB_GATT_EVTS_BASE + 10
+, <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a8c07ec4af0d87ffc7dceeaed5589e1ba">OB_GATTC_EVT_READ_BY_UUID_RSP</a> = OB_GATT_EVTS_BASE + 11
+, <br />
+&#160;&#160;<a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357aed095b4f31eac33bf44804c08ae6e19d">OB_GATTC_EVT_WRITE_RSP</a> = OB_GATT_EVTS_BASE + 12
+, <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a4cc20c79f1c4878fc467649f0a3ca315">OB_GATTC_EVT_HVX_IND</a> = OB_GATT_EVTS_BASE + 13
+<br />
+ }</td></tr>
+<tr class="memdesc:ga96e589443308d3d34346e94a17e29357"><td class="mdescLeft">&#160;</td><td class="mdescRight">OB_GATT_EVENTS.  <a href="group__OMBLE__GATT.html#ga96e589443308d3d34346e94a17e29357">More...</a><br /></td></tr>
+<tr class="separator:ga96e589443308d3d34346e94a17e29357"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga043fee7ca5d66b63c7268b9829faa9d9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GATT.html#ga043fee7ca5d66b63c7268b9829faa9d9">ob_att_prop</a> { <br />
+&#160;&#160;<a class="el" href="group__OMBLE__GATT.html#gga043fee7ca5d66b63c7268b9829faa9d9a3c1ab2ec0e8671f6c1716821c5f29124">OB_ATT_PROP_IND</a> = 1 &lt;&lt; 5
+, <a class="el" href="group__OMBLE__GATT.html#gga043fee7ca5d66b63c7268b9829faa9d9a2f1fd7f44b12b5c468e242b784d6280c">OB_ATT_PROP_NTF</a> = 1 &lt;&lt; 4
+, <a class="el" href="group__OMBLE__GATT.html#gga043fee7ca5d66b63c7268b9829faa9d9a144aac6a2118bc260323c6181c80121d">OB_ATT_PROP_WRITE</a> = 1 &lt;&lt; 3
+, <a class="el" href="group__OMBLE__GATT.html#gga043fee7ca5d66b63c7268b9829faa9d9aaa9d3e2484322d5c48abdaa37f8716c8">OB_ATT_PROP_WRITE_CMD</a> = 1 &lt;&lt; 2
+, <br />
+&#160;&#160;<a class="el" href="group__OMBLE__GATT.html#gga043fee7ca5d66b63c7268b9829faa9d9a6ef9217a8f8f5f7c2edda77bdfb6c8fe">OB_ATT_PROP_READ</a> = 1 &lt;&lt; 1
+<br />
+ }</td></tr>
+<tr class="memdesc:ga043fee7ca5d66b63c7268b9829faa9d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">att property  <a href="group__OMBLE__GATT.html#ga043fee7ca5d66b63c7268b9829faa9d9">More...</a><br /></td></tr>
+<tr class="separator:ga043fee7ca5d66b63c7268b9829faa9d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0fca2a234217bca854066ca12c2e6bff"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GATT.html#ga0fca2a234217bca854066ca12c2e6bff">ob_gatt_hvx_type</a> { <a class="el" href="group__OMBLE__GATT.html#gga0fca2a234217bca854066ca12c2e6bffa9977c2eecfde61a3d1a7ba02893bb7bd">OB_HANDLE_VALUE_NTF</a>
+, <a class="el" href="group__OMBLE__GATT.html#gga0fca2a234217bca854066ca12c2e6bffaaedbb44239ef9be3883a1d1ba74ba120">OB_HANDLE_VALUE_IND</a>
+ }</td></tr>
+<tr class="memdesc:ga0fca2a234217bca854066ca12c2e6bff"><td class="mdescLeft">&#160;</td><td class="mdescRight">OB_GATT_HVX_TYPE.  <a href="group__OMBLE__GATT.html#ga0fca2a234217bca854066ca12c2e6bff">More...</a><br /></td></tr>
+<tr class="separator:ga0fca2a234217bca854066ca12c2e6bff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2f17268cce632ebfbe7a95698063a0ff"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GATT.html#ga2f17268cce632ebfbe7a95698063a0ff">ob_gattc_write_type</a> { <a class="el" href="group__OMBLE__GATT.html#gga2f17268cce632ebfbe7a95698063a0ffaf43437055fbb503f5a454162bc8f0b64">OB_GATTC_WRITE_REQ</a>
+, <a class="el" href="group__OMBLE__GATT.html#gga2f17268cce632ebfbe7a95698063a0ffa4060386a2faeb3193dcbd0163f94acd9">OB_GATTC_WRITE_CMD</a>
+ }</td></tr>
+<tr class="memdesc:ga2f17268cce632ebfbe7a95698063a0ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">GATT Write Type.  <a href="group__OMBLE__GATT.html#ga2f17268cce632ebfbe7a95698063a0ff">More...</a><br /></td></tr>
+<tr class="separator:ga2f17268cce632ebfbe7a95698063a0ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:gaa3599aa20dc160c35f0db2c1926947ea"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GATT.html#gaa3599aa20dc160c35f0db2c1926947ea">ob_gatts_add_service</a> (const <a class="el" href="structob__gatt__serv__t.html">ob_gatt_serv_t</a> *att_serv, uint16_t *start_handle)</td></tr>
+<tr class="memdesc:gaa3599aa20dc160c35f0db2c1926947ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add GATT service.  <br /></td></tr>
+<tr class="separator:gaa3599aa20dc160c35f0db2c1926947ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga99d4a8cfbbc9e26f96df90b85c37e2f6"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GATT.html#ga99d4a8cfbbc9e26f96df90b85c37e2f6">ob_gatts_set_service_visibility</a> (uint16_t serv_hdl, uint8_t visible)</td></tr>
+<tr class="memdesc:ga99d4a8cfbbc9e26f96df90b85c37e2f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set service visibility.  <br /></td></tr>
+<tr class="separator:ga99d4a8cfbbc9e26f96df90b85c37e2f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga16ed75601dfa5e3bfb51318e41f4ab48"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GATT.html#ga16ed75601dfa5e3bfb51318e41f4ab48">ob_gatts_send_hvx</a> (uint8_t conn_idx, const <a class="el" href="structob__gatts__hvx__t.html">ob_gatts_hvx_t</a> *hvx)</td></tr>
+<tr class="memdesc:ga16ed75601dfa5e3bfb51318e41f4ab48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send notification or indication, can only be called when acting as a GATT server.  <br /></td></tr>
+<tr class="separator:ga16ed75601dfa5e3bfb51318e41f4ab48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa75581818d2ec51b0a76d0d79c02863d"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GATT.html#gaa75581818d2ec51b0a76d0d79c02863d">ob_gatts_read_response</a> (uint8_t conn_idx, uint16_t att_state, const uint8_t *data, uint16_t len)</td></tr>
+<tr class="memdesc:gaa75581818d2ec51b0a76d0d79c02863d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Response to read request.  <br /></td></tr>
+<tr class="separator:gaa75581818d2ec51b0a76d0d79c02863d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabf56b1e1a63ca411ba3ddf65251069c2"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GATT.html#gabf56b1e1a63ca411ba3ddf65251069c2">ob_gatts_write_response</a> (uint8_t conn_idx, uint16_t att_state)</td></tr>
+<tr class="memdesc:gabf56b1e1a63ca411ba3ddf65251069c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Response to write request.  <br /></td></tr>
+<tr class="separator:gabf56b1e1a63ca411ba3ddf65251069c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad7c221dcd2c57f8a0613a488b70e774b"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GATT.html#gad7c221dcd2c57f8a0613a488b70e774b">ob_gatts_set_pause</a> (uint8_t conn_idx, uint8_t pause_state)</td></tr>
+<tr class="memdesc:gad7c221dcd2c57f8a0613a488b70e774b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the gatt server to pause responding to client requests.  <br /></td></tr>
+<tr class="separator:gad7c221dcd2c57f8a0613a488b70e774b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa932c8adfed9a44e4cc04e534d3bb3e7"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GATT.html#gaa932c8adfed9a44e4cc04e534d3bb3e7">ob_gattc_mtu_req</a> (uint8_t conn_idx)</td></tr>
+<tr class="memdesc:gaa932c8adfed9a44e4cc04e534d3bb3e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request MTU exchange.  <br /></td></tr>
+<tr class="separator:gaa932c8adfed9a44e4cc04e534d3bb3e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6a4104bf3a417f1712dcd613f17ee5e3"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GATT.html#ga6a4104bf3a417f1712dcd613f17ee5e3">ob_gattc_find_service_by_handle</a> (uint8_t conn_idx, uint16_t start_handle, uint16_t end_handle)</td></tr>
+<tr class="memdesc:ga6a4104bf3a417f1712dcd613f17ee5e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Service search - by handle range.  <br /></td></tr>
+<tr class="separator:ga6a4104bf3a417f1712dcd613f17ee5e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab936ed76c19a5e6df10e3a68a686307a"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GATT.html#gab936ed76c19a5e6df10e3a68a686307a">ob_gattc_find_service_by_uuid</a> (uint8_t conn_idx, uint16_t start_handle, uint16_t end_handle, const uint8_t *uuid, uint8_t uuid_len)</td></tr>
+<tr class="memdesc:gab936ed76c19a5e6df10e3a68a686307a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Service search - by UUID.  <br /></td></tr>
+<tr class="separator:gab936ed76c19a5e6df10e3a68a686307a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga548f111ca3135536e2227d2cff59cd7a"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GATT.html#ga548f111ca3135536e2227d2cff59cd7a">ob_gattc_find_characteristic</a> (uint8_t conn_idx, uint16_t start_handle, uint16_t end_handle)</td></tr>
+<tr class="memdesc:ga548f111ca3135536e2227d2cff59cd7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Characteristic search.  <br /></td></tr>
+<tr class="separator:ga548f111ca3135536e2227d2cff59cd7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga49ac19635602c3dfc5e88cf55506738b"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GATT.html#ga49ac19635602c3dfc5e88cf55506738b">ob_gattc_find_descriptor</a> (uint8_t conn_idx, uint16_t start_handle, uint16_t end_handle)</td></tr>
+<tr class="memdesc:ga49ac19635602c3dfc5e88cf55506738b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Description search.  <br /></td></tr>
+<tr class="separator:ga49ac19635602c3dfc5e88cf55506738b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6ff999beb67a5ed0851edf1aac60d663"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GATT.html#ga6ff999beb67a5ed0851edf1aac60d663">ob_gattc_read</a> (uint8_t conn_idx, uint16_t att_hdl, uint16_t offset)</td></tr>
+<tr class="memdesc:ga6ff999beb67a5ed0851edf1aac60d663"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read request - by handle range.  <br /></td></tr>
+<tr class="separator:ga6ff999beb67a5ed0851edf1aac60d663"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga21c74294c32d66d1f147e251b237ccaf"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GATT.html#ga21c74294c32d66d1f147e251b237ccaf">ob_gattc_read_by_uuid</a> (uint8_t conn_idx, uint16_t start_handle, uint16_t end_handle, const uint8_t *uuid, uint8_t uuid_len)</td></tr>
+<tr class="memdesc:ga21c74294c32d66d1f147e251b237ccaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read request - by UUID.  <br /></td></tr>
+<tr class="separator:ga21c74294c32d66d1f147e251b237ccaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2cf4dcce9a0994c33c7e908494ce0384"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GATT.html#ga2cf4dcce9a0994c33c7e908494ce0384">ob_gattc_write</a> (uint8_t conn_idx, uint16_t att_hdl, uint8_t type, const uint8_t *data, int len)</td></tr>
+<tr class="memdesc:ga2cf4dcce9a0994c33c7e908494ce0384"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write request.  <br /></td></tr>
+<tr class="separator:ga2cf4dcce9a0994c33c7e908494ce0384"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga43c4e9829d0739b1527bd5d00ea1afd0"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GATT.html#ga43c4e9829d0739b1527bd5d00ea1afd0">ob_gattc_indicate_cfm</a> (uint8_t conn_idx)</td></tr>
+<tr class="memdesc:ga43c4e9829d0739b1527bd5d00ea1afd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">indicate response  <br /></td></tr>
+<tr class="separator:ga43c4e9829d0739b1527bd5d00ea1afd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ga15f9526f0122d5cd4bb1607acf37262d"><td class="memItemLeft" align="right" valign="top">const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GATT.html#ga15f9526f0122d5cd4bb1607acf37262d">ob_att_serv_def</a> [2]</td></tr>
+<tr class="memdesc:ga15f9526f0122d5cd4bb1607acf37262d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ATT Primary Service definition.  <br /></td></tr>
+<tr class="separator:ga15f9526f0122d5cd4bb1607acf37262d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9a1bb1b479a1b70dbf28b8f602cc0f18"><td class="memItemLeft" align="right" valign="top">const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GATT.html#ga9a1bb1b479a1b70dbf28b8f602cc0f18">ob_att_secs_def</a> [2]</td></tr>
+<tr class="memdesc:ga9a1bb1b479a1b70dbf28b8f602cc0f18"><td class="mdescLeft">&#160;</td><td class="mdescRight">ATT Primary Service definition.  <br /></td></tr>
+<tr class="separator:ga9a1bb1b479a1b70dbf28b8f602cc0f18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga13796448e415f9ed3f4fa509c749c080"><td class="memItemLeft" align="right" valign="top">const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GATT.html#ga13796448e415f9ed3f4fa509c749c080">ob_att_incl_def</a> [2]</td></tr>
+<tr class="memdesc:ga13796448e415f9ed3f4fa509c749c080"><td class="mdescLeft">&#160;</td><td class="mdescRight">ATT Include Service definition.  <br /></td></tr>
+<tr class="separator:ga13796448e415f9ed3f4fa509c749c080"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf10899f52792e5b44360da5b2004ea38"><td class="memItemLeft" align="right" valign="top">const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GATT.html#gaf10899f52792e5b44360da5b2004ea38">ob_att_char_def</a> [2]</td></tr>
+<tr class="memdesc:gaf10899f52792e5b44360da5b2004ea38"><td class="mdescLeft">&#160;</td><td class="mdescRight">ATT Characteristic definition.  <br /></td></tr>
+<tr class="separator:gaf10899f52792e5b44360da5b2004ea38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga102f39251c2d2ce02c4667301c7887c8"><td class="memItemLeft" align="right" valign="top">const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GATT.html#ga102f39251c2d2ce02c4667301c7887c8">ob_att_cudd_def</a> [2]</td></tr>
+<tr class="memdesc:ga102f39251c2d2ce02c4667301c7887c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">ATT Characteristic User Description Descriptor definition.  <br /></td></tr>
+<tr class="separator:ga102f39251c2d2ce02c4667301c7887c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0ad80e32bc37568ae9e84cb0e1bc1153"><td class="memItemLeft" align="right" valign="top">const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GATT.html#ga0ad80e32bc37568ae9e84cb0e1bc1153">ob_att_cccd_def</a> [2]</td></tr>
+<tr class="memdesc:ga0ad80e32bc37568ae9e84cb0e1bc1153"><td class="mdescLeft">&#160;</td><td class="mdescRight">ATT Client Characteristic Configuration Descriptor definition.  <br /></td></tr>
+<tr class="separator:ga0ad80e32bc37568ae9e84cb0e1bc1153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga538cc2a170a433d80a4955613f9c3bf1"><td class="memItemLeft" align="right" valign="top">const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__OMBLE__GATT.html#ga538cc2a170a433d80a4955613f9c3bf1">ob_att_rrd_def</a> [2]</td></tr>
+<tr class="memdesc:ga538cc2a170a433d80a4955613f9c3bf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">ATT Report Reference Descriptor definition.  <br /></td></tr>
+<tr class="separator:ga538cc2a170a433d80a4955613f9c3bf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>GATT. </p>
+<p>GATT related interfaces mainly control Bluetooth GATT client and GATT server communications </p><dl class="section version"><dt>Version</dt><dd>Version 1.0<ul>
+<li>Initial release </li>
+</ul>
+</dd></dl>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga148a05df5b4c05799272851b2e0bb679" name="ga148a05df5b4c05799272851b2e0bb679"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga148a05df5b4c05799272851b2e0bb679">&#9670;&#160;</a></span>OB_UUID_128BIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OB_UUID_128BIT&#160;&#160;&#160;16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UUID 128bit Length value. </p>
+
+</div>
+</div>
+<a id="gacfa5558a9adafa67a5d2a4bcb94f611d" name="gacfa5558a9adafa67a5d2a4bcb94f611d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacfa5558a9adafa67a5d2a4bcb94f611d">&#9670;&#160;</a></span>OB_UUID_16BIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OB_UUID_16BIT&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UUID 16bit Length value. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ga043fee7ca5d66b63c7268b9829faa9d9" name="ga043fee7ca5d66b63c7268b9829faa9d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga043fee7ca5d66b63c7268b9829faa9d9">&#9670;&#160;</a></span>ob_att_prop</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__OMBLE__GATT.html#ga043fee7ca5d66b63c7268b9829faa9d9">ob_att_prop</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>att property </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga043fee7ca5d66b63c7268b9829faa9d9a3c1ab2ec0e8671f6c1716821c5f29124" name="gga043fee7ca5d66b63c7268b9829faa9d9a3c1ab2ec0e8671f6c1716821c5f29124"></a>OB_ATT_PROP_IND&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga043fee7ca5d66b63c7268b9829faa9d9a2f1fd7f44b12b5c468e242b784d6280c" name="gga043fee7ca5d66b63c7268b9829faa9d9a2f1fd7f44b12b5c468e242b784d6280c"></a>OB_ATT_PROP_NTF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga043fee7ca5d66b63c7268b9829faa9d9a144aac6a2118bc260323c6181c80121d" name="gga043fee7ca5d66b63c7268b9829faa9d9a144aac6a2118bc260323c6181c80121d"></a>OB_ATT_PROP_WRITE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga043fee7ca5d66b63c7268b9829faa9d9aaa9d3e2484322d5c48abdaa37f8716c8" name="gga043fee7ca5d66b63c7268b9829faa9d9aaa9d3e2484322d5c48abdaa37f8716c8"></a>OB_ATT_PROP_WRITE_CMD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga043fee7ca5d66b63c7268b9829faa9d9a6ef9217a8f8f5f7c2edda77bdfb6c8fe" name="gga043fee7ca5d66b63c7268b9829faa9d9a6ef9217a8f8f5f7c2edda77bdfb6c8fe"></a>OB_ATT_PROP_READ&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga96e589443308d3d34346e94a17e29357" name="ga96e589443308d3d34346e94a17e29357"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga96e589443308d3d34346e94a17e29357">&#9670;&#160;</a></span>OB_GATT_EVENTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__OMBLE__GATT.html#ga96e589443308d3d34346e94a17e29357">OB_GATT_EVENTS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>OB_GATT_EVENTS. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga96e589443308d3d34346e94a17e29357a9e5e7718bf5a3138f4bf53ceac55c4ec" name="gga96e589443308d3d34346e94a17e29357a9e5e7718bf5a3138f4bf53ceac55c4ec"></a>OB_GATT_EVT_TX_COMPLETE&#160;</td><td class="fielddoc"><p>Notification or Write Command sending completion event, refer to <a class="el" href="structob__gatt__evt__tx__complete__t.html">ob_gatt_evt_tx_complete_t</a>. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga96e589443308d3d34346e94a17e29357a2d2b065eeb71cdca2bdd5c4f36a546fe" name="gga96e589443308d3d34346e94a17e29357a2d2b065eeb71cdca2bdd5c4f36a546fe"></a>OB_GATT_EVT_MTU_EXCHANGED&#160;</td><td class="fielddoc"><p>MTU exchange completion event, refer to <a class="el" href="structob__gatt__evt__mtu__exchanged__t.html">ob_gatt_evt_mtu_exchanged_t</a>. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga96e589443308d3d34346e94a17e29357a56dd9d8a814d3d475b06f040d31b4085" name="gga96e589443308d3d34346e94a17e29357a56dd9d8a814d3d475b06f040d31b4085"></a>OB_GATT_EVT_TIMEOUT&#160;</td><td class="fielddoc"><p>Request timeout event, refer to <a class="el" href="structob__gatt__evt__timeout__t.html">ob_gatt_evt_timeout_t</a>. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga96e589443308d3d34346e94a17e29357aefde18564d6ae0f5e6a80fc09be833a5" name="gga96e589443308d3d34346e94a17e29357aefde18564d6ae0f5e6a80fc09be833a5"></a>OB_GATTS_EVT_INDICATE_CFM&#160;</td><td class="fielddoc"><p>Indication response event, refer to <a class="el" href="structob__gatts__evt__indicate__cfm__t.html">ob_gatts_evt_indicate_cfm_t</a>. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga96e589443308d3d34346e94a17e29357a9dd07b5d22c012f848b395d5b4f8a9cf" name="gga96e589443308d3d34346e94a17e29357a9dd07b5d22c012f848b395d5b4f8a9cf"></a>OB_GATTS_EVT_READ_REQ&#160;</td><td class="fielddoc"><p>Read request event, see <a class="el" href="structob__gatts__evt__read__req__t.html">ob_gatts_evt_read_req_t</a>. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga96e589443308d3d34346e94a17e29357a0f33574c294c85e484978e566b1857cb" name="gga96e589443308d3d34346e94a17e29357a0f33574c294c85e484978e566b1857cb"></a>OB_GATTS_EVT_WRITE_REQ&#160;</td><td class="fielddoc"><p>Write request event, see <a class="el" href="structob__gatts__evt__write__req__t.html">ob_gatts_evt_write_req_t</a>. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga96e589443308d3d34346e94a17e29357acc47670ec21ff3a9068f901f909fe072" name="gga96e589443308d3d34346e94a17e29357acc47670ec21ff3a9068f901f909fe072"></a>OB_GATTC_EVT_FIND_SERV_RSP&#160;</td><td class="fielddoc"><p>Service discovery completion event, refer to <a class="el" href="structob__gattc__evt__find__serv__rsp__t.html">ob_gattc_evt_find_serv_rsp_t</a>. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga96e589443308d3d34346e94a17e29357adaf98a55962e4df2d05257ce5a65548a" name="gga96e589443308d3d34346e94a17e29357adaf98a55962e4df2d05257ce5a65548a"></a>OB_GATTC_EVT_FIND_SERV_BY_UUID_RSP&#160;</td><td class="fielddoc"><p>Service discovery by UUID completion event, refer to <a class="el" href="structob__gattc__evt__find__serv__by__uuid__rsp__t.html">ob_gattc_evt_find_serv_by_uuid_rsp_t</a>. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga96e589443308d3d34346e94a17e29357a393a632c7a7e59ea46d3bfb2edc2d4a9" name="gga96e589443308d3d34346e94a17e29357a393a632c7a7e59ea46d3bfb2edc2d4a9"></a>OB_GATTC_EVT_FIND_CHAR_RSP&#160;</td><td class="fielddoc"><p>Characteristic discovery completion event, refer to <a class="el" href="structob__gattc__evt__find__char__rsp__t.html">ob_gattc_evt_find_char_rsp_t</a>. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga96e589443308d3d34346e94a17e29357a03623737d5a807e566ddc187cb360ef2" name="gga96e589443308d3d34346e94a17e29357a03623737d5a807e566ddc187cb360ef2"></a>OB_GATTC_EVT_FIND_DESC_RSP&#160;</td><td class="fielddoc"><p>Descriptor of the discovery completion event, see <a class="el" href="structob__gattc__evt__find__desc__rsp__t.html">ob_gattc_evt_find_desc_rsp_t</a>. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga96e589443308d3d34346e94a17e29357a0b9a6c880fcee1534e9740444fc715f2" name="gga96e589443308d3d34346e94a17e29357a0b9a6c880fcee1534e9740444fc715f2"></a>OB_GATTC_EVT_READ_RSP&#160;</td><td class="fielddoc"><p>Read completion event, refer to <a class="el" href="structob__gattc__evt__read__rsp__t.html">ob_gattc_evt_read_rsp_t</a>. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga96e589443308d3d34346e94a17e29357a8c07ec4af0d87ffc7dceeaed5589e1ba" name="gga96e589443308d3d34346e94a17e29357a8c07ec4af0d87ffc7dceeaed5589e1ba"></a>OB_GATTC_EVT_READ_BY_UUID_RSP&#160;</td><td class="fielddoc"><p>Read by UUID completion event, refer to <a class="el" href="structob__gattc__evt__read__by__uuid__rsp__t.html">ob_gattc_evt_read_by_uuid_rsp_t</a>. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga96e589443308d3d34346e94a17e29357aed095b4f31eac33bf44804c08ae6e19d" name="gga96e589443308d3d34346e94a17e29357aed095b4f31eac33bf44804c08ae6e19d"></a>OB_GATTC_EVT_WRITE_RSP&#160;</td><td class="fielddoc"><p>Write completion event, refer to <a class="el" href="structob__gattc__evt__write__rsp__t.html">ob_gattc_evt_write_rsp_t</a>. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga96e589443308d3d34346e94a17e29357a4cc20c79f1c4878fc467649f0a3ca315" name="gga96e589443308d3d34346e94a17e29357a4cc20c79f1c4878fc467649f0a3ca315"></a>OB_GATTC_EVT_HVX_IND&#160;</td><td class="fielddoc"><p>Notification or indication receiving event, refer to <a class="el" href="structob__gattc__evt__hvx__ind__t.html">ob_gattc_evt_hvx_ind_t</a>. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga0fca2a234217bca854066ca12c2e6bff" name="ga0fca2a234217bca854066ca12c2e6bff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0fca2a234217bca854066ca12c2e6bff">&#9670;&#160;</a></span>ob_gatt_hvx_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__OMBLE__GATT.html#ga0fca2a234217bca854066ca12c2e6bff">ob_gatt_hvx_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>OB_GATT_HVX_TYPE. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga0fca2a234217bca854066ca12c2e6bffa9977c2eecfde61a3d1a7ba02893bb7bd" name="gga0fca2a234217bca854066ca12c2e6bffa9977c2eecfde61a3d1a7ba02893bb7bd"></a>OB_HANDLE_VALUE_NTF&#160;</td><td class="fielddoc"><p>Notification Type. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga0fca2a234217bca854066ca12c2e6bffaaedbb44239ef9be3883a1d1ba74ba120" name="gga0fca2a234217bca854066ca12c2e6bffaaedbb44239ef9be3883a1d1ba74ba120"></a>OB_HANDLE_VALUE_IND&#160;</td><td class="fielddoc"><p>Indication Type. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga2f17268cce632ebfbe7a95698063a0ff" name="ga2f17268cce632ebfbe7a95698063a0ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2f17268cce632ebfbe7a95698063a0ff">&#9670;&#160;</a></span>ob_gattc_write_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__OMBLE__GATT.html#ga2f17268cce632ebfbe7a95698063a0ff">ob_gattc_write_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GATT Write Type. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga2f17268cce632ebfbe7a95698063a0ffaf43437055fbb503f5a454162bc8f0b64" name="gga2f17268cce632ebfbe7a95698063a0ffaf43437055fbb503f5a454162bc8f0b64"></a>OB_GATTC_WRITE_REQ&#160;</td><td class="fielddoc"><p>Write request. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2f17268cce632ebfbe7a95698063a0ffa4060386a2faeb3193dcbd0163f94acd9" name="gga2f17268cce632ebfbe7a95698063a0ffa4060386a2faeb3193dcbd0163f94acd9"></a>OB_GATTC_WRITE_CMD&#160;</td><td class="fielddoc"><p>Write no response. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga548f111ca3135536e2227d2cff59cd7a" name="ga548f111ca3135536e2227d2cff59cd7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga548f111ca3135536e2227d2cff59cd7a">&#9670;&#160;</a></span>ob_gattc_find_characteristic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t ob_gattc_find_characteristic </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>conn_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>start_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>end_handle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Characteristic search. </p>
+<p>As a GATT Client, search for Characteristic between start_handle and end_handle. After peer responds, it will notify the upper layer through the event <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a393a632c7a7e59ea46d3bfb2edc2d4a9">OB_GATTC_EVT_FIND_CHAR_RSP</a> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_idx</td><td>connection index </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start_handle</td><td>handle range </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">end_handle</td><td>handle range </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>result, refer to <a class="el" href="group__OMBLE__ERROR.html#ga81c23f4a24c81b76f366aeeff1b89cf9">ob_error</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga49ac19635602c3dfc5e88cf55506738b" name="ga49ac19635602c3dfc5e88cf55506738b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga49ac19635602c3dfc5e88cf55506738b">&#9670;&#160;</a></span>ob_gattc_find_descriptor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t ob_gattc_find_descriptor </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>conn_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>start_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>end_handle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Description search. </p>
+<p>As a GATT Client, search for Descriptor between start_handle and end_handle. After peer responds, it will notify the upper layer through the event <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a03623737d5a807e566ddc187cb360ef2">OB_GATTC_EVT_FIND_DESC_RSP</a> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_idx</td><td>connection index </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start_handle</td><td>handle range </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">end_handle</td><td>handle range </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>result, refer to <a class="el" href="group__OMBLE__ERROR.html#ga81c23f4a24c81b76f366aeeff1b89cf9">ob_error</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga6a4104bf3a417f1712dcd613f17ee5e3" name="ga6a4104bf3a417f1712dcd613f17ee5e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6a4104bf3a417f1712dcd613f17ee5e3">&#9670;&#160;</a></span>ob_gattc_find_service_by_handle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t ob_gattc_find_service_by_handle </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>conn_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>start_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>end_handle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Service search - by handle range. </p>
+<p>As a GATT Client, search for GATT Server services between start_handle and end_handle. After peer responds, it will notify the upper layer through the event <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357acc47670ec21ff3a9068f901f909fe072">OB_GATTC_EVT_FIND_SERV_RSP</a> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_idx</td><td>connection index </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start_handle</td><td>handle range </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">end_handle</td><td>handle range </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>result, refer to <a class="el" href="group__OMBLE__ERROR.html#ga81c23f4a24c81b76f366aeeff1b89cf9">ob_error</a> </dd></dl>
+
+</div>
+</div>
+<a id="gab936ed76c19a5e6df10e3a68a686307a" name="gab936ed76c19a5e6df10e3a68a686307a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab936ed76c19a5e6df10e3a68a686307a">&#9670;&#160;</a></span>ob_gattc_find_service_by_uuid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t ob_gattc_find_service_by_uuid </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>conn_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>start_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>end_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>uuid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>uuid_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Service search - by UUID. </p>
+<p>As a GATT Client, search for the GATT Server service with the specified uuid between start_handle and end_handle. After peer responds, it will notify the upper layer through the event <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357adaf98a55962e4df2d05257ce5a65548a">OB_GATTC_EVT_FIND_SERV_BY_UUID_RSP</a> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_idx</td><td>connection index </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start_handle</td><td>handle range </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">end_handle</td><td>handle range </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">uuid</td><td>UUID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">uuid_len</td><td>UUID length </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>result, refer to <a class="el" href="group__OMBLE__ERROR.html#ga81c23f4a24c81b76f366aeeff1b89cf9">ob_error</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga43c4e9829d0739b1527bd5d00ea1afd0" name="ga43c4e9829d0739b1527bd5d00ea1afd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga43c4e9829d0739b1527bd5d00ea1afd0">&#9670;&#160;</a></span>ob_gattc_indicate_cfm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t ob_gattc_indicate_cfm </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>conn_idx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>indicate response </p>
+<p>This interface is used to respond to <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a4cc20c79f1c4878fc467649f0a3ca315">OB_GATTC_EVT_HVX_IND</a> request (only when type == OB_HANDLE_VALUE_IND in <a class="el" href="structob__gattc__evt__hvx__ind__t.html">ob_gattc_evt_hvx_ind_t</a> parameter) </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_idx</td><td>connection index </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>result, refer to <a class="el" href="group__OMBLE__ERROR.html#ga81c23f4a24c81b76f366aeeff1b89cf9">ob_error</a> </dd></dl>
+
+</div>
+</div>
+<a id="gaa932c8adfed9a44e4cc04e534d3bb3e7" name="gaa932c8adfed9a44e4cc04e534d3bb3e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa932c8adfed9a44e4cc04e534d3bb3e7">&#9670;&#160;</a></span>ob_gattc_mtu_req()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t ob_gattc_mtu_req </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>conn_idx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Request MTU exchange. </p>
+<p>The requested MTU value is the parameter max_att_mtu of <a class="el" href="group__OMBLE__COMMON.html#gae47c88381c4349ec3b06387a8f49dfd3">omble_init</a> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_idx</td><td>connection index </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>After the MTU parameter is successfully exchanged, if the MTU value changes, the upper layer will be notified through the event <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a2d2b065eeb71cdca2bdd5c4f36a546fe">OB_GATT_EVT_MTU_EXCHANGED</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>result, refer to <a class="el" href="group__OMBLE__ERROR.html#ga81c23f4a24c81b76f366aeeff1b89cf9">ob_error</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga6ff999beb67a5ed0851edf1aac60d663" name="ga6ff999beb67a5ed0851edf1aac60d663"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6ff999beb67a5ed0851edf1aac60d663">&#9670;&#160;</a></span>ob_gattc_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t ob_gattc_read </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>conn_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>att_hdl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read request - by handle range. </p>
+<p>As a GATT Client, read the data corresponding to att_hdl. After peer responds, it will notify the upper layer through the event <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a0b9a6c880fcee1534e9740444fc715f2">OB_GATTC_EVT_READ_RSP</a> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_idx</td><td>connection index </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">att_hdl</td><td>att handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>data offset </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>result, refer to <a class="el" href="group__OMBLE__ERROR.html#ga81c23f4a24c81b76f366aeeff1b89cf9">ob_error</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga21c74294c32d66d1f147e251b237ccaf" name="ga21c74294c32d66d1f147e251b237ccaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga21c74294c32d66d1f147e251b237ccaf">&#9670;&#160;</a></span>ob_gattc_read_by_uuid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t ob_gattc_read_by_uuid </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>conn_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>start_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>end_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>uuid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>uuid_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read request - by UUID. </p>
+<p>As a GATT Client, read the data of the specified UUID between start_handle and end_handle. After peer responds, it will notify the upper layer through the event <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a8c07ec4af0d87ffc7dceeaed5589e1ba">OB_GATTC_EVT_READ_BY_UUID_RSP</a> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_idx</td><td>connection index </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start_handle</td><td>handle range </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">end_handle</td><td>handle range </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">uuid</td><td>UUID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">uuid_len</td><td>UUID length </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>result, refer to <a class="el" href="group__OMBLE__ERROR.html#ga81c23f4a24c81b76f366aeeff1b89cf9">ob_error</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga2cf4dcce9a0994c33c7e908494ce0384" name="ga2cf4dcce9a0994c33c7e908494ce0384"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2cf4dcce9a0994c33c7e908494ce0384">&#9670;&#160;</a></span>ob_gattc_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t ob_gattc_write </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>conn_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>att_hdl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write request. </p>
+<p>As a GATT Client, write data to att_hdl. After peer responds, it will notify the upper layer through the event <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357aed095b4f31eac33bf44804c08ae6e19d">OB_GATTC_EVT_WRITE_RSP</a> <br  />
+</p>
+<p>If the parameter type type is OB_GATTC_WRITE_CMD, no response event <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357aed095b4f31eac33bf44804c08ae6e19d">OB_GATTC_EVT_WRITE_RSP</a> <br  />
+</p>
+<p>If the parameter type type is OB_GATTC_WRITE_CMD, after the data is sent to the peer device, the upper layer will be notified through the <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a9e5e7718bf5a3138f4bf53ceac55c4ec">OB_GATT_EVT_TX_COMPLETE</a> event. You can call ob_gattc_write continuously to cache the data to be written to increase the communication rate </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_idx</td><td>connection index </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">att_hdl</td><td>att handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>write type, refer to <a class="el" href="group__OMBLE__GATT.html#ga2f17268cce632ebfbe7a95698063a0ff">ob_gattc_write_type</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>data length, automatically truncated if it exceeds the current MTU-3 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>When calling ob_gattc_write to send data continuously, please note that the unsent data needs to occupy memory for buffering, so the amount of buffered data should be controlled according to the <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a9e5e7718bf5a3138f4bf53ceac55c4ec">OB_GATT_EVT_TX_COMPLETE</a> event to prevent memory exhaustion </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>result, refer to <a class="el" href="group__OMBLE__ERROR.html#ga81c23f4a24c81b76f366aeeff1b89cf9">ob_error</a> </dd></dl>
+
+</div>
+</div>
+<a id="gaa3599aa20dc160c35f0db2c1926947ea" name="gaa3599aa20dc160c35f0db2c1926947ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa3599aa20dc160c35f0db2c1926947ea">&#9670;&#160;</a></span>ob_gatts_add_service()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t ob_gatts_add_service </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structob__gatt__serv__t.html">ob_gatt_serv_t</a> *&#160;</td>
+          <td class="paramname"><em>att_serv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>start_handle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add GATT service. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">att_serv</td><td>service content, refer to <a class="el" href="structob__gatt__serv__t.html">ob_gatt_serv_t</a> </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">start_handle</td><td>After the service is successfully added, the service start handle value will be written to start_handle </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The total number of services added should be less than the parameter max_gatt_serv_num of <a class="el" href="group__OMBLE__COMMON.html#gae47c88381c4349ec3b06387a8f49dfd3">omble_init</a> </dd>
+<dd>
+The start handle value of the newly added service increases from 1 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>The variable pointed to by the parameter att_serv must be a global or static variable </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>result, refer to <a class="el" href="group__OMBLE__ERROR.html#ga81c23f4a24c81b76f366aeeff1b89cf9">ob_error</a> </dd></dl>
+
+</div>
+</div>
+<a id="gaa75581818d2ec51b0a76d0d79c02863d" name="gaa75581818d2ec51b0a76d0d79c02863d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa75581818d2ec51b0a76d0d79c02863d">&#9670;&#160;</a></span>ob_gatts_read_response()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t ob_gatts_read_response </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>conn_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>att_state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Response to read request. </p>
+<p>Used to respond to the attribute requested by <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a9dd07b5d22c012f848b395d5b4f8a9cf">OB_GATTS_EVT_READ_REQ</a>. The requested attribute handle value refers to <a class="el" href="structob__gatts__evt__read__req__t.html">ob_gatts_evt_read_req_t</a> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_idx</td><td>connection index </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">att_state</td><td>Read status, refer to <a class="el" href="group__OMBLE__ERROR.html#ga7401f9b9689032cfab88269eb466cdde">ob_gatt_error_t</a>. If it is not success, the data parameter is useless </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>Data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>Length. If it exceeds the transmittable length, the data content will be automatically truncated </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The transmittable length of the data is the current MTU-1. If the data length exceeds, it will be automatically truncated<br  />
+</dd>
+<dd>
+If the attribute data content read exceeds MTU-1, the GATT Client will initiate a read operation again, and the offset in the read parameter <a class="el" href="structob__gatts__evt__read__req__t.html">ob_gatts_evt_read_req_t</a> is the offset of the data to be read </dd>
+<dd>
+If the read operation needs to return an error, set att_state to the response error code. For GATT error codes, refer to <a class="el" href="group__OMBLE__ERROR.html#ga7401f9b9689032cfab88269eb466cdde">ob_gatt_error_t</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>result, refer to <a class="el" href="group__OMBLE__ERROR.html#ga81c23f4a24c81b76f366aeeff1b89cf9">ob_error</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga16ed75601dfa5e3bfb51318e41f4ab48" name="ga16ed75601dfa5e3bfb51318e41f4ab48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga16ed75601dfa5e3bfb51318e41f4ab48">&#9670;&#160;</a></span>ob_gatts_send_hvx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t ob_gatts_send_hvx </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>conn_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structob__gatts__hvx__t.html">ob_gatts_hvx_t</a> *&#160;</td>
+          <td class="paramname"><em>hvx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Send notification or indication, can only be called when acting as a GATT server. </p>
+<p>After sending notification, when the data is sent, you will receive the <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a9e5e7718bf5a3138f4bf53ceac55c4ec">OB_GATT_EVT_TX_COMPLETE</a> event, but before receiving this event, you can call ob_gatts_send_hvx continuously to cache the notifications to be sent to increase the communication rate<br  />
+</p>
+<p>After sending the indication, the peer device will respond to the <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357aefde18564d6ae0f5e6a80fc09be833a5">OB_GATTS_EVT_INDICATE_CFM</a> event </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_idx</td><td>connection index </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hvx</td><td>data parameter </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>When calling ob_gatts_send_hvx to send notifications continuously, please note that the unsent data needs to occupy memory for caching, so the amount of cached data should be controlled according to the <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a9e5e7718bf5a3138f4bf53ceac55c4ec">OB_GATT_EVT_TX_COMPLETE</a> event to prevent memory exhaustion </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>result, refer to <a class="el" href="group__OMBLE__ERROR.html#ga81c23f4a24c81b76f366aeeff1b89cf9">ob_error</a> </dd></dl>
+
+</div>
+</div>
+<a id="gad7c221dcd2c57f8a0613a488b70e774b" name="gad7c221dcd2c57f8a0613a488b70e774b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad7c221dcd2c57f8a0613a488b70e774b">&#9670;&#160;</a></span>ob_gatts_set_pause()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t ob_gatts_set_pause </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>conn_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>pause_state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the gatt server to pause responding to client requests. </p>
+<p>After setting the pause state, the GATT server will temporarily cache the client's GATT request and not report it to the application layer until the user cancels the pause state </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_idx</td><td>connection index </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pause_state</td><td>pending state: 1 or 0 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>result, refer to <a class="el" href="group__OMBLE__ERROR.html#ga81c23f4a24c81b76f366aeeff1b89cf9">ob_error</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga99d4a8cfbbc9e26f96df90b85c37e2f6" name="ga99d4a8cfbbc9e26f96df90b85c37e2f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga99d4a8cfbbc9e26f96df90b85c37e2f6">&#9670;&#160;</a></span>ob_gatts_set_service_visibility()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t ob_gatts_set_service_visibility </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>serv_hdl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>visible</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set service visibility. </p>
+<p>When the service is set to invisible, the GATT client will automatically skip the hidden service when searching for services, but the handle value it occupies will be retained </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">serv_hdl</td><td>service start handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">visible</td><td>service visible </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>parameter serv_hdl must be the start_handle value returned by <a class="el" href="group__OMBLE__GATT.html#gaa3599aa20dc160c35f0db2c1926947ea">ob_gatts_add_service</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>result, refer to <a class="el" href="group__OMBLE__ERROR.html#ga81c23f4a24c81b76f366aeeff1b89cf9">ob_error</a> </dd></dl>
+
+</div>
+</div>
+<a id="gabf56b1e1a63ca411ba3ddf65251069c2" name="gabf56b1e1a63ca411ba3ddf65251069c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabf56b1e1a63ca411ba3ddf65251069c2">&#9670;&#160;</a></span>ob_gatts_write_response()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t ob_gatts_write_response </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>conn_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>att_state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Response to write request. </p>
+<p>This interface is used to respond to <a class="el" href="group__OMBLE__GATT.html#gga96e589443308d3d34346e94a17e29357a0f33574c294c85e484978e566b1857cb">OB_GATTS_EVT_WRITE_REQ</a> request </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_idx</td><td>connection index </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">att_state</td><td>write status, refer to <a class="el" href="group__OMBLE__ERROR.html#ga7401f9b9689032cfab88269eb466cdde">ob_gatt_error_t</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>result, refer to <a class="el" href="group__OMBLE__ERROR.html#ga81c23f4a24c81b76f366aeeff1b89cf9">ob_error</a> </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="ga0ad80e32bc37568ae9e84cb0e1bc1153" name="ga0ad80e32bc37568ae9e84cb0e1bc1153"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0ad80e32bc37568ae9e84cb0e1bc1153">&#9670;&#160;</a></span>ob_att_cccd_def</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint8_t ob_att_cccd_def[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ATT Client Characteristic Configuration Descriptor definition. </p>
+
+</div>
+</div>
+<a id="gaf10899f52792e5b44360da5b2004ea38" name="gaf10899f52792e5b44360da5b2004ea38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf10899f52792e5b44360da5b2004ea38">&#9670;&#160;</a></span>ob_att_char_def</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint8_t ob_att_char_def[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ATT Characteristic definition. </p>
+
+</div>
+</div>
+<a id="ga102f39251c2d2ce02c4667301c7887c8" name="ga102f39251c2d2ce02c4667301c7887c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga102f39251c2d2ce02c4667301c7887c8">&#9670;&#160;</a></span>ob_att_cudd_def</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint8_t ob_att_cudd_def[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ATT Characteristic User Description Descriptor definition. </p>
+
+</div>
+</div>
+<a id="ga13796448e415f9ed3f4fa509c749c080" name="ga13796448e415f9ed3f4fa509c749c080"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga13796448e415f9ed3f4fa509c749c080">&#9670;&#160;</a></span>ob_att_incl_def</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint8_t ob_att_incl_def[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ATT Include Service definition. </p>
+
+</div>
+</div>
+<a id="ga538cc2a170a433d80a4955613f9c3bf1" name="ga538cc2a170a433d80a4955613f9c3bf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga538cc2a170a433d80a4955613f9c3bf1">&#9670;&#160;</a></span>ob_att_rrd_def</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint8_t ob_att_rrd_def[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ATT Report Reference Descriptor definition. </p>
+
+</div>
+</div>
+<a id="ga9a1bb1b479a1b70dbf28b8f602cc0f18" name="ga9a1bb1b479a1b70dbf28b8f602cc0f18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9a1bb1b479a1b70dbf28b8f602cc0f18">&#9670;&#160;</a></span>ob_att_secs_def</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint8_t ob_att_secs_def[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ATT Primary Service definition. </p>
+
+</div>
+</div>
+<a id="ga15f9526f0122d5cd4bb1607acf37262d" name="ga15f9526f0122d5cd4bb1607acf37262d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga15f9526f0122d5cd4bb1607acf37262d">&#9670;&#160;</a></span>ob_att_serv_def</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint8_t ob_att_serv_def[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ATT Primary Service definition. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+</div>
+</body>
+</html>

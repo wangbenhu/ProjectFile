@@ -1,0 +1,15 @@
+from build.building import *
+
+linker_script = None
+if GetDepend('CONFIG_TOOL_CHAIN_GCC'):
+    linker_script = 'GCC/cm4f_flash.ld'
+elif GetDepend('CONFIG_TOOL_CHAIN_ARMCLANG'):
+    linker_script = 'Keil/cm4f_flash_ac6.sct'
+elif GetDepend('CONFIG_TOOL_CHAIN_ICCARM'):
+    linker_script = 'IAR/cm4f_flash.icf'
+else:
+    raise Exception('Toolchain is not configured or SDK donot support the compiler')
+
+group = DefineGroup(name='linker_script', srcs=None, incs=None, LINKER_SCRIPT=linker_script)
+
+Return('group')

@@ -1,0 +1,266 @@
+# Kconfig file for CherryUSB
+menuconfig CHERRYUSB
+    bool "CherryUSB Configuration"
+    default n
+
+if CHERRYUSB
+
+    choice
+        prompt "OSAL Select"
+        default CHERRYUSB_OSAL_FREERTOS
+        config CHERRYUSB_OSAL_NONE
+            bool "NONE"
+        config CHERRYUSB_OSAL_FREERTOS
+            bool "FreeRTOS"
+    endchoice
+
+    menuconfig CHERRYUSB_DEVICE
+        bool "Enable usb device mode"
+        default y
+
+    if CHERRYUSB_DEVICE
+        choice
+            prompt "Select usb device speed"
+            default CHERRYUSB_DEVICE_SPEED_FS
+            config CHERRYUSB_DEVICE_SPEED_FS
+                bool "FS"
+            config CHERRYUSB_DEVICE_SPEED_HS
+                bool "HS"
+            config CHERRYUSB_DEVICE_SPEED_AUTO
+                bool "AUTO"
+        endchoice
+
+        choice
+            prompt "Select usb device ip, and some ip need config in usb_config.h, please check"
+            default CHERRYUSB_DEVICE_MUSB_OM
+            config CHERRYUSB_DEVICE_DWC2_OM
+                bool "dwc2_om"
+            config CHERRYUSB_DEVICE_MUSB_OM
+                bool "musb_om"
+        endchoice
+
+        config CHERRYUSB_DEVICE_CDC_ACM
+            bool
+            prompt "Enable usb cdc acm device"
+            default y
+
+        config CHERRYUSB_DEVICE_HID
+            bool
+            prompt "Enable usb hid device"
+            default y
+
+        config CHERRYUSB_DEVICE_MSC
+            bool
+            prompt "Enable usb msc device"
+            default y
+
+        config CHERRYUSB_DEVICE_AUDIO
+            bool
+            prompt "Enable usb audio device"
+            default y
+
+        config CHERRYUSB_DEVICE_VIDEO
+            bool
+            prompt "Enable usb video device"
+            default n
+
+        config CHERRYUSB_DEVICE_CDC_RNDIS
+            bool
+            prompt "Enable usb cdc rndis device"
+            default n
+
+        config CHERRYUSB_DEVICE_CDC_ECM
+            bool
+            prompt "Enable usb cdc ecm device"
+            default n
+
+        config CHERRYUSB_DEVICE_CDC_NCM
+            bool
+            prompt "Enable usb cdc ncm device"
+            default n
+
+        config CHERRYUSB_DEVICE_DFU
+            bool
+            prompt "Enable usb dfu device"
+            default n
+
+        config CHERRYUSB_DEVICE_ADB
+            bool
+            prompt "Enable usb adb device"
+            default n
+
+        choice
+            prompt "Select usb device template"
+            default CHERRYUSB_DEVICE_TEMPLATE_NONE
+            config CHERRYUSB_DEVICE_TEMPLATE_NONE
+                bool "none (Implement it yourself)"
+            config CHERRYUSB_DEVICE_TEMPLATE_CDC_ACM
+                bool "cdc_acm"
+            config CHERRYUSB_DEVICE_TEMPLATE_MSC
+                bool "msc"
+            config CHERRYUSB_DEVICE_TEMPLATE_HID_KEYBOARD
+                bool "hid_keyboard"
+            config CHERRYUSB_DEVICE_TEMPLATE_HID_MOUSE
+                bool "hid_mouse"
+            config CHERRYUSB_DEVICE_TEMPLATE_HID_CUSTOM
+                bool "hid_custom"
+            config CHERRYUSB_DEVICE_TEMPLATE_VIDEO
+                bool "video"
+            config CHERRYUSB_DEVICE_TEMPLATE_AUDIO_V1_MIC_SPEAKER
+                bool "audio_v1_mic_speaker_multichan"
+            config CHERRYUSB_DEVICE_TEMPLATE_AUDIO_V2_MIC_SPEAKER
+                bool "audio_v2_mic_speaker_multichan"
+            config CHERRYUSB_DEVICE_TEMPLATE_CDC_RNDIS
+                bool "cdc_rndis"
+            config CHERRYUSB_DEVICE_TEMPLATE_CDC_ECM
+                bool "cdc_ecm"
+            config CHERRYUSB_DEVICE_TEMPLATE_CDC_NCM
+                bool "cdc_ncm"
+            config CHERRYUSB_DEVICE_TEMPLATE_CDC_ACM_MSC
+                bool "cdc_acm_msc"
+            config CHERRYUSB_DEVICE_TEMPLATE_CDC_ACM_MSC_HID
+                bool "cdc_acm_msc_hid"
+            config CHERRYUSB_DEVICE_TEMPLATE_WINUSBV1
+                bool "winusbv1"
+            config CHERRYUSB_DEVICE_TEMPLATE_WINUSBV2_CDC
+                bool "winusbv2_cdc"
+            config CHERRYUSB_DEVICE_TEMPLATE_WINUSBV2_HID
+                bool "winusbv2_hid"
+        endchoice
+
+    endif
+
+    menuconfig CHERRYUSB_HOST
+        bool "Enable usb host mode"
+        default n
+
+    if CHERRYUSB_HOST
+        choice
+            prompt "Select usb host ip, and some ip need config in usb_config.h, please check"
+            default CHERRYUSB_HOST_MUSB_OM
+            config CHERRYUSB_HOST_DWC2_OM
+                bool "dwc2_om"
+            config CHERRYUSB_HOST_MUSB_OM
+                bool "musb_om"
+        endchoice
+
+        config CHERRYUSB_HOST_CDC_ACM
+            bool
+            prompt "Enable usb cdc acm driver"
+            default n
+
+        config CHERRYUSB_HOST_HID
+            bool
+            prompt "Enable usb hid driver"
+            default n
+
+        config CHERRYUSB_HOST_MSC
+            bool
+            prompt "Enable usb msc driver"
+            default n
+
+        config CHERRYUSB_HOST_CDC_ECM
+            bool
+            prompt "Enable usb cdc ecm driver"
+            select USBHOST_PLATFORM_CDC_ECM
+            default n
+
+        config CHERRYUSB_HOST_CDC_RNDIS
+            bool
+            prompt "Enable usb rndis driver"
+            select USBHOST_PLATFORM_CDC_RNDIS
+            default n
+
+        config CHERRYUSB_HOST_CDC_NCM
+            bool
+            prompt "Enable usb cdc ncm driver"
+            select USBHOST_PLATFORM_CDC_NCM
+            default n
+
+        config CHERRYUSB_HOST_VIDEO
+            bool
+            prompt "Enable usb video driver, it is commercial charge"
+            default n
+
+        config CHERRYUSB_HOST_AUDIO
+            bool
+            prompt "Enable usb audio driver, it is commercial charge"
+            default n
+
+        config CHERRYUSB_HOST_BLUETOOTH
+            bool
+            prompt "Enable usb bluetooth driver"
+            default n
+
+        config CHERRYUSB_HOST_ASIX
+            bool
+            prompt "Enable usb asix driver"
+            select USBHOST_PLATFORM_ASIX
+            default n
+
+        config CHERRYUSB_HOST_RTL8152
+            bool
+            prompt "Enable usb rtl8152 driver"
+            select USBHOST_PLATFORM_RTL8152
+            default n
+
+        config CHERRYUSB_HOST_FTDI
+            bool
+            prompt "Enable usb ftdi driver"
+            default n
+
+        config CHERRYUSB_HOST_CH34X
+            bool
+            prompt "Enable usb ch34x driver"
+            default n
+
+        config CHERRYUSB_HOST_CP210X
+            bool
+            prompt "Enable usb cp210x driver"
+            default n
+
+        config CHERRYUSB_HOST_PL2303
+            bool
+            prompt "Enable usb pl2303 driver"
+            default n
+
+        config USBHOST_PLATFORM_CDC_ECM
+            bool
+
+        config USBHOST_PLATFORM_CDC_RNDIS
+            bool
+
+        config USBHOST_PLATFORM_CDC_NCM
+            bool
+
+        config USBHOST_PLATFORM_ASIX
+            bool
+
+        config USBHOST_PLATFORM_RTL8152
+            bool
+
+        config CHERRYUSB_HOST_TEMPLATE
+            bool
+            prompt "Use usb host template"
+            default n
+
+        if CHERRYUSB_HOST_TEMPLATE
+            config TEST_USBH_CDC_ACM
+                int
+                prompt "demo for test cdc acm"
+                default 0
+                depends on CHERRYUSB_HOST_CDC_ACM
+            config TEST_USBH_HID
+                int
+                prompt "demo for test hid"
+                default 0
+                depends on CHERRYUSB_HOST_HID
+            config TEST_USBH_MSC
+                int
+                prompt "demo for test msc"
+                default 0
+                depends on CHERRYUSB_HOST_MSC
+        endif
+    endif
+
+endif

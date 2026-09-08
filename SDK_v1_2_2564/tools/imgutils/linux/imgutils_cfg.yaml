@@ -1,0 +1,10 @@
+iflash_config:
+  clk_div: 4
+  delay: 0x0
+  read_cmd: 'FLASH_FAST_READ_QO'
+  write_cmd: 'FLASH_PAGE_PROGRAM'
+  spi_mode: 'SPI_MODE_0'
+  encrypt_en: 0
+
+manifest_config:
+  img_ver: 0

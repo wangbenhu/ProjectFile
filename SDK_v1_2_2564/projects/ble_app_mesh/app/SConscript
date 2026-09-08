@@ -1,0 +1,19 @@
+from build.building import *
+
+PROJECT_APP_INCS = ['.']
+PROJECT_APP_INCS += ['firms']
+PROJECT_APP_INCS += ['tmall']
+
+PROJECT_APP_SRCS = ['omsh_app.c']
+PROJECT_APP_SRCS += ['omsh_app_shell.c']
+PROJECT_APP_SRCS += ['omsh_app_hook.c']
+PROJECT_APP_SRCS += ['firms/omsh_app_firms.c']
+PROJECT_APP_SRCS += ['firms/omsh_app_firms_mdl.c']
+PROJECT_APP_SRCS += ['firms/omsh_app_firms_mdl_demo.c']
+PROJECT_APP_SRCS += ['tmall/omsh_app_tmall.c']
+
+PROJECT_APP_DEFS = []
+
+group = DefineGroup(name='app', srcs=PROJECT_APP_SRCS, incs=PROJECT_APP_INCS, CPPDEFINES=PROJECT_APP_DEFS)
+
+Return('group')

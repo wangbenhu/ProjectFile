@@ -1,0 +1,11 @@
+from build.building import *
+
+group = []
+if GetDepend('CONFIG_EVT'):
+    EVT_SRCS = ['evt.c']
+    EVT_SRCS += ['evt_timer.c']
+    EVT_INCS = ['.']
+
+    group = DefineGroup(name='evt', srcs=EVT_SRCS, incs=EVT_INCS)
+
+Return('group')

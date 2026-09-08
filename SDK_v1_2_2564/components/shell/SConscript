@@ -1,0 +1,16 @@
+from build.building import *
+
+group = []
+if GetDepend('CONFIG_SHELL'):
+    SHELL_INCS = ['.']
+    SHELL_SRCS = ['shell_common.c']
+
+    if GetDepend('CONFIG_NON_RTOS'):
+        SHELL_SRCS += ['shell_port_nonrtos.c']
+    else:
+        SHELL_SRCS += ['shell_port_rtos.c']
+
+    group = DefineGroup(name='shell', srcs=SHELL_SRCS, incs=SHELL_INCS)
+
+
+Return('group')

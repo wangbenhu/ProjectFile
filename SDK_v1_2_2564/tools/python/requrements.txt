@@ -1,0 +1,4 @@
+SCons
+kconfiglib
+windows-curses
+pywin32

@@ -1,0 +1,32 @@
+
+// 调试器与CPU已建立连接但未下载应用程序前
+execUserPreload()
+{
+    // Disable WDT
+    __writeMemory32(0x6666, 0x400e00e8, "Memory");
+}
+
+// 调试器将应用程序下载完成之后
+execUserSetup()
+{
+
+}
+
+execUserReset()
+{
+    // Disable All IRQ
+    __writeMemory32(0xFFFFFFFF, 0xE000E180, "Memory");
+    __writeMemory32(0xFFFFFFFF, 0xE000E184, "Memory");
+    __writeMemory32(0x00000000, 0xE000E010, "Memory");
+
+    // Invalid Cache
+    __writeMemory32(1, 0xE0042004, "Memory");
+    __writeMemory32(0, 0xE0042008, "Memory");
+    __writeMemory32(1, 0xE0042020, "Memory");
+    __writeMemory32(0, 0xE0042004, "Memory");
+    __writeMemory32(1, 0xE0042008, "Memory");
+
+    // Set MSP/PC
+    #R13 = __readMemory32(0x00404000, "Memory");
+    #R15 = __readMemory32(0x00404004, "Memory");
+}
