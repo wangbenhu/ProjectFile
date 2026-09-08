@@ -20,7 +20,7 @@
 #include "omble.h"
 #include "om_dfu.h"
 #include "service_om_dfu.h"
-
+//#include "common_def.h"
 /*********************************************************************
  * MACROS
  */
@@ -39,6 +39,8 @@ static uint16_t m_start_handle;
 #define END_RESET 0xFE
 static uint8_t m_end_state = NOT_END;
 
+extern void dfu_start_wdt_set(void);
+extern void dfu_stop_wdt_set(void);
 enum {
     IDX_DFU_SVC,
     IDX_DFU_CTRL_CHAR,
@@ -152,17 +154,22 @@ void service_om_dfu_evt_cb(uint16_t evt_id, const omble_evt_t *evt)
 
 static void dfu_begin_ind_handler(uint8_t status, void *p)
 {
+//	log_debug("dfu_begin_ind_handler\r\n");
+	dfu_start_wdt_set();
     app_om_dfu_update_start_ind_handler(status, p);
 }
 
 static void dfu_prog_ind_handler(uint8_t status, void *p)
 {
+	//log_debug("dfu_prog_ind_handler\r\n");
     app_om_dfu_update_prog_ind_handler(status, p);
 }
 
 static void dfu_end_ind_handler(uint8_t status, void *p)
 {
     m_end_state = status;
+	dfu_stop_wdt_set();
+//	log_debug("dfu_begin_ind_handler\r\n");
 }
 
 uint8_t dfu_user_check_handler(uint8_t img_type, uint32_t img_size, uint32_t img_version)

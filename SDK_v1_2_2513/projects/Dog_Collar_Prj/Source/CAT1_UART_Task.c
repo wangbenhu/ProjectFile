@@ -42,6 +42,13 @@
 /*********************************************************************
  * MACROS
  */
+ 
+#if (1) 
+	#define CAT1_UART_LOG_DEBUG(format, ...)               	log_debug(format,  ## __VA_ARGS__)
+#else
+	#define CAT1_UART_LOG_DEBUG(format, ...)  
+#endif
+
 #define EVENT_SYSTEM_RESERVE_MASK 0x00FF
 
 #define CAT1_UART_TASK_PRIORITY (osPriorityNormal)
@@ -63,11 +70,6 @@
 #define CAT1_PORT_1S_DELAY (1000)
 #define CAT1_COMMAND_TIMEOUT (60000)
 #define LTE_INIT_RDY_TIMEOUT (10000)  // lteInit() 后等待 RDY 的超时时间 (10秒)
-
-#define CAT1_LOG_DEBUG(format, ...)               	log_debug(format,  ## __VA_ARGS__)
-/// log array
-#define CAT1_LOG_ARRAY(array, len)            do{int __i; for(__i=0;__i<(len);++__i)CAT1_LOG_DEBUG("%02X ",((uint8_t *)(array))[__i]);}while(0)
-
 /*********************************************************************
  * TYPEDEFS
  */
@@ -492,7 +494,7 @@ bool is_task_blocked(void)
                    ((flags & LTE_EVENT_TASK_UNBLOCK) == 0);
     
     if (blocked) {
-        log_debug("[CAT1][STA] task is blocked\r\n");
+        CAT1_UART_LOG_DEBUG("[CAT1][STA] task is blocked\r\n");
     }
     return blocked;
 }
@@ -524,7 +526,7 @@ void init_device_cache(void)
     if (g_cache_mutex == NULL) {
         g_cache_mutex = osMutexNew(NULL);
         if (g_cache_mutex == NULL) {
-            log_debug("[CAT1][ERR] Failed to create mutex\r\n");
+            CAT1_UART_LOG_DEBUG("[CAT1][ERR] Failed to create mutex\r\n");
             return;
         }
     }
@@ -538,7 +540,7 @@ mqtt_queue_t* mqtt_queue_create(void)
 {
     mqtt_queue_t *queue = DEMO_BT_Malloc(sizeof(mqtt_queue_t));
     if (!queue) {
-        log_debug("[CAT1][ERR] Failed to create MQTT queue\r\n");
+        CAT1_UART_LOG_DEBUG("[CAT1][ERR] Failed to create MQTT queue\r\n");
         return NULL;
     }
     
@@ -568,7 +570,7 @@ static void init_mqtt_queue(void)
 // 删除队列中第 index 个元素（0 表示队首）
 int mqtt_queue_remove_at(mqtt_queue_t *queue, int index) {
     if (!queue || index < 0 || index >= queue->count) {
-        log_debug("[CAT1][ERR] mqtt queue invalid index\r\n");
+        CAT1_UART_LOG_DEBUG("[CAT1][ERR] mqtt queue invalid index\r\n");
         return -1;
     }
 
@@ -649,7 +651,7 @@ uint8_t fetch_packet(uint8_t *out_data, uint16_t *out_len)
 	osMutexRelease(PacketListMutex);
 
 	//	// 打印释放前的信息
-//   log_debug(
+//   CAT1_UART_LOG_DEBUG(
 //           "Before free - Addr: 0x%p, Free heap: %u bytes\n",
 //           temp,
 //           xPortGetFreeHeapSize());
@@ -658,7 +660,7 @@ uint8_t fetch_packet(uint8_t *out_data, uint16_t *out_len)
 
 	DEMO_BT_Free(temp);
 // 打印释放后的信息
-//    log_debug(
+//    CAT1_UART_LOG_DEBUG(
 //           "After free - Freed: %u bytes, Free heap now: %u bytes\n",
 //           sizeof(PacketNode),
 //           xPortGetFreeHeapSize());
@@ -679,7 +681,7 @@ void printPacketList(void)
         // 打印数据内容（以十六进制格式）
         for (int i = 0; i < current->length; i++)
         {
-            log_debug("%02X\r\n", current->data[i]);
+            CAT1_UART_LOG_DEBUG("%02X\r\n", current->data[i]);
             if ((i + 1) % 16 == 0 && i + 1 < current->length)
             {
             }
@@ -688,7 +690,7 @@ void printPacketList(void)
         // 如果需要打印ASCII格式的数据
         if (current->length > 0 && current->data[current->length-1] == '\0')
         {
-            log_debug("  Text: %s\r\n", current->data);
+            CAT1_UART_LOG_DEBUG("  Text: %s\r\n", current->data);
         }
         
         current = current->next;
@@ -696,11 +698,11 @@ void printPacketList(void)
     
     if (count == 0)
     {
-        log_debug("Packet list is empty\r\n");
+        CAT1_UART_LOG_DEBUG("Packet list is empty\r\n");
     }
     else
     {
-        log_debug("Total packets: %d\r\n", count);
+        CAT1_UART_LOG_DEBUG("Total packets: %d\r\n", count);
     }
     
     osMutexRelease(PacketListMutex);
@@ -719,14 +721,14 @@ void insertPacket(unsigned char *data, int length)
 
 //	// 打印当前堆内存状态
     size_t freeHeapBefore = xPortGetFreeHeapSize();
-//    log_debug("Before malloc - Free heap: %u bytes\n", freeHeapBefore);
+//    CAT1_UART_LOG_DEBUG("Before malloc - Free heap: %u bytes\n", freeHeapBefore);
 
 	// 创建新节点
 	PacketNode *newNode = DEMO_BT_Malloc(sizeof(PacketNode));
 
 	if (!newNode)
 	{
-		log_debug("[CAT1][ERR] PacketNode fail\r\n");
+		CAT1_UART_LOG_DEBUG("[CAT1][ERR] PacketNode fail\r\n");
 		return;
 	}
 
@@ -870,7 +872,7 @@ cat1_config_type_t get_cat1_config_type(void)
 	
     if (version_str != NULL && strlen((char *)version_str) > 0)
     {
-        log_debug("[CAT1][DAT] CAT1 Version: %s\r\n", version_str);
+        CAT1_UART_LOG_DEBUG("[CAT1][DAT] CAT1 Version: %s\r\n", version_str);
         
         // NA区域的旧版本
         if (strncmp((char *)version_str, "EG800QNALCR01A06M04_A0.001.A0.001", 
@@ -891,7 +893,7 @@ cat1_config_type_t get_cat1_config_type(void)
     }
     else
     {
-        log_debug("[CAT1][ERR] No CAT1 version available\r\n");
+        CAT1_UART_LOG_DEBUG("[CAT1][ERR] No CAT1 version available\r\n");
     }
     
     return CAT1_CONFIG_NEW;
@@ -948,7 +950,7 @@ int mqtt_queue_push(mqtt_queue_t *queue, const uint8_t *data, uint16_t len, cons
     if (queue->count < MQTT_QUEUE_SIZE) {
         uint8_t *data_copy = DEMO_BT_Malloc(len);
         if (!data_copy) {
-            log_debug("[CAT1][ERR] Failed to allocate memory\r\n");
+            CAT1_UART_LOG_DEBUG("[CAT1][ERR] Failed to allocate memory\r\n");
             osMutexRelease(queue->mutex);
             return -1;
         }
@@ -965,7 +967,7 @@ int mqtt_queue_push(mqtt_queue_t *queue, const uint8_t *data, uint16_t len, cons
         
         ret = 0;
     } else {
-        log_debug("[CAT1][ERR] MQTT queue full! count=%d\r\n", queue->count);
+        CAT1_UART_LOG_DEBUG("[CAT1][ERR] MQTT queue full! count=%d\r\n", queue->count);
     }
     
     osMutexRelease(queue->mutex);
@@ -996,7 +998,7 @@ int mqtt_queue_pop_with_data(mqtt_queue_t *queue, mqtt_packet_t *packet)
     queue->head = (queue->head + 1) % MQTT_QUEUE_SIZE;
     queue->count--;
     
-//    log_debug("[CAT1][DAT] MQTT queue pop with data: count=%d, head=%d, tail=%d\r\n", 
+//    CAT1_UART_LOG_DEBUG("[CAT1][DAT] MQTT queue pop with data: count=%d, head=%d, tail=%d\r\n", 
 //             queue->count, queue->head, queue->tail);
     
     osMutexRelease(queue->mutex);
@@ -1063,7 +1065,7 @@ void at_uart_send_block(const char *cmd, uint16_t len)
 	}
 
 	// 测试LOG
-	log_debug("[CAT1][SND] %s\r\n",cmd);
+	CAT1_UART_LOG_DEBUG("[CAT1][SND] %s\r\n",cmd);
 //	drv_uart_write(LOG_UART, (uint8_t *)cmd, (uint32_t)len, 10);
 	
 	// 发送LTE
@@ -1500,7 +1502,7 @@ static void func_lte_type(lte_at_type_t type)
 //			// 清除主动上报标志（如果当前完成的是主动上报）
 //			if (is_auto_reporting) {
 //				is_auto_reporting = false;
-//				log_debug("Auto report completed\n");
+//				CAT1_UART_LOG_DEBUG("Auto report completed\n");
 //			}
 //			
 //			// 检查队列中是否有下一包数据
@@ -1510,40 +1512,40 @@ static void func_lte_type(lte_at_type_t type)
 //                if (g_mqtt_queue && !mqtt_queue_is_empty(g_mqtt_queue)) {
 //                    mqtt_packet_t packet;
 //                    if (mqtt_queue_pop_with_data(g_mqtt_queue, &packet) == 0) {
-//                        log_debug("Sending next queued cloud command, len=%d\n", packet.data_len);
+//                        CAT1_UART_LOG_DEBUG("Sending next queued cloud command, len=%d\n", packet.data_len);
 //                        
 //                        if (send_data_to_comm_task(COMM_TASK_ID, TASK_COMM_DATAJSON, 
 //                                                   packet.data, packet.data_len) == pdTRUE) {
 //                            DEMO_BT_Free(packet.data);
 //                            // g_mqtt_sending 保持为 1，g_current_send_type 保持为 1
-//                            log_debug("Next cloud command sent, waiting for response\n");
+//                            CAT1_UART_LOG_DEBUG("Next cloud command sent, waiting for response\n");
 //                        } else {
 //                            DEMO_BT_Free(packet.data);
 //                            g_mqtt_sending = 0;
 //                            g_current_send_type = 0;
-//                            log_debug("Failed to send next cloud command\n");
+//                            CAT1_UART_LOG_DEBUG("Failed to send next cloud command\n");
 //                        }
 //                    } else {
 //                        g_mqtt_sending = 0;
 //                        g_current_send_type = 0;
-//                        log_debug("Queue pop failed, no more commands\n");
+//                        CAT1_UART_LOG_DEBUG("Queue pop failed, no more commands\n");
 //                    }
 //                } else {
 //                    g_mqtt_sending = 0;
 //                    g_current_send_type = 0;
-//                    log_debug("No more cloud commands in queue\n");
+//                    CAT1_UART_LOG_DEBUG("No more cloud commands in queue\n");
 //                }
 //            } else if (g_current_send_type == 2) {
 //                // 主动上报完成
 //                g_mqtt_sending = 0;
 //                g_current_send_type = 0;
-//                log_debug("Auto report completed, system idle\n");
+//                CAT1_UART_LOG_DEBUG("Auto report completed, system idle\n");
 //                
 //                // 检查是否有待处理的云指令，如果有则立即发送
 //                if (g_mqtt_queue && !mqtt_queue_is_empty(g_mqtt_queue)) {
 //                    mqtt_packet_t packet;
 //                    if (mqtt_queue_peek(g_mqtt_queue, &packet) == 0) {
-//                        log_debug("Pending cloud command found after auto report, sending now\n");
+//                        CAT1_UART_LOG_DEBUG("Pending cloud command found after auto report, sending now\n");
 //                        // 主动上报完成后立即处理队列中的云指令
 //                        osEventFlagsSet(LteEventId, LTE_EVENT_CMD_READY);
 //                    }
@@ -1717,7 +1719,7 @@ BaseType_t start_delta_firmware(const char *url, uint16_t url_len)
     BaseType_t result = pdFALSE;
 
     if (url == NULL || url_len == 0 || url_len >= sizeof(firmware_url.firmwareUrlData)) {
-        log_debug("[CAT1][ERR] Invalid URL\r\n");
+        CAT1_UART_LOG_DEBUG("[CAT1][ERR] Invalid URL\r\n");
         return pdFALSE;
     }
     
@@ -1727,7 +1729,7 @@ BaseType_t start_delta_firmware(const char *url, uint16_t url_len)
     firmware_url.firmwareUrlData[url_len] = '\0';
     firmware_url.firmwareUrlLength = strlen((char *)firmware_url.firmwareUrlData);
     
-//    log_debug("[CAT1][DAT] firmware upgrade, URL: %s, Length: %d\r\n", 
+//    CAT1_UART_LOG_DEBUG("[CAT1][DAT] firmware upgrade, URL: %s, Length: %d\r\n", 
 //              firmware_url.firmwareUrlData, firmware_url.firmwareUrlLength);
     
 	lte_check_cmd_rtos(LTE_ATE0, "OK\r\n", 1, 500, 0);
@@ -1764,7 +1766,7 @@ BaseType_t start_http_download(const char *url, uint16_t url_len)
 
 	// 保存URL数据到http_data结构
     if (url == NULL || url_len == 0 || url_len >= sizeof(http_data.httpUrlData)) {
-        log_debug("[CAT1][ERR] Invalid URL parameters\r\n");
+        CAT1_UART_LOG_DEBUG("[CAT1][ERR] Invalid URL parameters\r\n");
         return pdFALSE;
     }
     
@@ -1885,19 +1887,19 @@ void delete_certificate_from_ufs(CACERT_Type_t cert_type)
 {
     switch(cert_type) {
         case CACERT_CA:
-            log_debug("[CAT1][STA] Deleting CA\r\n");
+            CAT1_UART_LOG_DEBUG("[CAT1][STA] Deleting CA\r\n");
             lte_check_cmd_rtos(LTE_QFDEL_CACERT, "OK\r\n", 1, 3000, 0);
             break;
         case CACERT_CLIENT:
-            log_debug("[CAT1][STA] Deleting CLIENT\r\n");
+            CAT1_UART_LOG_DEBUG("[CAT1][STA] Deleting CLIENT\r\n");
             lte_check_cmd_rtos(LTE_QFDEL_CLIENT, "OK\r\n", 1, 3000, 0);
             break;
         case CACERT_USERKEY:
-            log_debug("[CAT1][STA] Deleting USERKEY\r\n");
+            CAT1_UART_LOG_DEBUG("[CAT1][STA] Deleting USERKEY\r\n");
             lte_check_cmd_rtos(LTE_QFDEL_USERKEY, "OK\r\n", 1, 3000, 0);
             break;
         default:
-            log_debug("[CAT1][ERR] Unknown certificate\r\n");
+            CAT1_UART_LOG_DEBUG("[CAT1][ERR] Unknown certificate\r\n");
             return;
     }
 }
@@ -1915,7 +1917,7 @@ BaseType_t start_cacert_config(CACERT_Type_t cacert_type, uint8_t *data, uint16_
     BaseType_t result = pdFALSE;
 
     if (data == NULL || len == 0) {
-        log_debug("[CAT1][ERR] Invalid certificate data: data=%p, len=%d\r\n", data, len);
+        CAT1_UART_LOG_DEBUG("[CAT1][ERR] Invalid certificate data: data=%p, len=%d\r\n", data, len);
         return pdFALSE;
     }
 
@@ -1940,7 +1942,7 @@ BaseType_t start_cacert_config(CACERT_Type_t cacert_type, uint8_t *data, uint16_
             upload_cmd = LTE_QFUPL_USERKEY;
             break;
         default:
-            log_debug("[CAT1][ERR] Unknown certificate type: %d\r\n", cacert_type);
+            CAT1_UART_LOG_DEBUG("[CAT1][ERR] Unknown certificate type: %d\r\n", cacert_type);
             cert_write_state = CERT_STATE_ERROR;
             return pdFALSE;
     }
@@ -1964,7 +1966,7 @@ BaseType_t start_cacert_config(CACERT_Type_t cacert_type, uint8_t *data, uint16_
             upload_data = LTE_QFUPL_USERKEY_DATA;
             break;
 		default:
-            log_debug("[CAT1][ERR] Unknown certificate qfupl: %d\r\n", cacert_type);
+            CAT1_UART_LOG_DEBUG("[CAT1][ERR] Unknown certificate qfupl: %d\r\n", cacert_type);
             cert_write_state = CERT_STATE_ERROR;
             return pdFALSE;
     }
@@ -2089,7 +2091,7 @@ BaseType_t mqtt_publish(unsigned char *data, unsigned int len)
             if (osTimerIsRunning(deleteResponseTimer_ID))
                 osTimerStop(deleteResponseTimer_ID);
             osTimerStart(deleteResponseTimer_ID, osMS2TicksRound(3000));
-            log_debug("[CAT1][STA] Delete, start 3s delay\r\n");
+            CAT1_UART_LOG_DEBUG("[CAT1][STA] Delete, start 3s delay\r\n");
         }
     }
     
@@ -2113,7 +2115,7 @@ PUBLISH_FAIL:
 
     // 验证基本格式
     if (strncmp(topic, "pet/collar/", 11) != 0) {
-        log_debug("[CAT1][STA] topic err\r\n");
+        CAT1_UART_LOG_DEBUG("[CAT1][STA] topic err\r\n");
         return FUNC_UNKNOWN;
     }
 
@@ -2318,7 +2320,7 @@ void send_wifi_scan_data_to_comm_task(DeviceWifiSsid_t *wifi_data)
 //    // 调试打印发送的数据
 //    for (int i = 0; i < wifi_data->wifi_count && i < 10; i++)
 //    {
-//        log_debug("Send WiFi %d: SSID='%s', MAC='%s', RSSI='%s'\n", 
+//        CAT1_UART_LOG_DEBUG("Send WiFi %d: SSID='%s', MAC='%s', RSSI='%s'\n", 
 //                 i + 1,
 //                 wifi_data->wifi_list[i].ssid,
 //                 wifi_data->wifi_list[i].mac,
@@ -2332,7 +2334,7 @@ void send_wifi_scan_data_to_comm_task(DeviceWifiSsid_t *wifi_data)
     
     if (result != pdTRUE)
     {
-        log_debug("[CAT1][ERR] Failed to send WiFi —> comm\r\n");
+        CAT1_UART_LOG_DEBUG("[CAT1][ERR] Failed to send WiFi —> comm\r\n");
     }
 }
 
@@ -2369,7 +2371,7 @@ void lteInit(void)
 	drv_gpio_write(OM_GPIO1, GPIO_MASK(PAD_CAT1_POWERKEY - 32), GPIO_LEVEL_HIGH);	//powerkey 先拉拉高再拉低
 	osDelay(osMS2TicksRound(CAT1_POWER_VCC_TIME));
 	drv_gpio_write(OM_GPIO1, GPIO_MASK(PAD_CAT1_POWERKEY-32), GPIO_LEVEL_LOW);
-	log_debug("[CAT1][STA] lteInit success\r\n");
+	CAT1_UART_LOG_DEBUG("[CAT1][STA] lteInit success\r\n");
 }
 
 /**
@@ -2569,7 +2571,7 @@ void lteSubTopic(void)
 	// 	boot_high_freq_active = true;
 	// 	boot_start_tick = osKernelGetTickCount();
 	// 	osTimerStart(autoReportTimer_ID, BOOT_HIGH_FREQ_INTERVAL_MS);
-	// 	log_debug("[CAT1][STA] high-freq report started (15s x 2min)\r\n");
+	// 	CAT1_UART_LOG_DEBUG("[CAT1][STA] high-freq report started (15s x 2min)\r\n");
 	// }
 }
 
@@ -2603,7 +2605,7 @@ static void cat1_escape_pubdata_mode(void)
 		return;
 	}
 
-	log_debug("[CAT1][STA] module stuck in PUB data-wait, complete publish with payload (%d bytes)\r\n", pending);
+	CAT1_UART_LOG_DEBUG("[CAT1][STA] module stuck in PUB data-wait, complete publish with payload (%d bytes)\r\n", pending);
 
 	/* 补发真实payload + 行结束符：模组收满length字节结束QMTPUBEX */
 	drv_uart_write(CAT1_AT_UART, (uint8_t *)response_mqtt_data, pending, 10);
@@ -2623,7 +2625,7 @@ static void cat1_escape_pubdata_mode(void)
  */
 static void mqtt_disconnect_flush_queue(void)
 {
-	log_debug("[CAT1][STA] MQTT lost, flush stale AT cmds before reconnect\r\n");
+	CAT1_UART_LOG_DEBUG("[CAT1][STA] MQTT lost, flush stale AT cmds before reconnect\r\n");
 
 	cat1_escape_pubdata_mode();
 
@@ -3119,7 +3121,7 @@ void at_mqttData(uint8_t *str, uint16_t len, cmd_status_t *status)
     // 识别功能类型和设备SN
     mqtt_function_t current_func = extract_function_from_topic(received_topic);
     if (current_func == FUNC_UNKNOWN) {
-        log_debug("[CAT1][ERR] func unknow\r\n");
+        CAT1_UART_LOG_DEBUG("[CAT1][ERR] func unknow\r\n");
         *status = CMD_STATUS_FAILED;
         return;
     }
@@ -3165,7 +3167,7 @@ void at_mqttData(uint8_t *str, uint16_t len, cmd_status_t *status)
             }
             else
             {
-                log_debug("[CAT1][ERR] Product test MQTT failed\r\n");
+                CAT1_UART_LOG_DEBUG("[CAT1][ERR] Product test MQTT failed\r\n");
 				production_cat1_send_errorcode_task(TEST_TASK_ID, TASK_CAT1_AWS_WITHCA_TEST_REPLY,1);
                 *status = CMD_STATUS_SUCCESS;
             }
@@ -3188,7 +3190,7 @@ void at_mqttData(uint8_t *str, uint16_t len, cmd_status_t *status)
 
 		if ((CurrentChargeStatusDataGet() == CURRENT_CHARGE_STATUS_CHARGING || CurrentChargeStatusDataGet() == CURRENT_CHARGE_STATUS_LOW_BATTERY))
 		{
-			log_debug("[CAT1][STA] M3/M4 low-power: 4G downlink dropped\r\n");
+			CAT1_UART_LOG_DEBUG("[CAT1][STA] M3/M4 low-power: 4G downlink dropped\r\n");
 			*status = CMD_STATUS_SUCCESS;
 			return;
 		}
@@ -3202,17 +3204,17 @@ void at_mqttData(uint8_t *str, uint16_t len, cmd_status_t *status)
         // 分配内存保存数据
         uint8_t *data_copy = DEMO_BT_Malloc(json_len);
         if (!data_copy) {
-            log_debug("[CAT1][ERR] MQTT failed to allocate\r\n");
+            CAT1_UART_LOG_DEBUG("[CAT1][ERR] MQTT failed to allocate\r\n");
             *status = CMD_STATUS_FAILED;
             return;
         }
         memcpy(data_copy, (uint8_t *)quote_start + 1, json_len);
-        log_debug("[CAT1][STA] MQTT g_mqtt_sending=%d, is_auto_reporting=%d\r\n", g_mqtt_sending, is_auto_reporting);
+        CAT1_UART_LOG_DEBUG("[CAT1][STA] MQTT g_mqtt_sending=%d, is_auto_reporting=%d\r\n", g_mqtt_sending, is_auto_reporting);
         if (g_mqtt_sending == 0&& is_auto_reporting == false) { // && is_auto_reporting == false
             // 空闲状态，直接发送
             
             if (send_data_to_comm_task(COMM_TASK_ID, TASK_COMM_DATAJSON, data_copy, json_len) == pdTRUE) {
-//				log_debug("[CAT1][STA] MQTT idle, cmd sent to COMM\r\n");
+//				CAT1_UART_LOG_DEBUG("[CAT1][STA] MQTT idle, cmd sent to COMM\r\n");
                 // 不设 g_mqtt_sending=1: 云端指令流控靠 g_mqtt_queue,
                 // 设了会阻塞 COMM 的回包被 mqtt_publish() 处理, 导致永久卡死
                 DEMO_BT_Free(data_copy);
@@ -3223,7 +3225,7 @@ void at_mqttData(uint8_t *str, uint16_t len, cmd_status_t *status)
             }
         } else {
             // 忙碌状态，需要入队
-            log_debug("[CAT1][STA] MQTT busy, func=%d, queue count=%d\r\n", current_func, g_mqtt_queue->count);
+            CAT1_UART_LOG_DEBUG("[CAT1][STA] MQTT busy, func=%d, queue count=%d\r\n", current_func, g_mqtt_queue->count);
 			
 			osMutexAcquire(g_mqtt_queue->mutex, osWaitForever);
             
@@ -3243,7 +3245,7 @@ void at_mqttData(uint8_t *str, uint16_t len, cmd_status_t *status)
             
             // 有相同主题 - 删掉原数据，继续入队
             if (duplicate_idx >= 0) {
-                log_debug("[CAT1][STA] Found duplicate index: %d, discarding old\r\n", duplicate_idx);
+                CAT1_UART_LOG_DEBUG("[CAT1][STA] Found duplicate index: %d, discarding old\r\n", duplicate_idx);
 //                DEMO_BT_Free(data_copy);
 //                *status = CMD_STATUS_SUCCESS;
 //                osMutexRelease(g_mqtt_queue->mutex);
@@ -3253,7 +3255,7 @@ void at_mqttData(uint8_t *str, uint16_t len, cmd_status_t *status)
             else
 			{
 				// 没有相同主题
-				log_debug("[CAT1][STA] No duplicate topic\r\n");
+				CAT1_UART_LOG_DEBUG("[CAT1][STA] No duplicate topic\r\n");
             }
             // 检查队列是否已满
             if (g_mqtt_queue->count < MQTT_QUEUE_SIZE) {
@@ -3262,7 +3264,7 @@ void at_mqttData(uint8_t *str, uint16_t len, cmd_status_t *status)
                 if (!queue_data) {
                     DEMO_BT_Free(data_copy);
                     osMutexRelease(g_mqtt_queue->mutex);
-//                    log_debug("Failed to allocate memory for queue data\n");
+//                    CAT1_UART_LOG_DEBUG("Failed to allocate memory for queue data\n");
                     *status = CMD_STATUS_FAILED;
                     return;
                 }
@@ -3358,7 +3360,7 @@ void at_conn(uint8_t *str, uint16_t len, cmd_status_t *status)
 			if (!is_reconnecting) {
 				/* 清掉队列中残留的MQTT_OPEN/CONN等指令，避免重复指令报ERROR堵住重连 */
 				mqtt_disconnect_flush_queue();
-//				log_debug("[CAT1][STA] MQTT connect restart\r\n");
+//				CAT1_UART_LOG_DEBUG("[CAT1][STA] MQTT connect restart\r\n");
 				reStartModeConn();
 			}
 		}
@@ -3397,19 +3399,19 @@ void at_qmtsub(uint8_t *str, uint16_t len, cmd_status_t *status)
         if (result == 0)
         {
             // 订阅成功：Packet sent successfully and ACK received from the server
-//            log_debug("[CAT1][STA] MQTT subscribe success\r\n");
+//            CAT1_UART_LOG_DEBUG("[CAT1][STA] MQTT subscribe success\r\n");
             *status = CMD_STATUS_SUCCESS;
         }
         else if (result == 2)
         {
             // 失败：Failed to send packet
-            log_debug("[CAT1][ERR] MQTT Subscribe FAILED\r\n");
+            CAT1_UART_LOG_DEBUG("[CAT1][ERR] MQTT Subscribe FAILED\r\n");
             *status = CMD_STATUS_FAILED;
         }
         else
         {
             // result == 1 或其他值，重传情况，保持成功状态
-            log_debug("[CAT1][STA] MQTT Subscribe retransmission, result=%d\r\n", result);
+            CAT1_UART_LOG_DEBUG("[CAT1][STA] MQTT Subscribe retransmission, result=%d\r\n", result);
             *status = CMD_STATUS_SUCCESS;
         }
     }
@@ -3423,7 +3425,7 @@ void at_qmtsub(uint8_t *str, uint16_t len, cmd_status_t *status)
             if (result == 2)
             {
                 // 不标记失败状态，不重发，在超时时间内继续等待订阅结果
-                log_debug("[CAT1][STA] QMTSUB packet send failed (result=2), waiting!\r\n");
+                CAT1_UART_LOG_DEBUG("[CAT1][STA] QMTSUB packet send failed (result=2), waiting!\r\n");
                 // 不设置失败状态，保持等待
                 *status = CMD_STATUS_PENDING;
             }
@@ -3436,7 +3438,7 @@ void at_qmtsub(uint8_t *str, uint16_t len, cmd_status_t *status)
         else
         {
             // 其他格式（如查询响应），认为是成功的
-//            log_debug("[CAT1][DAT] MQTT Subscribe other: %s\r\n", data_start);
+//            CAT1_UART_LOG_DEBUG("[CAT1][DAT] MQTT Subscribe other: %s\r\n", data_start);
             *status = CMD_STATUS_SUCCESS;
         }
     }
@@ -3522,7 +3524,7 @@ void at_cpin(uint8_t *str, uint16_t len, cmd_status_t *status)
 		else
 		{
 			*status = CMD_STATUS_FAILED;
-			log_debug("[CAT1][ERR] SIM card not ready\r\n");
+			CAT1_UART_LOG_DEBUG("[CAT1][ERR] SIM card not ready\r\n");
 		}
 	}
 	else
@@ -3562,7 +3564,7 @@ void at_csq(uint8_t *str, uint16_t len, cmd_status_t *status)
 	{
 //		cat1_Status.cat1_signal = rssi;
 //		cat1_Status.cat1_signal_status = SIGNAL_IS_DETECTABLE;
-//		log_debug("Signal successful: RSSI=%d\n", cat1_Status.cat1_signal);
+//		CAT1_UART_LOG_DEBUG("Signal successful: RSSI=%d\n", cat1_Status.cat1_signal);
 		
 		// 直接存储到缓存
 		if(rssi == 99 || rssi == 199)
@@ -3668,7 +3670,7 @@ static int parse_serving_cell(char *params)
     }
 	else
 	{
-		log_debug("[CAT1][ERR] parse_serving_cell Fail\r\n");
+		CAT1_UART_LOG_DEBUG("[CAT1][ERR] parse_serving_cell Fail\r\n");
 //		cat1_send_reply_task(COMM_TASK_ID, TASK_CAT1_QUERY_ENODEB);
     }
     
@@ -3830,7 +3832,7 @@ uint8_t parse_single_wifi_info(char *data, uint16_t len, WifiInfo_t *wifi_info)
     // 检查字段数量
     if (field_count < 5)
     {
-        log_debug("[CAT1][DAT] Insufficient fields: %d\r\n", field_count);
+        CAT1_UART_LOG_DEBUG("[CAT1][DAT] Insufficient fields: %d\r\n", field_count);
         return 0;
     }
     
@@ -3900,7 +3902,7 @@ void at_cgdcont(uint8_t *str, uint16_t len, cmd_status_t *status)
     // 解析格式: 1,"IP","linksnet",... 或 1,"IP","linkset","0.0.0.0",...
     if (parsed_count >= 2)
     {
-		log_debug("[CAT1][DAT] cid: %d\r\n", cid);
+		CAT1_UART_LOG_DEBUG("[CAT1][DAT] cid: %d\r\n", cid);
         if (cid == 1)
         {
             if (is_apn_valid(apn))
@@ -3953,13 +3955,13 @@ void at_qmtpubex(uint8_t *str, uint16_t len, cmd_status_t *status)
 
 	if (sscanf((char *)str, "%d,%d,%d", &client_idx, &msg_id, &result_code) == 3) {
 		if (result_code == 0) {
-			log_debug("[CAT1][STA] MQTT publish confirmed by broker\r\n");
+			CAT1_UART_LOG_DEBUG("[CAT1][STA] MQTT publish confirmed by broker\r\n");
 		} else {
 			// result=1: 重传; result=2: Failed to send packet(发送失败)
-			log_debug("[CAT1][ERR] MQTT publish failed, broker result=%d\r\n", result_code);
+			CAT1_UART_LOG_DEBUG("[CAT1][ERR] MQTT publish failed, broker result=%d\r\n", result_code);
 		}
 	} else {
-		log_debug("[CAT1][STA] +QMTPUBEX received\r\n");
+		CAT1_UART_LOG_DEBUG("[CAT1][STA] +QMTPUBEX received\r\n");
 	}
 	
 	*status = CMD_STATUS_SUCCESS;
@@ -4004,7 +4006,7 @@ void at_qmtstat(uint8_t *data, uint16_t len, cmd_status_t *status)
                 // Sending CONNECT/CONNACK packet timed out or failed.
                 // 检查用户名密码，确保客户端ID未被使用，重新连接
 				isMqttConnected = false;
-				log_debug("[CAT1][STA] qmtstat is_reconnecting: %d\r\n",is_reconnecting);
+				CAT1_UART_LOG_DEBUG("[CAT1][STA] qmtstat is_reconnecting: %d\r\n",is_reconnecting);
                 if (!is_reconnecting) {
 					/* 重连前清空遗留的PUB/订阅等指令，避免断网期间报ERROR堵住/触发重启 */
 					mqtt_disconnect_flush_queue();
@@ -4075,15 +4077,15 @@ void lte_wifi_scan_flush(void)
 {
     if (wifi_scan_accum_active) {
         if (wifi_scan_accum.wifi_count > 0) {
-//            log_debug("[CAT1][STA] WiFi scan flush: %d APs → COMM\r\n", wifi_scan_accum.wifi_count);
+//            CAT1_UART_LOG_DEBUG("[CAT1][STA] WiFi scan flush: %d APs → COMM\r\n", wifi_scan_accum.wifi_count);
             send_wifi_scan_data_to_comm_task(&wifi_scan_accum);
         } else {
-//            log_debug("[CAT1][STA] WiFi scan flush: empty → COMM\r\n");
+//            CAT1_UART_LOG_DEBUG("[CAT1][STA] WiFi scan flush: empty → COMM\r\n");
             send_empty_wifi_scan_result();
         }
         wifi_scan_accum_active = false;
     } else {
-        log_debug("[CAT1][DBG] WiFi scan flush called but accum inactive\r\n");
+        CAT1_UART_LOG_DEBUG("[CAT1][DBG] WiFi scan flush called but accum inactive\r\n");
     }
     memset(&wifi_scan_accum, 0, sizeof(wifi_scan_accum));
     wifi_scan_accum.wifi_count = 0;
@@ -4101,18 +4103,18 @@ void at_wifiScan(uint8_t *data, uint16_t len, cmd_status_t *status)
     char *scan_data = (char *)data;
     char *current_pos = scan_data;
 
-//    log_debug("[CAT1][DBG] at_wifiScan called, len=%d\r\n", len);
+//    CAT1_UART_LOG_DEBUG("[CAT1][DBG] at_wifiScan called, len=%d\r\n", len);
 
     /* 错误/TIMEOUT：立即发送空结果并重置 */
     if (strstr(scan_data, "TIMEOUT") != NULL) {
-        log_debug("[CAT1][ERR] WiFi scan timeout\r\n");
+        CAT1_UART_LOG_DEBUG("[CAT1][ERR] WiFi scan timeout\r\n");
         *status = CMD_STATUS_FAILED;
         lte_wifi_scan_flush();
         return;
     }
 
     if (strstr(scan_data, "ERROR") != NULL) {
-        log_debug("[CAT1][ERR] WiFi scan error\r\n");
+        CAT1_UART_LOG_DEBUG("[CAT1][ERR] WiFi scan error\r\n");
         *status = CMD_STATUS_FAILED;
         lte_wifi_scan_flush();
         return;
@@ -4167,7 +4169,7 @@ void at_wifiScan(uint8_t *data, uint16_t len, cmd_status_t *status)
     }
 
     /*  lte_wifi_scan_flush() 在命令完成时统一发送 */
-//    log_debug("[CAT1][DBG] at_wifiScan accum count=%d\r\n", wifi_scan_accum.wifi_count);
+//    CAT1_UART_LOG_DEBUG("[CAT1][DBG] at_wifiScan accum count=%d\r\n", wifi_scan_accum.wifi_count);
     *status = CMD_STATUS_SUCCESS;
 }
 
@@ -4221,7 +4223,7 @@ void at_qflst(uint8_t *str, uint16_t len, cmd_status_t *status)
             
             // 检查引号
             if (pos >= len || str[pos] != '"') {
-                log_debug("[CAT1][ERR] No quote after\r\n");
+                CAT1_UART_LOG_DEBUG("[CAT1][ERR] No quote after\r\n");
                 // 移动到下一行继续解析
                 while (pos < len && str[pos] != '\n') pos++;
                 if (pos < len) pos++;
@@ -4238,7 +4240,7 @@ void at_qflst(uint8_t *str, uint16_t len, cmd_status_t *status)
             }
             
             if (pos >= len || str[pos] != '"') {
-                log_debug("[CAT1][ERR] No closing quote found\r\n");
+                CAT1_UART_LOG_DEBUG("[CAT1][ERR] No closing quote found\r\n");
                 // 移动到下一行继续解析
                 while (pos < len && str[pos] != '\n') pos++;
                 if (pos < len) pos++;
@@ -4338,7 +4340,7 @@ void at_qflst(uint8_t *str, uint16_t len, cmd_status_t *status)
                             http_data.filename[sizeof(http_data.filename) - 1] = '\0';
                         }
                     } else {
-                        log_debug("[CAT1][ERR] No file found for audio: %s\r\n", filename_ptr);
+                        CAT1_UART_LOG_DEBUG("[CAT1][ERR] No file found for audio: %s\r\n", filename_ptr);
                     }
                 }
             }
@@ -4362,33 +4364,33 @@ void at_qflst(uint8_t *str, uint16_t len, cmd_status_t *status)
     
     // 状态设置逻辑
     if (get_certificate_deletion_mode()) {
-//        log_debug("Certificate deletion mode: found_cacert=%d, found_client=%d, found_userkey=%d, stage=%d\n", 
+//        CAT1_UART_LOG_DEBUG("Certificate deletion mode: found_cacert=%d, found_client=%d, found_userkey=%d, stage=%d\n", 
 //                  found_cacert, found_client, found_userkey, current_delete_stage);
         
         // 根据删除阶段发送删除命令
         if (current_delete_stage == 0) {
             // 首次进入，检查并发送第一个删除命令
             if (found_cacert) {
-//                log_debug("Stage 0->1: Sending delete command for ca.pem\n");
+//                CAT1_UART_LOG_DEBUG("Stage 0->1: Sending delete command for ca.pem\n");
                 current_delete_stage = 1;
                 lte_check_cmd_rtos(LTE_QFDEL_CACERT, "OK\r\n", 1, 3000, 0);
                 *status = CMD_STATUS_SUCCESS;
                 return;
             } else if (found_client) {
-//                log_debug("Stage 0->2: Sending delete command for client.pem\n");
+//                CAT1_UART_LOG_DEBUG("Stage 0->2: Sending delete command for client.pem\n");
                 current_delete_stage = 2;
                 lte_check_cmd_rtos(LTE_QFDEL_CLIENT, "OK\r\n", 1, 3000, 0);
                 *status = CMD_STATUS_SUCCESS;
                 return;
             } else if (found_userkey) {
-//                log_debug("Stage 0->3: Sending delete command for key.pem\n");
+//                CAT1_UART_LOG_DEBUG("Stage 0->3: Sending delete command for key.pem\n");
                 current_delete_stage = 3;
                 lte_check_cmd_rtos(LTE_QFDEL_USERKEY, "OK\r\n", 1, 3000, 0);
                 *status = CMD_STATUS_SUCCESS;
                 return;
             } else {
                 // 没有证书，直接完成
-                log_debug("[CAT1][STA] No certificates found, completing deletion\r\n");
+                CAT1_UART_LOG_DEBUG("[CAT1][STA] No certificates found, completing deletion\r\n");
                 set_certificate_deletion_mode(false);
                 found_cacert = false;
                 found_client = false;
@@ -4404,20 +4406,20 @@ void at_qflst(uint8_t *str, uint16_t len, cmd_status_t *status)
         else if (current_delete_stage == 1) {
             // 刚删除完ca.pem，检查是否需要删除client.pem
             if (found_client) {
-//                log_debug("Stage 1->2: Sending delete command for client.pem\n");
+//                CAT1_UART_LOG_DEBUG("Stage 1->2: Sending delete command for client.pem\n");
                 current_delete_stage = 2;
                 lte_check_cmd_rtos(LTE_QFDEL_CLIENT, "OK\r\n", 1, 3000, 0);
                 *status = CMD_STATUS_SUCCESS;
                 return;
             } else if (found_userkey) {
-//                log_debug("Stage 1->3: Sending delete command for key.pem\n");
+//                CAT1_UART_LOG_DEBUG("Stage 1->3: Sending delete command for key.pem\n");
                 current_delete_stage = 3;
                 lte_check_cmd_rtos(LTE_QFDEL_USERKEY, "OK\r\n", 1, 3000, 0);
                 *status = CMD_STATUS_SUCCESS;
                 return;
             } else {
                 // 没有更多证书，删除完成
-//                log_debug("No more certificates after ca.pem, deletion completed\n");
+//                CAT1_UART_LOG_DEBUG("No more certificates after ca.pem, deletion completed\n");
                 set_certificate_deletion_mode(false);
                 found_cacert = false;
                 found_client = false;
@@ -4433,7 +4435,7 @@ void at_qflst(uint8_t *str, uint16_t len, cmd_status_t *status)
         else if (current_delete_stage == 2) {
             // 刚删除完client.pem，检查是否需要删除key.pem
             if (found_userkey) {
-//                log_debug("Stage 2->3: Sending delete command for key.pem and re-query\n");
+//                CAT1_UART_LOG_DEBUG("Stage 2->3: Sending delete command for key.pem and re-query\n");
                 current_delete_stage = 3;
                 lte_check_cmd_rtos(LTE_QFDEL_USERKEY, "OK\r\n", 1, 3000, 0);
                 lte_check_cmd_rtos(LTE_QFLST, "OK\r\n", 1, 3000, 0);
@@ -4512,7 +4514,7 @@ void at_qfopen(uint8_t *str, uint16_t len, cmd_status_t *status)
     }
     
     http_data.file_handle = atoi(num_start);
-    log_debug("[CAT1][DAT] File opened with handle: %d\r\n", http_data.file_handle);
+    CAT1_UART_LOG_DEBUG("[CAT1][DAT] File opened with handle: %d\r\n", http_data.file_handle);
     
     *status = CMD_STATUS_SUCCESS;
 }
@@ -4552,14 +4554,14 @@ void at_qhttpget(uint8_t *str, uint16_t len, cmd_status_t *status)
         }
         else
         {
-            log_debug("[CAT1][ERR] HTTP GET failed, error: %d, http status: %d\r\n", 
+            CAT1_UART_LOG_DEBUG("[CAT1][ERR] HTTP GET failed, error: %d, http status: %d\r\n", 
                      error, http_status);
             *status = CMD_STATUS_FAILED;
         }
     }
     else
     {
-//        log_debug("[CAT1][STA] Invalid QHTTPGET response format\r\n");
+//        CAT1_UART_LOG_DEBUG("[CAT1][STA] Invalid QHTTPGET response format\r\n");
         *status = CMD_STATUS_FAILED;
     }
 }
@@ -4586,10 +4588,10 @@ void at_qhttpreadfile(uint8_t *str, uint16_t len, cmd_status_t *status)
     int result = atoi(num_start);
     
     if (result == 0) {
-        log_debug("[CAT1][STA] HTTP file read to UFS success\r\n");
+        CAT1_UART_LOG_DEBUG("[CAT1][STA] HTTP file read to UFS success\r\n");
         *status = CMD_STATUS_SUCCESS;
     } else {
-        log_debug("[CAT1][ERR] QHTTPREAD failed with error code: %d\r\n", result);
+        CAT1_UART_LOG_DEBUG("[CAT1][ERR] QHTTPREAD failed with error code: %d\r\n", result);
         *status = CMD_STATUS_FAILED;
     }
 }
@@ -4606,7 +4608,7 @@ cmd_status_t parse_qfread_data(uint8_t *str, uint16_t len)
     char *connect_start = strstr(response, "CONNECT ");
     if (!connect_start)
     {
-        log_debug("[CAT1][ERR] CONNECT not found\r\n");
+        CAT1_UART_LOG_DEBUG("[CAT1][ERR] CONNECT not found\r\n");
         return CMD_STATUS_FAILED;
     }
     
@@ -4617,7 +4619,7 @@ cmd_status_t parse_qfread_data(uint8_t *str, uint16_t len)
     char *data_start = strstr(connect_start, "\r\n");
     if (!data_start)
     {
-        log_debug("[CAT1][ERR] No data start found\r\n");
+        CAT1_UART_LOG_DEBUG("[CAT1][ERR] No data start found\r\n");
         return CMD_STATUS_FAILED;
     }
     data_start += 2; // 跳过\r\n
@@ -4652,7 +4654,7 @@ cmd_status_t parse_qfread_data(uint8_t *str, uint16_t len)
         else
         {
             // 读取完成
-            log_debug("[CAT1][STA] File read complete: %d bytes\r\n", http_data.read_offset);
+            CAT1_UART_LOG_DEBUG("[CAT1][STA] File read complete: %d bytes\r\n", http_data.read_offset);
             lte_check_cmd_rtos(LTE_QFCLOSE, "OK\r\n", 1, 3000, 0);
             lte_check_cmd_rtos(LTE_QFDEL, "OK\r\n", 1, 3000, 0);
 //			reStartModeConn();
@@ -4686,14 +4688,14 @@ void at_connect(uint8_t *str, uint16_t len, cmd_status_t *status)
                 break;
             case LTE_QFREAD:
                 // 文件读取的CONNECT，解析数据
-                log_debug("[CAT1][STA] File read CONNECT received\r\n");
+                CAT1_UART_LOG_DEBUG("[CAT1][STA] File read CONNECT received\r\n");
                 *status = parse_qfread_data(str, len);
                 break;
 			case LTE_QFUPL_CACERT:
             case LTE_QFUPL_CLIENT:  
             case LTE_QFUPL_USERKEY:
                 // 证书写入的CONNECT，需要发送证书数据
-                log_debug("[CAT1][STA] Certificate CONNECT received\r\n");
+                CAT1_UART_LOG_DEBUG("[CAT1][STA] Certificate CONNECT received\r\n");
                 *status = CMD_STATUS_SUCCESS;
                 break;
             default:
@@ -4741,7 +4743,7 @@ void at_qfupl(uint8_t *str, uint16_t len, cmd_status_t *status)
 			}
             *status = CMD_STATUS_SUCCESS;
             cert_write_state = CERT_STATE_COMPLETE;
-            log_debug("[CAT1][STA] Certificate write successful, size matched: %d\r\n", upload_size);
+            CAT1_UART_LOG_DEBUG("[CAT1][STA] Certificate write successful, size matched: %d\r\n", upload_size);
             
             // 写入成功，可以释放内存了
             free_cert_data();
@@ -4761,7 +4763,7 @@ void at_qfupl(uint8_t *str, uint16_t len, cmd_status_t *status)
 			}
             *status = CMD_STATUS_FAILED;
             cert_write_state = CERT_STATE_ERROR;
-            log_debug("[CAT1][ERR] Certificate write failed: upload_size(%d) != expected(%d)\r\n", 
+            CAT1_UART_LOG_DEBUG("[CAT1][ERR] Certificate write failed: upload_size(%d) != expected(%d)\r\n", 
                      upload_size, expected_cert_len);
             
             // 写入失败，删除UFS中的文件并发送错误消息
@@ -4774,7 +4776,7 @@ void at_qfupl(uint8_t *str, uint16_t len, cmd_status_t *status)
     } else {
         *status = CMD_STATUS_FAILED;
         cert_write_state = CERT_STATE_ERROR;
-        log_debug("[CAT1][ERR] Invalid QFUPL response format: %s\r\n", str);
+        CAT1_UART_LOG_DEBUG("[CAT1][ERR] Invalid QFUPL response format: %s\r\n", str);
         
         // 释放内存
         free_cert_data();
@@ -4844,13 +4846,13 @@ void at_device_version(uint8_t *str, uint16_t len, cmd_status_t *status)
 		lfs_system_write((char *)cat1Version, strlen((char *)cat1Version),SYS_FIRMWARE_LTE_VER_ID);
         production_cat1_send_errorcode_task(TEST_TASK_ID, TASK_CMD_CAT1_VERSION_REPLY, 0);
         
-        log_debug("[CAT1][DAT] Cat1 version stored: %s\r\n", cat1Version);
+        CAT1_UART_LOG_DEBUG("[CAT1][DAT] Cat1 version stored: %s\r\n", cat1Version);
         *status = CMD_STATUS_SUCCESS;
     }
     else
     {
         production_cat1_send_errorcode_task(TEST_TASK_ID, TASK_CMD_CAT1_VERSION_REPLY, 1);
-        log_debug("[CAT1][ERR] Invalid version format, expected EG800Q prefix, got: %.*s\r\n", clean_len, clean_str);
+        CAT1_UART_LOG_DEBUG("[CAT1][ERR] Invalid version format, expected EG800Q prefix, got: %.*s\r\n", clean_len, clean_str);
         
         *status = CMD_STATUS_FAILED;
     }
@@ -4917,7 +4919,7 @@ void at_device_esim_sn(uint8_t *str, uint16_t len, cmd_status_t *status)
 	// if (clean_len >= MAX_ESIM_SN_LENGTH) {
 	//     clean_len = MAX_ESIM_SN_LENGTH - 1;
 	// }
-//	log_debug("SN: %s\n", clean_str);
+//	CAT1_UART_LOG_DEBUG("SN: %s\n", clean_str);
 	
 	BaseType_t result = send_data_to_test_task(TEST_TASK_ID, 
 	                                          TASK_CMD_CAT1_TEST_REPLAY,
@@ -4947,7 +4949,7 @@ void at_firmware_upgrade(uint8_t *str, uint16_t len, cmd_status_t *status)
     // 查找是否包含升级成功标志
     if (strstr(response, "\"FOTA\",\"END\",0") != NULL) 
     {
-        log_debug("[CAT1][STA] Firmware upgrade success!\r\n");
+        CAT1_UART_LOG_DEBUG("[CAT1][STA] Firmware upgrade success!\r\n");
         firmware_upgrade_state = 3;
         *status = CMD_STATUS_SUCCESS;
         
@@ -4989,7 +4991,7 @@ void at_firmware_upgrade(uint8_t *str, uint16_t len, cmd_status_t *status)
 //        char *comma_ptr = strrchr(response, ',');
 //        if (comma_ptr != NULL) {
 //            int progress = atoi(comma_ptr + 1);
-//            log_debug("Firmware upgrade progress: %d%%\n", progress);
+//            CAT1_UART_LOG_DEBUG("Firmware upgrade progress: %d%%\n", progress);
 //        }
 //    }
     
@@ -5037,13 +5039,13 @@ void at_cgact(uint8_t *str, uint16_t len, cmd_status_t *status)
         {
             if (pdp_state == 1)
             {
-                log_debug("[CAT1][STA] Context 1 is activated\r\n");
+                CAT1_UART_LOG_DEBUG("[CAT1][STA] Context 1 is activated\r\n");
                 // 上下文1已激活，可以执行后续指令
 				reStartModeQiCgact();
             }
             else
             {
-                log_debug("[CAT1][STA] Context 1 is not activated, setting APN\r\n");
+                CAT1_UART_LOG_DEBUG("[CAT1][STA] Context 1 is not activated, setting APN\r\n");
                 // 上下文1未激活，设置APN并激活
                 lte_check_cmd_rtos(LTE_SET_APN, "OK\r\n", 1, 1000, 0);
                 lte_check_cmd_rtos(LTE_SET_CGACT, "OK\r\n", 1, 1000, 0);
@@ -5053,7 +5055,7 @@ void at_cgact(uint8_t *str, uint16_t len, cmd_status_t *status)
         }
         else
         {
-            log_debug("[CAT1][STA] Ignoring context %d\r\n", pdp_id);
+            CAT1_UART_LOG_DEBUG("[CAT1][STA] Ignoring context %d\r\n", pdp_id);
         }
         
         *status = CMD_STATUS_SUCCESS;
@@ -5081,7 +5083,7 @@ void at_cmeError(uint8_t *str, uint16_t len, cmd_status_t *status)
 
             // 检查错误码为418（文件不存在）
             if (strstr((char *)str, "418") != NULL) {
-                log_debug("[CAT1][ERR] File not found error (418), certificate already deleted?\r\n");
+                CAT1_UART_LOG_DEBUG("[CAT1][ERR] File not found error (418), certificate already deleted?\r\n");
                 // 发送错误响应给TEST任务
                 Message_Cmd_Put(CAT1_UART_TASK_ID, ENTRY_TASK_ID, TASK_FACTORY_RESET_REPLY, NULL, 0);
                 Production_Result_Report(REPORT_CAT1_CMD_ERROR);
@@ -5100,12 +5102,12 @@ void at_cmeError(uint8_t *str, uint16_t len, cmd_status_t *status)
             
             // 错误码为407（文件名已存在）
             if (strstr((char *)str, "407") != NULL) {
-                log_debug("[CAT1][ERR] File already exists error (407), attempting delete and retry: %d\r\n",currentCmd->retry_count);
+                CAT1_UART_LOG_DEBUG("[CAT1][ERR] File already exists error (407), attempting delete and retry: %d\r\n",currentCmd->retry_count);
                 
 				
                 // 是否超过最大重试次数
 //                if (currentCmd->retry_count >= 3) {
-//                    log_debug("Max retry count (%d) reached, giving up\n", currentCmd->retry_count);
+//                    CAT1_UART_LOG_DEBUG("Max retry count (%d) reached, giving up\n", currentCmd->retry_count);
 //                    
 //                    // 根据证书类型发送对应的错误响应
 //                    if (currentCmd->type == LTE_QFUPL_CACERT) {
@@ -5122,7 +5124,7 @@ void at_cmeError(uint8_t *str, uint16_t len, cmd_status_t *status)
 //                
 //                // 增加重试计数
 ////                currentCmd->retry_count++;
-//                log_debug("Retry attempt %d for certificate write\n", currentCmd->retry_count);
+//                CAT1_UART_LOG_DEBUG("Retry attempt %d for certificate write\n", currentCmd->retry_count);
 
                 if (currentCmd->type == LTE_QFUPL_CACERT) {
 					// 重置命令队列和状态
@@ -5156,7 +5158,7 @@ void at_cmeError(uint8_t *str, uint16_t len, cmd_status_t *status)
             }
             // 其他错误码的处理
             else {
-                log_debug("[CAT1][ERR] Certificate write failed with error: %s\r\n", str);
+                CAT1_UART_LOG_DEBUG("[CAT1][ERR] Certificate write failed with error: %s\r\n", str);
                 
                 // 根据证书类型发送对应的错误响应
                 if (currentCmd->type == LTE_QFUPL_CACERT) {
@@ -5320,7 +5322,7 @@ static uint8_t process_single_line(uint8_t *ptr, uint16_t len, cmd_status_t *sta
 	// 处理关机指令
 	if (check_powered_down(ptr, len))
 	{
-		log_debug("[CAT1][STA] PowerDown\r\n");
+		CAT1_UART_LOG_DEBUG("[CAT1][STA] PowerDown\r\n");
 			if(production_flag.flag_set_sn)
 			{
 				production_flag.flag_set_sn = 0;
@@ -5373,11 +5375,11 @@ static uint8_t process_single_line(uint8_t *ptr, uint16_t len, cmd_status_t *sta
 			{
 				// 恢复过程中（lteInit开机/60s超时POWERKEY）的POWERED DOWN，跳过lteEventPowerDown
 				if (is_lte_init_recovery) {
-					log_debug("[CAT1][STA] PowerDown ignored\r\n");
+					CAT1_UART_LOG_DEBUG("[CAT1][STA] PowerDown ignored\r\n");
 					if(!checkCat1PowerState())
 					{
 						is_lte_init_recovery = false;  // 恢复过程结束
-//						log_debug("[CAT1][STA] retry power on\r\n");
+//						CAT1_UART_LOG_DEBUG("[CAT1][STA] retry power on\r\n");
 						lteInit();
 					}
 					//连接状态查询？
@@ -5393,7 +5395,7 @@ static uint8_t process_single_line(uint8_t *ptr, uint16_t len, cmd_status_t *sta
 //	else if (len >= 3 && ptr[0] == 'R' && ptr[1] == 'D' && ptr[2] == 'Y') 
 	else if (check_powered_on(ptr, len))
 	{
-		log_debug("[CAT1][STA] Ready!\r\n");
+		CAT1_UART_LOG_DEBUG("[CAT1][STA] Ready!\r\n");
 		lte_recovery_clear();
 		is_lte_init_recovery = false;  // RDY到达，恢复过程结束
 			reset_cat1_state_before_poweron();
@@ -5558,13 +5560,13 @@ static uint8_t process_single_line(uint8_t *ptr, uint16_t len, cmd_status_t *sta
 		// 检查是否是OK/ERROR等无冒号的响应
 		if (len == 2 && strncmp((char *)ptr, "OK", 2) == 0)
 		{
-			log_debug("[CAT1][STA] OK response\r\n");
+			CAT1_UART_LOG_DEBUG("[CAT1][STA] OK response\r\n");
 			*status = CMD_STATUS_SUCCESS;
 			return 1;
 		}
 		else if (len >= 5 && strncmp((char *)ptr, "ERROR", 5) == 0)
 		{
-			log_debug("[CAT1][ERR] ERROR response\r\n");
+			CAT1_UART_LOG_DEBUG("[CAT1][ERR] ERROR response\r\n");
 			*status = CMD_STATUS_FAILED;
 			return 1;
 		}
@@ -5776,7 +5778,7 @@ ResponseResult process_response(lteCmdItem_t *currentCmd, uint8_t *recv_buf, uin
     if (currentCmd && production_flag.flag_factory_reset && is_only_ok_response(recv_buf, recv_len)) {
         if (currentCmd->type == LTE_QFLST && get_certificate_deletion_mode()) {
             // 没有找到证书文件，             是正常情况
-            log_debug("[CAT1][STA] QFLST in deletion mode: no certificates found\r\n");
+            CAT1_UART_LOG_DEBUG("[CAT1][STA] QFLST in deletion mode: no certificates found\r\n");
             set_certificate_deletion_mode(false);
             Message_Cmd_Put(CAT1_UART_TASK_ID,ENTRY_TASK_ID,TASK_FACTORY_RESET_REPLY,NULL,0);
             Production_Result_Report(REPORT_OK);
@@ -5790,7 +5792,7 @@ ResponseResult process_response(lteCmdItem_t *currentCmd, uint8_t *recv_buf, uin
 	if (currentCmd && currentCmd->type == LTE_MQTT_ISSTATE && !qmtconn_info_seen &&
 	    response_is_bare_ok(recv_buf, recv_len))
 	{
-		log_debug("[CAT1][STA] QMTCONN? bare OK, no mqtt session, restart conn\r\n");
+		CAT1_UART_LOG_DEBUG("[CAT1][STA] QMTCONN? bare OK, no mqtt session, restart conn\r\n");
 		isMqttConnected = false;
 		if (!is_reconnecting) {
 			mqtt_disconnect_flush_queue();
@@ -5823,7 +5825,7 @@ ResponseResult process_response(lteCmdItem_t *currentCmd, uint8_t *recv_buf, uin
 		
 		cmd_status_t urc_status;
 		at_cmd_analysis(urc_buf, recv_len, &urc_status);  // ← 用副本
-		log_debug("[CAT1][DAT] URC processed, urc_status=%d\r\n", urc_status);
+		CAT1_UART_LOG_DEBUG("[CAT1][DAT] URC processed, urc_status=%d\r\n", urc_status);
 		urc_processed = true;
         //继续检查命令响应
     }
@@ -5843,7 +5845,7 @@ ResponseResult process_response(lteCmdItem_t *currentCmd, uint8_t *recv_buf, uin
         // 检查是否收到ERROR
         if (strstr((char *)recv_buf, "\r\nERROR\r\n") != NULL || 
             strstr((char *)recv_buf, "ERROR\r\n") != NULL) {
-            log_debug("[CAT1][ERR] MQTT command ERROR, need retry\r\n");
+            CAT1_UART_LOG_DEBUG("[CAT1][ERR] MQTT command ERROR, need retry\r\n");
             result = RESPONSE_ERROR;
             return result;
         }
@@ -5871,7 +5873,7 @@ ResponseResult process_response(lteCmdItem_t *currentCmd, uint8_t *recv_buf, uin
         
         // 收到ACK，返回成功
         if (has_ack) {
-            log_debug("[CAT1][STA] MQTT command ACK (%s) received\r\n", currentCmd->ack);
+            CAT1_UART_LOG_DEBUG("[CAT1][STA] MQTT command ACK (%s) received\r\n", currentCmd->ack);
             result = RESPONSE_SUCCESS;
 
 			if (currentCmd->type == LTE_MQTT_PUBMESSAGEDATA) {
@@ -5912,7 +5914,7 @@ ResponseResult process_response(lteCmdItem_t *currentCmd, uint8_t *recv_buf, uin
 
         // 修复: has_ack=false时返回RESPONSE_NONE, 不释放currentCmd
         // 之前返回RESPONSE_SUCCESS导致currentCmd被释放但g_mqtt_sending不清 → 永久死锁
-        log_debug("[CAT1][DBG] MQTT ack NOT matched, keeping currentCmd type=%d\r\n", currentCmd->type);
+        CAT1_UART_LOG_DEBUG("[CAT1][DBG] MQTT ack NOT matched, keeping currentCmd type=%d\r\n", currentCmd->type);
         result = RESPONSE_NONE;
         return result;
     }
@@ -5961,7 +5963,7 @@ ResponseResult process_response(lteCmdItem_t *currentCmd, uint8_t *recv_buf, uin
 
             if (cmd_status == CMD_STATUS_FAILED)
             {
-//                log_debug("[CAT1][ERR] enter at cmd analysis\r\n");
+//                CAT1_UART_LOG_DEBUG("[CAT1][ERR] enter at cmd analysis\r\n");
                 result = RESPONSE_ERROR;
             }
             else if (cmd_status == CMD_STATUS_SUCCESS)
@@ -5976,7 +5978,7 @@ ResponseResult process_response(lteCmdItem_t *currentCmd, uint8_t *recv_buf, uin
 					
 					// 此时MQTT网络注册成功，主题订阅完成并且第一次进入M5模式而非CAT1重启
 //                    if ((currentCmd->type == LTE_MQTT_SUB_WARNINGSTATE) && first_enter_M5_mode) {
-//                        log_debug("LTE_MQTT_SUB_WARNINGSTATE response complete, sending messages\n");
+//                        CAT1_UART_LOG_DEBUG("LTE_MQTT_SUB_WARNINGSTATE response complete, sending messages\n");
 //						first_enter_M5_mode = false;
 //                        cat1_send_reply_task(COMM_TASK_ID, TASK_COMM_MODE_REPORT);
 //                    }
@@ -6031,7 +6033,7 @@ ResponseResult process_response(lteCmdItem_t *currentCmd, uint8_t *recv_buf, uin
             }
             else {
                 // 不是URC，也不是命令响应，可能是乱码或无效数据
-                log_debug("[CAT1][ERR] Unknown data (not URC), discarding and returning ERROR\r\n");
+                CAT1_UART_LOG_DEBUG("[CAT1][ERR] Unknown data (not URC), discarding and returning ERROR\r\n");
                 result = RESPONSE_ERROR;
             }
         }
@@ -6127,13 +6129,13 @@ bool CELL_GetCurrentData(CellInfo_t *cell_info_out)
 // 删除设备回包完成后延时回调
 static void DeleteResponseTimerCallback(void *argument)
 {
-    log_debug("[CAT1][STA] DeleteResponseTimer fired\r\n");
+    CAT1_UART_LOG_DEBUG("[CAT1][STA] DeleteResponseTimer fired\r\n");
 	Message_Cmd_Put(CAT1_UART_TASK_ID,ENTRY_TASK_ID,TASK_CAT1_DELETE_DEVICE,NULL,0);
 }
 
 void TimerCallback_checkMqttState(void *argument)
 {
-	log_debug("[CAT1][STA] TimerCallback checkMqtt\r\n");
+	CAT1_UART_LOG_DEBUG("[CAT1][STA] TimerCallback checkMqtt\r\n");
 	if(g_mqtt_sending == 0 || !isMqttConnected)
 	{
 		lteMqttConnState();
@@ -6152,14 +6154,14 @@ void TimerCallback_checkMqttState(void *argument)
 
 void TimerCallback_checkDeviceState(void *argument)
 {
-	log_debug("[CAT1][STA] Device TimerCallback\r\n");
+	CAT1_UART_LOG_DEBUG("[CAT1][STA] Device TimerCallback\r\n");
 	
 		if(g_mqtt_sending != 0 || is_auto_reporting)
 		{	
 		if (queue_entry_tick != 0) {
 			uint32_t elapsed = osKernelGetTickCount() - queue_entry_tick;
 			if (elapsed >= osMS2TicksRound(2 * 60 * 1000)) {
-				log_debug("[CAT1][DAT] queue non-empty >2min (%lu ms), reset all\r\n", elapsed);
+				CAT1_UART_LOG_DEBUG("[CAT1][DAT] queue non-empty >2min (%lu ms), reset all\r\n", elapsed);
 				g_mqtt_sending = 0;
 				mqtt_send_start_tick = 0;
 				is_auto_reporting = false;
@@ -6173,7 +6175,7 @@ void TimerCallback_checkDeviceState(void *argument)
 			if (g_mqtt_sending == 1 && mqtt_send_start_tick != 0) {
 				uint32_t send_elapsed = osKernelGetTickCount() - mqtt_send_start_tick;
 				if (send_elapsed >= osMS2TicksRound(30 * 1000)) {
-					log_debug("[CAT1][WDT] MQTT send timeout 30s, force reset\r\n");
+					CAT1_UART_LOG_DEBUG("[CAT1][WDT] MQTT send timeout 30s, force reset\r\n");
 					g_mqtt_sending = 0;
 					mqtt_send_start_tick = 0;
 					// 检查并处理暂存的COMM消息
@@ -6226,7 +6228,7 @@ bool checkCat1PowerState(void)
 	is_power_checking = false;
 	
 	if (sem_status == osOK) {
-		log_debug("[CAT1][STA] hardware is Power on\r\n");
+		CAT1_UART_LOG_DEBUG("[CAT1][STA] hardware is Power on\r\n");
 		// 检活成功: 清除残留的命令状态和UART数据, 确保后续命令从干净状态开始
 		if (currentCmd) {
 			osMutexAcquire(LteMutex, osWaitForever);
@@ -6239,7 +6241,7 @@ bool checkCat1PowerState(void)
 		return true;
 	} else {
 		// 超时未收到OK
-		log_debug("[CAT1][STA] hardware is Power off\r\n");
+		CAT1_UART_LOG_DEBUG("[CAT1][STA] hardware is Power off\r\n");
 		return false;
 	}
 }
@@ -6261,7 +6263,7 @@ static void vCAT1UartTask(void *argument)
 	static uint16_t recv_len = 0;
 	static TickType_t LastWakeTime = 0;
 
-	log_debug("[CAT1][STA] Task %d started\r\n", my_task_info->task_id);
+	CAT1_UART_LOG_DEBUG("[CAT1][STA] Task %d started\r\n", my_task_info->task_id);
 
 	static uint8_t expecting_extra_response = 0; // 标记是否期待额外响应
 	
@@ -6286,7 +6288,7 @@ static void vCAT1UartTask(void *argument)
 	{
 		// 检查任务是否应该阻塞
         if (should_task_block()) {
-            log_debug("[CAT1][STA] task blocked, waiting for START command\r\n");
+            CAT1_UART_LOG_DEBUG("[CAT1][STA] task blocked, waiting for START command\r\n");
             wait_for_task_unblock();
             
             // 重新设置任务状态为运行中
@@ -6418,7 +6420,7 @@ static void vCAT1UartTask(void *argument)
 			}
 			if (cat1_receive_msg.source_id == UART_DATARECV_ID && cat1_receive_msg.data != NULL)
 			{
-//				log_debug("[CAT1][RCV] receive length: %d\r\n", cat1_receive_msg.data_length);
+//				CAT1_UART_LOG_DEBUG("[CAT1][RCV] receive length: %d\r\n", cat1_receive_msg.data_length);
 				// 将数据插入缓冲区
 				insertPacket(cat1_receive_msg.data, cat1_receive_msg.data_length);
 				DEMO_BT_Free(cat1_receive_msg.data);
@@ -6470,7 +6472,7 @@ static void vCAT1UartTask(void *argument)
 							pending_buf_len[pending_buf_tail]  = cat1_receive_msg.data_length;
 							pending_buf_tail = (pending_buf_tail + 1) % PENDING_BUF_SIZE;
 							pending_buf_count++;
-							log_debug("[CAT1][STA] MQTT busy, COMM msg pending (buf=%d)\\r\\n", pending_buf_count);
+							CAT1_UART_LOG_DEBUG("[CAT1][STA] MQTT busy, COMM msg pending (buf=%d)\\r\\n", pending_buf_count);
 						}
 					}
 				}
@@ -6479,7 +6481,7 @@ static void vCAT1UartTask(void *argument)
 					if (cat1_receive_msg.data != NULL)
 					{
 						// 启动HTTP下载流程
-//						log_debug("TASK_AUDIO_REALTIME:%s\n",cat1_receive_msg.data);
+//						CAT1_UART_LOG_DEBUG("TASK_AUDIO_REALTIME:%s\n",cat1_receive_msg.data);
 						start_http_download(cat1_receive_msg.data, cat1_receive_msg.data_length); 
 						DEMO_BT_Free(cat1_receive_msg.data);
 					}
@@ -6503,7 +6505,7 @@ static void vCAT1UartTask(void *argument)
 				// 检查currentCmd是否为NULL，确保只有空闲时才处理新指令
 				if (!currentCmd && lteCmdQueueHead != lteCmdQueueTail) {
 					currentCmd = &lteCmdQueue[lteCmdQueueHead];
-//					log_debug("Processing cmd type: %d, queue head: %d, tail: %d\n", 
+//					CAT1_UART_LOG_DEBUG("Processing cmd type: %d, queue head: %d, tail: %d\n", 
 //							 currentCmd->type, lteCmdQueueHead, lteCmdQueueTail);
 					// 集中化DTR管理：发送指令前统一拉低DTR唤醒模块
 					// DTR=LOW后加延时确保模组从睡眠中完全唤醒(EG800Q需~20ms)
@@ -6575,7 +6577,7 @@ static void vCAT1UartTask(void *argument)
 							unsigned int  p_len   = pending_buf_len[pending_buf_head];
 							pending_buf_head = (pending_buf_head + 1) % PENDING_BUF_SIZE;
 							pending_buf_count--;
-							log_debug("[CAT1][STA] Processing pending COMM msg (COMPLETE), len=%u\r\n", p_len);
+							CAT1_UART_LOG_DEBUG("[CAT1][STA] Processing pending COMM msg (COMPLETE), len=%u\r\n", p_len);
 							mqtt_publish(p_data, p_len);
 							DEMO_BT_Free(p_data);
 						}
@@ -6602,7 +6604,7 @@ static void vCAT1UartTask(void *argument)
 								lteCmdItem_t *next = &lteCmdQueue[lteCmdQueueHead];
 								if (next->type == LTE_MQTT_PUBMESSAGEDATA) {
 									lteCmdQueueHead = (lteCmdQueueHead + 1) % AT_CMD_QUEUE_SIZE;
-									log_debug("[CAT1][DBG] skip PUBMESSAGEDATA (OK bundled with >)\r\n");
+									CAT1_UART_LOG_DEBUG("[CAT1][DBG] skip PUBMESSAGEDATA (OK bundled with >)\r\n");
 								}
 								g_skip_pubmsgd = false;
 							}
@@ -6629,7 +6631,7 @@ static void vCAT1UartTask(void *argument)
 							unsigned int  p_len   = pending_buf_len[pending_buf_head];
 							pending_buf_head = (pending_buf_head + 1) % PENDING_BUF_SIZE;
 							pending_buf_count--;
-							log_debug("[CAT1][STA] Processing pending COMM msg (SUCCESS), len=%u\r\n", p_len);
+							CAT1_UART_LOG_DEBUG("[CAT1][STA] Processing pending COMM msg (SUCCESS), len=%u\r\n", p_len);
 							mqtt_publish(p_data, p_len);
 							DEMO_BT_Free(p_data);
 						}
@@ -6679,7 +6681,7 @@ static void vCAT1UartTask(void *argument)
 					// 重连/断连期间收到的残留ERROR，不触发整机重启，直接丢弃，等重连成功后业务重新入队
 					if (is_reconnecting || !isMqttConnected)
 					{
-						log_debug("[CAT1][STA] stale ERROR ignored during reconnect\r\n");
+						CAT1_UART_LOG_DEBUG("[CAT1][STA] stale ERROR ignored during reconnect\r\n");
 						osEventFlagsClear(LteEventId, LTE_EVENT_RESP_RECEIVED);
 						break;
 					}
@@ -6700,7 +6702,7 @@ static void vCAT1UartTask(void *argument)
 		// 检查固定60秒超时 - 如果60秒没有收到任何响应，重启LTE
 		if ((currentCmd || g_mqtt_sending != 0) && (osKernelGetTickCount() - LastWakeTime) > osMS2TicksRound(CAT1_COMMAND_TIMEOUT))
 		{
-			log_debug("[CAT1][ERR] LTE no response for 60s, rebooting(%d)\r\n",lte_reboot_count);
+			CAT1_UART_LOG_DEBUG("[CAT1][ERR] LTE no response for 60s, rebooting(%d)\r\n",lte_reboot_count);
 
 			// 增加重启计数
 			lte_reboot_count++;
@@ -6714,7 +6716,7 @@ static void vCAT1UartTask(void *argument)
 			{
 				lte_recovery_clear();
 
-				log_debug("[CAT1][ERR] send POWERKEY pulse, wait for RDY\r\n");
+				CAT1_UART_LOG_DEBUG("[CAT1][ERR] send POWERKEY pulse, wait for RDY\r\n");
 				is_lte_init_recovery = true;  // 标记恢复过程，阻止POWERED DOWN时阻塞任务
 				lteInit();
 
@@ -6733,13 +6735,13 @@ static void vCAT1UartTask(void *argument)
 		{
 			lte_init_pending = false;  // 清除标志，避免重复进入
 			is_lte_init_recovery = false;  // 超时退出恢复过程
-			log_debug("[CAT1][STA] wait timeout 10s, send AT\r\n");
+			CAT1_UART_LOG_DEBUG("[CAT1][STA] wait timeout 10s, send AT\r\n");
 
 			// AT 探活，判断模块开机/关机状态
 			if (checkCat1PowerState())
 			{
 				// 已开机，正常恢复运行
-				log_debug("[CAT1][STA] checkCat1PowerState: module is ON, resuming\r\n");
+				CAT1_UART_LOG_DEBUG("[CAT1][STA] checkCat1PowerState: module is ON, resuming\r\n");
 				set_cat1_state(LTE_TASK_RUNNING);
 				unblock_cat1_task();
 //				drv_gpio_write(OM_GPIO0, GPIO_MASK(PAD_CAT1_DTR), GPIO_LEVEL_LOW);
@@ -6754,13 +6756,13 @@ static void vCAT1UartTask(void *argument)
 					ltePowerDownPrepare();
 					// 关机
 					lteShutdown();
-					log_debug("[CAT1][ERR] checkCat1PowerState: module is OFF\r\n");
+					CAT1_UART_LOG_DEBUG("[CAT1][ERR] checkCat1PowerState: module is OFF\r\n");
 				}
 				else if (lte_hw_retry_count > 0 &&
 				         (osKernelGetTickCount() - lte_hw_retry_last_ts) < osMS2TicksRound(LTE_HW_RETRY_INTERVAL))
 				{
 					// 未到间隔时间，继续等待；重新挂起 pending 以便下次循环再判断
-					log_debug("[CAT1][ERR] checkCat1PowerState: module is OFF, HW retry %d/%d, wait interval\r\n",
+					CAT1_UART_LOG_DEBUG("[CAT1][ERR] checkCat1PowerState: module is OFF, HW retry %d/%d, wait interval\r\n",
 					          lte_hw_retry_count, LTE_HW_RETRY_MAX);
 					lte_init_pending = true;
 					lte_init_wait_start = osKernelGetTickCount();
@@ -6770,7 +6772,7 @@ static void vCAT1UartTask(void *argument)
 					// 可以执行本次硬件重试
 					lte_hw_retry_count++;
 					lte_hw_retry_last_ts = osKernelGetTickCount();
-					log_debug("[CAT1][ERR] checkCat1PowerState: module is OFF, lteInit() again (%d/%d)\r\n",
+					CAT1_UART_LOG_DEBUG("[CAT1][ERR] checkCat1PowerState: module is OFF, lteInit() again (%d/%d)\r\n",
 					          lte_hw_retry_count, LTE_HW_RETRY_MAX);
 					is_lte_init_recovery = true;
 					lteInit();
@@ -6786,7 +6788,7 @@ static void vCAT1UartTask(void *argument)
 		if (g_mqtt_sending == 1 && !currentCmd && lteCmdQueueHead == lteCmdQueueTail) {
 			if (mqtt_send_start_tick != 0 &&
 			    (osKernelGetTickCount() - mqtt_send_start_tick) > osMS2TicksRound(5000)) {
-				log_debug("[CAT1][WDT] g_mqtt_sending=1 but no active cmd for 5s, force clear\r\n");
+				CAT1_UART_LOG_DEBUG("[CAT1][WDT] g_mqtt_sending=1 but no active cmd for 5s, force clear\r\n");
 				g_mqtt_sending = 0;
 				mqtt_send_start_tick = 0;
 			}

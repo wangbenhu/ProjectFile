@@ -60,7 +60,7 @@
 #define TEST_ADC_ELECTRIC (1267)
 #define TEST_ADC_ELECTRIC_OFFSET (66)
 #define TEST_AGING_TIME (60*1000)//unit ms
-#define TEST_AGING_STOP_BLE_DELAY_TIME (3*1000)//unit ms
+#define TEST_AGING_STOP_BLE_DELAY_TIME (1*1000)//unit ms
 #define TSTS_ASING_LED_TIME (3*1000)
 /*********************************
 .************************************
@@ -95,6 +95,7 @@ static uint8_t asing_led_set = 0;
 static uint8_t asing_led_clear_flag = 0;
 
 ASING_STOP_BLE_FLAG_T asing_stop_ble_flag = ASING_STOP_BLE_FLAG_NONE;//0->1->2  默认->上报->上报完成
+
 /*********************************************************************
  * GLOBAL VARIABLES
  */

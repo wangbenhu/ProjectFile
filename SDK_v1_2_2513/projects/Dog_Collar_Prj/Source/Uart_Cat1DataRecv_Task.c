@@ -36,6 +36,11 @@
 /*********************************************************************
  * MACROS
  */
+ #if (1) 
+	#define CAT1_UART_RECVER_LOG_DEBUG(format, ...)               	log_debug(format,  ## __VA_ARGS__)
+#else
+	#define CAT1_UART_RECVER_LOG_DEBUG(format, ...)  
+#endif
 #define EVENT_SYSTEM_RESERVE_MASK   0x00FF
 
 #define UART_DATARECV_TASK_PRIORITY (osPriorityNormal)
@@ -107,7 +112,7 @@ bool safe_block_uart_task(void)
     uint32_t current_flags = osEventFlagsGet(UartEventId);
 
     if (current_flags & UART_EVENT_TASK_BLOCK) {
-        log_debug("[C-UART][STA] task already blocked, skip block\r\n");
+        CAT1_UART_RECVER_LOG_DEBUG("[C-UART][STA] task already blocked, skip block\r\n");
         return false;
     }
     
@@ -127,7 +132,7 @@ bool safe_unblock_uart_task(void)
     
     // 如果不在阻塞状态，不需要解除
     if (!(current_flags & UART_EVENT_TASK_BLOCK)) {
-        log_debug("[C-UART][STA] not blocked, skip unblock\r\n");
+        CAT1_UART_RECVER_LOG_DEBUG("[C-UART][STA] not blocked, skip unblock\r\n");
 		
         return false;
     }
@@ -238,13 +243,13 @@ static void vUartDataRecvTask(void *argument)
     uint16_t lteFifoLength = 0;
     Message_t received_uart1_msg;
 
-    log_debug("[C-UART][STA] Task %d started\r\n", my_task_info->task_id);
+    CAT1_UART_RECVER_LOG_DEBUG("[C-UART][STA] Task %d started\r\n", my_task_info->task_id);
 
     for(;;) 
     {
         // 检查任务是否应该阻塞
         if (should_uart_task_block()) {
-            log_debug("[C-UART][STA] task entering block\r\n");
+            CAT1_UART_RECVER_LOG_DEBUG("[C-UART][STA] task entering block\r\n");
             wait_for_uart_task_unblock();
         }
         
@@ -288,7 +293,7 @@ static void vUartDataRecvTask(void *argument)
             
             if (uart_timeout_counter >= UART_TIMEOUT_THRESHOLD) {
                 uart_cut_len = om_fifo_len(&lte_uartFifo_env.fifo);
-                log_debug("[C-UART][WTR] fifo watermark %u/4096\r\n", uart_cut_len); // 压测水位
+                CAT1_UART_RECVER_LOG_DEBUG("[C-UART][WTR] fifo watermark %u/4096\r\n", uart_cut_len); // 压测水位
                 uart_data_pending = false;
                 uart_data_processing = true;
                 uart_timeout_counter = 0;
@@ -336,12 +341,12 @@ static void vUartDataRecvTask(void *argument)
 							{
 								drv_uart_write(LOG_UART, (uint8_t *)"[C-UART][RCV]", (uint32_t)13, 10);
 								drv_uart_write(LOG_UART, (uint8_t *)lteRecvSubpackage, (uint32_t)lteFifoLength, 10);
-								log_debug("\r\n");
+								CAT1_UART_RECVER_LOG_DEBUG("\r\n");
 							}
                             // 检查是否正在电源检测且收到"OK"
                             if (is_power_checking && (strstr((char *)lteRecvSubpackage, "OK") != NULL ||
                                                       strstr((char *)lteRecvSubpackage, "ERROR") != NULL)) {
-                                log_debug("[C-UART][STA] Power check response (OK/ERROR)\r\n");
+                                CAT1_UART_RECVER_LOG_DEBUG("[C-UART][STA] Power check response (OK/ERROR)\r\n");
                                 osSemaphoreRelease(Cat1PowerCheckSem);
                                 DEMO_BT_Free(lteRecvSubpackage);
                                 continue;

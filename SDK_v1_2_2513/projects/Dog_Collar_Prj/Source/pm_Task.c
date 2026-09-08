@@ -38,6 +38,12 @@
 /*********************************************************************
  * MACROS
  */
+#if (0)
+	#define PM_LOG_DEBUG(format, ...)               	log_debug(format,  ## __VA_ARGS__)
+#else
+	#define PM_LOG_DEBUG(format, ...)               
+#endif
+
 #define EVENT_SYSTEM_RESERVE_MASK   0x00FF
 
 #define PM_TASK_PRIORITY (osPriorityNormal)
@@ -166,10 +172,10 @@ uint8_t Battery_SocUpdate(uint32_t batt_mv,
         soc_last = 100;  // 同时更新soc_last
 		
 		initialized = 1;
-	//	log_debug("Battery_FullDetect:%d,%d\r\n",soc_last,soc_now);
+	//	PM_LOG_DEBUG("Battery_FullDetect:%d,%d\r\n",soc_last,soc_now);
 		return soc_now;
 	}
-//	log_debug("Battery_SocUpdate:%d,%d %d\r\n",soc_last,soc_now,g_PMBatTimerMs);
+//	PM_LOG_DEBUG("Battery_SocUpdate:%d,%d %d\r\n",soc_last,soc_now,g_PMBatTimerMs);
 
 
 	/* 第一次调用时，直接使用计算值 */
@@ -230,7 +236,7 @@ uint8_t Battery_SocUpdate(uint32_t batt_mv,
             soc_last = 100;
             soc_drop_ms = 0;
 
-            log_debug("Battery_FullHold:%d,%d,%d\r\n",
+            PM_LOG_DEBUG("Battery_FullHold:%d,%d,%d\r\n",
                             soc_last, soc_now, batt_mv);
 			
 			log_batt_debug("Battery_FullHold:%d,%d,%d\r\n",
@@ -399,7 +405,7 @@ static uint8_t PM_BatteryCollectAndUpdate(uint32_t adc_value)
 
 	log_batt_debug("PM_BatteryCollectAndUpdate = ADC[%d] state[%d] Percentage[%d] filter[%d]\r\n",
 				   adc_value,charge_status,g_PMBatStatus.BAT_Capacity,voltage_mv_filter);
-	log_debug("PM_BatteryCollectAndUpdate = ADC[%d] state[%d] Percentage[%d] filter[%d]\r\n",
+	PM_LOG_DEBUG("PM_BatteryCollectAndUpdate = ADC[%d] state[%d] Percentage[%d] filter[%d]\r\n",
 			  adc_value,charge_status,g_PMBatStatus.BAT_Capacity,voltage_mv_filter);
 
 	return g_PMBatStatus.BAT_Capacity;
@@ -486,7 +492,7 @@ void PM_battery_timeout(void)
 		.data = &PM_Task_Bat_Status_Tmp,
 		.data_length=sizeof(PM_Task_Bat_Status_Tmp),
 	};
-//	log_debug("osMessageQueuePut PM_TASK_ID \r\n");
+//	PM_LOG_DEBUG("osMessageQueuePut PM_TASK_ID \r\n");
 					// 添加队列监控
 //uint32_t queue_count = osMessageQueueGetCount(entry_task_info->queue_handle);
 //uint32_t queue_capacity = osMessageQueueGetCapacity(entry_task_info->queue_handle);
@@ -532,7 +538,7 @@ static void vPMTask(void *argument)
 	if (g_pmEntryLowPowerSemaphore == NULL) {
 		g_pmEntryLowPowerSemaphore = osSemaphoreNew(1, 0, NULL);
     } else {
-//        log_debug("vPMTask already exists, skip creation\r\n");
+//        PM_LOG_DEBUG("vPMTask already exists, skip creation\r\n");
     }
     
 	PM_Timer_ID = osTimerNew(PMTimerCallback,PM_Timer_type,NULL,&PM_Timer_attr);
@@ -542,7 +548,6 @@ static void vPMTask(void *argument)
     for(;;) 
     {
 			//获取充电状态
-	//	log_debug("p\r\n");
 		PM_GetChargeStatus_Update();
 		if(battery_updata_flag_get())
 		{
@@ -557,7 +562,7 @@ static void vPMTask(void *argument)
 		
         if(osOK == osMessageQueueGet(my_task_info->queue_handle,&received_msg, NULL, 100))
         { 
-            log_debug("vPMTask %d received from:%d,%lu,%d,%d\r\n", 
+            PM_LOG_DEBUG("vPMTask %d received from:%d,%lu,%d,%d\r\n", 
                   my_task_info->task_id, received_msg.source_id, received_msg.command,*(uint8_t*)received_msg.data,received_msg.data_length);
             if(received_msg.source_id == ENTRY_TASK_ID)
             { 

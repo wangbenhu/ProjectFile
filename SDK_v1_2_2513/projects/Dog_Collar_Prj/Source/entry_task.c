@@ -219,11 +219,14 @@ static uint8_t gps_status =0;
 static LowPowerOffEnum_t low_power_off = LOW_POWER_OFF;//低功耗关机标志0/1 关/开
 static bool s_Charge_Stop_Flag = false;
 static uint8_t entry_low_sleep_flag = SYSTEM_POWER_STATE_DEFAULT;
-static uint8_t wdt_start_flag = 0;
+static bool wdt_start_flag = 0;
 static bool device_reset_flag = false;
 static uint8_t product_entry_flag = 0; //产测进入标志
 static bool cat1_del_device_flag = false;//删除设备的标志
 static bool cat1_restart_flag = false;//M4模式下判断LTE是否重启条件的标志
+
+static uint8_t power_on_lte_reset_flag = 0;//上电LTE重置标志
+static bool dfu_wdt_status_recird = false;
 static struct 
 {
 	uint8_t user_define_light_start_flag;
@@ -385,14 +388,14 @@ int set_entry_low_sleep_flag(SystemPowerState_t state) {
 */
 void wdt_flag_set(void)
 {
-	wdt_start_flag = 1;
+	wdt_start_flag = true;
 }
 /*
 * @brief: 获取看门狗标志位
 * @param: void
 * @return: uint8_t: 看门狗标志位
 */
-uint8_t wdt_flag_get(void)
+bool wdt_flag_get(void)
 {
 	return wdt_start_flag;
 }
@@ -403,7 +406,7 @@ uint8_t wdt_flag_get(void)
 */
 void wdt_flag_clear(void)
 {
-	wdt_start_flag = 0;
+	wdt_start_flag = false;
 }
 /*
 * @brief: 初始化看门狗
@@ -424,6 +427,32 @@ void m_wdt_stop(void)
 {
 	drv_wdt_init(0);
 	wdt_flag_clear();
+}
+/**
+ * @brief: 设置dfu看门狗状态
+ * @param: void
+ * @return: void
+ */
+void dfu_start_wdt_set(void)
+{
+	dfu_wdt_status_recird = wdt_flag_get();
+	if(dfu_wdt_status_recird)
+	{
+		m_wdt_stop();
+	}
+}
+/**
+ * @brief: 停止dfu看门狗
+ * @param: void
+ * @return: void
+ */
+void dfu_stop_wdt_set(void)
+{
+	if(dfu_wdt_status_recird)
+	{
+		dfu_wdt_status_recird =false;
+		m_wdt_init();
+	}
 }
 /*
 * @brief: 喂狗
@@ -466,7 +495,7 @@ uint8_t Message_Cmd_Put(TASK_ID_T source_id,
 	// 添加队列监控
 	uint32_t queue_count = osMessageQueueGetCount(pTaskInfo->queue_handle);
 	uint32_t queue_capacity = osMessageQueueGetCapacity(pTaskInfo->queue_handle);
-	log_debug("Message_Cmd_Put:%lu,%lu messages\r\n", queue_count, queue_capacity);
+	//log_debug("Message_Cmd_Put:%lu,%lu messages\r\n", queue_count, queue_capacity);
 	
 	if(osOK != osMessageQueuePut(pTaskInfo->queue_handle, &msg, NULL, 0))
 	{
@@ -780,6 +809,7 @@ void ModeM2Handler(void) {
 	
 	if(low_power_off != LOW_POWER_ON)
 	{
+		log_debug("LTE stop_22222222222\r\n");
 		//关闭CAT1_UART_TASK_ID任务
 		Message_Cmd_Put(ENTRY_TASK_ID,CAT1_UART_TASK_ID,TASK_CMD_STOP,NULL,0);
 		//关闭GNSS_UART_TASK_ID任务
@@ -812,6 +842,7 @@ void ModeM3Handler(void) {
     log_debug("...Mode M3 running...:%d\r\n",PM_GetBatteryCapacity());
 	
     COMM_MODE_REPORT(MODE_M3);
+	log_debug("lte start_ 7777777777777\r\n");
     	//关闭CAT1_UART_TASK_ID任务
     Message_Cmd_Put(ENTRY_TASK_ID,CAT1_UART_TASK_ID,TASK_CMD_START,NULL,0);
 //	//开启GNSS_UART_TASK_ID任务
@@ -870,6 +901,11 @@ int get_quality_random_binary(void) {
     
     return state & 1;
 }
+/**
+* @brief: 模式M4处理函数
+* @param: void
+* @return: void
+*/
 void m4_to_production_config(void)
 {
 	log_debug("m4_to_production_config = %d %d\r\n",FORE_MODE_STATUS,entry_low_sleep_flag);
@@ -879,7 +915,9 @@ void m4_to_production_config(void)
 		
 		if(entry_low_flag == SYSTEM_POWER_STATE_SHUTDOWN_READY)
 		{
+			log_debug(" Gat1 stop _ 111111111\r\n");
 			Message_Cmd_Put(ENTRY_TASK_ID,CAT1_UART_TASK_ID,TASK_CMD_STOP,NULL,0);
+			
 			Message_Cmd_Put(ENTRY_TASK_ID,TEST_TASK_ID,TASK_CMD_START,NULL,0);
 			led_force_stop_all();
 			set_entry_low_sleep_flag(SYSTEM_POWER_STATE_SHUTDOWN);
@@ -911,14 +949,18 @@ void ModeM4Handler(void) {
 	
     COMM_MODE_REPORT(MODE_M4);//存储当前的电量和模式
 	//关闭CAT1_UART_TASK_ID任务
+	log_debug("LTE stop_ 333333333333\r\n");
 	Message_Cmd_Put(ENTRY_TASK_ID,CAT1_UART_TASK_ID,TASK_CMD_STOP,NULL,0);
 	//开启GNSS_UART_TASK_ID任务
 	if(SetModePare.UserStatus == LFS_USER_INFO_GET_SUCCEED)
 	{
+		log_debug("GPS start_ 44444444444\r\n");
   		Entry_Control_GPS_Start_Power();//需求变更
+		power_on_lte_reset_flag = 1;//上电LTE重置标志
 	}
 	else
 	{
+		log_debug("GPS stop_ 5555555555555\r\n");
 		//关闭GPS任务 需求变更版本02010520260901
 		Entry_Control_GPS_Stop_Power();
 	}
@@ -947,6 +989,7 @@ void ModeM5Handler(void) {
 	pm_sleep_prevent(PM_ID_ENTRY_SLEEP);
 	
     COMM_MODE_REPORT(MODE_M5);
+	log_debug("lte start_ 77777777\r\n");
 //     //开启CAT1_UART_TASK_ID任务
     Message_Cmd_Put(ENTRY_TASK_ID,CAT1_UART_TASK_ID,TASK_CMD_START,NULL,0);
 //// 	//开启GNSS_UART_TASK_ID任务
@@ -1368,6 +1411,7 @@ void Factory_Data_Reset(void)
 		device_reset_flag = true;
 		//延时5s
 		osDelay(osMS2TicksRound(5000));
+		log_debug("lte stop_ 555555555555\r\n");
 			//关闭CAT1_UART_TASK_ID任务
 		Message_Cmd_Put(ENTRY_TASK_ID,CAT1_UART_TASK_ID,TASK_CMD_STOP,NULL,0);
 	}
@@ -1616,6 +1660,9 @@ static osStatus_t EntryTask_HandleMessageQueue(TaskInfo_t* pEntryTaskInfo, Messa
         {
             if(received_msg->command == TASK_TEST_START)
             {
+				log_debug("lte stop GPS stop_ 6666666666666\r\n");
+				Message_Cmd_Put(ENTRY_TASK_ID,CAT1_UART_TASK_ID,TASK_CMD_STOP,NULL,0);
+				Entry_Control_GPS_Stop_Power();
                 //正常M4模式进入生产制造模式
                 m4_to_production_config();
             }
@@ -1647,12 +1694,14 @@ static osStatus_t EntryTask_HandleMessageQueue(TaskInfo_t* pEntryTaskInfo, Messa
             if(received_msg->command == TASK_STOP_REPLY)//CAT1进入backup和关机时候进入
             {
 				//M4模式下，CAT1进入backup和关机时候进入，需要重启CAT1任务
-				if(FORE_MODE_STATUS == MODE_M4 && SetModePare.UserStatus == LFS_USER_INFO_GET_SUCCEED)//用户绑定 且处于M4模式
+				if(FORE_MODE_STATUS == MODE_M4 && SetModePare.UserStatus == LFS_USER_INFO_GET_SUCCEED && power_on_lte_reset_flag ==1)//用户绑定 且处于M4模式
 				{
+					power_on_lte_reset_flag = 0;//上电LTE重置标志清除
+					log_debug("lte start_ 7777777777777\r\n");
 //					log_debug("received_msg->command == TASK_STOP_REPLY\r\n");
 					cat1_task_restart(ENTRY_TASK_ID);
 				}
-				else
+				if(FORE_MODE_STATUS == MODE_M4 && SetModePare.UserStatus != LFS_USER_INFO_GET_SUCCEED)
 				{
 					cat1_restart_flag = true;
 				}
@@ -1661,7 +1710,7 @@ static osStatus_t EntryTask_HandleMessageQueue(TaskInfo_t* pEntryTaskInfo, Messa
 				{
 					osEventFlagsSet(g_sleepEntryReadyFlags, SLEEP_GNSS_READY_FLAG);
 				}
-				/* 设置就绪标志 */
+					/* 设置就绪标志 */
 				osEventFlagsSet(g_sleepEntryReadyFlags, SLEEP_CAT1_READY_FLAG);
             }
             if(received_msg->command == TASK_FACTORY_RESET_REPLY)//工厂重置回复
@@ -1703,6 +1752,7 @@ static void vEntryTask(void *argument)
 	{
 		m_motor_set(MOTOR_TIME_RUN,1);
 	}
+	//	m_wdt_stop();
     while(1)
     {
         if(Entry_Control_Stop_Power_Charge_FlagGet()){
@@ -1726,8 +1776,8 @@ static void vEntryTask(void *argument)
 			if( FORE_MODE_STATUS == MODE_M4 && SetModePare.UserStatus == LFS_USER_INFO_GET_SUCCEED)
 			{
 				cat1_restart_flag = false;
-				cat1_task_restart(ENTRY_TASK_ID);
-				gnss_task_restart(ENTRY_TASK_ID);
+//				cat1_task_restart(ENTRY_TASK_ID);
+//				gnss_task_restart(ENTRY_TASK_ID);
 			}
 		}
 		//释放低功耗阻塞信号量
@@ -1735,6 +1785,7 @@ static void vEntryTask(void *argument)
 		
 		m_led_user_handler();//LED处理函数
 	
+		
 		wdt_feed();//喂狗
 		//信号量的处理需要时间片500ms
 		EntryTask_HandleMessageQueue(pEntryTaskInfo,&received_msg);
@@ -1781,6 +1832,7 @@ static void vEntryTask(void *argument)
 					if(FORE_MODE_STATUS == MODE_M2)
 					{
 						osSemaphoreAcquire(xSemAgingTest, osWaitForever); 
+						
 					}
 				}
 			}
@@ -1790,9 +1842,10 @@ static void vEntryTask(void *argument)
 			(get_entry_low_sleep_flag() == SYSTEM_POWER_STATE_SHUTDOWN))//M3->M2模式切换关机阻塞
 		{
 			osSemaphoreAcquire(xSemAgingTest, osWaitForever); 
+			
 		}
-		
         osSemaphoreAcquire(xSemAgingTest, osWaitForever);
+		
     }
 }
 

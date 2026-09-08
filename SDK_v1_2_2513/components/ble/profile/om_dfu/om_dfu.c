@@ -55,7 +55,7 @@ extern uint8_t dfu_public_key[];
 /*********************************************************************
  * MACROS
  */
-// #define OM_DFU_DEBUG
+ #define OM_DFU_DEBUG
 #if defined(OM_DFU_DEBUG)
 #define dfu_debug(fmt, ...) log_debug("[DFU] " fmt, ## __VA_ARGS__)
 #define dfu_debug_array_ex log_debug_array_ex
@@ -891,6 +891,7 @@ void dfu_write_version_char(uint32_t cmd, dfu_version_t *version)
 
 int dfu_set_enable(bool enabled)
 {
+	dfu_debug("dfu_set_enable\r\n");
     if(env.status != DFU_STATUS_LOCKED){
         env.status = enabled?DFU_STATUS_ENABLED:DFU_STATUS_DISABLED;
     }

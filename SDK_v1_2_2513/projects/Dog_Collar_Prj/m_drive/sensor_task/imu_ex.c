@@ -14,6 +14,12 @@
 
 #include "pet_behavior_ai.h"
 #include "inv_imu_apex.h"
+
+#if (0)
+	#define IMU_LOG_DEBUG(format, ...)               	log_debug(format,  ## __VA_ARGS__)
+#else
+	#define IMU_LOG_DEBUG(format, ...)               
+#endif
 #define PET_AI_CONTEXT_SIZE 	6016
 static uint8_t ctx[PET_AI_CONTEXT_SIZE] __attribute__((aligned(8))); 
 static char sensor_ble_log_bug[50] = {0};
@@ -260,9 +266,9 @@ void sensor_data_send(int64_t time,int32_t *accel,int32_t *gyro)
 	
 //		for(int i=0;i<sizeof(send_data_tmp);i++)
 //		{
-//			log_debug("%x ",send_data_tmp[i]);
+//			IMU_LOG_DEBUG("%x ",send_data_tmp[i]);
 //		}
-//		log_debug("\r\n");
+//		IMU_LOG_DEBUG("\r\n");
 	//	OM_LOG_HEXDUMP(OM_LOG_INFO,send_data_tmp,sizeof(send_data_tmp),1);
 	tspp_send(send_data_tmp,sizeof(send_data_tmp));
 }
@@ -366,21 +372,21 @@ void imu_callback(inv_imu_sensor_event_t *event)
 			tspp_send(send_data_tmp,20);
 			
 		}
-//	log_debug( "data = %u: %.3f, %.3f, %.3f, %.3f, %.3f, %.3f, %.3f\r\n",
+//	IMU_LOG_DEBUG( "data = %u: %.3f, %.3f, %.3f, %.3f, %.3f, %.3f, %.3f\r\n",
 //		        (uint32_t)timestamp, accel_g[0], accel_g[1], accel_g[2], temp_degc, gyro_dps[0],
 //		        gyro_dps[1], gyro_dps[2]);
 		else if (event->sensor_mask & (1 << INV_SENSOR_GYRO))
 		{
 			tspp_send(send_data_tmp,20);
 		}
-//		log_debug(  "data = %u: NA, NA, NA, %.3f, %.3f, %.3f, %.3f\r\n", (uint32_t)timestamp,
+//		IMU_LOG_DEBUG(  "data = %u: NA, NA, NA, %.3f, %.3f, %.3f, %.3f\r\n", (uint32_t)timestamp,
 //		        temp_degc, gyro_dps[0], gyro_dps[1], gyro_dps[2]);
 		else if (event->sensor_mask & (1 << INV_SENSOR_ACCEL))
 		{
 			tspp_send(send_data_tmp,20);
 		}
 //	
-//		log_debug("data = %u: %.3f, %.3f, %.3f, %.3f, NA, NA, NA\r\n", (uint32_t)timestamp,
+//		IMU_LOG_DEBUG("data = %u: %.3f, %.3f, %.3f, %.3f, NA, NA, NA\r\n", (uint32_t)timestamp,
 //		        accel_g[0], accel_g[1], accel_g[2], temp_degc);
 	}
 	/*
@@ -391,7 +397,7 @@ void imu_callback(inv_imu_sensor_event_t *event)
 
 	if (event->sensor_mask & (1 << INV_SENSOR_ACCEL) && event->sensor_mask & (1 << INV_SENSOR_GYRO))
 	{
-//		OM_LOG_DEBUG("11 =%u: %d, %d, %d, %d, %d, %d, %d\r\n", (uint32_t)timestamp, accel[0],
+//		IMU_LOG_DEBUG("11 =%u: %d, %d, %d, %d, %d, %d, %d\r\n", (uint32_t)timestamp, accel[0],
 //		        accel[1], accel[2], event->temperature, gyro[0], gyro[1], gyro[2]);
 		if(get_ai_behavior_state())
 		{
@@ -409,7 +415,7 @@ void imu_callback(inv_imu_sensor_event_t *event)
 				if(ret == PET_AI_HAS_RESULT) 
 				{
 						// 新行为识别结果产生
-						log_debug("Behavior result: class_id = %d\r\n", pet_ai_result.class_id);
+						IMU_LOG_DEBUG("Behavior result: class_id = %d\r\n", pet_ai_result.class_id);
 						set_pet_ai_result_class_id(pet_ai_result.class_id);
 				} 
 				else if(ret == PET_AI_ERR_TIME) 
@@ -421,7 +427,7 @@ void imu_callback(inv_imu_sensor_event_t *event)
 				else if(ret < 0) 
 				{
 						// 其他错误，可根据需要处理
-						log_debug("pet_ai_push_sample error: %d\r\n", ret);
+						IMU_LOG_DEBUG("pet_ai_push_sample error: %d\r\n", ret);
 				}
 				
 //				if(m_trans_enable_get() && last_class_id != pet_ai_result.class_id)
@@ -433,12 +439,12 @@ void imu_callback(inv_imu_sensor_event_t *event)
 	}
 	else if (event->sensor_mask & (1 << INV_SENSOR_GYRO))
 	{
-//		OM_LOG_DEBUG("22 =%u: NA, NA, NA, %d, %d, %d, %d\r\n", (uint32_t)timestamp,
+//		IMU_LOG_DEBUG("22 =%u: NA, NA, NA, %d, %d, %d, %d\r\n", (uint32_t)timestamp,
 //		        event->temperature, gyro[0], gyro[1], gyro[2]);
 	}
 	else if (event->sensor_mask & (1 << INV_SENSOR_ACCEL))
 	{
-//		OM_LOG_DEBUG("3333 =%u: %d, %d, %d, %d, NA, NA, NA\r\n", (uint32_t)timestamp, accel[0],
+//		IMU_LOG_DEBUG("3333 =%u: %d, %d, %d, %d, NA, NA, NA\r\n", (uint32_t)timestamp, accel[0],
 //		        accel[1], accel[2], event->temperature);
 
 	}
@@ -454,7 +460,7 @@ int setup_imu_device(const struct inv_imu_serif *icm_serif)
 	rc = inv_imu_init(&icm_driver, icm_serif, imu_callback);
 	if (rc != INV_ERROR_SUCCESS) 
 	{
-			log_debug("Failed to initialize IMU!\r\n");
+			IMU_LOG_DEBUG("Failed to initialize IMU!\r\n");
 			return rc;
 	}
 
@@ -462,19 +468,19 @@ int setup_imu_device(const struct inv_imu_serif *icm_serif)
 	rc = inv_imu_get_who_am_i(&icm_driver, &who_am_i);
 	if (rc != INV_ERROR_SUCCESS) 
 	{
-			log_debug("Failed to read whoami!, rc = %d\r\n", rc);
+			IMU_LOG_DEBUG("Failed to read whoami!, rc = %d\r\n", rc);
 			return rc;
 	}
 
 	if (who_am_i != ICM_WHOAMI) 
 	{
-			log_debug("Bad WHOAMI!!!\r\n");
-			log_debug("Read 0x%02x, expected 0x%02x\r\n", who_am_i, ICM_WHOAMI);
+			IMU_LOG_DEBUG("Bad WHOAMI!!!\r\n");
+			IMU_LOG_DEBUG("Read 0x%02x, expected 0x%02x\r\n", who_am_i, ICM_WHOAMI);
 			return INV_ERROR;
 	}
 	else
 	{
-			log_debug("WHOAMI OK = 0x%02x!\r\n", who_am_i);
+			IMU_LOG_DEBUG("WHOAMI OK = 0x%02x!\r\n", who_am_i);
 	}
 
 	return rc;
@@ -517,7 +523,7 @@ rc |= pedometer_init(&icm_driver);
 //	rc |= inv_imu_enable_wom(&icm_driver);
 //	
 //	if (rc)
-//		log_debug("Error while %s\r\n", __func__);
+//		IMU_LOG_DEBUG("Error while %s\r\n", __func__);
 
 	return rc;
 }
@@ -532,32 +538,32 @@ void imu_init(void)
 	rc |= setup_mcu(&icm_serif);
 	if(rc != INV_ERROR_SUCCESS) 
 	{
-			log_debug("setup mcu fail!, rc = %d\r\n", rc);
+			IMU_LOG_DEBUG("setup mcu fail!, rc = %d\r\n", rc);
 	}
 	else
 	{
-			log_debug("setup mcu success!\r\n");
+			IMU_LOG_DEBUG("setup mcu success!\r\n");
 	}
 	
 	
 	rc |= setup_imu_device(&icm_serif);
 	if(rc != INV_ERROR_SUCCESS) 
 	{
-			log_debug("setup_imu_device fail!, rc = %d\r\n", rc);
+			IMU_LOG_DEBUG("setup_imu_device fail!, rc = %d\r\n", rc);
 	}
 	else
 	{
-			log_debug("setup_imu_device success!\r\n");
+			IMU_LOG_DEBUG("setup_imu_device success!\r\n");
 	}		
 	
 	rc |= configure_imu_device();	
 	if(rc != INV_ERROR_SUCCESS) 
 	{
-			log_debug("config imu fail!, rc = %d\r\n", rc);
+			IMU_LOG_DEBUG("config imu fail!, rc = %d\r\n", rc);
 	}
 	else
 	{
-			log_debug("config imu success!\r\n");
+			IMU_LOG_DEBUG("config imu success!\r\n");
 	}	
 	
 	//初始化宠物运动检查AI算法
@@ -652,7 +658,7 @@ bool judge_int_at_Z(void)
 		inv_imu_read_reg(&icm_driver, INT_STATUS2, 1, &int_status);
 		if(int_status & INT_STATUS_FIFO_THS_INT_MASK) 
 		{
-//				log_debug("WoM interrupt at (X, Y, Z): %d, %d, %d\r\n",
+//				IMU_LOG_DEBUG("WoM interrupt at (X, Y, Z): %d, %d, %d\r\n",
 //							(int_status & INT_STATUS2_WOM_X_INT_MASK) ? 1 : 0,
 //							(int_status & INT_STATUS2_WOM_Y_INT_MASK) ? 1 : 0,
 //							(int_status & INT_STATUS2_WOM_Z_INT_MASK) ? 1 : 0);
@@ -695,7 +701,7 @@ int imu_enter_sleep_mode(void)
 {
 		int rc = -1;
 		uint8_t value = 0;
-	log_debug("sensor enter sleep\r\n");
+	IMU_LOG_DEBUG("sensor enter sleep\r\n");
 // 禁用WoM
 	rc = inv_imu_write_reg(&icm_driver, WOM_CONFIG, 1, &value);
 
@@ -740,7 +746,7 @@ void set_motion_level(void)
 				//重度
 				motion_level = MOTION_L;
 		}
-		log_debug("set motion_level = %d, int_num = %d\r\n", motion_level, int_num);
+		IMU_LOG_DEBUG("set motion_level = %d, int_num = %d\r\n", motion_level, int_num);
 		clear_motion_int_num();
 }
 
