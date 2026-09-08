@@ -1,4 +1,0 @@
-config NVDS
-    bool "NVDS"
-    default n
-

@@ -1,2 +1,0 @@
-config FREE_RTOS
-    bool "freeRTOS"

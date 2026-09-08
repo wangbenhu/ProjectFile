@@ -1,7 +1,0 @@
-PM_DIR = $(COMPONENTS_DIR)/pm
-
-COMPONENTS_INCS += $(PM_DIR)
-COMPONENTS_SRCS += $(PM_DIR)/pm.c
-ifeq ($(CONFIG_PM), y)
-COMPONENTS_SRCS += $(PM_DIR)/pm_cpu_gnu.S
-endif

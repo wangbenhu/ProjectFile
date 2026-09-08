@@ -1,8 +1,0 @@
-from build.building import *
-
-
-PROJECT_MAIN_SRCS = ['main.c']
-
-group = DefineGroup(name='main', srcs=PROJECT_MAIN_SRCS, incs=None)
-
-Return('group')
